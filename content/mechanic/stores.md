@@ -4,7 +4,7 @@
 persona: Alex Mechanic
 device: tablet
 url: /workshop/parts
-state: "Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0 in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point"
+state: "Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004, tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point"
 :::
 
 **Stores** shows the parts and consumables your hub holds, how many are on the shelf and where they are. You can search for a part, correct the count after a stock check and ask for a part to be ordered.
@@ -36,7 +36,7 @@ state: "Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets 
       - Type brake pad in the search box
     callouts:
       - [1, "css=input[placeholder='Search name, FKL number or MPN']", "Search here"]
-      - [2, "text=FKL-900001", "The part"]
+      - [2, "text=FKL-900003", "The part"]
     :::
 
 3. Narrow the list with **All kart classes** (for example Cadet) or tick **Needs reordering only**.

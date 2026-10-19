@@ -29,7 +29,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
 
     ![A comment typed in Comment (optional)](../assets/img/mechanic/mech-pause-comment.png){ loading=lazy }
 
-4. Tap **Pause**. The kart shows **Paused** (grey) on the board.
+4. Tap **Pause**. The kart moves to the **Paused services** bar at the top of **Servicing**, and shows **Paused** (grey) on the board.
 
     ![The Paused services bar with 203 and 304](../assets/img/mechanic/mech-pause-done.png){ loading=lazy }
 
@@ -38,7 +38,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
 
 ## Resume
 
-1. Find the kart in the **Paused services** bar under the Workshop tabs. Hover or long-press to see the reason.
+1. On **Servicing**, find the kart in the **Paused services** bar under the Workshop tabs. Hover or long-press to see the reason.
 
     ![Junior 304 in the Paused services bar showing Waiting on parts](../assets/img/mechanic/mech-resume-bar.png){ loading=lazy }
 

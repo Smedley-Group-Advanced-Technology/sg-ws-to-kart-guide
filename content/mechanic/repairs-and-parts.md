@@ -39,14 +39,14 @@ Every finding, every damaged component and every stopping ticket becomes a **rep
       - [1, "text=Repair priority, top first. Work top to bottom.", "Start at the top"]
     :::
 
-3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any.
+3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by class and its number in the class: **Junior 7** is kart 307.
 
     :::shot mech-repair-card
     caption: The repair card for Junior 307 showing Waiting on front bumper and On order
     steps:
       - Find the 307 card in Requires part
     callouts:
-      - [1, "text=307", "Junior 307"]
+      - [1, "text=Junior 7", "Junior 307"]
       - [2, "text=Waiting on:", "The part it needs"]
       - [3, "text=On order", "Already ordered"]
     :::
@@ -184,7 +184,7 @@ captions:
 
 Parts reach a kart in three ways. Record each one in KART:
 
-- **In a service:** **Parts used** and **Add part used** on Servicing. See [Doing a service](service-turn.md).
+- **In a service:** **Components replaced** on Servicing (**Select**, then **Add to components replaced**). See [Doing a service](service-turn.md).
 - **On a repair:** the parts on the repair, with **Remedy per part** when you complete it.
 - **In campaign work:** **Parts fitted** on the campaign task. See [Campaign work](campaign-work.md).
 

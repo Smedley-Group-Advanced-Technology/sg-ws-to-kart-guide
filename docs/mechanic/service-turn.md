@@ -60,21 +60,21 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 ## Record parts and work
 
-1. If you fitted a part, go to **Parts used** and tap **Add part used**.
-
-    ![The Parts used section with Add part used](../assets/img/mechanic/mech-svc-parts.png){ loading=lazy }
-
-2. Pick the part, set the quantity and add it. KART takes it from your hub's stock.
-
-    ![A brake pad set added to Parts used with quantity 1](../assets/img/mechanic/mech-svc-parts-added.png){ loading=lazy }
-
-3. If you swapped a tracked component (for example a battery), add it under **Components replaced**.
+1. Every part you fitted goes under **Components replaced**, below the checklist. It lists the parts that fit this kart class.
 
     ![The Components replaced section with its search box](../assets/img/mechanic/mech-svc-components.png){ loading=lazy }
 
-4. Write what you did under **Record work done**.
+2. Type part of the name in **Search components…**, then tap **Select** on the part.
 
-    ![Record work done with a short note](../assets/img/mechanic/mech-svc-work-done.png){ loading=lazy }
+    ![Searching Components replaced for brake pads, with the Select button](../assets/img/mechanic/mech-svc-parts.png){ loading=lazy }
+
+3. Tap **Add to components replaced**. The part shows under **Components replaced on this service**. KART takes it from your hub's stock when you complete the service.
+
+    ![A brake pad set added under Components replaced on this service](../assets/img/mechanic/mech-svc-parts-added.png){ loading=lazy }
+
+4. To note what you did on a check, tap the note icon next to it (**Record work done**). Pick a common resolution or type a short note, then tap **Save**.
+
+    ![The Record work done note on a check, with Work carried out](../assets/img/mechanic/mech-svc-work-done.png){ loading=lazy }
 
 !!! note "Remember"
     Record **every** part in KART from day one. Until your hub's stock is moved from the Workshop App, the stock count depends on it. See [Switch-over day](../switch-over/index.md).
@@ -106,7 +106,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 ## Already have a kart in service?
 
-1. If you tap another kart while one is running, KART says **You already have a kart in service**.
+1. If you start another kart (tap it, then **Start service**) while one is running, KART says **You already have a kart in service**.
 
     ![The You already have a kart in service dialog with Pause and switch](../assets/img/mechanic/mech-svc-switch.png){ loading=lazy }
 

@@ -2063,7 +2063,7 @@
   device: tablet
   url: /workshop/campaign-work
   state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
-    campaign part caliper seal kit FKL-900006, 1 per kart
+    campaign part caliper seal kit FKL-900004, 1 per kart
   steps:
   - Open Campaign work and show Assigned to me (3)
   - Open the 301 task
@@ -2087,7 +2087,7 @@
   device: tablet
   url: /workshop/campaign-work
   state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
-    campaign part caliper seal kit FKL-900006, 1 per kart
+    campaign part caliper seal kit FKL-900004, 1 per kart
   steps:
   - Tap Campaign work
   callouts:
@@ -2105,7 +2105,7 @@
   device: tablet
   url: /workshop/campaign-work
   state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
-    campaign part caliper seal kit FKL-900006, 1 per kart
+    campaign part caliper seal kit FKL-900004, 1 per kart
   steps:
   - Look at Assigned to me (3)
   callouts:
@@ -2120,7 +2120,7 @@
   device: tablet
   url: /workshop/campaigns/{campaign}/tasks/{task:301}
   state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
-    campaign part caliper seal kit FKL-900006, 1 per kart
+    campaign part caliper seal kit FKL-900004, 1 per kart
   steps:
   - Open the 301 task
   callouts:
@@ -2198,7 +2198,7 @@
   device: tablet
   url: /workshop/campaigns/{campaign}/tasks/{task:305}
   state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
-    campaign part caliper seal kit FKL-900006, 1 per kart
+    campaign part caliper seal kit FKL-900004, 1 per kart
   steps:
   - Open the 305 task
   - Tap Unable to complete
@@ -2586,8 +2586,8 @@
   - On Overview, find the 101 tile and tap Requires service
   - Show Kart marked as requiring service and tap Undo
   - Show Mark used undone
-  - Switch to Race to Chassis for Demo Practice Day and drag race number 8 onto chassis 104
-  - Show Chassis 104 marked used and the event day note
+  - Switch to Race to Chassis for Demo Practice Day, tap Bambino and drag race number 8 onto chassis 04 (Bambino 104)
+  - Show Chassis 04 marked used and the event day note
   caption: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used
   captions:
   - Hub managers can mark a kart used on its tile.
@@ -2756,11 +2756,11 @@
   page: mechanic/pause-and-resume.md
   persona: Alex Mechanic
   device: tablet
-  url: /workshop/repairs
+  url: /workshop/in-service
   state: After pausing 203
   steps:
   - Tap Pause in the dialog
-  - Open Service Queue
+  - Look at the top of Servicing
   callouts:
   - n: 1
     target: text=Paused services
@@ -2771,7 +2771,7 @@
   page: mechanic/pause-and-resume.md
   persona: Alex Mechanic
   device: tablet
-  url: /workshop/repairs
+  url: /workshop/in-service
   state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
   steps:
   - Hover 304 in the Paused services bar
@@ -2816,7 +2816,7 @@
   page: mechanic/pause-and-resume.md
   persona: Casey Mechanic
   device: tablet
-  url: /workshop/repairs
+  url: /workshop/in-service
   state: Casey has started repair work on 205 while its service is open
   steps:
   - Hover 205 in the Paused services bar
@@ -2880,10 +2880,11 @@
     1; Cadet 207 and Junior 307 Repair Required
   steps:
   - Open Race to Chassis for Demo Practice Day on the tablet
-  - Drag race number 5 onto chassis 205
-  - Show the Chassis 205 marked used message with Undo
-  - Drag race number 6 onto chassis 207 and show Chassis 207 is not available
-  - Tap Cancel, then drag race number 6 onto chassis 206
+  - Tap Cadet at the top
+  - Drag race number 5 onto chassis 04 (Cadet 204)
+  - Show the Chassis 04 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Cadet 207) and show Chassis 07 is not available
+  - Tap Cancel, then drag race number 6 onto chassis 03 (Cadet 203)
   - Drag race number 6 back to the race number list to take it off
   caption: putting race numbers on chassis with drag and drop
   captions:
@@ -2922,8 +2923,8 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drag race number 5 onto chassis 205 slowly
-  caption: Dragging race number 5 onto chassis 205
+  - Drag race number 5 onto chassis 04 slowly
+  caption: Dragging race number 5 onto chassis 04, Cadet 204
 - id: mech-r2c-marked
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2933,7 +2934,7 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drop race number 5 on chassis 205
+  - Drop race number 5 on chassis 04
   callouts:
   - n: 1
     target: text=marked used
@@ -2941,7 +2942,7 @@
   - n: 2
     target: text=Undo
     note: Only for a mistake
-  caption: Chassis 205 marked used message with Undo
+  caption: Chassis 04 marked used message with Undo
 - id: mech-r2c-takeoff
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2951,7 +2952,7 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Tap chassis 205
+  - Tap chassis 01
   callouts:
   - n: 1
     target: text=Take off chassis
@@ -2968,7 +2969,7 @@
   steps:
   - Open Race to Chassis for Demo Practice Day on the phone
   - Tap the cell for race number 7 in the current session
-  - Tap chassis 302
+  - Tap Junior, then chassis 02 (Junior 302)
   - Show the marked used message
   - Tap Drag and drop view and back to Tap grid
   caption: putting a race number on a chassis with the tap grid on a phone
@@ -3006,12 +3007,12 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Tap chassis 302
+  - Tap chassis 02 (Junior 302)
   callouts:
   - n: 1
     target: text=Tap the chassis this race number drives.
     note: Pick the chassis
-  caption: Tap the chassis this race number drives, with 302 highlighted
+  caption: Tap the chassis this race number drives, with the Junior chassis list
 - id: mech-r2c-switch
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -3036,7 +3037,7 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drag race number 6 onto chassis 207
+  - Drag race number 6 onto chassis 07
   callouts:
   - n: 1
     target: text=is not available
@@ -3047,7 +3048,7 @@
   - n: 3
     target: text=Assign anyway
     note: Gives a track use override
-  caption: Chassis 207 is not available with the reason box and Assign anyway
+  caption: Chassis 07 (Cadet 207) is not available, with the reason box and Assign anyway
 - id: mech-r2c-cancel
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -3072,7 +3073,7 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drag race number 2 from its chassis onto chassis 104
+  - Drag race number 2 from chassis 02 onto chassis 03 (Cadet 203)
   callouts:
   - n: 1
     target: text=Logged. Why did the race number change chassis?
@@ -3344,7 +3345,7 @@
   - Find the 307 card in Requires part
   callouts:
   - n: 1
-    target: text=307
+    target: text=Junior 7
     note: Junior 307
   - n: 2
     target: 'text=Waiting on:'
@@ -3944,7 +3945,7 @@
   - Tap 203 in the Requires service lane
   - Tap Start service in the Start service? dialog
   - On Servicing, tap cells to set them Good, enter a tyre depth and battery voltages
-  - Tap Add part used and add one part
+  - Under Components replaced, select a part and tap Add to components replaced
   - Tap Complete service, tick the declaration and tap Confirm
   - Show 203 as Ready on Overview
   caption: a full service on Cadet 203, from the Service Queue to Complete service
@@ -4071,45 +4072,13 @@
   url: /workshop/in-service
   state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
   steps:
-  - Type "Rear sprocket worn, needs replacing"
+  - Type "Hairline crack near the seat mount"
   - Tap Save reason
   callouts:
   - n: 1
     target: text=Save reason
     note: Save it
   caption: A blocked reason typed with the Save reason button
-- id: mech-svc-parts
-  kind: screenshot
-  page: mechanic/service-turn.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop/in-service
-  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
-  steps:
-  - Scroll to Parts used
-  callouts:
-  - n: 1
-    target: text=Parts used
-    note: Every part you fitted
-  - n: 2
-    target: text=Add part used
-    note: Add one
-  caption: The Parts used section with Add part used
-- id: mech-svc-parts-added
-  kind: screenshot
-  page: mechanic/service-turn.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop/in-service
-  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
-  steps:
-  - Tap Add part used
-  - Search for brake pads (FKL-900001) and add quantity 1
-  callouts:
-  - n: 1
-    target: text=FKL-900001
-    note: The part you fitted
-  caption: A brake pad set added to Parts used with quantity 1
 - id: mech-svc-components
   kind: screenshot
   page: mechanic/service-turn.md
@@ -4122,8 +4091,40 @@
   callouts:
   - n: 1
     target: text=Components replaced
-    note: Tracked components only
+    note: Parts that fit this kart
   caption: The Components replaced section with its search box
+- id: mech-svc-parts
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Type brake pad in Search components
+  callouts:
+  - n: 1
+    target: text=Components replaced
+    note: Every part you fitted
+  - n: 2
+    target: text=Select
+    note: Pick the part
+  caption: Searching Components replaced for brake pads, with the Select button
+- id: mech-svc-parts-added
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap Select on Brake pads (pair), FKL-900003
+  - Tap Add to components replaced
+  callouts:
+  - n: 1
+    target: text=FKL-900003
+    note: The part you fitted
+  caption: A brake pad set added under Components replaced on this service
 - id: mech-svc-work-done
   kind: screenshot
   page: mechanic/service-turn.md
@@ -4132,12 +4133,13 @@
   url: /workshop/in-service
   state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
   steps:
-  - Scroll to Record work done and type "Chain adjusted"
+  - Tap the note icon next to a check
+  - Type "Chain adjusted"
   callouts:
   - n: 1
-    target: text=Record work done
+    target: text=Work carried out
     note: A short note
-  caption: Record work done with a short note
+  caption: The Record work done note on a check, with Work carried out
 - id: mech-svc-complete
   kind: screenshot
   page: mechanic/service-turn.md
@@ -4195,6 +4197,7 @@
   state: Alex has 203 in service and taps 204
   steps:
   - With 203 in service, tap 204 in the Requires service lane
+  - Tap Start service
   callouts:
   - n: 1
     target: text=You already have a kart in service
@@ -4223,8 +4226,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Tap Stores
   callouts:
@@ -4244,8 +4247,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Type brake pad in the search box
   callouts:
@@ -4253,7 +4256,7 @@
     target: css=input[placeholder='Search name, FKL number or MPN']
     note: Search here
   - n: 2
-    target: text=FKL-900001
+    target: text=FKL-900003
     note: The part
   caption: Searching Stores for brake pad
 - id: mech-stores-filter
@@ -4262,8 +4265,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Open All kart classes and choose Cadet
   callouts:
@@ -4280,8 +4283,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Look at the brake pad row
   callouts:
@@ -4298,8 +4301,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Find the brake pad row
   callouts:
@@ -4313,8 +4316,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Tap Adjust
   - Type 6 in Stock
@@ -4332,8 +4335,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Open Reason and choose Stock count
   callouts:
@@ -4347,8 +4350,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Type "Weekly count" in Comment
   - Tap Save
@@ -4366,8 +4369,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Tap Add to order list on the brake pad row
   - Type 4 in Quantity
@@ -4385,8 +4388,8 @@
   persona: Alex Mechanic
   device: tablet
   url: /workshop/parts
-  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
-    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
+    tie rods FKL-900005, chain FKL-900007, rear tyres FKL-900009, sprockets FKL-900015; some at or below the reorder point'
   steps:
   - Tap One-time need on a part row
   callouts:
@@ -5243,7 +5246,7 @@
   page: start/sign-in-and-access.md
   persona: Jamie Newstarter
   device: tablet
-  url: /auth?join=DEMOJOIN
+  url: /auth?join=DE0DE0000001
   state: A Demo Hub join link exists (code shown in the URL); Jamie not signed up yet (record before Jamie's sign-up is seeded)
   steps:
   - Open the join link
@@ -5257,7 +5260,7 @@
   page: start/sign-in-and-access.md
   persona: Jamie Newstarter
   device: tablet
-  url: /auth?join=DEMOJOIN
+  url: /auth?join=DE0DE0000001
   state: Demo Hub as seeded
   steps:
   - Type Jamie Newstarter in Full Name
@@ -5271,7 +5274,7 @@
   page: start/sign-in-and-access.md
   persona: Jamie Newstarter
   device: tablet
-  url: /auth?join=DEMOJOIN
+  url: /auth?join=DE0DE0000001
   state: Demo Hub as seeded
   steps:
   - Type JN in Initials
@@ -5285,7 +5288,7 @@
   page: start/sign-in-and-access.md
   persona: Jamie Newstarter
   device: tablet
-  url: /auth?join=DEMOJOIN
+  url: /auth?join=DE0DE0000001
   state: Demo Hub as seeded
   steps:
   - Type jamie.newstarter@demo-fkl.example in Email
@@ -5358,7 +5361,7 @@
   url: /pending
   state: After Morgan Manager approves Jamie (record after the approvals clip)
   steps:
-  - Sign in as Jamie after approval
+  - Wait on the waiting page while a manager approves Jamie
   callouts:
   - n: 1
     target: text=Your account has been approved
@@ -5392,7 +5395,8 @@
   url: /hub-selection
   state: Demo Hub as seeded
   steps:
-  - Tap Request Access next to Demo Hub North
+  - Choose Demo Hub North in the hub list
+  - Tap the Technical card
   callouts:
   - n: 1
     target: text=Hub Access Required
@@ -5409,9 +5413,9 @@
   - Tap Request Access in the dialog
   callouts:
   - n: 1
-    target: role=button[name='Request Access']
-    note: Send the request
-  caption: Request Access tapped in the Hub Access Required dialog
+    target: text=Access request sent successfully
+    note: The request is on its way
+  caption: The Access request sent successfully message after tapping Request Access
 - id: start-status-board
   kind: screenshot
   page: start/statuses.md

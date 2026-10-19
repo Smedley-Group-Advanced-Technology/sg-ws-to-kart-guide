@@ -28,8 +28,8 @@ steps:
   - On Overview, find the 101 tile and tap Requires service
   - Show Kart marked as requiring service and tap Undo
   - Show Mark used undone
-  - Switch to Race to Chassis for Demo Practice Day and drag race number 8 onto chassis 104
-  - Show Chassis 104 marked used and the event day note
+  - Switch to Race to Chassis for Demo Practice Day, tap Bambino and drag race number 8 onto chassis 04 (Bambino 104)
+  - Show Chassis 04 marked used and the event day note
 captions:
   - "Hub managers can mark a kart used on its tile."
   - "KART confirms and offers Undo."

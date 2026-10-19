@@ -67,15 +67,15 @@ captions:
       - [1, "text=Comment (optional)", "Anything the next mechanic should know"]
     :::
 
-4. Tap **Pause**. The kart shows **Paused** (grey) on the board.
+4. Tap **Pause**. The kart moves to the **Paused services** bar at the top of **Servicing**, and shows **Paused** (grey) on the board.
 
     :::shot mech-pause-done
     caption: The Paused services bar with 203 and 304
-    url: /workshop/repairs
+    url: /workshop/in-service
     state: After pausing 203
     steps:
       - Tap Pause in the dialog
-      - Open Service Queue
+      - Look at the top of Servicing
     callouts:
       - [1, "text=Paused services", "Your paused karts"]
     :::
@@ -85,11 +85,11 @@ captions:
 
 ## Resume
 
-1. Find the kart in the **Paused services** bar under the Workshop tabs. Hover or long-press to see the reason.
+1. On **Servicing**, find the kart in the **Paused services** bar under the Workshop tabs. Hover or long-press to see the reason.
 
     :::shot mech-resume-bar
     caption: Junior 304 in the Paused services bar showing Waiting on parts
-    url: /workshop/repairs
+    url: /workshop/in-service
     steps:
       - Hover 304 in the Paused services bar
     callouts:
@@ -130,7 +130,7 @@ When you start repair work on a kart that is in service (see [Repairs and parts 
 
     :::shot mech-resume-repair
     caption: A paused service with the spanner icon because repair work is running
-    url: /workshop/repairs
+    url: /workshop/in-service
     state: Casey has started repair work on 205 while its service is open
     persona: Casey Mechanic
     steps:

@@ -19,7 +19,7 @@
 | **Chassis** | The kart, by its number, in Race to Chassis | Chassis |
 | **Chassis reassignment** | A race number moved to a different chassis, logged with a reason | Chassis reassignment |
 | **Completed** | Order stage: received. Also a finished service, repair or task | Received |
-| **Components replaced** | Tracked components (such as batteries) swapped during a service | Components |
+| **Components replaced** | Every part fitted during a service, recorded on Servicing | Components, Parts used |
 | **Consumables** | Workshop supplies, on the second Stores tab | Consumables |
 | **Cover (support cover)** | The remote support person who answers a hub's chats today | (new) |
 | **Damage** | Damaged components, recorded with Record New Damage. Each becomes a repair | Damage report |
@@ -52,7 +52,6 @@
 | **Order List** | All order lines by stage | Order list |
 | **Overview** | The first Workshop tab with the fleet board | Readiness / Dashboard |
 | **Parts needed** | What the hub must order: repairs, campaigns and restock, minus what is on order | Parts Needed |
-| **Parts used** | Parts fitted during a service | Parts used |
 | **Pause reason** | Why a service was paused, such as End of Shift | Pause reason |
 | **Paused** | A service stopped for now, with a reason | Paused |
 | **Permission** | What an account may do: Workshop, Reliability, Hub Manager, Purchasing, FKL Central, Remote support | Role |

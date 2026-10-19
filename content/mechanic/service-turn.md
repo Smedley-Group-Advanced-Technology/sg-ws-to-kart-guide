@@ -25,7 +25,7 @@ steps:
   - Tap 203 in the Requires service lane
   - Tap Start service in the Start service? dialog
   - On Servicing, tap cells to set them Good, enter a tyre depth and battery voltages
-  - Tap Add part used and add one part
+  - Under Components replaced, select a part and tap Add to components replaced
   - Tap Complete service, tick the declaration and tap Confirm
   - Show 203 as Ready on Overview
 captions:
@@ -129,7 +129,7 @@ captions:
     caption: A blocked reason typed with the Save reason button
     url: /workshop/in-service
     steps:
-      - Type "Rear sprocket worn, needs replacing"
+      - Type "Hairline crack near the seat mount"
       - Tap Save reason
     callouts:
       - [1, "text=Save reason", "Save it"]
@@ -140,31 +140,7 @@ captions:
 
 ## Record parts and work
 
-1. If you fitted a part, go to **Parts used** and tap **Add part used**.
-
-    :::shot mech-svc-parts
-    caption: The Parts used section with Add part used
-    url: /workshop/in-service
-    steps:
-      - Scroll to Parts used
-    callouts:
-      - [1, "text=Parts used", "Every part you fitted"]
-      - [2, "text=Add part used", "Add one"]
-    :::
-
-2. Pick the part, set the quantity and add it. KART takes it from your hub's stock.
-
-    :::shot mech-svc-parts-added
-    caption: A brake pad set added to Parts used with quantity 1
-    url: /workshop/in-service
-    steps:
-      - Tap Add part used
-      - Search for brake pads (FKL-900001) and add quantity 1
-    callouts:
-      - [1, "text=FKL-900001", "The part you fitted"]
-    :::
-
-3. If you swapped a tracked component (for example a battery), add it under **Components replaced**.
+1. Every part you fitted goes under **Components replaced**, below the checklist. It lists the parts that fit this kart class.
 
     :::shot mech-svc-components
     caption: The Components replaced section with its search box
@@ -172,18 +148,43 @@ captions:
     steps:
       - Scroll to Components replaced
     callouts:
-      - [1, "text=Components replaced", "Tracked components only"]
+      - [1, "text=Components replaced", "Parts that fit this kart"]
     :::
 
-4. Write what you did under **Record work done**.
+2. Type part of the name in **Search components…**, then tap **Select** on the part.
 
-    :::shot mech-svc-work-done
-    caption: Record work done with a short note
+    :::shot mech-svc-parts
+    caption: Searching Components replaced for brake pads, with the Select button
     url: /workshop/in-service
     steps:
-      - Scroll to Record work done and type "Chain adjusted"
+      - Type brake pad in Search components
     callouts:
-      - [1, "text=Record work done", "A short note"]
+      - [1, "text=Components replaced", "Every part you fitted"]
+      - [2, "text=Select", "Pick the part"]
+    :::
+
+3. Tap **Add to components replaced**. The part shows under **Components replaced on this service**. KART takes it from your hub's stock when you complete the service.
+
+    :::shot mech-svc-parts-added
+    caption: A brake pad set added under Components replaced on this service
+    url: /workshop/in-service
+    steps:
+      - Tap Select on Brake pads (pair), FKL-900003
+      - Tap Add to components replaced
+    callouts:
+      - [1, "text=FKL-900003", "The part you fitted"]
+    :::
+
+4. To note what you did on a check, tap the note icon next to it (**Record work done**). Pick a common resolution or type a short note, then tap **Save**.
+
+    :::shot mech-svc-work-done
+    caption: The Record work done note on a check, with Work carried out
+    url: /workshop/in-service
+    steps:
+      - Tap the note icon next to a check
+      - Type "Chain adjusted"
+    callouts:
+      - [1, "text=Work carried out", "A short note"]
     :::
 
 !!! note "Remember"
@@ -242,13 +243,14 @@ captions:
 
 ## Already have a kart in service?
 
-1. If you tap another kart while one is running, KART says **You already have a kart in service**.
+1. If you start another kart (tap it, then **Start service**) while one is running, KART says **You already have a kart in service**.
 
     :::shot mech-svc-switch
     caption: The You already have a kart in service dialog with Pause and switch
     state: Alex has 203 in service and taps 204
     steps:
       - With 203 in service, tap 204 in the Requires service lane
+      - Tap Start service
     callouts:
       - [1, "text=You already have a kart in service", "Only one at a time"]
       - [2, "text=Pause and switch", "Pause 203 and start 204"]

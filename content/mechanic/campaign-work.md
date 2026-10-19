@@ -4,7 +4,7 @@
 persona: Alex Mechanic
 device: tablet
 url: /workshop/campaign-work
-state: "Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex; campaign part caliper seal kit FKL-900006, 1 per kart"
+state: "Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex; campaign part caliper seal kit FKL-900004, 1 per kart"
 :::
 
 A fleet campaign is the same job done on many karts, for example a part upgrade or an inspection. Your hub manager creates it. You do the work kart by kart on **Campaign work**.

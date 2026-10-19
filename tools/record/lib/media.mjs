@@ -1,0 +1,123 @@
+// Clip and GIF encoding with ffmpeg in Docker (one job at a time), and WebVTT captions from real step times.
+import fs from 'node:fs';
+import path from 'node:path';
+import { execFileSync, spawnSync } from 'node:child_process';
+import { REPO, RAW, VIDEO, GIF, HEAVY_PATTERN } from './config.mjs';
+
+export const FFMPEG_IMAGE = process.env.FKL_FFMPEG_IMAGE || 'jrottenberg/ffmpeg:6.1-alpine';
+
+// SPEC rule 5: wait while any other heavy job runs (the bracket pattern never matches pgrep itself).
+export function waitHeavy(log = console.log) {
+  for (let i = 0; ; i++) {
+    const r = spawnSync('pgrep', ['-af', HEAVY_PATTERN]);
+    const lines = r.stdout.toString().trim();
+    if (!lines) return;
+    if (i % 6 === 0) log(`  waiting for heavy job: ${lines.split('\n')[0].slice(0, 120)}`);
+    execFileSync('sleep', ['10']);
+  }
+}
+
+function ffmpeg(args, log) {
+  waitHeavy(log);
+  const rel = (p) => (p.startsWith(RAW) ? '/raw/' + path.relative(RAW, p) : p.startsWith(REPO) ? '/w/' + path.relative(REPO, p) : p);
+  const a = args.map((x) => (typeof x === 'string' ? rel(x) : x));
+  const uid = process.getuid(), gid = process.getgid();
+  const r = spawnSync('docker', ['run', '--rm', '-v', `${REPO}:/w`, '-v', `${RAW}:/raw:ro`, '-w', '/w', '--user', `${uid}:${gid}`, FFMPEG_IMAGE,
+    '-hide_banner', '-loglevel', 'error', '-y', ...a], { maxBuffer: 1 << 26 });
+  if (r.status !== 0) throw new Error(`ffmpeg failed: ${r.stderr.toString().slice(-1500)}`);
+}
+
+// A session result -> segments in clip order: [{file, from, to, g0}] (seconds in the page video; g0 = global start).
+export function segments(result, { start, end }) {
+  const segs = [];
+  const cuts = (result.cuts || []).filter(([a, b]) => b - a > 400).sort((x, y) => x[0] - y[0]);
+  for (const v of result.videos) {
+    for (const [a, b] of v.active) {
+      // the active window of this tab, minus the cut windows (a short 250 ms of each cut is kept)
+      let pieces = [[Math.max(a, start), Math.min(b ?? result.end, end)]];
+      for (const [ca, cb] of cuts) {
+        pieces = pieces.flatMap(([s, e]) => (cb <= s || ca >= e ? [[s, e]] : [[s, Math.max(s, ca + 150)], [Math.min(e, cb - 100), e]]));
+      }
+      for (const [s, e] of pieces) if (e - s > 200) segs.push({ file: v.path, from: (s - v.t0) / 1000, to: (e - v.t0) / 1000, g0: s, g1: e });
+    }
+  }
+  segs.sort((x, y) => x.g0 - y.g0);
+  return segs;
+}
+// Global ms -> seconds in the finished clip.
+function clipTime(segs, t) {
+  let acc = 0;
+  for (const s of segs) {
+    if (t <= s.g1) return acc + Math.max(0, t - s.g0) / 1000;  // a time inside a cut maps to the start of the next piece
+    acc += (s.g1 - s.g0) / 1000;
+  }
+  return acc;
+}
+
+const ts = (sec) => {
+  const ms = Math.round(sec * 1000), h = Math.floor(ms / 3600000), m = Math.floor((ms % 3600000) / 60000);
+  const s = Math.floor((ms % 60000) / 1000);
+  return `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}.${String(ms % 1000).padStart(3, '0')}`;
+};
+
+// Encode a clip: mp4 (H.264) + webm (VP9) + poster jpg + vtt.
+//   shot: shot-list entry; result: Session.close() result; opts: {lead (ms before first cue), tail (ms after last cue), poster (cue index or global ms)}
+export function buildClip(shot, result, opts = {}, log = console.log) {
+  const cues = result.cues;
+  if (cues.length !== shot.captions.length) throw new Error(`${shot.id}: ${cues.length} cues but ${shot.captions.length} captions`);
+  const start = Math.max(0, cues[0].t - (opts.lead ?? 900));
+  const end = Math.min(result.end, opts.end ?? result.end);
+  const segs = segments(result, { start, end });
+  if (!segs.length) throw new Error(`${shot.id}: no video segments`);
+  const dur = segs.reduce((a, s) => a + (s.g1 - s.g0), 0) / 1000;
+  const W = shot.device === 'phone' ? 390 : shot.device === 'desktop' ? 1440 : 1180;
+  const H = shot.device === 'phone' ? 844 : shot.device === 'desktop' ? 900 : 820;
+  const inputs = segs.flatMap((s) => ['-i', s.file]);
+  const chains = segs.map((s, i) => `[${i}:v]trim=start=${s.from.toFixed(3)}:end=${s.to.toFixed(3)},setpts=PTS-STARTPTS,fps=25,scale=${W}:${H}:flags=lanczos,setsar=1,format=yuv420p[v${i}]`);
+  const filter = `${chains.join(';')};${segs.map((_, i) => `[v${i}]`).join('')}concat=n=${segs.length}:v=1:a=0[out]`;
+  fs.mkdirSync(VIDEO, { recursive: true });
+  const base = path.join(VIDEO, shot.id);
+  log(`  encoding ${shot.id} (${dur.toFixed(1)} s, ${segs.length} segment(s))`);
+  ffmpeg([...inputs, '-filter_complex', filter, '-map', '[out]', '-an', '-c:v', 'libx264', '-preset', 'faster', '-crf', '28',
+    '-pix_fmt', 'yuv420p', '-movflags', '+faststart', `${base}.mp4`], log);
+  ffmpeg(['-i', `${base}.mp4`, '-an', '-c:v', 'libvpx-vp9', '-crf', '40', '-b:v', '0', '-row-mt', '1', '-deadline', 'good',
+    '-cpu-used', '5', '-threads', '4', `${base}.webm`], log);
+  // poster: a meaningful frame (default: 1.5 s after the cue in the middle)
+  const pc = opts.poster ?? Math.floor(cues.length / 2);
+  const pt = typeof pc === 'number' && pc < 1000 ? clipTime(segs, cues[pc].t) + 1.5 : clipTime(segs, pc);
+  ffmpeg(['-ss', Math.min(pt, dur - 0.2).toFixed(2), '-i', `${base}.mp4`, '-frames:v', '1', '-q:v', '4', `${base}.jpg`], log);
+  // captions
+  const lines = ['WEBVTT', ''];
+  const times = cues.map((c) => clipTime(segs, c.t));
+  times.forEach((t0, i) => {
+    const next = i + 1 < times.length ? times[i + 1] - 0.15 : dur;
+    let t1 = Math.min(t0 + 5.5, next, dur);
+    if (t1 - t0 < 2) {
+      t1 = Math.min(t0 + 2, dur);
+      if (i + 1 < times.length && t1 > times[i + 1]) log(`  WARNING ${shot.id}: cue ${i + 1} shorter than 2 s`);
+    }
+    lines.push(String(i + 1), `${ts(t0)} --> ${ts(t1)}`, cues[i].text || shot.captions[i], '');
+  });
+  fs.writeFileSync(`${base}.vtt`, lines.join('\n'));
+  const size = ['mp4', 'webm', 'jpg', 'vtt'].map((e) => fs.statSync(`${base}.${e}`).size).reduce((a, b) => a + b, 0);
+  log(`  clip ${shot.id}: ${dur.toFixed(1)} s, ${(size / 1048576).toFixed(2)} MB`);
+  return { duration: dur, size };
+}
+
+// GIF from a window of a session (global ms), max 800 px wide, palette, under 1.5 MB.
+export function buildGif(shot, result, { start, end }, log = console.log) {
+  const segs = segments(result, { start, end });
+  if (segs.length !== 1) throw new Error(`${shot.id}: GIF window must be on one tab`);
+  const s = segs[0];
+  fs.mkdirSync(GIF, { recursive: true });
+  const out = path.join(GIF, `${shot.id}.gif`);
+  for (const [fps, w] of [[10, 800], [8, 680], [6, 560]]) {
+    ffmpeg(['-ss', s.from.toFixed(3), '-t', (s.to - s.from).toFixed(3), '-i', s.file, '-vf',
+      `fps=${fps},scale='min(${w},iw)':-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=96:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle`,
+      '-loop', '0', out], log);
+    const mb = fs.statSync(out).size / 1048576;
+    log(`  gif ${shot.id}: ${(s.to - s.from).toFixed(1)} s, ${fps} fps, ${mb.toFixed(2)} MB`);
+    if (mb < 1.5) return;
+  }
+  throw new Error(`${shot.id}: GIF over 1.5 MB`);
+}

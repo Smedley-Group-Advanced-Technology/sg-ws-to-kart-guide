@@ -99,7 +99,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
 
     ![Join code or link and Or choose a hub on the waiting screen](../assets/img/start/start-pending-request.png){ loading=lazy }
 
-3. When you are approved, KART shows **Your account has been approved**. Tap **Continue**.
+3. When you are approved, the waiting page opens **Select your Hub** by itself (it checks about once a minute). If it shows **Your account has been approved** instead, tap **Continue**.
 
     ![Your account has been approved with the Continue button](../assets/img/start/start-approved.png){ loading=lazy }
 
@@ -115,13 +115,13 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
 
     ![Demo Hub North greyed out with a lock and Request Access](../assets/img/start/start-locked-hub.png){ loading=lazy }
 
-2. Tap **Request Access** next to the hub.
+2. Choose that hub, then tap one of its cards, for example **Technical**. KART shows **Hub Access Required**.
 
     ![The Hub Access Required dialog](../assets/img/start/start-request-access-dialog.png){ loading=lazy }
 
-3. Tap **Request Access** in the dialog. The request goes to an admin and to that hub's managers.
+3. Tap **Request Access** in the dialog. KART says **Access request sent successfully**. The request goes to an admin and to that hub's managers.
 
-    ![Request Access tapped in the Hub Access Required dialog](../assets/img/start/start-request-access-sent.png){ loading=lazy }
+    ![The Access request sent successfully message after tapping Request Access](../assets/img/start/start-request-access-sent.png){ loading=lazy }
 
 ## You can sign in but there is no Workshop card
 

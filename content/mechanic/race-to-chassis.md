@@ -56,10 +56,11 @@ caption: putting race numbers on chassis with drag and drop
 duration: 60
 steps:
   - Open Race to Chassis for Demo Practice Day on the tablet
-  - Drag race number 5 onto chassis 205
-  - Show the Chassis 205 marked used message with Undo
-  - Drag race number 6 onto chassis 207 and show Chassis 207 is not available
-  - Tap Cancel, then drag race number 6 onto chassis 206
+  - Tap Cadet at the top
+  - Drag race number 5 onto chassis 04 (Cadet 204)
+  - Show the Chassis 04 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Cadet 207) and show Chassis 07 is not available
+  - Tap Cancel, then drag race number 6 onto chassis 03 (Cadet 203)
   - Drag race number 6 back to the race number list to take it off
 captions:
   - "Drag a race number onto a chassis."
@@ -68,7 +69,9 @@ captions:
   - "Drag the number back to take it off."
 :::
 
-1. Find the race number in the **Race Number** list.
+1. Tap the kart class at the top, for example **Cadet**. The chassis show each kart's number in its class, so Cadet 204 is chassis **04**.
+
+2. Find the race number in the **Race Number** list.
 
     :::shot mech-r2c-dd-view
     caption: The drag and drop view with Chassis Number and Race Number columns
@@ -80,31 +83,31 @@ captions:
       - [3, "text=Chassis Number", "Karts of this hub"]
     :::
 
-2. Drag the number onto the chassis, for example race number **5** onto **205**.
+3. Drag the number onto the chassis, for example race number **5** onto chassis **04** (Cadet 204).
 
     :::gif mech-r2c-drag-gif
-    caption: Dragging race number 5 onto chassis 205
+    caption: Dragging race number 5 onto chassis 04, Cadet 204
     steps:
-      - Drag race number 5 onto chassis 205 slowly
+      - Drag race number 5 onto chassis 04 slowly
     :::
 
-3. KART says **Chassis 205 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake.
+4. KART says **Chassis 04 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake.
 
     :::shot mech-r2c-marked
-    caption: Chassis 205 marked used message with Undo
+    caption: Chassis 04 marked used message with Undo
     steps:
-      - Drop race number 5 on chassis 205
+      - Drop race number 5 on chassis 04
     callouts:
       - [1, "text=marked used", "Counted as used today"]
       - [2, "text=Undo", "Only for a mistake"]
     :::
 
-4. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
+5. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
 
     :::shot mech-r2c-takeoff
     caption: Take off chassis for a chassis with a race number
     steps:
-      - Tap chassis 205
+      - Tap chassis 01
     callouts:
       - [1, "text=Take off chassis", "Remove the number"]
     :::
@@ -121,7 +124,7 @@ device: phone
 steps:
   - Open Race to Chassis for Demo Practice Day on the phone
   - Tap the cell for race number 7 in the current session
-  - Tap chassis 302
+  - Tap Junior, then chassis 02 (Junior 302)
   - Show the marked used message
   - Tap Drag and drop view and back to Tap grid
 captions:
@@ -144,13 +147,13 @@ captions:
       - [2, "text=Current session", "This session"]
     :::
 
-2. Tap the chassis this race number drives, for example **302**.
+2. Tap the chassis this race number drives, for example chassis **02** in the **Junior** class (Junior 302).
 
     :::shot mech-r2c-tap-chassis
-    caption: Tap the chassis this race number drives, with 302 highlighted
+    caption: Tap the chassis this race number drives, with the Junior chassis list
     device: phone
     steps:
-      - Tap chassis 302
+      - Tap chassis 02 (Junior 302)
     callouts:
       - [1, "text=Tap the chassis this race number drives.", "Pick the chassis"]
     :::
@@ -168,12 +171,12 @@ captions:
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example **207**. KART says **Chassis 207 is not available** and why.
+1. Put a number on a chassis that is not available, for example Cadet chassis **07** (Cadet 207). KART says **Chassis 07 is not available** and why.
 
     :::shot mech-r2c-unavailable
-    caption: Chassis 207 is not available with the reason box and Assign anyway
+    caption: Chassis 07 (Cadet 207) is not available, with the reason box and Assign anyway
     steps:
-      - Drag race number 6 onto chassis 207
+      - Drag race number 6 onto chassis 07
     callouts:
       - [1, "text=is not available", "Repair Required: stopping ticket"]
       - [2, "text=4 to 500 characters.", "Give a reason"]
@@ -200,7 +203,7 @@ captions:
     :::shot mech-r2c-reassign
     caption: The Chassis reassignment question asking why the race number changed chassis
     steps:
-      - Drag race number 2 from its chassis onto chassis 104
+      - Drag race number 2 from chassis 02 onto chassis 03 (Cadet 203)
     callouts:
       - [1, "text=Logged. Why did the race number change chassis?", "Pick a reason"]
     :::

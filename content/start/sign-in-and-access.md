@@ -167,7 +167,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
     :::shot start-join-link
     caption: The Sign Up tab opened from a join link for Demo Hub
     persona: Jamie Newstarter
-    url: /auth?join=DEMOJOIN
+    url: /auth?join=DE0DE0000001
     state: "A Demo Hub join link exists (code shown in the URL); Jamie not signed up yet (record before Jamie's sign-up is seeded)"
     steps:
       - Open the join link
@@ -180,7 +180,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
     :::shot start-signup-name
     caption: Full Name filled in on the Sign Up tab
     persona: Jamie Newstarter
-    url: /auth?join=DEMOJOIN
+    url: /auth?join=DE0DE0000001
     steps:
       - Type Jamie Newstarter in Full Name
     callouts:
@@ -192,7 +192,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
     :::shot start-signup-initials
     caption: Initials JN typed in the Initials field
     persona: Jamie Newstarter
-    url: /auth?join=DEMOJOIN
+    url: /auth?join=DE0DE0000001
     steps:
       - Type JN in Initials
     callouts:
@@ -204,7 +204,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
     :::shot start-signup-email
     caption: Email and Password filled in on the Sign Up tab
     persona: Jamie Newstarter
-    url: /auth?join=DEMOJOIN
+    url: /auth?join=DE0DE0000001
     steps:
       - Type jamie.newstarter@demo-fkl.example in Email
       - Type a password in Password
@@ -257,7 +257,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
       - [3, "text=Send request", "Send it"]
     :::
 
-3. When you are approved, KART shows **Your account has been approved**. Tap **Continue**.
+3. When you are approved, the waiting page opens **Select your Hub** by itself (it checks about once a minute). If it shows **Your account has been approved** instead, tap **Continue**.
 
     :::shot start-approved
     caption: Your account has been approved with the Continue button
@@ -265,7 +265,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
     url: /pending
     state: "After Morgan Manager approves Jamie (record after the approvals clip)"
     steps:
-      - Sign in as Jamie after approval
+      - Wait on the waiting page while a manager approves Jamie
     callouts:
       - [1, "text=Your account has been approved", "You are in"]
       - [2, "text=Continue", "Tap Continue"]
@@ -291,26 +291,27 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
       - [2, "text=Request Access", "Ask for access"]
     :::
 
-2. Tap **Request Access** next to the hub.
+2. Choose that hub, then tap one of its cards, for example **Technical**. KART shows **Hub Access Required**.
 
     :::shot start-request-access-dialog
     caption: The Hub Access Required dialog
     url: /hub-selection
     steps:
-      - Tap Request Access next to Demo Hub North
+      - Choose Demo Hub North in the hub list
+      - Tap the Technical card
     callouts:
       - [1, "text=Hub Access Required", "Check the hub name"]
     :::
 
-3. Tap **Request Access** in the dialog. The request goes to an admin and to that hub's managers.
+3. Tap **Request Access** in the dialog. KART says **Access request sent successfully**. The request goes to an admin and to that hub's managers.
 
     :::shot start-request-access-sent
-    caption: Request Access tapped in the Hub Access Required dialog
+    caption: The Access request sent successfully message after tapping Request Access
     url: /hub-selection
     steps:
       - Tap Request Access in the dialog
     callouts:
-      - [1, "role=button[name='Request Access']", "Send the request"]
+      - [1, "text=Access request sent successfully", "The request is on its way"]
     :::
 
 ## You can sign in but there is no Workshop card

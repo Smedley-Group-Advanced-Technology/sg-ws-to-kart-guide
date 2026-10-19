@@ -1,0 +1,49 @@
+# Deploy is OFF until the visibility decision is made (internal-only hosting vs public GitHub Pages).
+# The build job always runs; the deploy job only runs when the repository variable PAGES_PUBLISH is 'true'.
+name: Guide site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install MkDocs Material (pinned)
+        run: pip install -r requirements.txt
+      - name: Check text and shot list
+        run: python tools/check_guide.py
+      # Non-strict for now: screenshots, clips and GIFs are recorded later, so missing-media warnings are expected.
+      # Switch to `mkdocs build --strict` (and add `--media` to the check above) once every file in shots/shots.yaml exists.
+      - name: Build site
+        run: mkdocs build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    if: vars.PAGES_PUBLISH == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

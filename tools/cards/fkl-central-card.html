@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FKL Central and admin quick reference card: From the Workshop App to KART</title>
+<style>
+@page { size: A4 portrait; margin: 0; }
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { position: relative; width: 210mm; height: 297mm; overflow: hidden; font-family: Arial, Helvetica, sans-serif; color: #000; background: #fff;
+  -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.banner { background: #000; color: #ffff00; text-align: center; font-family: "Arial Black", Arial, sans-serif; font-weight: 900;
+  text-transform: uppercase; letter-spacing: 0.12em; font-size: 10pt; padding: 2.2mm 0; }
+header { background: #0000ff; color: #fff; display: flex; align-items: center; gap: 8mm; padding: 6mm 12mm; }
+header img { height: 14mm; filter: brightness(0) invert(1); }
+header h1 { margin: 0; font-family: "Arial Black", Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; font-size: 21pt; line-height: 1.1; }
+header p { margin: 1mm 0 0 0; font-size: 10.5pt; }
+main { padding: 6mm 12mm 0 12mm; display: grid; grid-template-columns: 1.45fr 1fr; gap: 7mm; }
+h2 { font-family: "Arial Black", Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12pt;
+  margin: 0 0 3mm 0; border-bottom: 1.2mm solid #0000ff; padding-bottom: 1mm; }
+ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
+ol li { counter-increment: s; position: relative; padding: 0 0 0 11mm; margin: 0 0 3.2mm 0; font-size: 11.5pt; line-height: 1.3; }
+ol li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 8mm; height: 8mm; background: #0000ff; color: #fff;
+  font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 11pt; text-align: center; line-height: 8mm; }
+b { font-family: Monaco, "Courier New", monospace; font-weight: bold; font-size: 10.5pt; background: #f0f0f0; padding: 0 1mm; }
+.status { display: flex; align-items: flex-start; gap: 3mm; margin: 0 0 2.6mm 0; font-size: 10.5pt; line-height: 1.25; }
+.sw { flex: 0 0 6mm; height: 6mm; border: 0.3mm solid #000; }
+.box { margin-top: 5mm; border-left: 2mm solid #ff0000; border-top: 0.6mm solid #ff0000; border-right: 0.6mm solid #ff0000; border-bottom: 0.6mm solid #ff0000; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.box strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
+.note { margin-top: 4mm; background: #e8ddfc; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.note strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
+footer { position: absolute; bottom: 0; left: 0; right: 0; background: #141414; color: #fff; font-size: 8.5pt; padding: 3mm 12mm; display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+<div class="banner">Draft, pending approval by Sammy / Joe</div>
+<header>
+<img src="../../docs/assets/brand/fkl-logo-blue.png" alt="FAT Karting League">
+<div><h1>FKL Central and admin</h1><p>Master data for every hub. From the Workshop App to KART.</p></div>
+</header>
+<main>
+<section><h2>Steps</h2><ol>
+<li>Select your Hub &gt; <b>FKL Central</b>.</li>
+<li><b>Parts catalogue</b> &gt; <b>Master parts</b>: search, <b>Add part</b> (MPN required), <b>Edit part</b>, <b>Suppliers</b>.</li>
+<li><b>Catalogues</b> and <b>Hub catalogues</b>: which parts each hub sees; exact kart generations.</li>
+<li><b>Part requests</b> &gt; <b>Review</b>: <b>Link part</b>, <b>Add part</b>, <b>Keep local</b> or <b>Reject request</b>.</li>
+<li><b>Master review</b>: check hub-local parts, merge into a master part.</li>
+<li><b>Service checklists</b>: <b>New draft</b> for a kart class, <b>Add check</b>.</li>
+<li><b>Check before publishing</b>, then <b>Publish</b> with <b>What changed (required)</b>.</li>
+<li><b>Servicing</b>: tyre tread, alignment, battery voltage, axle run-out. <b>Save</b>.</li>
+<li>Admins: <b>Admin Access</b> &gt; <b>User Administration</b> &gt; <b>All Users</b>.</li>
+<li>Set <b>Hub Access</b> and <b>Permissions</b>; save each.</li>
+<li><b>Deactivate user</b> is a soft switch-off; <b>Reactivate user</b> undoes it.</li>
+</ol></section>
+<section>
+<div class="note"><strong>Remember</strong>Your hub lead and FKL Central agree new parts. Hub managers can give only Workshop and Purchasing.</div>
+<div class="box"><strong>Watch out</strong>Publishing a checklist changes it for every hub with that kart class from the next service. Tell the hub managers first.</div>
+</section>
+</main>
+<footer><span>Official guide of FAT Karting League, part of Smedley Group. Internal use only.</span><span>Draft 2026-10</span></footer>
+</body>
+</html>

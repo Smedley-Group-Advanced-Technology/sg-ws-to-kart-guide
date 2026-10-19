@@ -1,0 +1,23 @@
+# Build output
+site/
+
+# Python environments (the tools venv lives outside the repo)
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Raw media from the recorder (only annotated and encoded files are committed)
+raw/
+media-raw/
+docs/assets/img/**/*.raw.png
+docs/assets/img/**/raw/
+docs/assets/video/**/*.raw.*
+*.raw.mp4
+*.raw.webm
+*.mov
+*.mkv
+
+# Local secrets, never committed
+.env
+*.env

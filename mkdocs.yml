@@ -1,0 +1,101 @@
+site_name: From the Workshop App to KART
+site_description: Official FAT Karting League guide for moving from the FKL Workshop App to KART (FKL Kart Allocation & Reliability Tracking).
+site_author: FAT Karting League
+copyright: Official guide of FAT Karting League, part of Smedley Group. Internal use only.
+use_directory_urls: false
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  logo: assets/brand/fkl-logo-white.svg
+  favicon: assets/brand/favicon.png
+  font: false
+  palette:
+    scheme: default
+    primary: custom
+    accent: custom
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+extra_css:
+  - assets/brand/brand.css
+  - assets/brand/print.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.keys
+
+extra:
+  generator: false
+
+nav:
+  - Home: index.md
+  - Getting started:
+      - Signing in and access: start/sign-in-and-access.md
+      - Finding your way: start/finding-your-way.md
+      - Kart statuses: start/statuses.md
+      - Incidents, tickets and repairs: start/problems-explained.md
+  - Mechanic:
+      - Your path: mechanic/index.md
+      - The fleet board: mechanic/fleet-board.md
+      - Doing a service: mechanic/service-turn.md
+      - Pause and resume: mechanic/pause-and-resume.md
+      - Report a problem: mechanic/report-a-problem.md
+      - Reliability tickets: mechanic/reliability-ticket.md
+      - Repairs and parts used: mechanic/repairs-and-parts.md
+      - Campaign work: mechanic/campaign-work.md
+      - Marking karts used: mechanic/mark-used.md
+      - Race to Chassis: mechanic/race-to-chassis.md
+      - The kart page: mechanic/kart-page.md
+      - Your weekly schedule: mechanic/schedule.md
+      - Stores: mechanic/stores.md
+  - Hub manager:
+      - Your path: hub-manager/index.md
+      - Workshop Manager tour: hub-manager/workshop-manager.md
+      - Kart allocation: hub-manager/kart-allocation.md
+      - Campaigns: hub-manager/campaigns.md
+      - Schedules and targets: hub-manager/schedules-and-targets.md
+      - Stock and parts needed: hub-manager/stock-and-parts-needed.md
+      - Orders: hub-manager/orders.md
+      - Hub catalogue: hub-manager/hub-catalogue.md
+      - Approvals: hub-manager/approvals.md
+      - Reports: hub-manager/reports.md
+  - FKL Central:
+      - Your path: fkl-central/index.md
+      - Parts catalogue: fkl-central/parts-catalogue.md
+      - Part requests: fkl-central/part-requests.md
+      - Service checklists: fkl-central/checklists.md
+      - Servicing thresholds: fkl-central/servicing-thresholds.md
+      - Users and permissions: fkl-central/users.md
+  - Remote support:
+      - Your path: remote-support/index.md
+      - KART Comms: remote-support/comms.md
+      - Support cover: remote-support/cover.md
+      - Direct chats: remote-support/direct-chats.md
+  - Switch-over day: switch-over/index.md
+  - Help:
+      - Where did it go?: where-did-it-go.md
+      - FAQ: faq.md
+      - Troubleshooting: troubleshooting.md
+      - Glossary: glossary.md
+      - Quick reference cards: cards/index.md

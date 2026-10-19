@@ -1,0 +1,141 @@
+/* FKL brand for "From the Workshop App to KART" (FKL brand guidelines v0.36).
+   Colours: FKL Blue #0000FF, white, black. Accents: Yellow #FFFF00, Future Rose #FF9191,
+   Lilac #E8DDFC, Light Grey #F0F0F0, Dark Grey #141414, FAT Red #FF0000 (warnings only). */
+
+:root {
+  --fkl-blue: #0000ff;
+  --fkl-yellow: #ffff00;
+  --fkl-rose: #ff9191;
+  --fkl-lilac: #e8ddfc;
+  --fkl-light-grey: #f0f0f0;
+  --fkl-dark-grey: #141414;
+  --fkl-red: #ff0000;
+  --fkl-head-font: "Arial Black", "Arial Bold", Arial, Helvetica, sans-serif;
+  --fkl-body-font: Arial, Helvetica, sans-serif;
+  --fkl-mono-font: Monaco, "Courier New", Courier, monospace;
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #0000ff;
+  --md-primary-fg-color--light: #3333ff;
+  --md-primary-fg-color--dark: #0000cc;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.85);
+  --md-accent-fg-color: #0000ff;
+  --md-accent-fg-color--transparent: rgba(0, 0, 255, 0.1);
+  --md-default-fg-color: #000000;
+  --md-default-fg-color--light: #141414;
+  --md-typeset-color: #000000;
+  --md-typeset-a-color: #0000ff;
+  --md-text-font-family: var(--fkl-body-font);
+  --md-code-font-family: var(--fkl-mono-font);
+  --md-footer-bg-color: #141414;
+  --md-footer-bg-color--dark: #000000;
+}
+
+body, .md-typeset { font-family: var(--fkl-body-font); }
+.md-typeset { font-size: 0.85rem; line-height: 1.6; }
+.md-typeset code, .md-typeset kbd, .fkl-mono { font-family: var(--fkl-mono-font); }
+
+/* Header and tabs: FKL Blue, white text */
+.md-header, .md-tabs { background-color: #0000ff; color: #ffffff; }
+.md-tabs__link { color: #ffffff; opacity: 0.85; font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.7rem; }
+.md-tabs__link--active, .md-tabs__link:hover { color: #ffffff; opacity: 1; text-decoration: underline; text-decoration-color: #ffff00; text-decoration-thickness: 3px; text-underline-offset: 6px; }
+.md-header__title { font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.08em; }
+.md-header__button.md-logo img, .md-header__button.md-logo svg { height: 1.6rem; width: auto; }
+.md-header__button.md-logo { padding: 0.4rem 0.6rem; } /* clear space around the logo */
+
+/* Draft banner: yellow on black, not dismissible */
+.md-banner { background-color: #000000; color: #ffff00; }
+.md-banner__inner { margin: 0.3rem auto; font-size: 0.8rem; }
+.fkl-draft-banner { font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; color: #ffff00; }
+
+/* Headlines: all caps, heavy, wide letter-spacing */
+.md-typeset h1, .md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  font-family: var(--fkl-head-font);
+  font-weight: 900;
+  font-stretch: expanded;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+.md-typeset h1 { color: #0000ff; font-size: 1.7rem; line-height: 1.2; }
+.md-typeset h2 { font-size: 1.15rem; border-bottom: 3px solid #0000ff; padding-bottom: 0.2rem; }
+.md-typeset h3 { font-size: 0.95rem; }
+
+/* High contrast links and tables */
+.md-typeset a { text-decoration: underline; text-underline-offset: 2px; }
+.md-typeset a.headerlink { text-decoration: none; }
+.md-typeset table:not([class]) { font-size: 0.8rem; border: 1px solid #141414; }
+.md-typeset table:not([class]) th { background: #0000ff; color: #ffffff; font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.04em; font-size: 0.7rem; }
+.md-typeset table:not([class]) tr:nth-child(even) td { background: #f0f0f0; }
+
+/* Big tap targets for tablets (at least 44 px) */
+.md-nav__link, .md-tabs__link, .md-footer__link, .md-search-result__link, .md-top { min-height: 44px; display: flex; align-items: center; }
+.md-header__button { min-width: 44px; min-height: 44px; }
+.md-typeset .md-button { min-height: 44px; padding: 0.6em 1.4em; font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.06em; border-radius: 0; }
+.md-typeset .md-button--primary { background: #0000ff; border-color: #0000ff; color: #ffffff; }
+
+/* Labels and keys in mono */
+.md-typeset kbd { font-size: 0.8em; border: 1px solid #141414; box-shadow: 0 2px 0 #141414; }
+
+/* Admonitions mapped to the brand */
+.md-typeset .admonition, .md-typeset details { border-width: 0 0 0 6px; border-radius: 0; font-size: 0.8rem; box-shadow: none; }
+.md-typeset .admonition.tip, .md-typeset details.tip { border-color: #0000ff; background: #f5f5ff; }
+.md-typeset .tip > .admonition-title, .md-typeset .tip > summary { background: #0000ff; color: #ffffff; }
+.md-typeset .tip > .admonition-title::before, .md-typeset .tip > summary::before { background-color: #ffffff; }
+.md-typeset .admonition.warning, .md-typeset details.warning { border-color: #ff0000; border-width: 3px 3px 3px 6px; border-style: solid; background: #ffffff; }
+.md-typeset .warning > .admonition-title, .md-typeset .warning > summary { background: #ffffff; color: #000000; border-bottom: 2px solid #ff0000; }
+.md-typeset .warning > .admonition-title::before, .md-typeset .warning > summary::before { background-color: #ff0000; }
+.md-typeset .admonition.note, .md-typeset details.note { border-color: #7a5cc4; background: #e8ddfc; }
+.md-typeset .note > .admonition-title, .md-typeset .note > summary { background: #d6c6fa; color: #000000; }
+.md-typeset .note > .admonition-title::before, .md-typeset .note > summary::before { background-color: #000000; }
+.md-typeset .admonition.info, .md-typeset details.info { border-color: #000000; background: #ffffcc; }
+.md-typeset .info > .admonition-title, .md-typeset .info > summary { background: #ffff00; color: #000000; }
+.md-typeset .info > .admonition-title::before, .md-typeset .info > summary::before { background-color: #000000; }
+.md-typeset .admonition.abstract, .md-typeset details.abstract { border-color: #141414; background: #f0f0f0; }
+.md-typeset .abstract > .admonition-title, .md-typeset .abstract > summary { background: #141414; color: #ffffff; }
+.md-typeset .abstract > .admonition-title::before, .md-typeset .abstract > summary::before { background-color: #ffffff; }
+.md-typeset .admonition-title, .md-typeset summary { font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.72rem; }
+
+/* Step screenshots, clips and GIFs */
+.md-content img { max-width: 100%; height: auto; border: 1px solid #c8c8c8; background: #ffffff; }
+.md-content .fkl-noborder img, .md-content img.fkl-noborder { border: 0; }
+.md-typeset ol > li { margin-bottom: 1.1em; }
+.md-typeset ol > li img { display: block; margin-top: 0.5em; }
+figure.clip { margin: 1.2em 0; max-width: 100%; }
+figure.clip video { max-width: 100%; height: auto; border: 2px solid #000000; background: #000000; }
+figure.clip figcaption { font-size: 0.75rem; font-family: var(--fkl-mono-font); color: #141414; text-align: left; }
+
+/* Status colour swatches */
+.swatch { display: inline-block; width: 1.1em; height: 1.1em; vertical-align: -0.2em; border: 1px solid #000000; margin-right: 0.35em; }
+.sw-ready { background: #059669; }
+.sw-requires { background: #f59e0b; }
+.sw-inprogress { background: #0284c7; }
+.sw-paused { background: #64748b; }
+.sw-repair-needed { background: #9333ea; }
+.sw-repair-required { background: #dc2626; }
+.sw-ready-to-repair { background: #f97316; }
+.sw-waiting { background: #b91c1c; }
+.sw-campaign { background: #4f46e5; }
+.sw-tag-campaign { background: #facc15; }
+
+/* Home page: pick your role cards */
+.fkl-roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.md-typeset .fkl-roles a.fkl-role { display: block; min-height: 8rem; padding: 1.1rem 1.2rem; background: #0000ff; color: #ffffff; text-decoration: none; border: 3px solid #0000ff; }
+.md-typeset .fkl-roles a.fkl-role:hover, .md-typeset .fkl-roles a.fkl-role:focus { background: #000000; border-color: #ffff00; }
+.fkl-role strong { display: block; font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.08em; font-size: 1.05rem; margin-bottom: 0.4rem; }
+.fkl-role span { font-size: 0.8rem; }
+.fkl-links { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.8rem; margin: 1rem 0; }
+.md-typeset .fkl-links a { display: flex; align-items: center; min-height: 56px; padding: 0.6rem 1rem; border: 3px solid #000000; color: #000000; text-decoration: none; font-family: var(--fkl-head-font); text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.75rem; }
+.md-typeset .fkl-links a:hover, .md-typeset .fkl-links a:focus { background: #ffff00; }
+
+/* IFFFUTURE ticker strip (home page only) */
+.fkl-ticker { overflow: hidden; white-space: nowrap; background: #000000; color: #ffff00; font-family: var(--fkl-head-font); letter-spacing: 0.3em; font-size: 0.7rem; padding: 0.25rem 0; margin: 0 0 1.2rem 0; }
+.fkl-ticker span { display: inline-block; padding-left: 100%; animation: fkl-ticker 30s linear infinite; }
+@keyframes fkl-ticker { from { transform: translateX(0); } to { transform: translateX(-100%); } }
+@media (prefers-reduced-motion: reduce) { .fkl-ticker span { animation: none; padding-left: 0; } }
+
+/* Footer */
+.md-footer-meta { background: #000000; }
+.md-copyright { color: #ffffff; font-size: 0.7rem; }

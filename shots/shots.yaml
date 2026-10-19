@@ -1,0 +1,5693 @@
+# Shot list for the guide: one entry per screenshot, clip and GIF used in docs/.
+# Format: see research SPEC (id, kind, page, persona, device, url, state, steps, callouts, caption, captions, duration).
+# Devices: tablet = 1180x820 landscape, phone = 390x844, desktop = 1440x900. Base URL http://localhost:9080 (local guide stack, demo data only).
+# Screenshots go to docs/assets/img/<section>/<id>.png (section = page folder, 'general' for top-level pages),
+# clips to docs/assets/video/<id>.mp4/.webm/.vtt/.jpg, GIFs to docs/assets/gif/<id>.gif.
+# URL placeholders: {kart:NNN} = id of the Demo Hub kart shown as NNN (e.g. {kart:207}), {campaign} = id of Junior caliper seal upgrade,
+# {task:NNN} = that campaign's task for kart NNN, {hub} = Demo Hub id. Callout targets are Playwright-style selectors (text=, role=, label=, css=).
+# Clip captions: one VTT cue per line, each shown 2 to 6 seconds while that action happens; leave silent gaps between cues on longer clips.
+- id: fc-checklist-clip
+  kind: clip
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
+  steps:
+  - Open FKL Central, Service checklists
+  - Tap New draft on the Cadet row
+  - Tap Add check in a section, type the Label, choose By hand, tap Save check
+  - Tap Check before publishing
+  - Tap Publish, type What changed and confirm
+  caption: making a draft of the Cadet checklist, adding a check and publishing it
+  captions:
+  - Open Service checklists.
+  - Make a new draft for the class.
+  - Add or change checks.
+  - Check it before publishing.
+  - Publish with a note of what changed.
+  duration: 70
+- id: fc-chk-list
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
+  steps:
+  - Tap Service checklists
+  callouts:
+  - n: 1
+    target: text=Kart class
+    note: One row per class
+  - n: 2
+    target: text=Published
+    note: The version in use
+  caption: Service checklists with a row per kart class and the Shared checklist
+- id: fc-chk-draft
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
+  steps:
+  - Find the Cadet row
+  callouts:
+  - n: 1
+    target: text=New draft
+    note: Start a change
+  caption: New draft on the Cadet row
+- id: fc-chk-add
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Cadet draft open
+  steps:
+  - Tap New draft
+  callouts:
+  - n: 1
+    target: text=Add section
+    note: New section
+  - n: 2
+    target: text=Add check
+    note: New check
+  caption: The checklist editor with Add section and Add check
+- id: fc-chk-check
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Cadet draft open
+  steps:
+  - Tap Add check
+  - Type "Rear sprocket guard secure" in Label
+  callouts:
+  - n: 1
+    target: text=Label
+    note: What the mechanic checks
+  - n: 2
+    target: text=By hand (the mechanic ticks it)
+    note: Ticked by hand
+  caption: The check dialog with Label, Optional and Answer
+- id: fc-chk-save
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Cadet draft open
+  steps:
+  - Look at Readings
+  callouts:
+  - n: 1
+    target: text=Add reading
+    note: A value to type in
+  - n: 2
+    target: text=Save check
+    note: Save
+  caption: Readings with Add reading and Save check
+- id: fc-chk-verify
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Cadet draft open with the new check
+  steps:
+  - Tap Check before publishing
+  callouts:
+  - n: 1
+    target: text=Check before publishing
+    note: Catch mistakes first
+  caption: Check before publishing in the editor
+- id: fc-chk-publish
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=checklists
+  state: Cadet draft open with the new check
+  steps:
+  - Tap Publish
+  - Type "Added rear sprocket guard check"
+  callouts:
+  - n: 1
+    target: text=What changed (required)
+    note: Tell the hubs what is new
+  caption: Publish with What changed (required)
+- id: fc-chk-mechanic
+  kind: screenshot
+  page: fkl-central/checklists.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has 203 in service
+  steps:
+  - Open Servicing for 203
+  callouts:
+  - n: 1
+    target: css=[role=grid]
+    note: One cell per check
+  caption: The Cadet checklist as a mechanic sees it on Servicing
+- id: fc-path-overview
+  kind: screenshot
+  page: fkl-central/index.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central
+  state: Taylor Central signed in (admin and FKL Central)
+  steps:
+  - On Select your Hub tap FKL Central
+  callouts:
+  - n: 1
+    target: text=Parts catalogue
+    note: Master parts and requests
+  - n: 2
+    target: text=Servicing
+    note: Thresholds
+  - n: 3
+    target: text=Service checklists
+    note: Checklists per class
+  caption: The FKL Central page with its tabs
+- id: fc-review-clip
+  kind: clip
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Open FKL Central, Parts catalogue, Part requests
+  - Tap Review on Steering column bush
+  - Choose Add a new part, check name, MPN and category
+  - Tap Add part and show Part added to the catalogue
+  caption: reviewing the Steering column bush request from Demo Hub
+  captions:
+  - Open Part requests.
+  - Tap Review.
+  - Link a part, add a new one, keep it local or reject.
+  - Save. The hub sees the result.
+  duration: 45
+- id: fc-req-list
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Tap Part requests
+  callouts:
+  - n: 1
+    target: text=Part requests
+    note: With a badge
+  - n: 2
+    target: text=Steering column bush
+    note: From Demo Hub
+  caption: Part requests with Steering column bush waiting
+- id: fc-req-review
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Tap Review on Steering column bush
+  callouts:
+  - n: 1
+    target: text=Review part request
+    note: Four choices
+  caption: The Review part request dialog
+- id: fc-req-link
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Choose Link an existing part
+  callouts:
+  - n: 1
+    target: text=Link an existing part
+    note: Already in the catalogue
+  - n: 2
+    target: text=Link part
+    note: Link it
+  caption: Link an existing part with the part search
+- id: fc-req-add
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Choose Add a new part
+  callouts:
+  - n: 1
+    target: text=Add a new part
+    note: New master part
+  - n: 2
+    target: text=An MPN is required for a new part.
+    note: MPN needed
+  caption: Add a new part with name, MPN and category
+- id: fc-req-local
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Choose Keep as a hub-local part
+  callouts:
+  - n: 1
+    target: text=Keep local
+    note: Only that hub sees it
+  caption: Keep as a hub-local part
+- id: fc-req-reject
+  kind: screenshot
+  page: fkl-central/part-requests.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Pending part request Steering column bush from Demo Hub
+  steps:
+  - Choose Reject
+  callouts:
+  - n: 1
+    target: text=Reason (shown to the hub)
+    note: The hub reads this
+  - n: 2
+    target: text=Reject request
+    note: Reject
+  caption: Reject with Reason (shown to the hub)
+- id: fc-parts-master
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Tap Parts catalogue
+  callouts:
+  - n: 1
+    target: text=Master parts
+    note: The master list
+  - n: 2
+    target: text=Add part
+    note: New part
+  caption: Master parts with the search box and Add part
+- id: fc-parts-search
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Type FKL-900004 in the search box
+  callouts:
+  - n: 1
+    target: css=input[placeholder='Search name, FKL number or MPN']
+    note: Search
+  caption: Searching master parts for FKL-900004
+- id: fc-parts-edit
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Find the front bumper row
+  callouts:
+  - n: 1
+    target: text=Edit part
+    note: Change details
+  - n: 2
+    target: text=Suppliers
+    note: Supplier list
+  caption: Edit part and Suppliers on the front bumper row
+- id: fc-parts-add
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Tap Add part
+  callouts:
+  - n: 1
+    target: text=Manufacturer part no.
+    note: Required
+  caption: The Add part form
+- id: fc-cat-list
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Tap Catalogues
+  callouts:
+  - n: 1
+    target: text=Catalogues
+    note: Sets of parts
+  caption: The Catalogues tab with FKL Master
+- id: fc-cat-generation
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Open a catalogue
+  callouts:
+  - n: 1
+    target: text=Kart generation
+    note: One exact generation
+  caption: Kart generation on a catalogue
+- id: fc-cat-hubs
+  kind: screenshot
+  page: fkl-central/parts-catalogue.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=bom
+  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
+    seal kit); default catalogue FKL Master
+  steps:
+  - Tap Hub catalogues
+  callouts:
+  - n: 1
+    target: text=Hub catalogues
+    note: Per hub
+  caption: Hub catalogues showing the catalogue in use per hub
+- id: fc-thr-tab
+  kind: screenshot
+  page: fkl-central/servicing-thresholds.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=servicing
+  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
+  steps:
+  - Tap Servicing
+  callouts:
+  - n: 1
+    target: text=Tyre tread threshold
+    note: Minimum tread depth
+  - n: 2
+    target: text=Front spindle alignment limits
+    note: Toe and camber
+  caption: The Servicing tab with the thresholds
+- id: fc-thr-battery
+  kind: screenshot
+  page: fkl-central/servicing-thresholds.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=servicing
+  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
+  steps:
+  - Scroll to Battery voltage threshold
+  callouts:
+  - n: 1
+    target: text=Battery voltage threshold
+    note: Minimum battery voltage (V)
+  caption: Battery voltage threshold with the minimum voltage
+- id: fc-thr-axle
+  kind: screenshot
+  page: fkl-central/servicing-thresholds.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=servicing
+  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
+  steps:
+  - Scroll to Axle run-out tolerance
+  callouts:
+  - n: 1
+    target: text=Axle run-out tolerance
+    note: Maximum axle run-out (mm)
+  caption: Axle run-out tolerance with the maximum run-out
+- id: fc-thr-save
+  kind: screenshot
+  page: fkl-central/servicing-thresholds.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=servicing
+  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
+  steps:
+  - Tap Save
+  callouts:
+  - n: 1
+    target: text=Save
+    note: Save the limits
+  caption: The Save button on the Servicing tab
+- id: fc-users-tab
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Tap Admin Access
+  callouts:
+  - n: 1
+    target: text=User Administration
+    note: All accounts
+  - n: 2
+    target: text=Pending User Approvals
+    note: Waiting sign-ups
+  caption: User Administration on the Admin page
+- id: fc-users-list
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Scroll to All Users
+  callouts:
+  - n: 1
+    target: text=All Users
+    note: Every account
+  - n: 2
+    target: text=Alex Mechanic
+    note: Tap to open
+  caption: All Users with Alex Mechanic
+- id: fc-users-hubs
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Tap Alex Mechanic
+  callouts:
+  - n: 1
+    target: text=Hub Access
+    note: Which hubs
+  - n: 2
+    target: text=Save Hub Access
+    note: Save
+  caption: Hub Access with Demo Hub ticked and Save Hub Access
+- id: fc-users-perms
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Scroll to Permissions
+  callouts:
+  - n: 1
+    target: text=Permissions
+    note: What they can do
+  - n: 2
+    target: text=Save Permissions
+    note: Save
+  caption: Permissions with Workshop ticked and Save Permissions
+- id: fc-users-create
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Tap Create user
+  callouts:
+  - n: 1
+    target: text=Create user
+    note: New account
+  caption: The Create user form on the Admin page
+- id: fc-users-temp
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - 'Fill in the form for a demo account and tap Create user (recorder: delete the account afterwards)'
+  callouts:
+  - n: 1
+    target: text=Copy password
+    note: Copy it
+  caption: Temporary password with Copy password and the confirm tick
+- id: fc-users-deactivate
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  steps:
+  - Open a demo user's details
+  callouts:
+  - n: 1
+    target: text=Deactivate user
+    note: Soft switch-off
+  caption: Deactivate user in the user details
+- id: fc-users-reactivate
+  kind: screenshot
+  page: fkl-central/users.md
+  persona: Taylor Central
+  device: desktop
+  url: /admin?tab=users
+  state: A demo account deactivated for the shot
+  steps:
+  - Open the deactivated demo user
+  callouts:
+  - n: 1
+    target: text=Reactivate user
+    note: Switch back on
+  caption: Reactivate user on a deactivated account
+- id: hm-appr-button
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-selection
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Choose Demo Hub
+  callouts:
+  - n: 1
+    target: text=Hub Manager
+    note: Your dashboard
+  caption: The Hub Manager button on Select your Hub
+- id: hm-appr-tile
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Open the Hub Manager dashboard
+  callouts:
+  - n: 1
+    target: text=Pending approvals
+    note: Sign-ups and access requests
+  caption: The Pending approvals tile showing 1 waiting
+- id: hm-approve-clip
+  kind: clip
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Open the Hub Manager dashboard and tap Pending approvals
+  - On Requests, show Jamie's Sign-up row via join link
+  - Tap Approve
+  - Show Request approved and the empty list
+  caption: approving Jamie Newstarter's join request
+  captions:
+  - Open Pending approvals.
+  - Check who is asking and for which hub.
+  - Tap Approve.
+  - They can sign in now.
+  duration: 40
+- id: hm-appr-row
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap Pending approvals
+  callouts:
+  - n: 1
+    target: text=Sign-up
+    note: A new account
+  - n: 2
+    target: text=via join link
+    note: Used your link
+  caption: Jamie Newstarter's Sign-up row via join link
+- id: hm-appr-approve
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap Approve
+  callouts:
+  - n: 1
+    target: text=Approve
+    note: Let them in
+  caption: The Approve button on the request row
+- id: hm-appr-done
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Wait for Request approved
+  callouts:
+  - n: 1
+    target: text=Request approved
+    note: Done
+  caption: Request approved message
+- id: hm-join-tab
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap the Join links tab
+  callouts:
+  - n: 1
+    target: text=Join links
+    note: Your hub's links
+  - n: 2
+    target: text=Create join link
+    note: New link
+  caption: The Join links tab with Create join link
+- id: hm-join-form
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Type 14 in Valid for (days), 5 in Maximum uses, "New mechanics" in Label
+  callouts:
+  - n: 1
+    target: text=Valid for (days)
+    note: 1 to 90 days
+  caption: The join link form with Valid for, Maximum uses and Label
+- id: hm-join-copy
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap Create join link
+  - Tap Copy link
+  callouts:
+  - n: 1
+    target: text=Copy link
+    note: Send it to the new starter
+  caption: The new link with Copy link
+- id: hm-create-form
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap the Create user tab
+  callouts:
+  - n: 1
+    target: text=Full Name
+    note: Their full name
+  - n: 2
+    target: text=Repeat e-mail
+    note: Typed twice to avoid mistakes
+  caption: The Create user form
+- id: hm-create-perms
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Choose Demo Hub and tick Workshop
+  callouts:
+  - n: 1
+    target: text=Hub managers can give Workshop and Purchasing only.
+    note: Your limit
+  caption: Hub Demo Hub and the Workshop permission ticked
+- id: hm-create-password
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tap Create user
+  callouts:
+  - n: 1
+    target: text=Temporary password
+    note: Shown only now
+  - n: 2
+    target: text=Copy password
+    note: Copy it
+  caption: Temporary password with Copy password
+- id: hm-create-done
+  kind: screenshot
+  page: hub-manager/approvals.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-manager
+  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
+  steps:
+  - Tick the box and tap Done
+  callouts:
+  - n: 1
+    target: text=I have passed the password on
+    note: Confirm
+  caption: I have passed the password on ticked, with Done
+- id: hm-campaign-clip
+  kind: clip
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=campaigns
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Open Workshop Manager, Campaigns, tap New campaign
+  - Type a campaign name, choose Integrated and a work type
+  - Choose Fleet class Junior, Lead mechanic Alex Mechanic, dates
+  - Choose Selected karts only and tick three karts
+  - Add the caliper seal kit as a required part, 1 per kart
+  - Tap Create campaign and show the detail page
+  caption: creating an integrated campaign for Juniors and adding karts
+  captions:
+  - Open Campaigns and tap New campaign.
+  - Name it and choose Integrated or Standalone.
+  - Choose the class, the lead mechanic and the dates.
+  - Pick all karts or only some.
+  - Add the parts each kart needs.
+  - Tap Create campaign.
+  duration: 75
+- id: hm-camp-list
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=campaigns
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Tap Campaigns
+  callouts:
+  - n: 1
+    target: text=Fleet campaigns
+    note: All campaigns
+  - n: 2
+    target: text=New campaign
+    note: Start a new one
+  caption: Fleet campaigns with the New campaign button
+- id: hm-camp-name
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Tap New campaign
+  - Type a campaign name
+  callouts:
+  - n: 1
+    target: text=New fleet campaign
+    note: The form
+  - n: 2
+    target: label=Campaign name
+    note: A clear name
+  caption: The New fleet campaign form with Campaign name filled in
+- id: hm-camp-type
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Choose Integrated
+  callouts:
+  - n: 1
+    target: text=Integrated
+    note: Part of the service
+  - n: 2
+    target: text=Standalone
+    note: Tracked on its own
+  caption: Campaign type with Integrated and Standalone
+- id: hm-camp-worktype
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Choose Part Upgrade in Work type
+  - Type a description
+  callouts:
+  - n: 1
+    target: text=Work type
+    note: What kind of job
+  caption: Work type Part Upgrade and a description
+- id: hm-camp-class
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Choose Junior, Alex Mechanic and the dates
+  callouts:
+  - n: 1
+    target: text=Fleet class
+    note: Which class
+  - n: 2
+    target: text=Lead mechanic
+    note: Who leads it
+  caption: Fleet class Junior, Lead mechanic Alex Mechanic and the dates
+- id: hm-camp-karts
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Choose Selected karts only and tick 301, 302 and 305
+  callouts:
+  - n: 1
+    target: text=Selected karts only
+    note: Pick the karts
+  caption: Karts with Selected karts only and three Juniors ticked
+- id: hm-camp-parts
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Add caliper seal kit FKL-900006 with quantity 1
+  callouts:
+  - n: 1
+    target: text=Required parts per kart (optional)
+    note: Parts each kart needs
+  caption: The caliper seal kit added as a required part, 1 per kart
+- id: hm-camp-instructions
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Type the work instructions
+  callouts:
+  - n: 1
+    target: text=Work instructions
+    note: Step by step for the mechanic
+  caption: Work instructions filled in
+- id: hm-camp-create
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/new
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Choose Active in Status
+  callouts:
+  - n: 1
+    target: text=Create campaign
+    note: Save it
+  caption: Status and the Create campaign button
+- id: hm-camp-detail
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/{campaign}
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Open Junior caliper seal upgrade
+  callouts:
+  - n: 1
+    target: text=Karts in this campaign
+    note: One row per kart
+  - n: 2
+    target: text=Add karts
+    note: Add more
+  caption: The campaign detail page with Karts in this campaign
+- id: hm-camp-add
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/{campaign}
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Tap Add karts and tick 306
+  callouts:
+  - n: 1
+    target: text=Add karts
+    note: Add more karts
+  caption: Adding karts to the campaign
+- id: hm-camp-exclude
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/{campaign}
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Tap Exclude kart on the 308 row
+  callouts:
+  - n: 1
+    target: text=Exclude kart
+    note: Not needed on this kart
+  caption: Exclude kart on a campaign row
+- id: hm-camp-reset
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/{campaign}
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Open the actions on the 305 row
+  callouts:
+  - n: 1
+    target: text=Reset to not started
+    note: Do it again
+  caption: Reset to not started on a campaign row
+- id: hm-camp-status
+  kind: screenshot
+  page: hub-manager/campaigns.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/campaigns/{campaign}
+  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
+    kit FKL-900006
+  steps:
+  - Open Campaign status
+  callouts:
+  - n: 1
+    target: text=Campaign status
+    note: Change the status
+  caption: Campaign status with Draft, Active, Paused, Completed and Cancelled
+- id: hm-cat-tab
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Tap Hub catalogue
+  callouts:
+  - n: 1
+    target: text=Hub catalogue
+    note: Your hub's parts
+  caption: The Hub catalogue editor
+- id: hm-cat-hide
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Find a part your hub does not use
+  callouts:
+  - n: 1
+    target: text=Hide at this hub
+    note: Remove it from your Stores
+  caption: Hide at this hub on a part row
+- id: hm-cat-supplier
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Open Hub details on brake pads FKL-900001
+  callouts:
+  - n: 1
+    target: text=Hub details
+    note: Hub-specific settings
+  caption: The supplier picker in Hub details
+- id: hm-req-open
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Scroll to Part requests
+  callouts:
+  - n: 1
+    target: text=Request a part
+    note: Ask FKL Central
+  - n: 2
+    target: text=Waiting for FKL Central
+    note: Steering column bush
+  caption: The Part requests card with Steering column bush waiting
+- id: hm-req-name
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Tap Request a part
+  - Type a part name
+  callouts:
+  - n: 1
+    target: text=Part name
+    note: What it is called
+  caption: Part name filled in
+- id: hm-req-mpn
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Type an MPN and quantity 2
+  callouts:
+  - n: 1
+    target: text=Manufacturer part number (MPN), if known
+    note: Helps FKL Central match it
+  caption: MPN and Quantity needed filled in
+- id: hm-req-send
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Type notes and tap Send request
+  callouts:
+  - n: 1
+    target: text=Send request
+    note: Send it
+  caption: Notes and Send request
+- id: hm-request-part-clip
+  kind: clip
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Open Workshop Manager, Hub catalogue
+  - Tap Request a part
+  - Fill in Part name, MPN, Quantity needed and Notes
+  - Tap Send request and show it as Waiting for FKL Central
+  caption: requesting a part from FKL Central in the Hub catalogue
+  captions:
+  - Open Hub catalogue.
+  - Tap Request a part.
+  - Say what the part is and how many.
+  - Send the request to FKL Central.
+  duration: 40
+- id: hm-cat-local
+  kind: screenshot
+  page: hub-manager/hub-catalogue.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
+  steps:
+  - Tap Add hub-local part
+  callouts:
+  - n: 1
+    target: text=Add hub-local part
+    note: Only for your hub
+  caption: The Add hub-local part form with MPN
+- id: hm-path-overview
+  kind: screenshot
+  page: hub-manager/index.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop
+  state: Morgan Manager signed in at Demo Hub
+  steps:
+  - Sign in as Morgan Manager and open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Workshop Manager
+    note: Your extra tab
+  caption: The Workshop with the Workshop Manager tab for Morgan Manager
+- id: hm-alloc-tab
+  kind: screenshot
+  page: hub-manager/kart-allocation.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=allocation
+  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
+  steps:
+  - Tap Kart Allocation
+  callouts:
+  - n: 1
+    target: text=Workshop staff
+    note: Mechanics and their kart counts
+  - n: 2
+    target: text=Kart allocation
+    note: One row per kart
+  caption: Kart Allocation with Workshop staff and the kart list
+- id: hm-alloc-filter
+  kind: screenshot
+  page: hub-manager/kart-allocation.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=allocation
+  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
+  steps:
+  - Tap Needs service only
+  callouts:
+  - n: 1
+    target: text=Needs service only
+    note: Karts with work to do
+  caption: Needs service only selected
+- id: hm-alloc-pick
+  kind: screenshot
+  page: hub-manager/kart-allocation.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=allocation
+  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
+  steps:
+  - Open the list on the 203 row
+  callouts:
+  - n: 1
+    target: text=Unassigned
+    note: Nobody yet
+  caption: The mechanic list open on the row for 203
+- id: hm-alloc-done
+  kind: screenshot
+  page: hub-manager/kart-allocation.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=allocation
+  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
+  steps:
+  - Choose Casey Mechanic
+  callouts:
+  - n: 1
+    target: text=Casey Mechanic
+    note: Allocated
+  caption: 203 allocated to Casey Mechanic
+- id: hm-orders-clip
+  kind: clip
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Open Workshop Manager, Order List
+  - Tap Approval queue and show the rear tyres line
+  - Tap Approve on rear tyres
+  - Find the sprockets line under Approved and tap Mark ordered
+  - Show sprockets under Ordered
+  caption: approving rear tyres in the approval queue and marking sprockets ordered
+  captions:
+  - Open the Order List.
+  - Lines waiting for you are in the approval queue.
+  - Tap Approve.
+  - When you have placed the order, tap Mark ordered.
+  - The line moves to Ordered.
+  duration: 60
+- id: hm-ord-list
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Order List
+  callouts:
+  - n: 1
+    target: text=Draft
+    note: Brake pads
+  - n: 2
+    target: text=Submitted
+    note: Rear tyres
+  - n: 3
+    target: text=Approved
+    note: Sprockets
+  - n: 4
+    target: text=Ordered
+    note: Front bumpers
+  caption: The Order List with lines in every stage
+- id: hm-ord-submit
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Submit on brake pads
+  callouts:
+  - n: 1
+    target: text=Submit
+    note: Send for approval
+  caption: Submit on the brake pads Draft line
+- id: hm-ord-queue
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Approval queue
+  callouts:
+  - n: 1
+    target: text=Approval queue
+    note: Lines waiting for you
+  caption: Approval queue with the rear tyres line waiting for approval
+- id: hm-ord-approve
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Approve on rear tyres
+  callouts:
+  - n: 1
+    target: text=Approve
+    note: OK to order
+  caption: Approve on the rear tyres line
+- id: hm-ord-reject
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Reject on a Submitted line
+  - Type "Wrong size, see new request"
+  callouts:
+  - n: 1
+    target: text=Reject order
+    note: Close the line
+  - n: 2
+    target: text=Reason (optional)
+    note: Say why
+  caption: The Reject order dialog with a reason
+- id: hm-ord-mark
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Mark ordered on sprockets
+  callouts:
+  - n: 1
+    target: text=Mark ordered
+    note: Placed with the supplier
+  caption: Mark ordered on the sprockets line
+- id: hm-ord-onorder
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/repairs
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Open Service Queue and find the 307 card
+  callouts:
+  - n: 1
+    target: text=On order
+    note: Mechanics see it is coming
+  caption: The 307 repair card showing On order for front bumpers
+- id: hm-ord-bulk
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Add bulk order
+  callouts:
+  - n: 1
+    target: text=Add bulk order
+    note: Straight to Ordered
+  caption: The Add bulk order button
+- id: hm-ord-onetime
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: A one-time need for caliper seal kits exists
+  steps:
+  - Look at the Submitted column
+  callouts:
+  - n: 1
+    target: text=One-time
+    note: From Stores
+  caption: A one-time need line in Submitted
+- id: hm-goodsin-clip
+  kind: clip
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Open Workshop Manager, Goods In
+  - Choose the front bumper part and the open order in Against order
+  - Type the quantity, unit cost, currency, supplier and invoice reference
+  - Tap Receive stock
+  - Show the 307 repair card now ready to repair
+  caption: receiving the front bumpers for Junior 307 in Goods In
+  captions:
+  - Open Goods In.
+  - Pick the part and its order.
+  - Type what arrived and what it cost.
+  - Tap Receive stock.
+  - The waiting repair is ready to do.
+  duration: 55
+- id: hm-gi-tab
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=goods-in
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Tap Goods In
+  callouts:
+  - n: 1
+    target: text=Goods In
+    note: Record parts received
+  caption: Goods In for Demo Hub
+- id: hm-gi-part
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=goods-in
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Choose front bumper FKL-900004 in Part
+  - Choose the open order in Against order
+  callouts:
+  - n: 1
+    target: text=Part
+    note: What arrived
+  - n: 2
+    target: text=Against order
+    note: Which order it belongs to
+  caption: Part front bumper and Against order chosen
+- id: hm-gi-cost
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=goods-in
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Type 2 in Quantity, 45.00 in Unit cost, choose GBP
+  callouts:
+  - n: 1
+    target: text=Quantity
+    note: How many arrived
+  - n: 2
+    target: text=Unit cost
+    note: Price per part
+  caption: Quantity, Unit cost and Currency filled in
+- id: hm-gi-invoice
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=goods-in
+  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
+    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  steps:
+  - Type the supplier and invoice reference DEMO-INV-001
+  callouts:
+  - n: 1
+    target: text=Invoice reference
+    note: From the delivery note
+  caption: Supplier and Invoice reference filled in
+- id: hm-gi-done
+  kind: screenshot
+  page: hub-manager/orders.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/repairs
+  state: After front bumpers are received
+  steps:
+  - Tap Receive stock
+  - Open Service Queue
+  callouts:
+  - n: 1
+    target: text=307
+    note: Ready to repair now
+  caption: The 307 repair now in Requires reliability actions
+- id: hm-rep-tab
+  kind: screenshot
+  page: hub-manager/reports.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=reports
+  state: Demo Hub with some completed demo services
+  steps:
+  - Tap Reports
+  callouts:
+  - n: 1
+    target: text=Workshop & productivity
+    note: Report groups
+  caption: The Reports tab with the report groups
+- id: hm-rep-pick
+  kind: screenshot
+  page: hub-manager/reports.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=reports
+  state: Demo Hub with some completed demo services
+  steps:
+  - Choose Turn summary
+  callouts:
+  - n: 1
+    target: text=Turn summary
+    note: Services per week
+  caption: Turn summary chosen
+- id: hm-rep-period
+  kind: screenshot
+  page: hub-manager/reports.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=reports
+  state: Demo Hub with some completed demo services
+  steps:
+  - Set From and To to the last two weeks
+  callouts:
+  - n: 1
+    target: text=Period
+    note: Dates
+  caption: Period from and to dates
+- id: hm-rep-export
+  kind: screenshot
+  page: hub-manager/reports.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=reports
+  state: Demo Hub with some completed demo services
+  steps:
+  - Look at the export buttons
+  callouts:
+  - n: 1
+    target: text=Excel
+    note: Spreadsheet
+  - n: 2
+    target: text=PDF
+    note: To print or send
+  - n: 3
+    target: text=CSV
+    note: Raw data
+  caption: The Excel, PDF and CSV buttons
+- id: hm-sched-settings
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Open Schedule, tap Schedule settings
+  callouts:
+  - n: 1
+    target: text=Schedule participants
+    note: Who plans a week
+  - n: 2
+    target: text=Scheduling mode
+    note: Who fills it in
+  caption: Schedule settings with participants and scheduling mode
+- id: hm-sched-mode
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Open Scheduling mode
+  callouts:
+  - n: 1
+    target: text=Employee planned
+    note: Mechanics plan
+  - n: 2
+    target: text=Manager assigned
+    note: You plan
+  caption: Scheduling mode Employee planned or Manager assigned
+- id: hm-sched-deadline
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Choose Friday and 12:00
+  callouts:
+  - n: 1
+    target: text=Submission deadline day
+    note: When plans are due
+  caption: Submission deadline day Friday and the time
+- id: hm-sched-require
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tick both boxes
+  callouts:
+  - n: 1
+    target: text=Require start time
+    note: Start time required
+  - n: 2
+    target: text=Require finish time
+    note: Finish time required
+  caption: Require start time and Require finish time ticked
+- id: hm-sched-people
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Look at the participant rows for Alex and Casey
+  callouts:
+  - n: 1
+    target: text=Allow remote work
+    note: Remote work allowed
+  caption: Schedule participants with Allow remote work
+- id: hm-sched-save
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Save settings
+  callouts:
+  - n: 1
+    target: text=Save settings
+    note: Save
+  caption: The Save settings button
+- id: hm-target-add
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=targets
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Work targets
+  callouts:
+  - n: 1
+    target: text=Add target
+    note: New target
+  caption: Work targets with the Add target button
+- id: hm-target-type
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=targets
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Add target
+  - Choose Alex Mechanic and Turns
+  callouts:
+  - n: 1
+    target: text=Person
+    note: Who
+  - n: 2
+    target: text=Work type
+    note: What kind of work
+  caption: Person Alex Mechanic and Work type Turns
+- id: hm-target-number
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=targets
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Type 10 in the target and choose Cadet in Class (optional)
+  callouts:
+  - n: 1
+    target: text=Class (optional)
+    note: Limit to one class
+  caption: Target (completed) set to 10 for Cadet
+- id: hm-target-save
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=targets
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Save target
+  callouts:
+  - n: 1
+    target: text=Save target
+    note: Save
+  caption: The saved target in the Work targets list
+- id: hm-ready-list
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=readiness
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Readiness targets
+  callouts:
+  - n: 1
+    target: text=Demo Regional Race
+    note: The planning event
+  caption: Readiness targets with Demo Regional Race
+- id: hm-ready-edit
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=readiness
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Edit target on Demo Regional Race
+  callouts:
+  - n: 1
+    target: text=Edit target
+    note: Change the numbers
+  caption: Edit target for Demo Regional Race
+- id: hm-ready-numbers
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=readiness
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Type 5 Bambino, 7 Cadet, 7 Junior
+  callouts:
+  - n: 1
+    target: text=Enter whole numbers from 0 to 1000.
+    note: Per class
+  caption: Bambino, Cadet and Junior numbers for Demo Regional Race
+- id: hm-ready-overview
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Open Overview
+  callouts:
+  - n: 1
+    target: text=Event readiness
+    note: Progress to the target
+  caption: Event readiness on Overview showing Remaining per class
+- id: hm-pn-tab
+  kind: screenshot
+  page: hub-manager/stock-and-parts-needed.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=parts-needed
+  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900001 at the reorder point
+  steps:
+  - Tap Parts needed
+  callouts:
+  - n: 1
+    target: text=Kart parts
+    note: Kart parts
+  - n: 2
+    target: text=Shop consumables
+    note: Consumables
+  caption: Parts needed with Kart parts and Shop consumables
+- id: hm-pn-columns
+  kind: screenshot
+  page: hub-manager/stock-and-parts-needed.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=parts-needed
+  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900001 at the reorder point
+  steps:
+  - Look at the rows
+  callouts:
+  - n: 1
+    target: text=Demand
+    note: Repairs, campaigns, restock
+  - n: 2
+    target: text=On order
+    note: Already ordered
+  - n: 3
+    target: text=Still needed
+    note: What is left to order
+  caption: The Parts needed columns for brake pads and caliper seal kits
+- id: hm-pn-qty
+  kind: screenshot
+  page: hub-manager/stock-and-parts-needed.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=parts-needed
+  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900001 at the reorder point
+  steps:
+  - Change Order qty for brake pads to 8
+  callouts:
+  - n: 1
+    target: text=Order qty
+    note: How many to order
+  caption: Order qty changed on the brake pads row
+- id: hm-pn-create
+  kind: screenshot
+  page: hub-manager/stock-and-parts-needed.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=parts-needed
+  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900001 at the reorder point
+  steps:
+  - Tap Create draft orders
+  callouts:
+  - n: 1
+    target: text=Create draft orders
+    note: Make Draft lines
+  caption: The Create draft orders button and its explanation
+- id: hm-pn-reorder
+  kind: screenshot
+  page: hub-manager/stock-and-parts-needed.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/parts
+  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900001 at the reorder point
+  steps:
+  - Tap Adjust on the brake pads row
+  callouts:
+  - n: 1
+    target: label=Reorder point
+    note: Order when stock reaches this
+  - n: 2
+    target: label=Target
+    note: Order up to this
+  caption: Adjust stock with Reorder point and Target
+- id: hm-wm-metrics
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager
+  state: Demo Hub as seeded
+  steps:
+  - Tap Workshop Manager
+  callouts:
+  - n: 1
+    target: text=Workshop Manager
+    note: Service metrics, fleet campaigns and kart allocation
+  - n: 2
+    target: text=Service Metrics
+    note: Services and times
+  caption: Workshop Manager on the Service Metrics tab
+- id: hm-wm-blockers
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=blockers
+  state: Demo Hub as seeded
+  steps:
+  - Tap Blockers
+  callouts:
+  - n: 1
+    target: text=Blockers
+    note: What holds karts up
+  caption: The Blockers tab
+- id: hm-wm-time
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=time
+  state: Demo Hub as seeded
+  steps:
+  - Tap Time Tracking
+  callouts:
+  - n: 1
+    target: text=Time Tracking
+    note: Time per person
+  caption: The Time Tracking tab
+- id: hm-wm-alignment
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=alignment
+  state: Demo Hub as seeded
+  steps:
+  - Tap Alignment health
+  callouts:
+  - n: 1
+    target: text=Alignment health
+    note: Fleet alignment
+  caption: The Alignment health tab
+- id: hm-wm-campaigns
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=campaigns
+  state: Demo Hub as seeded
+  steps:
+  - Tap Campaigns
+  callouts:
+  - n: 1
+    target: text=Junior caliper seal upgrade
+    note: Active campaign
+  caption: The Campaigns tab with Junior caliper seal upgrade
+- id: hm-wm-targets
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=targets
+  state: Demo Hub as seeded
+  steps:
+  - Tap Work targets
+  callouts:
+  - n: 1
+    target: text=Work targets
+    note: Targets per person
+  - n: 2
+    target: text=Readiness targets
+    note: Targets per event
+  caption: The Work targets tab
+- id: hm-wm-allocation
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=allocation
+  state: Demo Hub as seeded
+  steps:
+  - Tap Kart Allocation
+  callouts:
+  - n: 1
+    target: text=Kart Allocation
+    note: Who does which kart
+  caption: The Kart Allocation tab
+- id: hm-wm-damage
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=damage-reports
+  state: Demo Hub as seeded
+  steps:
+  - Tap Damage Reports
+  callouts:
+  - n: 1
+    target: text=Damage Reports
+    note: Damage on your karts
+  caption: The Damage Reports tab
+- id: hm-wm-parts
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=parts-needed
+  state: Demo Hub as seeded
+  steps:
+  - Tap Parts needed
+  callouts:
+  - n: 1
+    target: text=Parts needed
+    note: What to order
+  - n: 2
+    target: text=Order List
+    note: Orders by stage
+  - n: 3
+    target: text=Goods In
+    note: Receive parts
+  caption: The Parts needed tab
+- id: hm-wm-catalogue
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=hub-catalogue
+  state: Demo Hub as seeded
+  steps:
+  - Tap Hub catalogue
+  callouts:
+  - n: 1
+    target: text=Hub catalogue
+    note: Your hub's parts
+  caption: The Hub catalogue tab
+- id: hm-wm-reports
+  kind: screenshot
+  page: hub-manager/workshop-manager.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=reports
+  state: Demo Hub as seeded
+  steps:
+  - Tap Reports
+  callouts:
+  - n: 1
+    target: text=Reports
+    note: Excel, PDF or CSV
+  caption: The Reports tab
+- id: home-hub-selection
+  kind: screenshot
+  page: index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Alex Mechanic signed in, Demo Hub selected
+  steps:
+  - Sign in as Alex Mechanic
+  - Choose Demo Hub in the Select a hub dropdown
+  callouts:
+  - n: 1
+    target: text=Select your Hub
+    note: This is where KART starts
+  - n: 2
+    target: text=Workshop
+    note: All workshop work lives here
+  caption: The KART hub selection screen with the Workshop card
+- id: mech-campaign-clip
+  kind: clip
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaign-work
+  state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
+    campaign part caliper seal kit FKL-900006, 1 per kart
+  steps:
+  - Open Campaign work and show Assigned to me (3)
+  - Open the 301 task
+  - Tap Start work
+  - Under Parts fitted tap Fit for the caliper seal kit
+  - Tap Complete work
+  - Show 301 gone from Assigned to me
+  caption: doing the Junior caliper seal upgrade on Junior 301
+  captions:
+  - Open Campaign work.
+  - Your tasks are under Assigned to me.
+  - Open the kart's task and tap Start work.
+  - Fit the campaign parts.
+  - Tap Complete work.
+  - The task is done.
+  duration: 65
+- id: mech-camp-tab
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaign-work
+  state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
+    campaign part caliper seal kit FKL-900006, 1 per kart
+  steps:
+  - Tap Campaign work
+  callouts:
+  - n: 1
+    target: text=Assigned to me
+    note: Your tasks first
+  - n: 2
+    target: text=All open karts
+    note: Everything still open
+  caption: The Campaign work tab with Assigned to me and All open karts
+- id: mech-camp-pick
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaign-work
+  state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
+    campaign part caliper seal kit FKL-900006, 1 per kart
+  steps:
+  - Look at Assigned to me (3)
+  callouts:
+  - n: 1
+    target: text=301
+    note: Tap to open the task
+  caption: Junior 301, 302 and 305 under Assigned to me for Junior caliper seal upgrade
+- id: mech-camp-start
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:301}
+  state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
+    campaign part caliper seal kit FKL-900006, 1 per kart
+  steps:
+  - Open the 301 task
+  callouts:
+  - n: 1
+    target: text=Start work
+    note: Start the task
+  caption: The campaign task page for 301 with Start work
+- id: mech-camp-measure
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:301}
+  state: 'Variant: campaign with a required measurement (skip if the demo campaign has none)'
+  steps:
+  - Tap Record measurement
+  callouts:
+  - n: 1
+    target: text=Record measurement
+    note: Type the reading
+  caption: Record measurement on a campaign task
+- id: mech-camp-fit
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:301}
+  state: 301 task in progress
+  steps:
+  - Scroll to Parts fitted
+  - Tap Fit for the caliper seal kit
+  callouts:
+  - n: 1
+    target: text=Parts fitted
+    note: Takes the part from stock
+  - n: 2
+    target: text=Fit another part
+    note: Anything extra
+  caption: Parts fitted with the caliper seal kit and the Fit button
+- id: mech-camp-complete
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:301}
+  state: 301 task in progress, part fitted
+  steps:
+  - Scroll to Completion record
+  callouts:
+  - n: 1
+    target: text=Complete work
+    note: Finish the task
+  caption: Complete work on the 301 campaign task
+- id: mech-camp-fitprompt
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:302}
+  state: 302 task in progress, no part fitted
+  steps:
+  - Tap Complete work without fitting the part
+  callouts:
+  - n: 1
+    target: text=Fit and complete
+    note: Parts were fitted
+  - n: 2
+    target: text=Complete without them
+    note: No parts used
+  caption: The Fit the campaign parts? question with Fit and complete and Complete without them
+- id: mech-camp-unable
+  kind: screenshot
+  page: mechanic/campaign-work.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaigns/{campaign}/tasks/{task:305}
+  state: Active integrated campaign Junior caliper seal upgrade on all Juniors; tasks for 301, 302 and 305 assigned to Alex;
+    campaign part caliper seal kit FKL-900006, 1 per kart
+  steps:
+  - Open the 305 task
+  - Tap Unable to complete
+  callouts:
+  - n: 1
+    target: text=Unable to complete
+    note: Give the reason
+  caption: Unable to complete with a reason on a campaign task
+- id: mech-fleet-board-clip
+  kind: clip
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Open the Workshop for Demo Hub on Overview
+  - Point at Next Event, Work targets and Event readiness
+  - Scroll to Fleet Status
+  - Scroll to the Readiness board and tap the Requires service count
+  - Show the list with 103, 203, 204, 303, 205 and 304
+  - Tap Back, scroll to the Junior Karts tiles and show the Campaign and Missing Components tags
+  caption: a tour of the Overview tab and the Readiness board
+  captions:
+  - Overview is the first Workshop tab.
+  - The cards at the top show the next event and your targets.
+  - Fleet Status counts open problems.
+  - The Readiness board counts every status.
+  - Tap a number to list those karts.
+  - Each kart tile shows its tags.
+  duration: 60
+- id: mech-board-open
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: First tab
+  caption: The Overview tab for Demo Hub
+- id: mech-board-cards
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Look at the cards at the top of Overview
+  callouts:
+  - n: 1
+    target: text=Next Event
+    note: The next event in the calendar
+  - n: 2
+    target: text=Work targets
+    note: Your targets this week
+  - n: 3
+    target: text=Event readiness
+    note: Demo Regional Race targets
+  - n: 4
+    target: text=Campaigns
+    note: Junior caliper seal upgrade
+  caption: Next Event, Work targets, Event readiness and Campaigns cards
+- id: mech-board-readiness
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Scroll to the Event readiness card
+  callouts:
+  - n: 1
+    target: text=Demo Regional Race
+    note: The planning event
+  - n: 2
+    target: text=Remaining
+    note: Karts still needed
+  caption: Event readiness for Demo Regional Race with Remaining counts per class
+- id: mech-board-fleet-status
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Scroll to Fleet Status
+  callouts:
+  - n: 1
+    target: text=Fleet Status
+    note: Open problems at a glance
+  - n: 2
+    target: text=Missing
+    note: 308 is missing a battery
+  caption: The Fleet Status card with counts per problem type
+- id: mech-board-reload
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Scroll to the Readiness board
+  callouts:
+  - n: 1
+    target: text=Readiness board
+    note: Every kart of this hub
+  - n: 2
+    target: text=Reload board
+    note: Fetch the latest
+  caption: The Readiness board with the Reload board button
+- id: mech-board-drill
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/readiness/turn_all
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Tap the Requires service count
+  callouts:
+  - n: 1
+    target: text=Requires service
+    note: 103, 203, 204 and 303, plus 205 in progress and 304 paused
+  caption: The list of karts that require service
+- id: mech-board-drill-open
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/readiness/turn_all
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Tap 203 in the list
+  callouts:
+  - n: 1
+    target: text=203
+    note: Opens the kart page
+  caption: Tapping kart 203 in the list opens its kart page
+- id: mech-board-tiles
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Scroll to the Junior Karts tiles
+  callouts:
+  - n: 1
+    target: text=#301
+    note: 'Campaign tag: caliper seal upgrade'
+  - n: 2
+    target: text=#308
+    note: Missing Components
+  - n: 3
+    target: text=View log book
+    note: The kart's log book
+  caption: Junior Karts tiles with Campaign tags and Missing Components on 308
+- id: mech-path-overview
+  kind: screenshot
+  page: mechanic/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in at Demo Hub
+  steps:
+  - Sign in as Alex Mechanic and open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: Start here every shift
+  - n: 2
+    target: text=Report a kart problem
+    note: Report anything wrong
+  - n: 3
+    target: text=Open kart
+    note: Find a kart quickly
+  caption: The Workshop Overview as a mechanic sees it, without the Workshop Manager tab
+- id: mech-openkart-clip
+  kind: clip
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap Open kart on Overview
+  - Type 207 in Kart number and tap Open
+  - Show the badges, Current work and the counts
+  - Open the History tab and scroll through Status history and Repair history
+  - Open the QR code tab
+  caption: opening Cadet 207 with Open kart and looking at its history
+  captions:
+  - Tap Open kart.
+  - Type the kart number and tap Open.
+  - The top shows status and open work.
+  - History shows everything done to the kart.
+  - The QR code tab prints a label.
+  duration: 45
+- id: mech-kart-open
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Open Overview
+  callouts:
+  - n: 1
+    target: text=Open kart
+    note: Find a kart fast
+  caption: The Open kart button on Overview
+- id: mech-kart-number
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap Open kart
+  - Type 207 in Kart number
+  callouts:
+  - n: 1
+    target: label=Kart number
+    note: Class number, such as 207
+  - n: 2
+    target: text=Scan QR code
+    note: Or scan the label
+  caption: The Open kart dialog with 207 typed in Kart number
+- id: mech-kart-page
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap Open
+  callouts:
+  - n: 1
+    target: text=Unavailable
+    note: Not offered for allocation
+  - n: 2
+    target: text=Open repairs
+    note: Repairs still open
+  - n: 3
+    target: text=Open tickets
+    note: The stopping ticket
+  caption: The kart page of Cadet 207 with its badges and counts
+- id: mech-kart-scan
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap Open kart
+  callouts:
+  - n: 1
+    target: text=Scan QR code
+    note: Use the camera
+  - n: 2
+    target: text=Scan a photo
+    note: Or pick a photo of the label
+  caption: Scan QR code in the Open kart dialog
+- id: mech-kart-scan-camera
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - 'Tap Scan QR code (recorder: use a printed demo label for 207 or a still frame)'
+  callouts:
+  - n: 1
+    target: css=video
+    note: Point at the label
+  caption: The camera view while scanning a kart label
+- id: mech-kart-top
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Look at the top of the page
+  callouts:
+  - n: 1
+    target: text=Last status change
+    note: When and who
+  - n: 2
+    target: text=Changed by
+    note: Initials
+  caption: The top of the 207 kart page with Last status change and Changed by
+- id: mech-kart-current
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Scroll to Current work
+  callouts:
+  - n: 1
+    target: text=Current work
+    note: What is open now
+  caption: Current work on the 207 kart page
+- id: mech-kart-history
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap History
+  callouts:
+  - n: 1
+    target: text=Status history
+    note: Every status change
+  - n: 2
+    target: text=Repair history
+    note: Past repairs
+  caption: The History tab of 207 with its sections
+- id: mech-kart-components
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap Components
+  callouts:
+  - n: 1
+    target: text=Components
+    note: Fitted components
+  caption: The Components tab on the kart page
+- id: mech-kart-qr
+  kind: screenshot
+  page: mechanic/kart-page.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:207}
+  state: Demo Hub fleet as seeded; Cadet 207 with its stopping ticket and repair; history from earlier demo services
+  steps:
+  - Tap QR code
+  callouts:
+  - n: 1
+    target: text=QR code
+    note: Print a label
+  caption: The QR code tab with the label to print
+- id: mech-mark-used-clip
+  kind: clip
+  page: mechanic/mark-used.md
+  persona: Morgan Manager
+  device: tablet
+  url: /workshop
+  state: Bambino 101 Ready (not used today)
+  steps:
+  - On Overview, find the 101 tile and tap Requires service
+  - Show Kart marked as requiring service and tap Undo
+  - Show Mark used undone
+  - Switch to Race to Chassis for Demo Practice Day and drag race number 8 onto chassis 104
+  - Show Chassis 104 marked used and the event day note
+  caption: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used
+  captions:
+  - Hub managers can mark a kart used on its tile.
+  - KART confirms and offers Undo.
+  - Undo puts the kart back as it was.
+  - On the event day, Race to Chassis marks karts used for you.
+  - They stay Ready today and need a service after the event.
+  duration: 50
+- id: mech-used-tile
+  kind: screenshot
+  page: mechanic/mark-used.md
+  persona: Morgan Manager
+  device: tablet
+  url: /workshop
+  state: Bambino 101 Ready (not used today)
+  steps:
+  - Scroll to Bambino Karts
+  callouts:
+  - n: 1
+    target: text=#101
+    note: Bambino 101
+  - n: 2
+    target: role=button[name='Requires service']
+    note: Only for hub managers and admins
+  caption: The tile for Bambino 101 with its Requires service button
+- id: mech-used-toast
+  kind: screenshot
+  page: mechanic/mark-used.md
+  persona: Morgan Manager
+  device: tablet
+  url: /workshop
+  state: Bambino 101 Ready (not used today)
+  steps:
+  - Tap Requires service on 101
+  callouts:
+  - n: 1
+    target: text=Kart marked as requiring service
+    note: Done
+  - n: 2
+    target: text=Undo
+    note: Tap if it was a mistake
+  caption: The Kart marked as requiring service message with Undo
+- id: mech-used-undo-gif
+  kind: gif
+  page: mechanic/mark-used.md
+  persona: Morgan Manager
+  device: tablet
+  url: /workshop
+  state: Bambino 101 Ready (not used today)
+  steps:
+  - Tap Requires service on 101
+  - Tap Undo in the message
+  - Show Mark used undone
+  caption: Marking 101 used and tapping Undo in the message
+- id: mech-used-undo-button
+  kind: screenshot
+  page: mechanic/mark-used.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:101}
+  state: 101 marked used by mistake, no service started
+  steps:
+  - Open kart 101
+  callouts:
+  - n: 1
+    target: text=Undo mark used
+    note: Only shown while it can be undone
+  caption: The Undo mark used button on the kart page of 101
+- id: mech-used-undo-dialog
+  kind: screenshot
+  page: mechanic/mark-used.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:101}
+  state: 101 marked used by mistake, no service started
+  steps:
+  - Tap Undo mark used
+  callouts:
+  - n: 1
+    target: text=Undo mark used?
+    note: Only for a real mistake
+  caption: The Undo mark used? question
+- id: mech-used-undone
+  kind: screenshot
+  page: mechanic/mark-used.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:101}
+  state: 101 marked used by mistake, no service started
+  steps:
+  - Tap Undo mark used in the question
+  callouts:
+  - n: 1
+    target: text=Mark used undone
+    note: Back to how it was
+  caption: Mark used undone message on the kart page
+- id: mech-pause-clip
+  kind: clip
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - On Servicing for 203, tap Pause
+  - Choose End of Shift in Pause reason, type a comment, tap Pause
+  - Show the Paused services bar with 203 and 304
+  - Tap 304 in the Paused services bar and show its Servicing page
+  caption: pausing Cadet 203 with a reason and resuming Junior 304
+  captions:
+  - Tap Pause when you stop work.
+  - Choose a reason.
+  - Add a note for the next mechanic.
+  - Your paused karts wait in the bar.
+  - Tap a kart to carry on.
+  duration: 50
+- id: mech-pause-button
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - Open Servicing for 203
+  callouts:
+  - n: 1
+    target: role=button[name='Pause']
+    note: Pause the service
+  caption: The Pause button on the Servicing page
+- id: mech-pause-reason
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - Tap Pause
+  - Open the Pause reason list
+  callouts:
+  - n: 1
+    target: text=Pause service
+    note: The pause dialog
+  - n: 2
+    target: text=Waiting on parts
+    note: Pick the real reason
+  caption: The Pause service dialog with the list of pause reasons
+- id: mech-pause-comment
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - Choose End of Shift
+  - Type "Front brakes bled, rear still to do" in Comment (optional)
+  callouts:
+  - n: 1
+    target: text=Comment (optional)
+    note: Anything the next mechanic should know
+  caption: A comment typed in Comment (optional)
+- id: mech-pause-done
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: After pausing 203
+  steps:
+  - Tap Pause in the dialog
+  - Open Service Queue
+  callouts:
+  - n: 1
+    target: text=Paused services
+    note: Your paused karts
+  caption: The Paused services bar with 203 and 304
+- id: mech-resume-bar
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - Hover 304 in the Paused services bar
+  callouts:
+  - n: 1
+    target: text=304
+    note: 'Paused by Alex: Waiting on parts'
+  caption: Junior 304 in the Paused services bar showing Waiting on parts
+- id: mech-resume-open
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
+  steps:
+  - Tap 304 in the Paused services bar
+  callouts:
+  - n: 1
+    target: text=304
+    note: Back in service
+  caption: Servicing for Junior 304 after resuming
+- id: mech-resume-kartpage
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:304}
+  state: 304 paused by Alex
+  steps:
+  - Open kart 304 with Open kart
+  callouts:
+  - n: 1
+    target: text=Resume service
+    note: Carry on from here
+  - n: 2
+    target: text=Pause reason
+    note: Why it was paused
+  caption: Resume service on the kart page of Junior 304
+- id: mech-resume-repair
+  kind: screenshot
+  page: mechanic/pause-and-resume.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Casey has started repair work on 205 while its service is open
+  steps:
+  - Hover 205 in the Paused services bar
+  callouts:
+  - n: 1
+    target: text=205
+    note: Repair work is running
+  caption: A paused service with the spanner icon because repair work is running
+- id: mech-r2c-events
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Choose Demo Hub on Select your Hub
+  callouts:
+  - n: 1
+    target: text=Event Operations
+    note: Events and drivers
+  caption: The Event Operations card on Select your Hub
+- id: mech-r2c-pick-event
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /events
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Find Demo Practice Day in the list
+  callouts:
+  - n: 1
+    target: text=Demo Practice Day
+    note: Today's session event
+  caption: Demo Practice Day in the Event Operations list
+- id: mech-r2c-action
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /events
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Tap Demo Practice Day
+  callouts:
+  - n: 1
+    target: text=Race to Chassis
+    note: Complete R2C mappings
+  caption: The Select Action dialog with Race to Chassis
+- id: mech-r2c-drag-clip
+  kind: clip
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Open Race to Chassis for Demo Practice Day on the tablet
+  - Drag race number 5 onto chassis 205
+  - Show the Chassis 205 marked used message with Undo
+  - Drag race number 6 onto chassis 207 and show Chassis 207 is not available
+  - Tap Cancel, then drag race number 6 onto chassis 206
+  - Drag race number 6 back to the race number list to take it off
+  caption: putting race numbers on chassis with drag and drop
+  captions:
+  - Drag a race number onto a chassis.
+  - KART marks the chassis used for today.
+  - An unavailable chassis asks for a reason.
+  - Drag the number back to take it off.
+  duration: 60
+- id: mech-r2c-dd-view
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Open Race to Chassis on the tablet
+  callouts:
+  - n: 1
+    target: text=Race to Chassis Assignment
+    note: Drag and drop view
+  - n: 2
+    target: text=Race Number
+    note: Numbers to place
+  - n: 3
+    target: text=Chassis Number
+    note: Karts of this hub
+  caption: The drag and drop view with Chassis Number and Race Number columns
+- id: mech-r2c-drag-gif
+  kind: gif
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Drag race number 5 onto chassis 205 slowly
+  caption: Dragging race number 5 onto chassis 205
+- id: mech-r2c-marked
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Drop race number 5 on chassis 205
+  callouts:
+  - n: 1
+    target: text=marked used
+    note: Counted as used today
+  - n: 2
+    target: text=Undo
+    note: Only for a mistake
+  caption: Chassis 205 marked used message with Undo
+- id: mech-r2c-takeoff
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Tap chassis 205
+  callouts:
+  - n: 1
+    target: text=Take off chassis
+    note: Remove the number
+  caption: Take off chassis for a chassis with a race number
+- id: mech-r2c-tap-clip
+  kind: clip
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: phone
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Open Race to Chassis for Demo Practice Day on the phone
+  - Tap the cell for race number 7 in the current session
+  - Tap chassis 302
+  - Show the marked used message
+  - Tap Drag and drop view and back to Tap grid
+  caption: putting a race number on a chassis with the tap grid on a phone
+  captions:
+  - On a phone, the tap grid opens.
+  - Tap the race number cell.
+  - Then tap the chassis it drives.
+  - Switch views with the button at the bottom.
+  duration: 45
+- id: mech-r2c-tap-cell
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: phone
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Open Race to Chassis on the phone
+  - Tap the cell for race number 7 in the current session
+  callouts:
+  - n: 1
+    target: 'text=Race #'
+    note: Race numbers
+  - n: 2
+    target: text=Current session
+    note: This session
+  caption: The tap grid on a phone with the cell for race number 7 selected
+- id: mech-r2c-tap-chassis
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: phone
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Tap chassis 302
+  callouts:
+  - n: 1
+    target: text=Tap the chassis this race number drives.
+    note: Pick the chassis
+  caption: Tap the chassis this race number drives, with 302 highlighted
+- id: mech-r2c-switch
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: phone
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Look at the bottom left of the tap grid
+  callouts:
+  - n: 1
+    target: text=Drag and drop view
+    note: Switch view
+  caption: The Drag and drop view button at the bottom left of the tap grid
+- id: mech-r2c-unavailable
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Drag race number 6 onto chassis 207
+  callouts:
+  - n: 1
+    target: text=is not available
+    note: 'Repair Required: stopping ticket'
+  - n: 2
+    target: text=4 to 500 characters.
+    note: Give a reason
+  - n: 3
+    target: text=Assign anyway
+    note: Gives a track use override
+  caption: Chassis 207 is not available with the reason box and Assign anyway
+- id: mech-r2c-cancel
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Tap Cancel
+  callouts:
+  - n: 1
+    target: text=Cancel
+    note: Use another chassis
+  caption: Cancel in the not available dialog
+- id: mech-r2c-reassign
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Drag race number 2 from its chassis onto chassis 104
+  callouts:
+  - n: 1
+    target: text=Logged. Why did the race number change chassis?
+    note: Pick a reason
+  caption: The Chassis reassignment question asking why the race number changed chassis
+- id: mech-r2c-reassign-save
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Choose a reason and tap Save reason
+  callouts:
+  - n: 1
+    target: text=Save reason
+    note: Saved in the log
+  - n: 2
+    target: text=Reassignments
+    note: All moves today
+  caption: A reason chosen and the Reassignments count
+- id: mech-r2c-past
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: A past session event exists at Demo Hub (any earlier demo event)
+  steps:
+  - Open Race to Chassis for a past event
+  callouts:
+  - n: 1
+    target: text=Past Event - Editing Restricted
+    note: View only
+  caption: Past Event - Editing Restricted on an earlier event
+- id: mech-ticket-clip
+  kind: clip
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Tap Report a kart problem on Overview
+  - Choose 207 and Reliability, tap Continue
+  - In the ticket form set Effect of Issue to Cut out not restarted and Status to Ongoing
+  - Type the description and tap Submit Issue
+  - Show Workshop incident linked to the ticket
+  - Back in the Workshop, show 207 as Repair Required and its card in the Service Queue
+  caption: raising a stopping reliability ticket on Cadet 207 that cut out and would not restart
+  captions:
+  - Tap Report a kart problem.
+  - Choose the kart and Reliability.
+  - Tap Continue to open the ticket form.
+  - 'Pick the effect: cut out, not restarted.'
+  - Leave the status Ongoing and submit.
+  - The kart is now Repair Required.
+  duration: 75
+- id: mech-ticket-open
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Open Overview as Casey Mechanic
+  callouts:
+  - n: 1
+    target: text=Report a kart problem
+    note: Start here
+  caption: Report a kart problem on Overview for Casey
+- id: mech-ticket-type
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Tap Report a kart problem, choose 207, choose Reliability
+  callouts:
+  - n: 1
+    target: text=Reliability
+    note: A fault for engineering
+  - n: 2
+    target: text=Continue opens the reliability ticket form
+    note: What happens next
+  caption: Kart 207 and the Reliability type chosen
+- id: mech-ticket-form
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Tap Continue
+  callouts:
+  - n: 1
+    target: text=Kart Type *
+    note: Already filled in
+  caption: The reliability ticket form opened for Cadet 207
+- id: mech-ticket-effect
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Open Effect of Issue and choose Cut out not restarted
+  callouts:
+  - n: 1
+    target: text=Effect of Issue *
+    note: Anything but Performance stops the kart
+  caption: Effect of Issue set to Cut out not restarted
+- id: mech-ticket-status
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Check Status shows Ongoing
+  callouts:
+  - n: 1
+    target: text=Status *
+    note: Ongoing keeps the ticket open
+  caption: Status set to Ongoing
+- id: mech-ticket-describe
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Type "Cut out on the back straight, would not restart" in Describe Issue
+  callouts:
+  - n: 1
+    target: text=Describe Issue
+    note: What the kart did
+  caption: Describe Issue filled in
+- id: mech-ticket-saved
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)
+  steps:
+  - Tap Submit Issue
+  callouts:
+  - n: 1
+    target: text=Workshop incident linked to the ticket.
+    note: The workshop sees it too
+  caption: The ticket saved with the Workshop incident linked to the ticket message
+- id: mech-ticket-result
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 207 with its stopping ticket (as seeded)
+  steps:
+  - Open Service Queue
+  callouts:
+  - n: 1
+    target: text=207
+    note: Cadet 207
+  - n: 2
+    target: text=Open ticket
+    note: Linked stopping ticket
+  caption: Cadet 207 repair card with Reliability and Open ticket tags
+- id: mech-ticket-linked
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 207 repair completed (Log remedy done), ticket still Ongoing
+  steps:
+  - Find the 207 card
+  callouts:
+  - n: 1
+    target: text=Open linked ticket
+    note: Opens the ticket
+  caption: Open linked ticket on the 207 repair card
+- id: mech-ticket-resolve
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /tracker
+  state: Cadet 207 repair completed, ticket still Ongoing
+  steps:
+  - Open the ticket for editing
+  - Set Status to Resolved
+  callouts:
+  - n: 1
+    target: text=Resolved
+    note: The fault is fixed
+  caption: The 207 ticket with Status set to Resolved
+- id: mech-ticket-closed
+  kind: screenshot
+  page: mechanic/reliability-ticket.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: After the 207 ticket is resolved
+  steps:
+  - Tap Update Issue
+  - Open Overview and find 207
+  callouts:
+  - n: 1
+    target: text=#207
+    note: Available again
+  caption: Cadet 207 no longer Repair Required on the Readiness board
+- id: mech-repair-lanes
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Open Service Queue
+  - Scroll to the exception lanes
+  callouts:
+  - n: 1
+    target: text=Requires reliability actions
+    note: Repairs you can do now
+  - n: 2
+    target: text=Requires part
+    note: Repairs waiting on parts
+  - n: 3
+    target: text=Requires Support
+    note: Needs a specialist or a decision
+  caption: The exception lanes Requires reliability actions, Requires part and Requires Support
+- id: mech-repair-priority
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Look at the Requires reliability actions lane
+  callouts:
+  - n: 1
+    target: text=Repair priority, top first. Work top to bottom.
+    note: Start at the top
+  caption: The repair priority list with Work top to bottom
+- id: mech-repair-card
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Find the 307 card in Requires part
+  callouts:
+  - n: 1
+    target: text=307
+    note: Junior 307
+  - n: 2
+    target: 'text=Waiting on:'
+    note: The part it needs
+  - n: 3
+    target: text=On order
+    note: Already ordered
+  caption: The repair card for Junior 307 showing Waiting on front bumper and On order
+- id: mech-repair-clip
+  kind: clip
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - On the 106 card tap Open kart page
+  - Tap Start repair under Current work, wait a few seconds, tap Stop repair work
+  - Back in the Service Queue, tap Log remedy / complete repair on the 106 card
+  - Choose Tightened / Secured in Remedy, type What was done
+  - Tap Confirm repair complete
+  - Show 106 back as Ready on Overview
+  caption: repairing Bambino 106, logging the remedy and recording the parts used
+  captions:
+  - Open the kart page from the repair card.
+  - Tap Start repair when you begin.
+  - Tap Stop repair work when you finish.
+  - Tap Log remedy / complete repair.
+  - Choose the remedy and say what you did.
+  - Record every part you used.
+  - Confirm. The repair is closed.
+  duration: 80
+- id: mech-repair-kartpage
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Find the 106 card
+  callouts:
+  - n: 1
+    target: text=Open kart page
+    note: Go to the kart
+  caption: Open kart page on the 106 repair card
+- id: mech-repair-start
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:106}
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Scroll to Current work
+  callouts:
+  - n: 1
+    target: text=Current work
+    note: Open repairs on this kart
+  - n: 2
+    target: text=Start repair
+    note: Start the repair clock
+  caption: Start repair under Current work on the 106 kart page
+- id: mech-repair-stop
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:106}
+  state: Repair work running on 106
+  steps:
+  - Tap Start repair and wait
+  callouts:
+  - n: 1
+    target: text=Pause repair
+    note: A short break
+  - n: 2
+    target: text=Stop repair work
+    note: Finished for now
+  caption: Pause repair and Stop repair work while repair work is running
+- id: mech-remedy-open
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Find the 106 card
+  callouts:
+  - n: 1
+    target: text=Log remedy / complete repair
+    note: Close the repair
+  caption: Log remedy / complete repair on the 106 card
+- id: mech-remedy-type
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Tap Log remedy / complete repair
+  - Open Remedy and choose Tightened / Secured
+  callouts:
+  - n: 1
+    target: text=Remedy
+    note: What kind of fix
+  caption: The Remedy list with Repaired, Replaced, Adjusted, Tightened / Secured, Cleaned and Other
+- id: mech-remedy-parts
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Front bumpers received for 307 (record after the Goods In shots)
+  steps:
+  - Open Log remedy / complete repair on 307
+  - Choose Replaced for the front bumper
+  callouts:
+  - n: 1
+    target: text=Remedy per part
+    note: One answer per part
+  - n: 2
+    target: text=Replaced
+    note: 'New part fitted: takes stock'
+  caption: Remedy per part on the 307 repair with Replaced chosen for the front bumper
+- id: mech-remedy-notes
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Type "Bumper mount bolt tightened to torque, thread locker added" in What was done
+  callouts:
+  - n: 1
+    target: text=What was done
+    note: A short note
+  caption: What was done filled in
+- id: mech-remedy-files
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Scroll to Files
+  callouts:
+  - n: 1
+    target: text=Files
+    note: Photos or documents
+  caption: The Files field in the remedy dialog
+- id: mech-remedy-confirm
+  kind: screenshot
+  page: mechanic/repairs-and-parts.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Bambino 106 repair (loose bumper mount) ready to repair; Junior 307 repair (broken front bumper) waiting on parts,
+    front bumpers on order; Cadet 207 repair on its stopping ticket
+  steps:
+  - Tap Confirm repair complete
+  callouts:
+  - n: 1
+    target: text=Confirm repair complete
+    note: Done
+  caption: Confirm repair complete at the bottom of the remedy dialog
+- id: mech-incident-clip
+  kind: clip
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report a kart problem on Overview
+  - Choose 106 in Kart
+  - Choose Incident, Incident type Impact / Contact, describe it, Impact location Front
+  - Add a finding, Issue type Loose, Item / component Bumper mount
+  - Answer No, it is still usable
+  - Tap Report problem
+  - Show 106 as Repair Needed (usable) and its repair card in the Service Queue
+  caption: reporting an incident on Bambino 106 with a loose bumper mount finding
+  captions:
+  - Tap Report a kart problem.
+  - Choose the kart.
+  - Pick Incident and say what happened.
+  - Add what you found.
+  - Say whether it stops the kart.
+  - Tap Report problem.
+  - The finding is now a repair.
+  duration: 70
+- id: mech-report-open
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Open Overview
+  callouts:
+  - n: 1
+    target: text=Report a kart problem
+    note: Tap here
+  caption: The Report a kart problem button on Overview
+- id: mech-report-kart
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report a kart problem
+  - Open Choose a kart and pick 106
+  callouts:
+  - n: 1
+    target: text=Choose a kart
+    note: Pick the kart
+  caption: Choosing kart 106 in the Report a kart problem dialog
+- id: mech-report-type
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Look at What are you reporting?
+  - Choose Incident
+  callouts:
+  - n: 1
+    target: text=Incident
+    note: Something that happened
+  - n: 2
+    target: text=Needs the Reliability permission.
+    note: Only with Reliability
+  caption: The four report types with Reliability and Damage greyed out for Alex
+- id: mech-report-incident-type
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Open Incident type and choose Impact / Contact
+  callouts:
+  - n: 1
+    target: text=Incident type
+    note: What kind of incident
+  caption: Incident type set to Impact / Contact
+- id: mech-report-describe
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Type "Hit the tyre wall at turn 3 in the Demo Practice Day" in Describe the incident
+  callouts:
+  - n: 1
+    target: text=Describe the incident
+    note: Short and clear
+  caption: Describe the incident filled in
+- id: mech-report-impact
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Front under Impact location
+  callouts:
+  - n: 1
+    target: text=Impact location
+    note: Where it was hit
+  caption: Impact location Front selected
+- id: mech-report-finding
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - In Finding 1 choose Issue type Loose
+  - Type "Bumper mount" in Item / component
+  - Type "Front bumper mount bolt loose" in Describe the issue
+  callouts:
+  - n: 1
+    target: text=Finding 1
+    note: Each finding becomes a repair
+  - n: 2
+    target: text=Item / component
+    note: What part of the kart
+  caption: Finding 1 with Issue type Loose and Item / component Bumper mount
+- id: mech-report-part
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Answer No to Is a replacement part required?
+  callouts:
+  - n: 1
+    target: text=Is a replacement part required?
+    note: Yes adds the part to the repair
+  caption: Is a replacement part required? answered No
+- id: mech-report-stop
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Choose No, it is still usable
+  - Show the note under the question
+  callouts:
+  - n: 1
+    target: text=Would this stop the kart from being used?
+    note: Answer honestly
+  - n: 2
+    target: text=This answer does not stop the kart
+    note: Only a reliability ticket stops it
+  caption: Would this stop the kart from being used? with the reminder that the answer does not stop the kart
+- id: mech-report-submit
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Scroll to the bottom of the dialog
+  callouts:
+  - n: 1
+    target: text=Add finding
+    note: Another finding
+  - n: 2
+    target: text=Report problem
+    note: Save the report
+  caption: Add finding and Report problem buttons at the bottom of the dialog
+- id: mech-report-result
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: After the 106 incident is reported
+  steps:
+  - Open Service Queue
+  callouts:
+  - n: 1
+    target: text=Incident
+    note: Repair from the incident
+  - n: 2
+    target: text=106
+    note: Bambino 106
+  caption: The new repair card for 106 in the Service Queue
+- id: mech-feedback-type
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report a kart problem
+  - Choose 302 and Driver feedback
+  callouts:
+  - n: 1
+    target: text=Driver feedback
+    note: What the driver said
+  caption: Driver feedback chosen for Junior 302
+- id: mech-feedback-power
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Open Driver feedback type and choose Power / Performance
+  callouts:
+  - n: 1
+    target: text=Driver feedback type
+    note: Type of feedback
+  caption: Driver feedback type Power / Performance
+- id: mech-feedback-describe
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Type "Driver says it feels slow out of the hairpin" in Describe the driver feedback
+  callouts:
+  - n: 1
+    target: text=Describe the driver feedback
+    note: In the driver's words
+  caption: Describe the driver feedback filled in
+- id: mech-feedback-inspection
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Scroll to Power / Performance inspection
+  - Answer the checks Pass, one Fail
+  callouts:
+  - n: 1
+    target: text=Power / Performance inspection
+    note: Answer every check
+  - n: 2
+    target: text=Inspection findings (optional)
+    note: A failed check needs a finding
+  caption: The Power / Performance inspection checklist with Pass and Fail answers
+- id: mech-feedback-finding
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Add a finding with Issue type Worn and Item / component "Throttle cable"
+  callouts:
+  - n: 1
+    target: text=Inspection findings (optional)
+    note: One finding per failed check
+  caption: A finding added for a failed inspection check
+- id: mech-feedback-submit
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report problem
+  callouts:
+  - n: 1
+    target: text=Report problem
+    note: Save it
+  caption: Report problem at the bottom of the driver feedback report
+- id: mech-sched-tab
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Tap Schedule
+  callouts:
+  - n: 1
+    target: text=Weekly work schedule
+    note: Your week
+  caption: The Weekly work schedule on the Schedule tab
+- id: mech-sched-week
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Tap Upcoming week
+  callouts:
+  - n: 1
+    target: text=Upcoming week
+    note: Plan ahead
+  caption: Previous week, This week and Upcoming week buttons
+- id: mech-sched-plan
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Look for Plan my week
+  callouts:
+  - n: 1
+    target: text=Plan my week
+    note: Start planning
+  caption: The Plan my week button
+- id: mech-sched-day
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Tap Plan my week
+  - Tick Working on Monday
+  callouts:
+  - n: 1
+    target: text=Working on
+    note: One tick per day
+  caption: Working on Monday ticked
+- id: mech-sched-location
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Choose In shop in Work location
+  callouts:
+  - n: 1
+    target: text=Work location
+    note: In shop or remote
+  caption: Work location set to In shop
+- id: mech-sched-times
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Set Start 08:00 and Finish 16:30
+  callouts:
+  - n: 1
+    target: text=Start
+    note: Start time
+  - n: 2
+    target: text=Finish
+    note: Finish time
+  caption: Start 08:00 and Finish 16:30 for Monday
+- id: mech-sched-submit
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: 'Demo Hub schedule settings: Employee planned, deadline Friday; Alex is a schedule participant with remote work allowed'
+  steps:
+  - Scroll to the bottom
+  callouts:
+  - n: 1
+    target: text=Save draft
+    note: Keep working on it
+  - n: 2
+    target: text=Submit
+    note: Send to your hub manager
+  caption: Save draft and Submit at the bottom of the week
+- id: mech-service-clip
+  kind: clip
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Open Service Queue
+  - Tap 203 in the Requires service lane
+  - Tap Start service in the Start service? dialog
+  - On Servicing, tap cells to set them Good, enter a tyre depth and battery voltages
+  - Tap Add part used and add one part
+  - Tap Complete service, tick the declaration and tap Confirm
+  - Show 203 as Ready on Overview
+  caption: a full service on Cadet 203, from the Service Queue to Complete service
+  captions:
+  - Open the Service Queue.
+  - Tap the kart that needs a service.
+  - Tap Start service.
+  - Tap each check to mark it Good.
+  - Type the readings where asked.
+  - Add any part you fitted.
+  - Tap Complete service.
+  - Tick the declaration and confirm.
+  - The kart is Ready again.
+  duration: 85
+- id: mech-svc-queue
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap Service Queue
+  callouts:
+  - n: 1
+    target: text=Service Queue
+    note: Your work list
+  - n: 2
+    target: text=Requires service
+    note: Karts waiting for a service
+  caption: The Service Queue with the Requires service, In progress and Completed lanes
+- id: mech-svc-find
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Look at the Requires service lane
+  callouts:
+  - n: 1
+    target: text=203
+    note: Cadet 203
+  caption: Kart 203 in the Cadet column of the Requires service lane
+- id: mech-svc-dialog
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap 203
+  callouts:
+  - n: 1
+    target: text=Start service?
+    note: Check the kart number
+  - n: 2
+    target: role=button[name='Start service']
+    note: Tap to start
+  caption: The Start service? dialog for kart 203
+- id: mech-svc-servicing
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap Start service
+  callouts:
+  - n: 1
+    target: text=Servicing
+    note: The service you are working on
+  - n: 2
+    target: text=203
+    note: Kart in service
+  caption: The Servicing tab with the Cadet checklist grid for 203
+- id: mech-svc-cycle-gif
+  kind: gif
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap one check cell three times slowly
+  caption: Tapping a checklist cell cycles it from Unchecked to Good to Blocked
+- id: mech-svc-reading
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Type 3.5 in a tyre depth reading
+  - Type 51.2 and 51.0 in the battery voltage readings
+  callouts:
+  - n: 1
+    target: css=input[inputmode=decimal]
+    note: Type the reading here
+  caption: A measured check with tyre depth and battery voltage readings
+- id: mech-svc-blocked
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap a cell until it shows Blocked
+  callouts:
+  - n: 1
+    target: text=Why is this blocked?
+    note: Say what is wrong
+  caption: The Why is this blocked? box after setting a check to Blocked
+- id: mech-svc-blocked-save
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Type "Rear sprocket worn, needs replacing"
+  - Tap Save reason
+  callouts:
+  - n: 1
+    target: text=Save reason
+    note: Save it
+  caption: A blocked reason typed with the Save reason button
+- id: mech-svc-parts
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Scroll to Parts used
+  callouts:
+  - n: 1
+    target: text=Parts used
+    note: Every part you fitted
+  - n: 2
+    target: text=Add part used
+    note: Add one
+  caption: The Parts used section with Add part used
+- id: mech-svc-parts-added
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap Add part used
+  - Search for brake pads (FKL-900001) and add quantity 1
+  callouts:
+  - n: 1
+    target: text=FKL-900001
+    note: The part you fitted
+  caption: A brake pad set added to Parts used with quantity 1
+- id: mech-svc-components
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Scroll to Components replaced
+  callouts:
+  - n: 1
+    target: text=Components replaced
+    note: Tracked components only
+  caption: The Components replaced section with its search box
+- id: mech-svc-work-done
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Scroll to Record work done and type "Chain adjusted"
+  callouts:
+  - n: 1
+    target: text=Record work done
+    note: A short note
+  caption: Record work done with a short note
+- id: mech-svc-complete
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Answer every required check
+  - Scroll to the bottom
+  callouts:
+  - n: 1
+    target: text=Complete service
+    note: Tap when every check is answered
+  caption: The Complete service button at the bottom of Servicing
+- id: mech-svc-declaration
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
+  steps:
+  - Tap Complete service
+  - Tick the declaration box
+  callouts:
+  - n: 1
+    target: text=Service & Inspection Declaration
+    note: Read it
+  - n: 2
+    target: role=checkbox
+    note: Tick to confirm
+  caption: The Service and Inspection Declaration with the confirm tick box
+- id: mech-svc-done
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: After Alex completes the service on 203
+  steps:
+  - Tap Confirm
+  - Open Overview and find 203
+  callouts:
+  - n: 1
+    target: text=#203
+    note: Ready again
+  caption: Kart 203 back as Ready on the Overview board
+- id: mech-svc-switch
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Alex has 203 in service and taps 204
+  steps:
+  - With 203 in service, tap 204 in the Requires service lane
+  callouts:
+  - n: 1
+    target: text=You already have a kart in service
+    note: Only one at a time
+  - n: 2
+    target: text=Pause and switch
+    note: Pause 203 and start 204
+  caption: The You already have a kart in service dialog with Pause and switch
+- id: mech-svc-switched
+  kind: screenshot
+  page: mechanic/service-turn.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: After Pause and switch from 203 to 204
+  steps:
+  - Tap Pause and switch
+  callouts:
+  - n: 1
+    target: text=Paused services
+    note: 203 waits here
+  caption: Servicing for 204 with 203 in the Paused services bar
+- id: mech-stores-tab
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Tap Stores
+  callouts:
+  - n: 1
+    target: text=Stores
+    note: Parts and consumables
+  - n: 2
+    target: text=Parts
+    note: Kart parts
+  - n: 3
+    target: text=Consumables
+    note: Shop consumables
+  caption: Stores with the Parts and Consumables tabs
+- id: mech-stores-search
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Type brake pad in the search box
+  callouts:
+  - n: 1
+    target: css=input[placeholder='Search name, FKL number or MPN']
+    note: Search here
+  - n: 2
+    target: text=FKL-900001
+    note: The part
+  caption: Searching Stores for brake pad
+- id: mech-stores-filter
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Open All kart classes and choose Cadet
+  callouts:
+  - n: 1
+    target: text=All kart classes
+    note: Parts that fit this class
+  - n: 2
+    target: text=Needs reordering only
+    note: Low and out of stock
+  caption: The kart class filter and Needs reordering only
+- id: mech-stores-row
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Look at the brake pad row
+  callouts:
+  - n: 1
+    target: text=Location
+    note: Where it is kept
+  - n: 2
+    target: text=Stock
+    note: On the shelf
+  caption: A Stores row showing Location, Stock, Reorder point and Target
+- id: mech-stores-adjust
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Find the brake pad row
+  callouts:
+  - n: 1
+    target: text=Adjust
+    note: Correct the count
+  caption: The Adjust button on the brake pad row
+- id: mech-stores-adjust-stock
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Tap Adjust
+  - Type 6 in Stock
+  callouts:
+  - n: 1
+    target: text=Adjust stock
+    note: The correction
+  - n: 2
+    target: label=Stock
+    note: What is really on the shelf
+  caption: The Adjust stock dialog with the new count in Stock
+- id: mech-stores-adjust-reason
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Open Reason and choose Stock count
+  callouts:
+  - n: 1
+    target: text=Reason
+    note: Always give a reason
+  caption: The Reason list with Stock count, Used on repair, Damaged / scrapped, Transfer and Correction
+- id: mech-stores-adjust-save
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Type "Weekly count" in Comment
+  - Tap Save
+  callouts:
+  - n: 1
+    target: text=Comment
+    note: Optional note
+  - n: 2
+    target: text=Save
+    note: Save the count
+  caption: Comment filled in and the Save button
+- id: mech-stores-order
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Tap Add to order list on the brake pad row
+  - Type 4 in Quantity
+  callouts:
+  - n: 1
+    target: text=Add to order list
+    note: Ask for more
+  - n: 2
+    target: label=Quantity
+    note: How many
+  caption: Add to order list with a quantity for brake pads
+- id: mech-stores-onetime
+  kind: screenshot
+  page: mechanic/stores.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: 'Demo Hub stock: brake pads FKL-900001, rear tyres FKL-900002, sprockets FKL-900003, front bumpers FKL-900004 (0
+    in stock, on order), tie rods FKL-900005, caliper seal kit FKL-900006; some at or below the reorder point'
+  steps:
+  - Tap One-time need on a part row
+  callouts:
+  - n: 1
+    target: text=One-time need
+    note: A one-off purchase
+  - n: 2
+    target: label=Reason
+    note: Required
+  caption: The One-time need dialog with Reason
+- id: rs-comms-open
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Open /comms
+  callouts:
+  - n: 1
+    target: text=KART Comms
+    note: The messenger
+  caption: KART Comms open in the browser at /comms
+- id: rs-trackside-cover
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Sign in as Alex Mechanic and open /comms
+  callouts:
+  - n: 1
+    target: text=Remote Support
+    note: Ask for help here
+  - n: 2
+    target: text=On cover
+    note: Who covers your hub today
+  caption: The Trackside view with Remote Support and On cover
+- id: rs-trackside-hub
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Choose Demo Hub
+  callouts:
+  - n: 1
+    target: text=Choose the hub you are working at
+    note: Pick your hub
+  caption: Choose the hub you are working at
+- id: rs-trackside-send
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Type "Kart 307 shows Repair Required but the bumper is fitted" and tap Send
+  callouts:
+  - n: 1
+    target: text=Send
+    note: Send it
+  caption: A support message typed with Send
+- id: rs-comms-clip
+  kind: clip
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Open /comms as Riley Support
+  - Tap Unassigned and open Casey Mechanic's chat
+  - Tap Claim
+  - Type a reply and tap Send
+  - Tap Close chat
+  - Show Reopen chat on the closed chat
+  caption: claiming, answering and closing a support chat in KART Comms
+  captions:
+  - The Support view lists chats to answer.
+  - Unassigned chats wait for someone.
+  - Tap Claim to take it.
+  - Reply to the staff member.
+  - Close the chat when it is solved.
+  - Reopen it if needed.
+  duration: 60
+- id: rs-support-queue
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Tap My queue
+  callouts:
+  - n: 1
+    target: text=My queue
+    note: Your work
+  - n: 2
+    target: text=Claimed by me
+    note: You took these
+  caption: My queue with Alex Mechanic's claimed chat
+- id: rs-support-unassigned
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Tap Unassigned
+  callouts:
+  - n: 1
+    target: text=Unassigned
+    note: Waiting for someone
+  caption: Unassigned with Casey Mechanic's chat
+- id: rs-support-claim
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Open Casey Mechanic's chat
+  callouts:
+  - n: 1
+    target: text=Claim
+    note: Take the chat
+  caption: The Claim button on an unassigned chat
+- id: rs-support-reply
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Tap Claim
+  - Type a reply and tap Send
+  callouts:
+  - n: 1
+    target: text=Send
+    note: Reply
+  caption: A reply typed in the chat
+- id: rs-support-close
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Tap Close chat
+  callouts:
+  - n: 1
+    target: text=Close chat
+    note: Solved
+  caption: Close chat at the top of the conversation
+- id: rs-support-reopen
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Open the closed chat
+  callouts:
+  - n: 1
+    target: text=Reopen chat
+    note: Open it again
+  caption: Reopen chat on a closed chat
+- id: rs-ai-support
+  kind: screenshot
+  page: remote-support/comms.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
+    chat from Casey Mechanic
+  steps:
+  - Open /comms as Alex Mechanic
+  callouts:
+  - n: 1
+    target: text=AI Support
+    note: Automatic answers
+  - n: 2
+    target: text=AI Chats
+    note: Earlier AI chats
+  caption: The AI Support button and AI Chats list in the Trackside view
+- id: rs-cover-clip
+  kind: clip
+  page: remote-support/cover.md
+  persona: Riley Support
+  device: desktop
+  url: /rs-dash
+  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  steps:
+  - On Select your Hub tap Remote Support
+  - On Hub Dashboard find Demo Hub and Demo Practice Day
+  - Open Support cover and choose Riley Support
+  - Show Support cover updated and the On cover header in /comms
+  caption: setting support cover for Demo Practice Day
+  captions:
+  - Open Remote Support.
+  - Find the hub and today's event.
+  - Choose who covers it.
+  - Comms now shows them on cover.
+  duration: 35
+- id: rs-cover-button
+  kind: screenshot
+  page: remote-support/cover.md
+  persona: Riley Support
+  device: desktop
+  url: /hub-selection
+  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  steps:
+  - Sign in as Riley Support
+  callouts:
+  - n: 1
+    target: text=Remote Support
+    note: Remote Support Dashboard
+  caption: The Remote Support button on Select your Hub
+- id: rs-cover-event
+  kind: screenshot
+  page: remote-support/cover.md
+  persona: Riley Support
+  device: desktop
+  url: /rs-dash
+  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  steps:
+  - Open Hub Dashboard
+  callouts:
+  - n: 1
+    target: text=Hub Dashboard
+    note: All hubs
+  - n: 2
+    target: text=Demo Practice Day
+    note: Today's event
+  caption: The Demo Hub tile with Demo Practice Day
+- id: rs-cover-select
+  kind: screenshot
+  page: remote-support/cover.md
+  persona: Riley Support
+  device: desktop
+  url: /rs-dash
+  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  steps:
+  - Open Support cover on Demo Practice Day
+  callouts:
+  - n: 1
+    target: text=Support cover
+    note: Who covers
+  caption: The Support cover list with Riley Support
+- id: rs-cover-saved
+  kind: screenshot
+  page: remote-support/cover.md
+  persona: Riley Support
+  device: desktop
+  url: /rs-dash
+  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  steps:
+  - Choose Riley Support
+  callouts:
+  - n: 1
+    target: text=Support cover updated
+    note: Saved
+  caption: Support cover updated message
+- id: rs-direct-clip
+  kind: clip
+  page: remote-support/direct-chats.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Open /comms as Alex Mechanic
+  - Type "Ca" in the new direct chat search
+  - Choose Casey Mechanic
+  - Show the existing chat reopening, type a message and tap Send
+  caption: starting a direct chat with a colleague in KART Comms
+  captions:
+  - Open KART Comms.
+  - Search for a colleague by name or initials.
+  - Choose them.
+  - Your earlier chat opens again.
+  - Type and send.
+  duration: 35
+- id: rs-direct-list
+  kind: screenshot
+  page: remote-support/direct-chats.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Open /comms
+  callouts:
+  - n: 1
+    target: text=Direct Chats
+    note: Your direct chats
+  - n: 2
+    target: css=input[placeholder^='New direct chat']
+    note: Find a colleague
+  caption: Direct Chats with the new direct chat search box
+- id: rs-direct-search
+  kind: screenshot
+  page: remote-support/direct-chats.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Type Ca
+  callouts:
+  - n: 1
+    target: text=Casey Mechanic
+    note: Tap to chat
+  caption: Casey Mechanic found by typing Ca
+- id: rs-direct-open
+  kind: screenshot
+  page: remote-support/direct-chats.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Tap Casey Mechanic
+  callouts:
+  - n: 1
+    target: text=Casey Mechanic
+    note: The same chat as before
+  caption: The existing chat between Alex and Casey
+- id: rs-direct-send
+  kind: screenshot
+  page: remote-support/direct-chats.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Type "Can you check the 205 chain before you go?" and tap Send
+  callouts:
+  - n: 1
+    target: text=Send
+    note: Send
+  - n: 2
+    target: css=button[aria-label='Attach file']
+    note: Add a photo
+  caption: A message typed in the direct chat with Send and Attach file
+- id: rs-direct-support
+  kind: screenshot
+  page: remote-support/direct-chats.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Existing direct chat between Alex Mechanic and Casey Mechanic
+  steps:
+  - Open /comms as Riley Support
+  callouts:
+  - n: 1
+    target: text=Start a direct chat
+    note: Message a staff member
+  caption: Start a direct chat in the Support view
+- id: rs-path-overview
+  kind: screenshot
+  page: remote-support/index.md
+  persona: Riley Support
+  device: desktop
+  url: /comms
+  state: Riley Support on cover for Demo Hub today (Demo Practice Day); Alex Mechanic has a support chat claimed by Riley
+  steps:
+  - Sign in as Riley Support and open /comms
+  callouts:
+  - n: 1
+    target: text=Support
+    note: Support view
+  - n: 2
+    target: text=My queue
+    note: Your chats
+  caption: KART Comms in the Support view for Riley
+- id: start-hub-dropdown
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - Tap the Select a hub dropdown
+  callouts:
+  - n: 1
+    target: text=Select your Hub
+    note: The start screen
+  - n: 2
+    target: text=Select a hub
+    note: Tap to choose your hub
+  caption: The Select a hub dropdown on Select your Hub
+- id: start-hub-cards
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - Choose Demo Hub in the dropdown
+  callouts:
+  - n: 1
+    target: text=Workshop
+    note: Servicing, parts and repairs
+  - n: 2
+    target: text=Technical
+    note: Reliability tickets and damage
+  - n: 3
+    target: text=Event Operations
+    note: Events and Race to Chassis
+  caption: The Workshop, Technical and Event Operations cards for Demo Hub
+- id: start-new-tab
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Tap the Workshop card
+  - Show the browser tab bar with two KART tabs
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: You land on Overview
+  - n: 2
+    target: text=Back
+    note: Back takes you one step back
+  caption: The Workshop open in a second browser tab on Overview
+- id: start-hub-buttons
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Morgan Manager
+  device: desktop
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - Sign in as Morgan Manager
+  - Choose Demo Hub
+  callouts:
+  - n: 1
+    target: text=Hub Manager
+    note: Only with the hub manager permission
+  caption: Extra buttons under the cards for a hub manager
+- id: start-tab-strip
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: Fleet board and cards
+  - n: 2
+    target: text=Stores
+    note: Parts and consumables
+  - n: 3
+    target: text=Service Queue
+    note: Karts that need a service, and repairs
+  - n: 4
+    target: text=Servicing
+    note: The service you are working on
+  - n: 5
+    target: text=Campaign work
+    note: Campaign tasks
+  - n: 6
+    target: text=Schedule
+    note: Your weekly schedule
+  caption: The Workshop tab strip with Overview, Stores, Service Queue, Servicing, Campaign work and Schedule
+- id: start-tab-strip-phone
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: phone
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Open the Workshop on the phone viewport
+  - Swipe the tab strip left until Schedule shows
+  callouts:
+  - n: 1
+    target: text=Schedule
+    note: Swipe to see more tabs
+  caption: The tab strip on a phone, scrolled sideways to Schedule
+- id: start-tab-strip-manager
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Sign in as Morgan Manager and open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Workshop Manager
+    note: Hub managers and admins only
+  caption: The Workshop Manager tab at the end of the strip for a hub manager
+- id: start-header
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Open the Workshop Overview
+  callouts:
+  - n: 1
+    target: text=SOP Viewer
+    note: Opens the hub's SOPs in a new tab
+  - n: 2
+    target: text=FKL Support
+    note: Help chat
+  - n: 3
+    target: css=button:has(svg.lucide-bell)
+    note: Notifications
+  - n: 4
+    target: css=button:has(.sr-only:text('Sign out'))
+    note: Sign out
+  caption: Header buttons SOP Viewer, FKL Support, notifications, language, theme and sign out
+- id: start-signout
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Hover the sign-out icon
+  callouts:
+  - n: 1
+    target: css=button:has(.sr-only:text('Sign out'))
+    note: Sign out here
+  caption: The sign-out icon at the right of the header
+- id: start-back
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Alex Mechanic signed in
+  steps:
+  - Point at the Back button
+  callouts:
+  - n: 1
+    target: text=Back
+    note: Go back one step
+  caption: The Back button at the top left of the Workshop page
+- id: start-phone-cards
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: phone
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - Open Select your Hub on the phone viewport and choose Demo Hub
+  callouts:
+  - n: 1
+    target: text=Workshop
+    note: Cards stack on a phone
+  caption: The hub selection cards stacked on a phone
+- id: start-tablet-landscape
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Alex Mechanic signed in
+  steps:
+  - Open Service Queue on the tablet viewport
+  callouts:
+  - n: 1
+    target: text=Requires service
+    note: More lanes fit in landscape
+  caption: The Service Queue on a landscape tablet with all lanes visible
+- id: start-a2hs-open
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - Open /hub-selection in the tablet browser
+  callouts:
+  - n: 1
+    target: text=Select your Hub
+    note: Sign in first
+  caption: KART open in the tablet browser
+- id: start-a2hs-menu
+  kind: screenshot
+  page: start/finding-your-way.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Alex Mechanic signed in
+  steps:
+  - 'Open the browser menu (recorder: show a mock-up frame, this is browser UI and not part of KART)'
+  callouts:
+  - n: 1
+    target: text=Add to Home Screen
+    note: Browser menu item
+  caption: The browser menu with Add to Home Screen
+- id: start-problem-106
+  kind: screenshot
+  page: start/problems-explained.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (106 Repair Needed after an incident, 207 stopping ticket, 307 broken front bumper)
+  steps:
+  - Open the Workshop Overview
+  - Scroll to the Bambino Karts tiles
+  callouts:
+  - n: 1
+    target: text=#106
+    note: Bambino 106
+  - n: 2
+    target: css=[data-kart='106'] input[type=checkbox]
+    note: Available stays ticked
+  caption: Bambino 106 showing Repair Needed (usable) on the Readiness board
+- id: start-problem-207
+  kind: screenshot
+  page: start/problems-explained.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (106 Repair Needed after an incident, 207 stopping ticket, 307 broken front bumper)
+  steps:
+  - Scroll to the Cadet Karts tiles
+  callouts:
+  - n: 1
+    target: text=#207
+    note: Cadet 207
+  - n: 2
+    target: text=Reliability
+    note: Stopping reliability ticket
+  caption: Cadet 207 showing Repair Required and not available
+- id: start-problem-queue
+  kind: screenshot
+  page: start/problems-explained.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Demo Hub as seeded (106 Repair Needed after an incident, 207 stopping ticket, 307 broken front bumper)
+  steps:
+  - Tap Service Queue
+  - Scroll to the exception lanes
+  callouts:
+  - n: 1
+    target: text=Requires reliability actions
+    note: Repairs ready to do
+  - n: 2
+    target: text=Requires part
+    note: Repairs waiting on parts, such as 307
+  caption: Repair cards for 106, 207 and 307 in the Service Queue exception lanes
+- id: start-sign-in-clip
+  kind: clip
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Open http://localhost:9080/auth
+  - Type alex.mechanic@demo-fkl.example in Email
+  - Type the demo password in Password
+  - Tap Sign In and wait for Select your Hub
+  - Choose Demo Hub in the hub dropdown
+  - Tap the Workshop card and show the new tab opening on Overview
+  caption: signing in to KART and opening the Workshop for Demo Hub
+  captions:
+  - Open KART in your browser.
+  - Type your e-mail address.
+  - Type your password.
+  - Tap Sign In.
+  - KART opens on Select your Hub.
+  - Choose your hub.
+  - Tap Workshop. It opens in a new tab.
+  duration: 40
+- id: start-signin-page
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Open /auth while signed out
+  callouts:
+  - n: 1
+    target: text=FKL KART
+    note: The KART sign-in card
+  - n: 2
+    target: role=tab[name='Sign In']
+    note: Make sure Sign In is selected
+  caption: The KART sign-in card with the Sign In and Sign Up tabs
+- id: start-signin-email
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Type alex.mechanic@demo-fkl.example in Email
+  callouts:
+  - n: 1
+    target: label=Email
+    note: Your work e-mail address
+  caption: E-mail address typed in the Email field
+- id: start-signin-password
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Type the demo password in Password
+  callouts:
+  - n: 1
+    target: label=Password
+    note: Your KART password
+  caption: Password typed in the Password field, shown as dots
+- id: start-signin-success
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Tap Sign In
+  - Wait for the toast and the Select your Hub page
+  callouts:
+  - n: 1
+    target: text=Successfully signed in!
+    note: You are in
+  - n: 2
+    target: text=Select your Hub
+    note: Pick your hub next
+  caption: Select your Hub after signing in, with the Successfully signed in message
+- id: start-signin-phone
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: phone
+  url: /auth
+  state: Demo Hub as seeded
+  steps:
+  - Open /auth on the phone viewport while signed out
+  callouts:
+  - n: 1
+    target: text=Sign In
+    note: Same card, same steps
+  caption: The KART sign-in card on a phone
+- id: start-temp-signin
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /auth
+  state: 'Variant: Jamie''s account was made with Create user and a temporary password (record on a fresh seed, before the
+    sign-up shots)'
+  steps:
+  - Type jamie.newstarter@demo-fkl.example and the temporary password
+  - Tap Sign In
+  callouts:
+  - n: 1
+    target: text=Sign In
+    note: Use the temporary password once
+  caption: Signing in with a temporary password
+- id: start-set-password
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /change-password
+  state: 'Variant: Jamie''s account made with Create user, first sign-in'
+  steps:
+  - Type a new password of at least 10 characters in New Password
+  callouts:
+  - n: 1
+    target: text=Set your password
+    note: KART asks for your own password
+  - n: 2
+    target: label=New Password
+    note: At least 10 characters
+  caption: The Set your password screen with New Password and Confirm Password
+- id: start-confirm-password
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /change-password
+  state: 'Variant: Jamie''s account made with Create user, first sign-in'
+  steps:
+  - Type the same password in Confirm Password
+  callouts:
+  - n: 1
+    target: label=Confirm Password
+    note: Same password again
+  caption: The new password typed again in Confirm Password
+- id: start-password-updated
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /change-password
+  state: 'Variant: Jamie''s account made with Create user, first sign-in'
+  steps:
+  - Tap Save password
+  - Wait for the Password updated toast
+  callouts:
+  - n: 1
+    target: text=Password updated
+    note: 'Done: use this password from now on'
+  caption: Password updated message after saving the new password
+- id: start-join-link
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /auth?join=DEMOJOIN
+  state: A Demo Hub join link exists (code shown in the URL); Jamie not signed up yet (record before Jamie's sign-up is seeded)
+  steps:
+  - Open the join link
+  callouts:
+  - n: 1
+    target: text=You are joining
+    note: The hub you are joining
+  caption: The Sign Up tab opened from a join link for Demo Hub
+- id: start-signup-name
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /auth?join=DEMOJOIN
+  state: Demo Hub as seeded
+  steps:
+  - Type Jamie Newstarter in Full Name
+  callouts:
+  - n: 1
+    target: label=Full Name
+    note: Your full name
+  caption: Full Name filled in on the Sign Up tab
+- id: start-signup-initials
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /auth?join=DEMOJOIN
+  state: Demo Hub as seeded
+  steps:
+  - Type JN in Initials
+  callouts:
+  - n: 1
+    target: label=Initials
+    note: Up to 5 letters
+  caption: Initials JN typed in the Initials field
+- id: start-signup-email
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /auth?join=DEMOJOIN
+  state: Demo Hub as seeded
+  steps:
+  - Type jamie.newstarter@demo-fkl.example in Email
+  - Type a password in Password
+  callouts:
+  - n: 1
+    target: label=Email
+    note: Your work e-mail
+  - n: 2
+    target: label=Password
+    note: Choose a password
+  caption: Email and Password filled in on the Sign Up tab
+- id: start-signup-done
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /pending
+  state: Demo Hub as seeded
+  steps:
+  - Tap Sign Up
+  - Wait for the Waiting for approval page
+  callouts:
+  - n: 1
+    target: text=Waiting for approval
+    note: A Demo Hub manager reviews it
+  caption: Account Created message and the Waiting for approval screen
+- id: start-pending
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /pending
+  state: Jamie Newstarter pending at Demo Hub
+  steps:
+  - Sign in as Jamie Newstarter
+  callouts:
+  - n: 1
+    target: text=Waiting for approval
+    note: Your request is waiting
+  - n: 2
+    target: text=This page updates by itself
+    note: No need to refresh
+  caption: Waiting for approval, showing that a manager of Demo Hub will review the request
+- id: start-pending-request
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /pending
+  state: Jamie Newstarter pending at Demo Hub
+  steps:
+  - Point at Join code or link and Or choose a hub
+  callouts:
+  - n: 1
+    target: text=Join code or link
+    note: Paste the code from your hub manager
+  - n: 2
+    target: text=Or choose a hub
+    note: Or pick your hub
+  - n: 3
+    target: text=Send request
+    note: Send it
+  caption: Join code or link and Or choose a hub on the waiting screen
+- id: start-approved
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Jamie Newstarter
+  device: tablet
+  url: /pending
+  state: After Morgan Manager approves Jamie (record after the approvals clip)
+  steps:
+  - Sign in as Jamie after approval
+  callouts:
+  - n: 1
+    target: text=Your account has been approved
+    note: You are in
+  - n: 2
+    target: text=Continue
+    note: Tap Continue
+  caption: Your account has been approved with the Continue button
+- id: start-locked-hub
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Demo Hub as seeded
+  steps:
+  - Open the Select a hub dropdown
+  callouts:
+  - n: 1
+    target: text=Demo Hub North
+    note: A hub you cannot use yet
+  - n: 2
+    target: text=Request Access
+    note: Ask for access
+  caption: Demo Hub North greyed out with a lock and Request Access
+- id: start-request-access-dialog
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Demo Hub as seeded
+  steps:
+  - Tap Request Access next to Demo Hub North
+  callouts:
+  - n: 1
+    target: text=Hub Access Required
+    note: Check the hub name
+  caption: The Hub Access Required dialog
+- id: start-request-access-sent
+  kind: screenshot
+  page: start/sign-in-and-access.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Demo Hub as seeded
+  steps:
+  - Tap Request Access in the dialog
+  callouts:
+  - n: 1
+    target: role=button[name='Request Access']
+    note: Send the request
+  caption: Request Access tapped in the Hub Access Required dialog
+- id: start-status-board
+  kind: screenshot
+  page: start/statuses.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
+    and 307 Repair Required; Juniors with campaign tasks)
+  steps:
+  - Open the Workshop for Demo Hub
+  - Scroll to the Readiness board
+  callouts:
+  - n: 1
+    target: text=Readiness board
+    note: Counts per status
+  - n: 2
+    target: text=Ready
+    note: 'Green: can race'
+  - n: 3
+    target: text=Requires service
+    note: 'Amber: needs a service'
+  - n: 4
+    target: text=Repair Required
+    note: 'Red: must not be used'
+  caption: The Readiness board with counts for Ready, Requires service, Repair Needed (usable), Repair Required and Campaign
+    Required
+- id: start-status-drilldown
+  kind: screenshot
+  page: start/statuses.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/readiness/repair_all
+  state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
+    and 307 Repair Required; Juniors with campaign tasks)
+  steps:
+  - Tap the Repair Required count on the Readiness board
+  callouts:
+  - n: 1
+    target: text=207
+    note: Stopping reliability ticket
+  - n: 2
+    target: text=307
+    note: Waiting on a front bumper
+  caption: The list of Repair Required karts, 207 and 307
+- id: start-status-tags
+  kind: screenshot
+  page: start/statuses.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
+    and 307 Repair Required; Juniors with campaign tasks)
+  steps:
+  - Scroll to the Junior Karts tiles
+  callouts:
+  - n: 1
+    target: text=#308
+    note: Junior 308
+  - n: 2
+    target: text=Missing Components
+    note: A battery is missing
+  - n: 3
+    target: text=Campaign
+    note: Open campaign task
+  caption: Kart tiles with reason tags such as Missing Components on 308 and Campaign on the Juniors
+- id: so-before-signin
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /auth
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Open /auth and sign in as Alex Mechanic
+  callouts:
+  - n: 1
+    target: text=Sign In
+    note: Check you can sign in
+  caption: Signing in to KART before the switch-over day
+- id: so-before-card
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Choose Demo Hub
+  callouts:
+  - n: 1
+    target: text=Workshop
+    note: You need this card
+  caption: The Workshop card for your hub on Select your Hub
+- id: so-before-tabs
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Tap the Workshop card
+  callouts:
+  - n: 1
+    target: text=Service Queue
+    note: You can start services
+  caption: The Workshop tabs including Service Queue
+- id: so-day-1-access
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: You have access
+  caption: The Workshop for your hub open in KART
+- id: so-day-2-freeze
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /hub-selection
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Show Select your Hub on the tablet
+  callouts:
+  - n: 1
+    target: text=Select your Hub
+    note: Record in KART only
+  caption: KART open on the workshop tablet as the only app for recording
+- id: so-day-3-board
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Scroll to the Readiness board
+  callouts:
+  - n: 1
+    target: text=Readiness board
+    note: Compare with the real karts
+  caption: The Readiness board to compare with the karts in the workshop
+- id: so-day-4-services
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/in-service
+  state: Alex has 304 paused (stands in for a carried-over service)
+  steps:
+  - Tap Servicing
+  callouts:
+  - n: 1
+    target: text=Paused services
+    note: Carried-over services
+  caption: Servicing with carried-over services in the Paused services bar
+- id: so-day-5-queue
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Tap Service Queue
+  callouts:
+  - n: 1
+    target: text=Requires service
+    note: Was Turn Required
+  caption: The Requires service lane in the Service Queue
+- id: so-day-6-repairs
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Scroll to Requires reliability actions
+  callouts:
+  - n: 1
+    target: text=Log remedy / complete repair
+    note: Record the parts too
+  caption: Open repair cards in the exception lanes
+- id: so-day-7-tickets
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Casey Mechanic
+  device: tablet
+  url: /workshop/repairs
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Find the 207 card
+  callouts:
+  - n: 1
+    target: text=Open linked ticket
+    note: Resolve it if fixed
+  caption: Open linked ticket on a repair card to close a fixed ticket
+- id: so-day-8-campaign
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/campaign-work
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Tap Campaign work
+  callouts:
+  - n: 1
+    target: text=Assigned to me
+    note: Carry on here
+  caption: Campaign work with open tasks
+- id: so-day-9-report
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Tap Report a kart problem
+  callouts:
+  - n: 1
+    target: text=What are you reporting?
+    note: Incident or Reliability
+  caption: Report a kart problem with Incident and Reliability
+- id: so-day-10-order
+  kind: screenshot
+  page: switch-over/index.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/parts
+  state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
+  steps:
+  - Tap Stores
+  callouts:
+  - n: 1
+    target: text=Add to order list
+    note: Re-enter the order
+  caption: Add to order list in Stores
+- id: gen-trouble-comms
+  kind: screenshot
+  page: troubleshooting.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /comms
+  state: Demo Hub as seeded
+  steps:
+  - Open /comms as Alex Mechanic
+  - Type "Kart 307 shows Repair Required but the bumper is fitted"
+  callouts:
+  - n: 1
+    target: text=Remote Support
+    note: Ask for help
+  caption: A support message in KART Comms describing the problem
+- id: gen-where-tabs
+  kind: screenshot
+  page: where-did-it-go.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub as seeded
+  steps:
+  - Open the Workshop for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Overview
+    note: Readiness and Dashboard
+  - n: 2
+    target: text=Service Queue
+    note: Repair Workflow and turns
+  caption: The Workshop tabs that replace the Workshop App menu

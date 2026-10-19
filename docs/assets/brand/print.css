@@ -1,0 +1,18 @@
+/* Clean printing: no header, tabs, navigation, search or footer; keep the draft banner text. */
+@media print {
+  .md-header, .md-tabs, .md-sidebar, .md-footer, .md-top, .md-search, .md-source, .headerlink, .fkl-ticker { display: none !important; }
+  .md-banner { display: block !important; background: #ffffff !important; color: #000000 !important; border: 2px solid #000000; }
+  .fkl-draft-banner { color: #000000 !important; }
+  .md-main__inner, .md-content, .md-content__inner { margin: 0 !important; padding: 0 !important; max-width: 100% !important; }
+  body, .md-typeset { font-size: 11pt; color: #000000; background: #ffffff; }
+  .md-typeset h1 { font-size: 20pt; }
+  .md-typeset h2 { font-size: 14pt; page-break-after: avoid; }
+  .md-typeset ol > li, .md-typeset .admonition, figure, table { page-break-inside: avoid; }
+  .md-typeset a { color: #000000; }
+  figure.clip video { display: none; }
+  figure.clip figcaption::before { content: "Video: "; }
+  .md-content img { max-width: 80%; }
+  .md-typeset details { display: block; }
+  .md-typeset details > *:not(summary) { display: block !important; }
+  .md-typeset .fkl-roles a.fkl-role { background: #ffffff !important; color: #000000 !important; border: 2px solid #000000; }
+}

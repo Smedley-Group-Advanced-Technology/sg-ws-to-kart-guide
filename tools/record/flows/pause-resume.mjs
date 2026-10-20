@@ -20,12 +20,11 @@ export default {
     await s.shot('mech-pause-button', { scroll: false, at: { 1: s.page.getByRole('button', { name: 'Pause', exact: true }) } });
     await s.tap(s.page.getByRole('button', { name: 'Pause', exact: true }));
     const dlg = s.dialog;
-    await dlg.getByText('Pause service').first().waitFor();
+    await dlg.getByText(/^Pause service/).first().waitFor();
     await s.wait(800);
     s.cue();                                                    // Choose a reason.
-    await s.tap(dlg.getByRole('combobox').first(), { pause: 900 });
-    await s.shot('mech-pause-reason', { scroll: false, at: { 1: s.page.getByText('Pause service', { exact: true }), 2: s.page.getByRole('option', { name: 'Waiting on parts' }) } });
-    await s.tap(s.page.getByRole('option', { name: 'End of Shift' }));
+    await s.shot('mech-pause-reason', { scroll: false, at: { 1: dlg.getByText(/^Pause service/), 2: dlg.getByText('Waiting on parts', { exact: true }) } });
+    await s.tap(dlg.getByText('End of Shift', { exact: true }));
     s.cue();                                                    // Add a note for the next mechanic.
     await s.type(dlg.locator('textarea').first(), 'Front brakes bled, rear still to do');
     await s.shot('mech-pause-comment', { scroll: false, at: { 1: dlg.getByText('Comment (optional)') } });

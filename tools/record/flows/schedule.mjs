@@ -17,7 +17,7 @@ export default {
     const scope = (await dlg.count()) ? dlg : s.page;
     const monday = scope.getByRole('checkbox', { name: /^Working on Monday/ }).or(scope.getByRole('switch', { name: /^Working on Monday/ }));
     await s.tap(monday);
-    await s.shot('mech-sched-day', { at: { 1: monday } });
+    await s.shot('mech-sched-day', { at: { 1: monday }, place: { 1: 'below' } });
     const loc = scope.getByRole('combobox', { name: 'Work location' }).first();
     await s.tap(loc);
     await s.tap(s.page.getByRole('option', { name: 'In shop' }));
@@ -25,10 +25,12 @@ export default {
     const times = scope.locator('input[type=time]');
     await times.nth(0).fill('08:00');
     await times.nth(1).fill('16:30');
-    await s.shot('mech-sched-times', { at: { 1: times.nth(0), 2: times.nth(1) } });
+    await s.page.evaluate(() => document.activeElement && document.activeElement.blur());
+    await s.shot('mech-sched-times', { at: { 1: times.nth(0), 2: times.nth(1) }, place: { 1: 'below', 2: 'below' } });
     const save = scope.getByRole('button', { name: 'Save draft' });
-    await s.scrollTo(save);
-    await s.shot('mech-sched-submit', { at: { 1: save, 2: scope.getByRole('button', { name: 'Submit', exact: true }) } });
+    await save.evaluate((e) => e.scrollIntoView({ block: 'end' }));
+    await s.wait(600);
+    await s.shot('mech-sched-submit', { scroll: false, at: { 1: save, 2: scope.getByRole('button', { name: 'Submit', exact: true }) } });
     await s.close();
   },
 };

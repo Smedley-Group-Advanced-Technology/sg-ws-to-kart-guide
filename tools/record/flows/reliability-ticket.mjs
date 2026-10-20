@@ -4,8 +4,7 @@ import { tab } from './service-turn.mjs';
 
 export default {
   shots: ['mech-ticket-clip', 'mech-ticket-open', 'mech-ticket-type', 'mech-ticket-form', 'mech-ticket-effect', 'mech-ticket-status',
-    'mech-ticket-describe', 'mech-ticket-saved', 'mech-ticket-result', 'so-day-7-tickets', 'mech-ticket-linked',
-    'mech-ticket-resolve', 'mech-ticket-closed'],
+    'mech-ticket-describe', 'mech-ticket-saved'],
   reset: ['no_207_ticket'],
   async run({ open, clip }) {
     const s = await open({ persona: 'Casey Mechanic', device: 'tablet', record: true });
@@ -49,26 +48,5 @@ export default {
     const r = await s.close();
     clip('mech-ticket-clip', r, { poster: 2 });
 
-    // the repair card and resolving the ticket
-    const c = await open({ persona: 'Casey Mechanic', device: 'tablet' });
-    await c.goto('/workshop/repairs');
-    await c.mustReload(c.page.getByText('Cadet 207', { exact: true }), 60000);
-    const card = c.page.locator('div').filter({ has: c.page.getByText('Cadet 207', { exact: true }) }).filter({ hasText: 'Open linked ticket' }).last();
-    await c.scrollTo(card);
-    await c.shot('mech-ticket-result', { at: { 1: card.getByText('Cadet 207', { exact: true }), 2: card.getByText('Open ticket', { exact: true }) } });
-    await c.shot('so-day-7-tickets', { at: { 1: card.getByText('Open linked ticket') } });
-    await c.shot('mech-ticket-linked', { at: { 1: card.getByText('Open linked ticket') } });
-    await c.tap(card.getByText('Open linked ticket'));
-    await c.must(c.page.getByText('Status *'), { timeout: 45000 });
-    await c.settle(800);
-    await c.tap(c.page.getByRole('radio', { name: 'Resolved' }));
-    await c.shot('mech-ticket-resolve', { at: { 1: c.page.getByRole('radio', { name: 'Resolved' }) } });
-    await c.tap(c.page.getByRole('button', { name: 'Update Issue' }));
-    await c.wait(2500);
-    await c.goto('/workshop');
-    await c.mustReload('text=Readiness board', 60000);
-    const t207 = c.tile('#207', 'Available');
-    await c.shot('mech-ticket-closed', { at: { 1: t207 } });
-    await c.close();
   },
 };

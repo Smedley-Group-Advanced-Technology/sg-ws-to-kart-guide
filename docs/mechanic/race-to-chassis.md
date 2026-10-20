@@ -59,7 +59,7 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 
 1. Tap the cell for the race number and session, for example race number **7** in the **Current session**.
 
-    ![The tap grid on a phone with the cell for race number 7 selected](../assets/img/mechanic/mech-r2c-tap-cell.png){ loading=lazy }
+    ![The tap grid on a phone, with the cell for race number 7 in session 1](../assets/img/mechanic/mech-r2c-tap-cell.png){ loading=lazy }
 
 2. Tap the chassis this race number drives, for example chassis **02** in the **Junior** class (Junior 302).
 

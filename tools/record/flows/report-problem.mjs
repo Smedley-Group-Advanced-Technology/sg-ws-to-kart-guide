@@ -31,8 +31,8 @@ export default {
     await s.tap(incType, { pause: 800 });
     await s.tap(s.page.getByRole('option', { name: 'Impact / Contact' }));
     await s.shot('mech-report-incident-type', { at: { 1: dlg.getByText(/^Incident type/) } });
-    await s.type(dlg.getByPlaceholder('Describe the incident'), 'Hit the tyre wall at turn 3 in the Demo Practice Day');
-    await s.shot('mech-report-describe', { at: { 1: dlg.getByPlaceholder('Describe the incident') } });
+    await s.type(dlg.locator('#report-notes'), 'Hit the tyre wall at turn 3 in the Demo Practice Day');
+    await s.shot('mech-report-describe', { at: { 1: dlg.getByText('Notes / details', { exact: true }) } });
     await s.tap(dlg.getByRole('button', { name: 'Front', exact: true }));
     await s.shot('mech-report-impact', { at: { 1: dlg.getByText(/^Impact location/) } });
     s.cue();                                                    // Add what you found.
@@ -59,7 +59,7 @@ export default {
     s.cue();                                                    // The finding is now a repair.
     await s.tap(tab(s, 'Service Queue'));
     await s.skip(async () => { await s.must(s.page.getByText('Bambino 6', { exact: true }), { timeout: 45000 }); await s.settle(600); });
-    const card = s.page.locator('.bg-card,[class*="rounded"]').filter({ has: s.page.getByText('Bambino 6', { exact: true }) }).filter({ hasText: 'Incident' }).last();
+    const card = s.page.getByText('Bambino 6', { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Log remedy / complete repair"]][1]');
     await s.scrollTo(card);
     await s.hover(card);
     await s.wait(2500);
@@ -80,8 +80,8 @@ export default {
     await f.tap(d.getByRole('combobox').nth(1));
     await f.tap(f.page.getByRole('option', { name: 'Power / Performance' }));
     await f.shot('mech-feedback-power', { at: { 1: d.getByText(/^Driver feedback type/) } });
-    await f.type(d.getByPlaceholder('Describe the driver feedback'), 'Driver says it feels slow out of the hairpin');
-    await f.shot('mech-feedback-describe', { at: { 1: d.getByPlaceholder('Describe the driver feedback') } });
+    await f.type(d.locator('#report-notes'), 'Driver says it feels slow out of the hairpin');
+    await f.shot('mech-feedback-describe', { at: { 1: d.getByText('Notes / details', { exact: true }) } });
     await f.settle(600);
     // answer the inspection: Pass everywhere, one Fail
     const passes = d.locator('[data-testid="dfi-pass"]');

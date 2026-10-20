@@ -21,7 +21,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
 
     ![The Pause button on the Servicing page](../assets/img/mechanic/mech-pause-button.png){ loading=lazy }
 
-2. In **Pause service**, open **Pause reason** and choose one, for example **End of Shift** or **Waiting on parts**.
+2. In **Pause service**, tap a **Pause reason**, for example **End of Shift** or **Waiting on parts**.
 
     ![The Pause service dialog with the list of pause reasons](../assets/img/mechanic/mech-pause-reason.png){ loading=lazy }
 

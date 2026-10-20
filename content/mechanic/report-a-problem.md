@@ -90,14 +90,14 @@ captions:
       - [1, "text=Incident type", "What kind of incident"]
     :::
 
-5. Type what happened in **Describe the incident**.
+5. Type what happened in **Notes / details**. (**Describe the incident** only appears when the incident type is **Other**.)
 
     :::shot mech-report-describe
-    caption: Describe the incident filled in
+    caption: Notes / details filled in for the incident
     steps:
-      - Type "Hit the tyre wall at turn 3 in the Demo Practice Day" in Describe the incident
+      - Type "Hit the tyre wall at turn 3 in the Demo Practice Day" in Notes / details
     callouts:
-      - [1, "text=Describe the incident", "Short and clear"]
+      - [1, "text=Notes / details", "Short and clear"]
     :::
 
 6. Tap the **Impact location**, for example **Front**.
@@ -198,14 +198,14 @@ captions:
       - [1, "text=Driver feedback type", "Type of feedback"]
     :::
 
-3. Type what the driver said in **Describe the driver feedback**.
+3. Type what the driver said in **Notes / details**. (**Describe the driver feedback** only appears for the type **Other**.)
 
     :::shot mech-feedback-describe
-    caption: Describe the driver feedback filled in
+    caption: Notes / details filled in with what the driver said
     steps:
-      - Type "Driver says it feels slow out of the hairpin" in Describe the driver feedback
+      - Type "Driver says it feels slow out of the hairpin" in Notes / details
     callouts:
-      - [1, "text=Describe the driver feedback", "In the driver's words"]
+      - [1, "text=Notes / details", "In the driver's words"]
     :::
 
 4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail.

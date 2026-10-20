@@ -137,14 +137,14 @@ captions:
 1. Tap the cell for the race number and session, for example race number **7** in the **Current session**.
 
     :::shot mech-r2c-tap-cell
-    caption: The tap grid on a phone with the cell for race number 7 selected
+    caption: The tap grid on a phone, with the cell for race number 7 in session 1
     device: phone
     steps:
       - Open Race to Chassis on the phone
-      - Tap the cell for race number 7 in the current session
+      - Find the cell for race number 7 in the current session
     callouts:
       - [1, "text=Race #", "Race numbers"]
-      - [2, "text=Current session", "This session"]
+      - [2, "css=[data-testid='r2c-cell-7-1']", "Race number 7, session 1"]
     :::
 
 2. Tap the chassis this race number drives, for example chassis **02** in the **Junior** class (Junior 302).

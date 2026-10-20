@@ -46,7 +46,7 @@ flowchart TD
 
 1. Open **Overview** and look at Bambino **106**. It shows **Repair Needed (usable)**: the incident found a loose bumper mount, and the kart can still be used.
 
-    ![Bambino 106 showing Repair Needed (usable) on the Readiness board](../assets/img/start/start-problem-106.png){ loading=lazy }
+    ![Bambino 106 after an incident, still Available on its tile](../assets/img/start/start-problem-106.png){ loading=lazy }
 
 2. Look at Cadet **207**. It shows **Repair Required** because of a stopping reliability ticket: it cut out and would not restart.
 

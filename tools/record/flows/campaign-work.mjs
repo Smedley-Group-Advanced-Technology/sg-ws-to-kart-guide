@@ -36,6 +36,7 @@ export default {
     await s.scrollTo(parts.getByText('Parts fitted', { exact: true }), { block: 'start' });
     await s.shot('mech-camp-fit', { scroll: false, at: { 1: parts.getByText('Parts fitted', { exact: true }), 2: parts.getByRole('button', { name: /Fit another part/ }) } });
     await s.tap(parts.getByRole('button', { name: 'Fit', exact: true }));
+    await s.tap(s.dialog.getByRole('button', { name: 'Confirm' }));
     await s.skip(() => s.settle(800));
     await s.wait(1200);
     s.cue();                                                    // Tap Complete work.

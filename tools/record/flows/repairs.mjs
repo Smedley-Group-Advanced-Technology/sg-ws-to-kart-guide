@@ -4,7 +4,7 @@ import { HUB } from '../lib/config.mjs';
 import { asPersona } from '../lib/db.mjs';
 import { tab } from './service-turn.mjs';
 
-const repairCard = (s, label) => s.page.locator('div').filter({ has: s.page.getByText(label, { exact: true }) }).filter({ hasText: 'Log remedy / complete repair' }).last();
+const repairCard = (s, label) => s.page.getByText(label, { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Log remedy / complete repair"]][1]');
 
 export default {
   shots: ['mech-repair-lanes', 'mech-repair-priority', 'mech-repair-card', 'mech-repair-kartpage', 'mech-remedy-open', 'so-day-6-repairs',

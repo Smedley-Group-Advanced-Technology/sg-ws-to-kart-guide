@@ -44,13 +44,13 @@ captions:
       - [1, "role=button[name='Pause']", "Pause the service"]
     :::
 
-2. In **Pause service**, open **Pause reason** and choose one, for example **End of Shift** or **Waiting on parts**.
+2. In **Pause service**, tap a **Pause reason**, for example **End of Shift** or **Waiting on parts**.
 
     :::shot mech-pause-reason
     caption: The Pause service dialog with the list of pause reasons
     steps:
       - Tap Pause
-      - Open the Pause reason list
+      - Look at the Pause reason list
     callouts:
       - [1, "text=Pause service", "The pause dialog"]
       - [2, "text=Waiting on parts", "Pick the real reason"]

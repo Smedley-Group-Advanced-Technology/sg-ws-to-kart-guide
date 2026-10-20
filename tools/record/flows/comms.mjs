@@ -11,7 +11,7 @@ export default {
     if (await s.pick(thread)) { await s.tap(thread); await s.settle(600); }
     const box = s.page.getByPlaceholder(/Type a message/);
     await s.type(box, 'Kart 307 shows Repair Required but the bumper is fitted');
-    await s.shot('gen-trouble-comms', { scroll: false, at: { 1: s.page.getByText('Remote Support').first() } });
+    await s.shot('gen-trouble-comms', { scroll: false, at: { 1: s.page.getByText('Remote Support').first() }, place: { 1: 'right' } });
     await s.close();
   },
 };

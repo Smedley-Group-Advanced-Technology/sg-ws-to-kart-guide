@@ -41,9 +41,9 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Incident type set to Impact / Contact](../assets/img/mechanic/mech-report-incident-type.png){ loading=lazy }
 
-5. Type what happened in **Describe the incident**.
+5. Type what happened in **Notes / details**. (**Describe the incident** only appears when the incident type is **Other**.)
 
-    ![Describe the incident filled in](../assets/img/mechanic/mech-report-describe.png){ loading=lazy }
+    ![Notes / details filled in for the incident](../assets/img/mechanic/mech-report-describe.png){ loading=lazy }
 
 6. Tap the **Impact location**, for example **Front**.
 
@@ -85,9 +85,9 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Driver feedback type Power / Performance](../assets/img/mechanic/mech-feedback-power.png){ loading=lazy }
 
-3. Type what the driver said in **Describe the driver feedback**.
+3. Type what the driver said in **Notes / details**. (**Describe the driver feedback** only appears for the type **Other**.)
 
-    ![Describe the driver feedback filled in](../assets/img/mechanic/mech-feedback-describe.png){ loading=lazy }
+    ![Notes / details filled in with what the driver said](../assets/img/mechanic/mech-feedback-describe.png){ loading=lazy }
 
 4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail.
 

@@ -34,7 +34,7 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 
     ![Record measurement on a campaign task](../assets/img/mechanic/mech-camp-measure.png){ loading=lazy }
 
-5. Under **Parts fitted**, tap **Fit** for each campaign part. Tap **Fit another part** if you used something else.
+5. Under **Parts fitted**, tap **Fit** for each campaign part, check the **Quantity** and tap **Confirm**. KART takes it from the hub's stock. Tap **Fit another part** if you used something else.
 
     ![Parts fitted with the caliper seal kit and the Fit button](../assets/img/mechanic/mech-camp-fit.png){ loading=lazy }
 

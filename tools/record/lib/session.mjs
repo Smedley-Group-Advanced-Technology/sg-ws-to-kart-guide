@@ -129,8 +129,12 @@ export class Session {
 
   // A toast (sonner or Radix) with this text; hovering it pauses its timer so it stays for the screenshot.
   async toast(text) {
-    const t = this.page.locator('[data-sonner-toast], li[role=status], [role=status]').filter({ hasText: text });
-    await t.first().waitFor({ timeout: 45000 });
+    const t = this.page.locator('[data-sonner-toast], ol > li, [role=status]').filter({ hasText: text });
+    await t.first().waitFor({ timeout: 45000 }).catch(async (e) => {
+      const f = path.join(this.rawDir, `toast-fail-${Date.now()}.png`);
+      await this.page.screenshot({ path: f }).catch(() => {});
+      throw new Error(`${this.name}: no toast "${text}" (see ${f})`);
+    });
     const b = await t.first().boundingBox().catch(() => null);
     if (b) await this.page.mouse.move(b.x + b.width / 2, b.y + b.height / 2);
     return t.first();
@@ -195,7 +199,7 @@ export class Session {
       this.log('  reloading the page once');
       await this.page.reload({ waitUntil: 'commit' });
       await this.settle(600);
-      return this.must(target, { timeout: 45000 });
+      return this.must(target, { timeout: 90000 });
     }
   }
 

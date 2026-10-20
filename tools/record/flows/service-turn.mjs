@@ -100,9 +100,14 @@ async function emptyReading(s) {
   throw new Error('no empty reading input');
 }
 async function answerVisible(s, n, pause) {
+  // element handles, not role locators: the cells re-render every second while the timer runs
   for (let i = 0; i < n; i++) {
-    const b = s.page.getByRole('button', { name: 'Unchecked' });
-    if (!(await s.pick(b))) break;
-    await s.tap(b, { pause });
+    const h = await s.page.$('button[aria-label="Unchecked"]:visible');
+    if (!h) break;
+    await h.evaluate((e) => e.scrollIntoView({ block: 'center' })).catch(() => {});
+    const b = await h.boundingBox().catch(() => null);
+    if (b) { await s.moveCursor(b.x + b.width / 2, b.y + b.height / 2, 450); await s.pulse(); }
+    if (b) await s.page.mouse.click(b.x + b.width / 2, b.y + b.height / 2); else await h.click({ force: true }).catch(() => {});
+    await s.page.waitForTimeout(s.pace(pause));
   }
 }

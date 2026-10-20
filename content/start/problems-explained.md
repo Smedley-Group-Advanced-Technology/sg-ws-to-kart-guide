@@ -53,7 +53,7 @@ flowchart TD
 1. Open **Overview** and look at Bambino **106**. It shows **Repair Needed (usable)**: the incident found a loose bumper mount, and the kart can still be used.
 
     :::shot start-problem-106
-    caption: Bambino 106 showing Repair Needed (usable) on the Readiness board
+    caption: Bambino 106 after an incident, still Available on its tile
     steps:
       - Open the Workshop Overview
       - Scroll to the Bambino Karts tiles

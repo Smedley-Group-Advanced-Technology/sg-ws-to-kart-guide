@@ -14,15 +14,15 @@ export default {
     await s.shot('mech-r2c-switch', { scroll: false, at: { 1: s.page.locator('[data-testid="r2c-view-dragdrop"]') } });
     await s.wait(2500);
     s.cue();                                                    // Tap the race number cell.
-    const cur = s.page.getByText('Current session').first();
-    let cell = s.page.locator('[data-testid="r2c-cell-7-1"]');
+    const cell = s.page.locator('[data-testid="r2c-cell-7-1"]');
+    await s.scrollTo(cell);
+    await s.shot('mech-r2c-tap-cell', { scroll: false, at: { 1: s.page.getByText('Race #', { exact: true }), 2: cell } });
     await s.tap(cell);
     await s.wait(600);
-    await s.shot('mech-r2c-tap-cell', { at: { 1: s.page.getByText('Race #', { exact: true }), 2: cur }, optional: [2] });
     s.cue();                                                    // Then tap the chassis it drives.
     const ch = s.page.locator('[data-testid="r2c-chassis-2"]');
     await s.scrollTo(ch);
-    await s.shot('mech-r2c-tap-chassis', { scroll: false, at: { 1: s.page.getByText('Tap the chassis this race number drives.') } });
+    await s.shot('mech-r2c-tap-chassis', { scroll: false, at: { 1: s.page.getByText('Tap the chassis this race number drives.') }, place: { 1: 'below' } });
     await s.tap(ch);
     await s.wait(2500);
     s.cue();                                                    // Switch views with the button at the bottom.

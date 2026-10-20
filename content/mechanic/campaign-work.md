@@ -82,7 +82,7 @@ captions:
       - [1, "text=Record measurement", "Type the reading"]
     :::
 
-5. Under **Parts fitted**, tap **Fit** for each campaign part. Tap **Fit another part** if you used something else.
+5. Under **Parts fitted**, tap **Fit** for each campaign part, check the **Quantity** and tap **Confirm**. KART takes it from the hub's stock. Tap **Fit another part** if you used something else.
 
     :::shot mech-camp-fit
     caption: Parts fitted with the caliper seal kit and the Fit button

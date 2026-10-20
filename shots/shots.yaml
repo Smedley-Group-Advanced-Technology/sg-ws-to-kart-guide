@@ -2727,7 +2727,7 @@
   state: Alex has Cadet 203 in service; Junior 304 already paused by Alex with reason Waiting on parts
   steps:
   - Tap Pause
-  - Open the Pause reason list
+  - Look at the Pause reason list
   callouts:
   - n: 1
     target: text=Pause service
@@ -2989,15 +2989,15 @@
     1; Cadet 207 and Junior 307 Repair Required
   steps:
   - Open Race to Chassis on the phone
-  - Tap the cell for race number 7 in the current session
+  - Find the cell for race number 7 in the current session
   callouts:
   - n: 1
     target: 'text=Race #'
     note: Race numbers
   - n: 2
-    target: text=Current session
-    note: This session
-  caption: The tap grid on a phone with the cell for race number 7 selected
+    target: css=[data-testid='r2c-cell-7-1']
+    note: Race number 7, session 1
+  caption: The tap grid on a phone, with the cell for race number 7 in session 1
 - id: mech-r2c-tap-chassis
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -3623,12 +3623,12 @@
   state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
     / Performance inspection checklist published
   steps:
-  - Type "Hit the tyre wall at turn 3 in the Demo Practice Day" in Describe the incident
+  - Type "Hit the tyre wall at turn 3 in the Demo Practice Day" in Notes / details
   callouts:
   - n: 1
-    target: text=Describe the incident
+    target: text=Notes / details
     note: Short and clear
-  caption: Describe the incident filled in
+  caption: Notes / details filled in for the incident
 - id: mech-report-impact
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -3773,12 +3773,12 @@
   state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
     / Performance inspection checklist published
   steps:
-  - Type "Driver says it feels slow out of the hairpin" in Describe the driver feedback
+  - Type "Driver says it feels slow out of the hairpin" in Notes / details
   callouts:
   - n: 1
-    target: text=Describe the driver feedback
+    target: text=Notes / details
     note: In the driver's words
-  caption: Describe the driver feedback filled in
+  caption: Notes / details filled in with what the driver said
 - id: mech-feedback-inspection
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -5042,7 +5042,7 @@
   - n: 2
     target: css=[data-kart='106'] input[type=checkbox]
     note: Available stays ticked
-  caption: Bambino 106 showing Repair Needed (usable) on the Readiness board
+  caption: Bambino 106 after an incident, still Available on its tile
 - id: start-problem-207
   kind: screenshot
   page: start/problems-explained.md

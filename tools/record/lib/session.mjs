@@ -187,7 +187,7 @@ export class Session {
   }
 
   async must(target, opts) {
-    const deadline = Date.now() + (opts?.timeout ?? 45000);
+    const deadline = Date.now() + Math.max(opts?.timeout ?? 90000, 90000);
     for (;;) {
       const el = await this.pick(target, opts);
       if (el) return el;
@@ -206,7 +206,7 @@ export class Session {
       this.log('  reloading the page once');
       await this.page.reload({ waitUntil: 'commit' });
       await this.settle(600);
-      return this.must(target, { timeout: 90000 });
+      return this.must(target, { timeout: 150000 });
     }
   }
 

@@ -57,13 +57,15 @@ export default {
     await s.skip(() => s.settle(1000));
     await s.wait(1500);
     s.cue();                                                    // The finding is now a repair.
-    await s.tap(tab(s, 'Service Queue'));
-    await s.skip(async () => { await s.must(s.page.getByText('Bambino 6', { exact: true }), { timeout: 45000 }); await s.settle(600); });
-    const card = s.page.getByText('Bambino 6', { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Log remedy / complete repair"]][1]');
-    await s.scrollTo(card);
-    await s.hover(card);
-    await s.wait(2500);
-    await s.shot('mech-report-result', { scroll: false, at: { 1: card.getByText('Incident', { exact: true }), 2: card.getByText('Bambino 6', { exact: true }) } });
+    try {
+      await s.tap(tab(s, 'Service Queue'));
+      await s.skip(async () => { await s.mustReload(s.page.getByText('Bambino 6', { exact: true }), 60000); await s.settle(600); });
+      const card = s.page.getByText('Bambino 6', { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Log remedy / complete repair"]][1]');
+      await s.scrollTo(card);
+      await s.hover(card);
+      await s.wait(2500);
+      await s.shot('mech-report-result', { scroll: false, at: { 1: card.getByText('Incident', { exact: true }), 2: card.getByText('Bambino 6', { exact: true }) } });
+    } catch (e) { s.log(`  queue view not ready, clip ends here (${String(e).slice(0, 120)})`); }
     const r = await s.close();
     clip('mech-incident-clip', r, { poster: 3 });
 

@@ -35,10 +35,18 @@ export function segments(result, { start, end }) {
     for (const [a, b] of v.active) {
       // the active window of this tab, minus the cut windows (a short 250 ms of each cut is kept)
       let pieces = [[Math.max(a, start), Math.min(b ?? result.end, end)]];
-      for (const [ca, cb] of cuts) {
+      if (result.keeps && result.keeps.length) {
+        // only the windows the viewer should see (merged when less than 400 ms apart)
+        const ks = result.keeps.map(([x, y]) => [x - 60, y + 120]).sort((x, y) => x[0] - y[0]);
+        const merged = [];
+        for (const k of ks) { const l = merged.at(-1); if (l && k[0] - l[1] < 400) l[1] = Math.max(l[1], k[1]); else merged.push([...k]); }
+        const [pa, pb] = pieces[0];
+        pieces = merged.map(([x, y]) => [Math.max(x, pa), Math.min(y, pb)]).filter(([x, y]) => y - x > 0);
+      }
+      for (const [ca, cb] of (result.keeps && result.keeps.length ? [] : cuts)) {
         pieces = pieces.flatMap(([s, e]) => (cb <= s || ca >= e ? [[s, e]] : [[s, Math.max(s, ca + 150)], [Math.min(e, cb - 100), e]]));
       }
-      for (const [s, e] of pieces) if (e - s > 200) segs.push({ file: v.path, from: (s - v.t0) / 1000, to: (e - v.t0) / 1000, g0: s, g1: e });
+      for (const [s, e] of pieces) if (e - s > 120) segs.push({ file: v.path, from: (s - v.t0) / 1000, to: (e - v.t0) / 1000, g0: s, g1: e });
     }
   }
   segs.sort((x, y) => x.g0 - y.g0);
@@ -72,16 +80,14 @@ export function buildClip(shot, result, opts = {}, log = console.log) {
   const dur = segs.reduce((a, s) => a + (s.g1 - s.g0), 0) / 1000;
   const W = shot.device === 'phone' ? 390 : shot.device === 'desktop' ? 1440 : 1180;
   const H = shot.device === 'phone' ? 844 : shot.device === 'desktop' ? 900 : 820;
-  const inputs = segs.flatMap((s) => ['-i', s.file]);
-  const chains = segs.map((s, i) => `[${i}:v]trim=start=${s.from.toFixed(3)}:end=${s.to.toFixed(3)},setpts=PTS-STARTPTS,fps=25,scale=${W}:${H}:flags=lanczos,setsar=1,format=yuv420p[v${i}]`);
-  const filter = `${chains.join(';')};${segs.map((_, i) => `[v${i}]`).join('')}concat=n=${segs.length}:v=1:a=0[out]`;
+  const { inputs, filter } = selectFilter(segs, `scale=${W}:${H}:flags=lanczos,setsar=1,format=yuv420p`);
   fs.mkdirSync(VIDEO, { recursive: true });
   const base = path.join(VIDEO, shot.id);
   log(`  encoding ${shot.id} (${dur.toFixed(1)} s, ${segs.length} segment(s))`);
   ffmpeg([...inputs, '-filter_complex', filter, '-map', '[out]', '-an', '-c:v', 'libx264', '-preset', 'faster', '-crf', '28',
     '-pix_fmt', 'yuv420p', '-movflags', '+faststart', `${base}.mp4`], log);
-  ffmpeg(['-i', `${base}.mp4`, '-an', '-c:v', 'libvpx-vp9', '-crf', '40', '-b:v', '0', '-row-mt', '1', '-deadline', 'good',
-    '-cpu-used', '5', '-threads', '4', `${base}.webm`], log);
+  ffmpeg(['-i', `${base}.mp4`, '-an', '-c:v', 'libvpx-vp9', '-crf', '40', '-b:v', '0', '-row-mt', '1', '-deadline', 'realtime',
+    '-cpu-used', '8', '-threads', '2', `${base}.webm`], log);
   // poster: a meaningful frame (default: 1.5 s after the cue in the middle)
   const pc = opts.poster ?? Math.floor(cues.length / 2);
   const pt = typeof pc === 'number' && pc < 1000 ? clipTime(segs, cues[pc].t) + 1.5 : clipTime(segs, pc);
@@ -107,17 +113,31 @@ export function buildClip(shot, result, opts = {}, log = console.log) {
 // GIF from a window of a session (global ms), max 800 px wide, palette, under 1.5 MB.
 export function buildGif(shot, result, { start, end }, log = console.log) {
   const segs = segments(result, { start, end });
-  if (segs.length !== 1) throw new Error(`${shot.id}: GIF window must be on one tab`);
-  const s = segs[0];
+  const dur = segs.reduce((x, g) => x + g.g1 - g.g0, 0) / 1000;
   fs.mkdirSync(GIF, { recursive: true });
   const out = path.join(GIF, `${shot.id}.gif`);
   for (const [fps, w] of [[10, 800], [8, 680], [6, 560]]) {
-    ffmpeg(['-ss', s.from.toFixed(3), '-t', (s.to - s.from).toFixed(3), '-i', s.file, '-vf',
-      `fps=${fps},scale='min(${w},iw)':-1:flags=lanczos,split[a][b];[a]palettegen=max_colors=96:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle`,
+    const { inputs, filter } = selectFilter(segs, `fps=${fps},scale='min(${w},iw)':-1:flags=lanczos`, fps);
+    ffmpeg([...inputs, '-filter_complex', `${filter};[out]split[a][b];[a]palettegen=max_colors=96:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle[g]`,
+      '-map', '[g]',
       '-loop', '0', out], log);
     const mb = fs.statSync(out).size / 1048576;
-    log(`  gif ${shot.id}: ${(s.to - s.from).toFixed(1)} s, ${fps} fps, ${mb.toFixed(2)} MB`);
+    log(`  gif ${shot.id}: ${dur.toFixed(1)} s, ${fps} fps, ${mb.toFixed(2)} MB`);
     if (mb < 1.5) return;
   }
   throw new Error(`${shot.id}: GIF over 1.5 MB`);
+}
+
+// One input per video file; the kept time windows are picked with select and joined with concat.
+function selectFilter(segs, tail, fps = 25) {
+  const groups = [];
+  for (const g of segs) { const l = groups.at(-1); if (l && l.file === g.file) l.parts.push(g); else groups.push({ file: g.file, parts: [g] }); }
+  const inputs = groups.flatMap((g) => ['-i', g.file]);
+  const chains = groups.map((g, i) => {
+    const sel = g.parts.map((p) => `between(t\\,${p.from.toFixed(3)}\\,${p.to.toFixed(3)})`).join('+');
+    return `[${i}:v]fps=${fps},select=${sel},setpts=N/(${fps}*TB),${tail}[v${i}]`;
+  });
+  const filter = groups.length === 1 ? chains[0].replace(/\[v0\]$/, '[out]')
+    : `${chains.join(';')};${groups.map((_, i) => `[v${i}]`).join('')}concat=n=${groups.length}:v=1:a=0[out]`;
+  return { inputs, filter };
 }

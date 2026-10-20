@@ -51,7 +51,7 @@ export class Session {
     s.browser = browser; s.persona = persona; s.device = device; s.record = record; s.name = name; s.log = log;
     s.dev = DEVICES[device];
     if (!s.dev) throw new Error(`unknown device ${device}`);
-    s.blocked = []; s.errors = []; s.cues = []; s.marks = {}; s.pages = []; s.cuts = [];
+    s.blocked = []; s.errors = []; s.cues = []; s.marks = {}; s.pages = []; s.cuts = []; s.keeps = [];
     s.T = Date.now();
     s.rawDir = path.join(RAW, name);
     fs.mkdirSync(s.rawDir, { recursive: true });
@@ -79,8 +79,15 @@ export class Session {
   }
   now() { return Date.now() - this.T; }
   pace(ms) { return this.record ? ms : Math.min(ms, 250); }
-  async wait(ms) { await this.page.waitForTimeout(ms); }
-  async beat() { await this.page.waitForTimeout(this.pace(1200)); }
+  // Time the viewer should see (waits, cursor moves, typing, pauses after a tap). In clips only these windows
+  // are kept, so slow loads and waiting for elements never show up in the video.
+  async keep(fn) {
+    const a = this.now();
+    try { return await fn(); } finally { this.keeps.push([a, this.now()]); }
+  }
+  async view(ms) { await this.keep(() => this.page.waitForTimeout(ms)); }
+  async wait(ms) { await this.view(ms); }
+  async beat() { await this.view(this.pace(1200)); }
 
   // Activate a page for the video timeline (the clip follows whichever tab the viewer would look at).
   activate(p) {
@@ -216,7 +223,7 @@ export class Session {
       c.style.transform = `translate(${x}px,${y}px)`;
       sessionStorage.setItem('rec-cursor', JSON.stringify({ x, y }));
     }, { x, y, ms }).catch(() => {});
-    await this.page.waitForTimeout(ms + 120);
+    await this.view(ms + 120);
   }
 
   async pulse() {
@@ -247,13 +254,13 @@ export class Session {
       const y = b === 'start' ? r.top + scrollY - 76 : r.top + scrollY - Math.max(76, (innerHeight - r.height) / 2);
       window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
     }, block);
-    await this.page.waitForTimeout(this.pace(1000));
+    await this.view(this.pace(1000));
     return el;
   }
 
   async scrollBy(dy) {
     await this.page.evaluate((d) => window.scrollBy({ top: d, behavior: 'smooth' }), dy);
-    await this.page.waitForTimeout(this.pace(1000));
+    await this.view(this.pace(1000));
   }
 
   async hover(target) {
@@ -261,7 +268,7 @@ export class Session {
     const b = await el.boundingBox();
     await this.moveCursor(b.x + b.width / 2, b.y + b.height / 2);
     await el.hover({ force: true });
-    await this.page.waitForTimeout(this.pace(600));
+    await this.view(this.pace(600));
     return el;
   }
 
@@ -276,7 +283,7 @@ export class Session {
       await this.pulse();
     }
     await el.click({ force, position, noWaitAfter: noWait });
-    await this.page.waitForTimeout(this.pace(pause));
+    await this.view(this.pace(pause));
     return el;
   }
 
@@ -285,9 +292,9 @@ export class Session {
     if (clear) await el.fill('');
     await el.focus();
     if (clear) await this.page.keyboard.press('Control+A');   // number inputs keep a 0 after fill('')
-    if (this.record) await this.page.keyboard.type(String(text), { delay });
+    if (this.record) await this.keep(() => this.page.keyboard.type(String(text), { delay }));
     else await this.page.keyboard.insertText(String(text));
-    await this.page.waitForTimeout(this.pace(pause));
+    await this.view(this.pace(pause));
     return el;
   }
 
@@ -310,17 +317,17 @@ export class Session {
     await this.page.mouse.move(ax, ay);
     await this.pulse();
     await this.page.mouse.down();
-    await this.page.waitForTimeout(this.pace(hold));
+    await this.view(this.pace(hold));
     const n = this.record ? steps : 8;
     for (let i = 1; i <= n; i++) {
       const x = ax + ((bx - ax) * i) / n, y = ay + ((by - ay) * i) / n;
       await this.page.mouse.move(x, y);
       if (this.record) await this.moveCursor(x, y, 30);
     }
-    await this.page.waitForTimeout(this.pace(hold));
+    await this.view(this.pace(hold));
     await this.page.mouse.up();
     await this.pulse();
-    await this.page.waitForTimeout(this.pace(1200));
+    await this.view(this.pace(1200));
   }
 
   // Caption cue: the next caption of the clip starts now (or the given text).
@@ -448,7 +455,7 @@ export class Session {
       }
     }
     if (this.blocked.some((u) => /supabase\.co/.test(u))) throw new Error(`${this.name}: blocked requests to supabase.co: ${this.blocked.join(', ')}`);
-    return { videos: vids, cues: this.cues, marks: this.marks, cuts: this.cuts, end };
+    return { videos: vids, cues: this.cues, marks: this.marks, cuts: this.cuts, keeps: this.keeps, end };
   }
 }
 

@@ -159,14 +159,14 @@ captions:
       - [1, "text=Resolved", "The fault is fixed"]
     :::
 
-3. Tap **Update Issue**. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
+3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
     :::shot mech-ticket-closed
     caption: Cadet 207 no longer Repair Required on the Readiness board
     url: /workshop
     state: After the 207 ticket is resolved
     steps:
-      - Tap Update Issue
+      - Tap Update
       - Open Overview and find 207
     callouts:
       - [1, "text=#207", "Available again"]

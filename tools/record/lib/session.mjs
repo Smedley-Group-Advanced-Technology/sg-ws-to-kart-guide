@@ -284,6 +284,7 @@ export class Session {
     const el = await this.tap(target, { pause: 250 });
     if (clear) await el.fill('');
     await el.focus();
+    if (clear) await this.page.keyboard.press('Control+A');   // number inputs keep a 0 after fill('')
     if (this.record) await this.page.keyboard.type(String(text), { delay });
     else await this.page.keyboard.insertText(String(text));
     await this.page.waitForTimeout(this.pace(pause));

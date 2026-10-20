@@ -65,7 +65,7 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
     ![The 207 ticket with Status set to Resolved](../assets/img/mechanic/mech-ticket-resolve.png){ loading=lazy }
 
-3. Tap **Update Issue**. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
+3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
     ![Cadet 207 no longer Repair Required on the Readiness board](../assets/img/mechanic/mech-ticket-closed.png){ loading=lazy }
 

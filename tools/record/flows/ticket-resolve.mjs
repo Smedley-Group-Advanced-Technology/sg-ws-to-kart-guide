@@ -18,7 +18,7 @@ export default {
     await c.settle(800);
     await c.tap(c.page.getByRole('radio', { name: 'Resolved' }));
     await c.shot('mech-ticket-resolve', { at: { 1: c.page.getByRole('radio', { name: 'Resolved' }) } });
-    await c.tap(c.page.getByRole('button', { name: 'Update Issue' }));
+    await c.tap(c.page.getByRole('button', { name: 'Update', exact: true }));
     await c.wait(2500);
     await c.goto('/workshop');
     await c.mustReload('text=Readiness board', 60000);

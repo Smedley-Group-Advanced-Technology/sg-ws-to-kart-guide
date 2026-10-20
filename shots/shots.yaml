@@ -3289,7 +3289,7 @@
   url: /workshop
   state: After the 207 ticket is resolved
   steps:
-  - Tap Update Issue
+  - Tap Update
   - Open Overview and find 207
   callouts:
   - n: 1

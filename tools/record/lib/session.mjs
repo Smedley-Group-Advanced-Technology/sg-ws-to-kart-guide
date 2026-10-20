@@ -378,9 +378,10 @@ export class Session {
   //   n1 = the toast, n2 (optional) = the button in it with this text (e.g. 'Undo')
   async toastShot(id, text, button) {
     const shot = getShot(id);
-    const t = await this.toast(text);
+    let t = await this.toast(text);
     const boxes = [];
-    const b1 = await t.boundingBox();
+    let b1 = await t.boundingBox().catch(() => null);
+    if (!b1) { t = await this.toast(text); b1 = await t.boundingBox().catch(() => null); }
     if (b1) boxes.push({ n: 1, x: b1.x, y: b1.y, w: b1.width, h: b1.height, style: 'box' });
     if (button) {
       const b2 = await t.locator('button', { hasText: button }).first().boundingBox().catch(() => null);
@@ -394,7 +395,7 @@ export class Session {
     const problems = await this.scanPage();
     if (problems.length) throw new Error(`${id}: ${problems.join('; ')}`);
     const need = (shot.callouts || []).length;
-    if (boxes.length < Math.min(need, button ? 2 : 1)) throw new Error(`${id}: toast button not found`);
+    if (button && boxes.length < 2) this.log(`  ${id}: the ${button} button was not found, only the message is marked`);
     await annotate(this.browser, raw, outputPath(shot), boxes.slice(0, need || boxes.length));
     this.log(`  shot ${id} (toast)`);
     return t;

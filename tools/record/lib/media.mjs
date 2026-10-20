@@ -10,7 +10,8 @@ export const FFMPEG_IMAGE = process.env.FKL_FFMPEG_IMAGE || 'jrottenberg/ffmpeg:
 export function waitHeavy(log = console.log) {
   for (let i = 0; ; i++) {
     const r = spawnSync('pgrep', ['-af', HEAVY_PATTERN]);
-    const lines = r.stdout.toString().trim();
+    // Playwright's own video writer (ms-playwright/ffmpeg) is part of the recording, not a separate heavy job
+    const lines = r.stdout.toString().split('\n').filter((l) => l.trim() && !l.includes('ms-playwright')).join('\n');
     if (!lines) return;
     if (i % 6 === 0) log(`  waiting for heavy job: ${lines.split('\n')[0].slice(0, 120)}`);
     execFileSync('sleep', ['10']);

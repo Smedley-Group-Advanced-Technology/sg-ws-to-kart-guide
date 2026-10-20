@@ -37,8 +37,7 @@ export default {
     const sess = s.page.getByRole('button', { name: 'Session 1', exact: true });
     if (await s.pick(sess)) await s.tap(sess);
     await s.tap(s.page.getByRole('button', { name: 'Submit Issue' }));
-    const tt = await s.toast('Workshop incident linked to the ticket.');
-    await s.shot('mech-ticket-saved', { scroll: false, wait: 200, at: { 1: tt } });
+    await s.toastShot('mech-ticket-saved', 'Workshop incident linked to the ticket.');
     await s.wait(1200);
     s.cue();                                                    // The kart is now Repair Required.
     await s.goto('/workshop/readiness/repair_all', { settle: false });

@@ -117,7 +117,7 @@ captions:
     steps:
       - In Finding 1 choose Issue type Loose
       - Type "Bumper mount" in Item / component
-      - Type "Front bumper mount bolt loose" in Describe the issue
+      - Type "Front bumper mount bolt loose" in Notes
     callouts:
       - [1, "text=Finding 1", "Each finding becomes a repair"]
       - [2, "text=Item / component", "What part of the kart"]

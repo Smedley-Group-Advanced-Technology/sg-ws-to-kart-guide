@@ -3655,7 +3655,7 @@
   steps:
   - In Finding 1 choose Issue type Loose
   - Type "Bumper mount" in Item / component
-  - Type "Front bumper mount bolt loose" in Describe the issue
+  - Type "Front bumper mount bolt loose" in Notes
   callouts:
   - n: 1
     target: text=Finding 1

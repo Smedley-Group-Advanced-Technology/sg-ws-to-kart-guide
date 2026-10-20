@@ -41,7 +41,7 @@ export default {
     await s.tap(issue, { pause: 800 });
     await s.tap(s.page.getByRole('option', { name: 'Loose', exact: true }));
     await s.type(dlg.getByPlaceholder('e.g. Tie rod, brake cable, bumper mount'), 'Bumper mount');
-    await s.type(dlg.getByPlaceholder('Describe the issue'), 'Front bumper mount bolt loose');
+    await s.type(dlg.locator('textarea').last(), 'Front bumper mount bolt loose');
     await s.shot('mech-report-finding', { at: { 1: dlg.getByText(/^Finding 1/), 2: dlg.getByText(/^Item \/ component/) } });
     await s.tap(dlg.locator('[data-testid="finding-parts-no"]'));
     await s.shot('mech-report-part', { at: { 1: dlg.getByText('Is a replacement part required?') } });

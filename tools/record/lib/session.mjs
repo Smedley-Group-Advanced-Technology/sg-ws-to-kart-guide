@@ -137,7 +137,7 @@ export class Session {
   // A toast (sonner or Radix) with this text; hovering it pauses its timer so it stays for the screenshot.
   async toast(text) {
     const t = this.page.locator('[data-sonner-toast]:visible, ol > li:visible, [role=status]:visible').filter({ hasText: text });
-    await t.first().waitFor({ timeout: 45000 }).catch(async (e) => {
+    await t.first().waitFor({ timeout: 90000 }).catch(async (e) => {
       const f = path.join(this.rawDir, `toast-fail-${Date.now()}.png`);
       await this.page.screenshot({ path: f }).catch(() => {});
       throw new Error(`${this.name}: no toast "${text}" (see ${f})`);
@@ -374,6 +374,32 @@ export class Session {
   //   at: {n: target}     override a callout target; skip: [n] leave a callout out
   //   fullPage, clip: {x,y,width,height} | clipTo: target (with pad), scroll: false
   //   allowToast: true (an error toast is intended), frame: mock browser frame (see annotate.mjs)
+  // Screenshot of a short-lived toast: boxes and the picture are taken at once, the checks right after.
+  //   n1 = the toast, n2 (optional) = the button in it with this text (e.g. 'Undo')
+  async toastShot(id, text, button) {
+    const shot = getShot(id);
+    const t = await this.toast(text);
+    const boxes = [];
+    const b1 = await t.boundingBox();
+    if (b1) boxes.push({ n: 1, x: b1.x, y: b1.y, w: b1.width, h: b1.height, style: 'box' });
+    if (button) {
+      const b2 = await t.locator('button', { hasText: button }).first().boundingBox().catch(() => null);
+      if (b2) boxes.push({ n: 2, x: b2.x, y: b2.y, w: b2.width, h: b2.height, style: 'box' });
+    }
+    if (this.record) await this.showCursor(false);
+    const raw = path.join(this.rawDir, `${id}.raw.png`);
+    await this.page.screenshot({ path: raw, animations: 'disabled', caret: 'hide' });
+    if (this.record) await this.showCursor(true);
+    if (!b1) throw new Error(`${id}: toast gone before the screenshot`);
+    const problems = await this.scanPage();
+    if (problems.length) throw new Error(`${id}: ${problems.join('; ')}`);
+    const need = (shot.callouts || []).length;
+    if (boxes.length < Math.min(need, button ? 2 : 1)) throw new Error(`${id}: toast button not found`);
+    await annotate(this.browser, raw, outputPath(shot), boxes.slice(0, need || boxes.length));
+    this.log(`  shot ${id} (toast)`);
+    return t;
+  }
+
   async shot(id, opts = {}) {
     const shot = getShot(id);
     if (shot.kind !== 'screenshot') throw new Error(`${id} is a ${shot.kind}`);

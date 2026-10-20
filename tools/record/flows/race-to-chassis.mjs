@@ -35,8 +35,7 @@ export default {
     await s.drag(race(s, 5), slot(s, 4));
     const g1 = s.now();
     s.cue();                                                    // KART marks the chassis used for today.
-    const tm = await s.toast(/marked used/);
-    await s.shot('mech-r2c-marked', { scroll: false, wait: 200, at: { 1: tm, 2: tm.locator('button', { hasText: 'Undo' }) } });
+    await s.toastShot('mech-r2c-marked', /marked used/, 'Undo');
     await s.wait(2500);
     s.cue();                                                    // An unavailable chassis asks for a reason.
     await s.drag(race(s, 6), slot(s, 7));

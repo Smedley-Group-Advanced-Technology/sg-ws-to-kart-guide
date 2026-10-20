@@ -24,8 +24,7 @@ export default {
     const g0 = s.now();
     await s.tap(btn);
     s.cue();                                                    // KART confirms and offers Undo.
-    const tk = await s.toast('Kart marked as requiring service');
-    await s.shot('mech-used-toast', { scroll: false, wait: 200, at: { 1: tk, 2: tk.locator('button', { hasText: 'Undo' }) } });
+    const tk = await s.toastShot('mech-used-toast', 'Kart marked as requiring service', 'Undo');
     await s.wait(1200);
     s.cue();                                                    // Undo puts the kart back as it was.
     await s.tap(tk.locator('button', { hasText: 'Undo' }));
@@ -60,8 +59,7 @@ export default {
     await a.wait(500);
     await a.shot('mech-used-undo-dialog', { scroll: false, at: { 1: a.page.getByText('Undo mark used?') } });
     await a.tap(a.dialog.getByRole('button', { name: 'Undo mark used' }));
-    const tu = await a.toast('Mark used undone');
-    await a.shot('mech-used-undone', { scroll: false, wait: 200, at: { 1: tu } });
+    await a.toastShot('mech-used-undone', 'Mark used undone');
     await a.close();
   },
 };

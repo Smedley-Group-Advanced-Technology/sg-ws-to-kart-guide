@@ -57,6 +57,25 @@ export default {
     await s.settle(600);
     await s.shot('mech-svc-parts-added', { at: { 1: comp.getByText(/stock deducted on completion/).first().locator('..') } });
     s.cue();                                                    // Tap Complete service.
+    // sweep: any check still unchecked (a section that did not open in time) is answered off camera
+    await s.skip(async () => {
+      for (let round = 0; round < 3; round++) {
+        if (!(await s.page.$('button[aria-label="Unchecked"]'))) {
+          for (const sec of ['Chassis and frame', 'Steering', 'Brakes', 'Wheels and tyres', 'Electrics and battery']) {
+            const head = s.page.getByText(sec, { exact: true }).first();
+            const row = head.locator('xpath=ancestor::*[contains(., "/")][1]');
+            const txt = await row.innerText().catch(() => '');
+            const m = txt.match(/(\d+)\/(\d+)/);
+            if (m && m[1] !== m[2]) { await head.click().catch(() => {}); await s.page.waitForTimeout(800); }
+          }
+        }
+        await answerVisible(s, 20, 150);
+        if (!(await s.page.$('button[aria-label="Unchecked"]'))) {
+          const left = await s.page.getByText(/checks still unchecked/).count();
+          if (!left) break;
+        }
+      }
+    });
     const done = s.page.getByRole('button', { name: 'Complete service' });
     await s.scrollTo(done);
     await s.shot('mech-svc-complete', { at: { 1: done } });

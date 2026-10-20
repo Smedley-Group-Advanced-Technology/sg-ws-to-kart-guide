@@ -92,19 +92,7 @@ export function buildClip(shot, result, opts = {}, log = console.log) {
   const pc = opts.poster ?? Math.floor(cues.length / 2);
   const pt = typeof pc === 'number' && pc < 1000 ? clipTime(segs, cues[pc].t) + 1.5 : clipTime(segs, pc);
   ffmpeg(['-ss', Math.min(pt, dur - 0.2).toFixed(2), '-i', `${base}.mp4`, '-frames:v', '1', '-q:v', '4', `${base}.jpg`], log);
-  // captions
-  const lines = ['WEBVTT', ''];
-  const times = cues.map((c) => clipTime(segs, c.t));
-  times.forEach((t0, i) => {
-    const next = i + 1 < times.length ? times[i + 1] - 0.15 : dur;
-    let t1 = Math.min(t0 + 5.5, next, dur);
-    if (t1 - t0 < 2) {
-      t1 = Math.min(t0 + 2, dur);
-      if (i + 1 < times.length && t1 > times[i + 1]) log(`  WARNING ${shot.id}: cue ${i + 1} shorter than 2 s`);
-    }
-    lines.push(String(i + 1), `${ts(t0)} --> ${ts(t1)}`, cues[i].text || shot.captions[i], '');
-  });
-  fs.writeFileSync(`${base}.vtt`, lines.join('\n'));
+  writeVtt(shot, result, opts, log);
   const size = ['mp4', 'webm', 'jpg', 'vtt'].map((e) => fs.statSync(`${base}.${e}`).size).reduce((a, b) => a + b, 0);
   log(`  clip ${shot.id}: ${dur.toFixed(1)} s, ${(size / 1048576).toFixed(2)} MB`);
   return { duration: dur, size };
@@ -117,27 +105,48 @@ export function buildGif(shot, result, { start, end }, log = console.log) {
   fs.mkdirSync(GIF, { recursive: true });
   const out = path.join(GIF, `${shot.id}.gif`);
   for (const [fps, w] of [[10, 800], [8, 680], [6, 560]]) {
-    const { inputs, filter } = selectFilter(segs, `fps=${fps},scale='min(${w},iw)':-1:flags=lanczos`, fps);
+    // GIFs stay 2 to 6 s: a longer window is played faster
+    const speed = Math.max(1, dur / 6);
+    const { inputs, filter } = selectFilter(segs, `scale='min(${w},iw)':-1:flags=lanczos`, fps * speed, fps);
     ffmpeg([...inputs, '-filter_complex', `${filter};[out]split[a][b];[a]palettegen=max_colors=96:stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=4:diff_mode=rectangle[g]`,
       '-map', '[g]',
       '-loop', '0', out], log);
     const mb = fs.statSync(out).size / 1048576;
-    log(`  gif ${shot.id}: ${dur.toFixed(1)} s, ${fps} fps, ${mb.toFixed(2)} MB`);
+    log(`  gif ${shot.id}: ${(dur / Math.max(1, dur / 6)).toFixed(1)} s shown, ${fps} fps, ${mb.toFixed(2)} MB`);
     if (mb < 1.5) return;
   }
   throw new Error(`${shot.id}: GIF over 1.5 MB`);
 }
 
 // One input per video file; the kept time windows are picked with select and joined with concat.
-function selectFilter(segs, tail, fps = 25) {
+function selectFilter(segs, tail, fps = 25, outFps = fps) {
   const groups = [];
   for (const g of segs) { const l = groups.at(-1); if (l && l.file === g.file) l.parts.push(g); else groups.push({ file: g.file, parts: [g] }); }
   const inputs = groups.flatMap((g) => ['-i', g.file]);
   const chains = groups.map((g, i) => {
     const sel = g.parts.map((p) => `between(t\\,${p.from.toFixed(3)}\\,${p.to.toFixed(3)})`).join('+');
-    return `[${i}:v]fps=${fps},select=${sel},setpts=N/(${fps}*TB),${tail}[v${i}]`;
+    return `[${i}:v]fps=${fps},select=${sel},setpts=N/(${outFps}*TB),fps=${outFps},${tail}[v${i}]`;
   });
   const filter = groups.length === 1 ? chains[0].replace(/\[v0\]$/, '[out]')
     : `${chains.join(';')};${groups.map((_, i) => `[v${i}]`).join('')}concat=n=${groups.length}:v=1:a=0[out]`;
   return { inputs, filter };
+}
+
+// WebVTT from the real cue times: each cue 2 to 5.5 s, never overlapping the next one.
+export function writeVtt(shot, result, opts = {}, log = console.log) {
+  const cues = result.cues;
+  const start = Math.max(0, cues[0].t - (opts.lead ?? 900));
+  const segs = segments(result, { start, end: Math.min(result.end, opts.end ?? result.end) });
+  const dur = segs.reduce((a, s) => a + (s.g1 - s.g0), 0) / 1000;
+  const times = cues.map((c) => clipTime(segs, c.t));
+  const lines = ['WEBVTT', ''];
+  let prevEnd = 0;
+  times.forEach((raw, i) => {
+    const t0 = Math.max(raw, prevEnd + 0.05);
+    const next = i + 1 < times.length ? Math.max(times[i + 1], t0 + 2) : dur;
+    const t1 = Math.min(Math.max(t0 + 2, Math.min(t0 + 5.5, next - 0.1)), Math.max(dur, t0 + 2));
+    prevEnd = t1;
+    lines.push(String(i + 1), `${ts(t0)} --> ${ts(t1)}`, cues[i].text || shot.captions[i], '');
+  });
+  fs.writeFileSync(path.join(VIDEO, `${shot.id}.vtt`), lines.join('\n'));
 }

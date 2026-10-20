@@ -69,6 +69,15 @@ function reset(variants = []) {
 async function main() {
   let args = process.argv.slice(2);
   if (args.includes('--defer')) { defer = true; args = args.filter((a) => a !== '--defer'); }
+  if (args[0] === '--vtt') {
+    // rewrite the captions of encoded clips from their saved jobs (no re-encoding)
+    const { writeVtt } = await import('./lib/media.mjs');
+    for (const f of fs.readdirSync(JOBS).filter((x) => x.endsWith('.json'))) {
+      const j = JSON.parse(fs.readFileSync(path.join(JOBS, f), 'utf8'));
+      if (j.kind === 'clip' && (!args[1] || args.includes(j.id))) { writeVtt(getShot(j.id), j.result, j.opts); console.log(`vtt ${j.id}`); }
+    }
+    return;
+  }
   if (args[0] === '--encode') {
     // encode saved jobs (all pending ones, or the given ids, also already encoded ones)
     const ids = args.slice(1);

@@ -1,3 +1,5 @@
+import { HUB } from '../lib/config.mjs';
+import { sqlValue } from '../lib/db.mjs';
 // The 207 repair card with its linked ticket, and resolving the ticket (normal demo world: 207 has its seeded
 // stopping ticket). Casey Mechanic, tablet.
 export default {
@@ -19,7 +21,10 @@ export default {
     await c.tap(c.page.getByRole('radio', { name: 'Resolved' }));
     await c.shot('mech-ticket-resolve', { at: { 1: c.page.getByRole('radio', { name: 'Resolved' }) } });
     await c.tap(c.page.getByRole('button', { name: 'Update', exact: true }));
-    await c.wait(2500);
+    await c.wait(4000);
+    const st = sqlValue(`select string_agg(status, ',') from public.kart_issues where hub_id = '${HUB}' and kart_number = 7 and kart_type = 'Cadet'`);
+    c.log(`  207 ticket status after Update: ${st}`);
+    if (!/Resolved/.test(st || '')) throw new Error('the 207 ticket was not resolved');
     await c.goto('/workshop');
     await c.mustReload('text=Readiness board', 60000);
     const t207 = c.tile('#207', 'Available');

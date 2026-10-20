@@ -68,7 +68,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
     ![Searching Components replaced for brake pads, with the Select button](../assets/img/mechanic/mech-svc-parts.png){ loading=lazy }
 
-3. Tap **Add to components replaced**. The part shows under **Components replaced on this service**. KART takes it from your hub's stock when you complete the service.
+3. Tap **Add to components replaced**. The part shows under **Components replaced on this service** with **stock deducted on completion**: KART takes it from your hub's stock when you complete the service.
 
     ![A brake pad set added under Components replaced on this service](../assets/img/mechanic/mech-svc-parts-added.png){ loading=lazy }
 

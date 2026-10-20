@@ -4122,7 +4122,7 @@
   - Tap Add to components replaced
   callouts:
   - n: 1
-    target: text=FKL-900003
+    target: text=stock deducted on completion
     note: The part you fitted
   caption: A brake pad set added under Components replaced on this service
 - id: mech-svc-work-done

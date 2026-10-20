@@ -55,7 +55,7 @@ export default {
     await s.tap(comp.getByRole('button', { name: 'Select' }).first());
     await s.tap(comp.getByRole('button', { name: /Add to components replaced/ }));
     await s.settle(600);
-    await s.shot('mech-svc-parts-added', { at: { 1: comp.getByText(/Components replaced on this service/).locator('..').getByText(/FKL-900003/).first() } });
+    await s.shot('mech-svc-parts-added', { at: { 1: comp.getByText(/stock deducted on completion/).first().locator('..') } });
     s.cue();                                                    // Tap Complete service.
     const done = s.page.getByRole('button', { name: 'Complete service' });
     await s.scrollTo(done);

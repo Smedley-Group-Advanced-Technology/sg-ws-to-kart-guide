@@ -163,7 +163,7 @@ captions:
       - [2, "text=Select", "Pick the part"]
     :::
 
-3. Tap **Add to components replaced**. The part shows under **Components replaced on this service**. KART takes it from your hub's stock when you complete the service.
+3. Tap **Add to components replaced**. The part shows under **Components replaced on this service** with **stock deducted on completion**: KART takes it from your hub's stock when you complete the service.
 
     :::shot mech-svc-parts-added
     caption: A brake pad set added under Components replaced on this service
@@ -172,7 +172,7 @@ captions:
       - Tap Select on Brake pads (pair), FKL-900003
       - Tap Add to components replaced
     callouts:
-      - [1, "text=FKL-900003", "The part you fitted"]
+      - [1, "text=stock deducted on completion", "The part you fitted"]
     :::
 
 4. To note what you did on a check, tap the note icon next to it (**Record work done**). Pick a common resolution or type a short note, then tap **Save**.

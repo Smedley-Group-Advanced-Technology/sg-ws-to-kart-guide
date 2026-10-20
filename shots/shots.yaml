@@ -3695,9 +3695,9 @@
     target: text=Would this stop the kart from being used?
     note: Answer honestly
   - n: 2
-    target: text=This answer does not stop the kart
+    target: text=Recorded for the workshop
     note: Only a reliability ticket stops it
-  caption: Would this stop the kart from being used? with the reminder that the answer does not stop the kart
+  caption: Would this stop the kart from being used? with the note that an incident never stops the kart
 - id: mech-report-submit
   kind: screenshot
   page: mechanic/report-a-problem.md

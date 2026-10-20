@@ -59,7 +59,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
 9. Answer **Would this stop the kart from being used?** Here: **No, it is still usable**.
 
-    ![Would this stop the kart from being used? with the reminder that the answer does not stop the kart](../assets/img/mechanic/mech-report-stop.png){ loading=lazy }
+    ![Would this stop the kart from being used? with the note that an incident never stops the kart](../assets/img/mechanic/mech-report-stop.png){ loading=lazy }
 
 10. Tap **Add finding** if you found something else. Then tap **Report problem**.
 

@@ -136,13 +136,13 @@ captions:
 9. Answer **Would this stop the kart from being used?** Here: **No, it is still usable**.
 
     :::shot mech-report-stop
-    caption: Would this stop the kart from being used? with the reminder that the answer does not stop the kart
+    caption: Would this stop the kart from being used? with the note that an incident never stops the kart
     steps:
       - Choose No, it is still usable
       - Show the note under the question
     callouts:
       - [1, "text=Would this stop the kart from being used?", "Answer honestly"]
-      - [2, "text=This answer does not stop the kart", "Only a reliability ticket stops it"]
+      - [2, "text=Recorded for the workshop", "Only a reliability ticket stops it"]
     :::
 
 10. Tap **Add finding** if you found something else. Then tap **Report problem**.

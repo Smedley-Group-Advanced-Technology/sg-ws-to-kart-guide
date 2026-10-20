@@ -47,8 +47,8 @@ export default {
     await s.shot('mech-report-part', { at: { 1: dlg.getByText('Is a replacement part required?') } });
     s.cue();                                                    // Say whether it stops the kart.
     await s.tap(dlg.locator('[data-testid="finding-blocking-no"]'));
-    await s.scrollTo(dlg.getByText(/^This answer does not stop the kart/));
-    await s.shot('mech-report-stop', { scroll: false, at: { 1: dlg.getByText(/^Would this stop the kart from being used\?/), 2: dlg.getByText(/^This answer does not stop the kart/) } });
+    await s.scrollTo(dlg.getByText(/^Recorded for the workshop/));
+    await s.shot('mech-report-stop', { scroll: false, at: { 1: dlg.getByText(/^Would this stop the kart from being used\?/), 2: dlg.getByText(/^Recorded for the workshop/) } });
     const submit = dlg.getByRole('button', { name: 'Report problem' });
     await s.scrollTo(submit);
     await s.shot('mech-report-submit', { scroll: false, at: { 1: dlg.getByRole('button', { name: /Add finding/ }), 2: submit } });

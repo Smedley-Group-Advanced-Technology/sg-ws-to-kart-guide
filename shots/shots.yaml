@@ -2880,11 +2880,11 @@
     1; Cadet 207 and Junior 307 Repair Required
   steps:
   - Open Race to Chassis for Demo Practice Day on the tablet
-  - Tap Cadet at the top
-  - Drag race number 5 onto chassis 04 (Cadet 204)
-  - Show the Chassis 04 marked used message with Undo
-  - Drag race number 6 onto chassis 07 (Cadet 207) and show Chassis 07 is not available
-  - Tap Cancel, then drag race number 6 onto chassis 03 (Cadet 203)
+  - Tap Junior at the top
+  - Drag race number 5 onto chassis 01 (Junior 301)
+  - Show the Chassis 01 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Junior 307) and show Chassis 07 is not available
+  - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
   caption: putting race numbers on chassis with drag and drop
   captions:
@@ -2923,8 +2923,8 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drag race number 5 onto chassis 04 slowly
-  caption: Dragging race number 5 onto chassis 04, Cadet 204
+  - Drag race number 5 onto chassis 01 slowly
+  caption: Dragging race number 5 onto chassis 01, Junior 301
 - id: mech-r2c-marked
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2934,7 +2934,7 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Drop race number 5 on chassis 04
+  - Drop race number 5 on chassis 01
   callouts:
   - n: 1
     target: text=marked used
@@ -2942,7 +2942,7 @@
   - n: 2
     target: text=Undo
     note: Only for a mistake
-  caption: Chassis 04 marked used message with Undo
+  caption: Chassis 01 marked used message with Undo
 - id: mech-r2c-takeoff
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -3048,7 +3048,7 @@
   - n: 3
     target: text=Assign anyway
     note: Gives a track use override
-  caption: Chassis 07 (Cadet 207) is not available, with the reason box and Assign anyway
+  caption: Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway
 - id: mech-r2c-cancel
   kind: screenshot
   page: mechanic/race-to-chassis.md

@@ -130,7 +130,7 @@ async function main() {
           gif: (id, result, w) => job({ kind: 'gif', id, result, opts: w }, log),
         };
         await flow.run(ctx);
-        const notMade = flow.shots.filter((id) => !fs.existsSync(outputPath(getShot(id))) && !(defer && fs.existsSync(path.join(JOBS, `${id}.json`))));
+        const notMade = flow.shots.filter((id) => !(flow.optional || []).includes(id)).filter((id) => !fs.existsSync(outputPath(getShot(id))) && !(defer && fs.existsSync(path.join(JOBS, `${id}.json`))));
         if (notMade.length) throw new Error(`not produced: ${notMade.join(', ')}`);
         log(`done in ${Math.round((Date.now() - started) / 1000)} s`);
         break;

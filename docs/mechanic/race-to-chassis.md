@@ -29,19 +29,19 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 <track kind="captions" src="../assets/video/mech-r2c-drag-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: putting race numbers on chassis with drag and drop (about 60 seconds, with captions)</figcaption></figure>
 
-1. Tap the kart class at the top, for example **Cadet**. The chassis show each kart's number in its class, so Cadet 204 is chassis **04**.
+1. Tap the kart class at the top, for example **Junior**. The chassis show each kart's number in its class, so Junior 301 is chassis **01**.
 
 2. Find the race number in the **Race Number** list.
 
     ![The drag and drop view with Chassis Number and Race Number columns](../assets/img/mechanic/mech-r2c-dd-view.png){ loading=lazy }
 
-3. Drag the number onto the chassis, for example race number **5** onto chassis **04** (Cadet 204).
+3. Drag the number onto the chassis, for example race number **5** onto chassis **01** (Junior 301).
 
-    ![Dragging race number 5 onto chassis 04, Cadet 204](../assets/gif/mech-r2c-drag-gif.gif){ loading=lazy }
+    ![Dragging race number 5 onto chassis 01, Junior 301](../assets/gif/mech-r2c-drag-gif.gif){ loading=lazy }
 
-4. KART says **Chassis 04 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake.
+4. KART says **Chassis 01 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
 
-    ![Chassis 04 marked used message with Undo](../assets/img/mechanic/mech-r2c-marked.png){ loading=lazy }
+    ![Chassis 01 marked used message with Undo](../assets/img/mechanic/mech-r2c-marked.png){ loading=lazy }
 
 5. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
 
@@ -71,9 +71,9 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example Cadet chassis **07** (Cadet 207). KART says **Chassis 07 is not available** and why.
+1. Put a number on a chassis that is not available, for example Junior chassis **07** (Junior 307). KART says **Chassis 07 is not available** and why.
 
-    ![Chassis 07 (Cadet 207) is not available, with the reason box and Assign anyway](../assets/img/mechanic/mech-r2c-unavailable.png){ loading=lazy }
+    ![Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway](../assets/img/mechanic/mech-r2c-unavailable.png){ loading=lazy }
 
 2. Normally tap **Cancel** and use another chassis. Only if your hub manager agrees, type a reason and tap **Assign anyway**. This gives a track use override until the end of the event.
 

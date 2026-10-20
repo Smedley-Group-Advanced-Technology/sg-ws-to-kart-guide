@@ -173,13 +173,13 @@ Print this list, or the [switch-over day card](../cards/index.md).
 7. Close any KART stopping ticket whose fault is already fixed.
 
     :::shot so-day-7-tickets
-    caption: Open linked ticket on a repair card to close a fixed ticket
+    caption: Tap a reliability card (Open ticket) to close a fixed ticket
     url: /workshop/repairs
     persona: Casey Mechanic
     steps:
       - Find the 207 card
     callouts:
-      - [1, "text=Open linked ticket", "Resolve it if fixed"]
+      - [1, "text=Open ticket", "Resolve it if fixed"]
     :::
 
 8. Carry on any open campaign in **Campaign work** and record the fitted parts on the task.

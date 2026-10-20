@@ -57,9 +57,9 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
 ## Close a ticket when the fault is fixed
 
-1. On the repair card, tap **Open linked ticket**.
+1. In the **Service Queue**, tap the kart's reliability card (it says **Open ticket**). On a card that came from an incident or damage, tap **Open linked ticket** instead.
 
-    ![Open linked ticket on the 207 repair card](../assets/img/mechanic/mech-ticket-linked.png){ loading=lazy }
+    ![The Cadet 207 reliability card with Open ticket](../assets/img/mechanic/mech-ticket-linked.png){ loading=lazy }
 
 2. Change **Status** to **Resolved**.
 

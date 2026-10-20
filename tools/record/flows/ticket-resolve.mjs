@@ -8,12 +8,12 @@ export default {
     const c = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await c.goto('/workshop/repairs');
     await c.mustReload(c.page.getByText('Cadet 207', { exact: true }), 60000);
-    const card = c.page.getByText('Cadet 207', { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Open linked ticket"]][1]');
+    const card = c.page.locator('a,button,[role=button]').filter({ hasText: /^\s*Cadet 207/ }).filter({ hasText: 'Open ticket' });
     await c.scrollTo(card);
     await c.shot('mech-ticket-result', { at: { 1: card.getByText('Cadet 207', { exact: true }), 2: card.getByText('Open ticket', { exact: true }) } });
-    await c.shot('so-day-7-tickets', { at: { 1: card.getByText('Open linked ticket') } });
-    await c.shot('mech-ticket-linked', { at: { 1: card.getByText('Open linked ticket') } });
-    await c.tap(card.getByText('Open linked ticket'));
+    await c.shot('so-day-7-tickets', { at: { 1: card.getByText('Open ticket', { exact: true }) } });
+    await c.shot('mech-ticket-linked', { at: { 1: card.getByText('Open ticket', { exact: true }) } });
+    await c.tap(card);
     await c.must(c.dialog.getByText('Status *'), { timeout: 60000 });
     await c.settle(800);
     await c.tap(c.page.getByRole('radio', { name: 'Resolved' }));

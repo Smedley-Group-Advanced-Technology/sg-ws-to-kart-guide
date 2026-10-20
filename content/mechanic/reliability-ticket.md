@@ -134,16 +134,16 @@ captions:
 
 ## Close a ticket when the fault is fixed
 
-1. On the repair card, tap **Open linked ticket**.
+1. In the **Service Queue**, tap the kart's reliability card (it says **Open ticket**). On a card that came from an incident or damage, tap **Open linked ticket** instead.
 
     :::shot mech-ticket-linked
-    caption: Open linked ticket on the 207 repair card
+    caption: The Cadet 207 reliability card with Open ticket
     url: /workshop/repairs
-    state: Cadet 207 repair completed (Log remedy done), ticket still Ongoing
+    state: Cadet 207 with its stopping ticket still Ongoing
     steps:
       - Find the 207 card
     callouts:
-      - [1, "text=Open linked ticket", "Opens the ticket"]
+      - [1, "text=Open ticket", "Opens the ticket"]
     :::
 
 2. Change **Status** to **Resolved**.

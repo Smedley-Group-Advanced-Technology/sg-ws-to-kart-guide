@@ -3258,14 +3258,14 @@
   persona: Casey Mechanic
   device: tablet
   url: /workshop/repairs
-  state: Cadet 207 repair completed (Log remedy done), ticket still Ongoing
+  state: Cadet 207 with its stopping ticket still Ongoing
   steps:
   - Find the 207 card
   callouts:
   - n: 1
-    target: text=Open linked ticket
+    target: text=Open ticket
     note: Opens the ticket
-  caption: Open linked ticket on the 207 repair card
+  caption: The Cadet 207 reliability card with Open ticket
 - id: mech-ticket-resolve
   kind: screenshot
   page: mechanic/reliability-ticket.md
@@ -5618,9 +5618,9 @@
   - Find the 207 card
   callouts:
   - n: 1
-    target: text=Open linked ticket
+    target: text=Open ticket
     note: Resolve it if fixed
-  caption: Open linked ticket on a repair card to close a fixed ticket
+  caption: Tap a reliability card (Open ticket) to close a fixed ticket
 - id: so-day-8-campaign
   kind: screenshot
   page: switch-over/index.md

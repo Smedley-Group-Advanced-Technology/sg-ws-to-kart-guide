@@ -105,7 +105,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 
 7. Close any KART stopping ticket whose fault is already fixed.
 
-    ![Open linked ticket on a repair card to close a fixed ticket](../assets/img/switch-over/so-day-7-tickets.png){ loading=lazy }
+    ![Tap a reliability card (Open ticket) to close a fixed ticket](../assets/img/switch-over/so-day-7-tickets.png){ loading=lazy }
 
 8. Carry on any open campaign in **Campaign work** and record the fitted parts on the task.
 

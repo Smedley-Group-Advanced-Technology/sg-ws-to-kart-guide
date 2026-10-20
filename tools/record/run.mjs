@@ -110,7 +110,7 @@ async function main() {
       const log = (m) => console.log(`[${flow.file}] ${m}`);
       log(`start (${flow.shots.length} shots)`);
       const started = Date.now();
-      try {
+      for (let attempt = 1; attempt <= 2; attempt++) try {
         if (!flow.reset && worldDirty) { reset([]); worldDirty = false; log('normal demo world restored first'); }
         if (flow.reset) { reset(Array.isArray(flow.reset) ? flow.reset : []); log(`demo world reset${Array.isArray(flow.reset) && flow.reset.length ? ` (${flow.reset.join(', ')})` : ''}`); }
         worldDirty = worldDirty || !!flow.reset;
@@ -124,9 +124,11 @@ async function main() {
         const notMade = flow.shots.filter((id) => !fs.existsSync(outputPath(getShot(id))) && !(defer && fs.existsSync(path.join(JOBS, `${id}.json`))));
         if (notMade.length) throw new Error(`not produced: ${notMade.join(', ')}`);
         log(`done in ${Math.round((Date.now() - started) / 1000)} s`);
+        break;
       } catch (e) {
-        log(`FAILED: ${e.stack || e}`);
-        failed.push(flow.file);
+        log(`FAILED (attempt ${attempt}): ${e.stack || e}`);
+        if (attempt === 2) failed.push(flow.file);
+        else { worldDirty = true; log('retrying once'); }
       }
     }
   } finally {

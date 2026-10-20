@@ -37,7 +37,7 @@ export function segments(result, { start, end }) {
       let pieces = [[Math.max(a, start), Math.min(b ?? result.end, end)]];
       if (result.keeps && result.keeps.length) {
         // only the windows the viewer should see (merged when less than 400 ms apart)
-        const ks = result.keeps.map(([x, y]) => [x - 60, y + 120]).sort((x, y) => x[0] - y[0]);
+        const ks = result.keeps.map(([x, y]) => [Math.max(x, y - 6000) - 60, y + 120]).sort((x, y) => x[0] - y[0]);  // at most 6 s of any one action (slow typing on a busy machine)
         const merged = [];
         for (const k of ks) { const l = merged.at(-1); if (l && k[0] - l[1] < 400) l[1] = Math.max(l[1], k[1]); else merged.push([...k]); }
         const [pa, pb] = pieces[0];

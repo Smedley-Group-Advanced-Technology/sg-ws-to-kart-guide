@@ -136,7 +136,7 @@ export class Session {
 
   // A toast (sonner or Radix) with this text; hovering it pauses its timer so it stays for the screenshot.
   async toast(text) {
-    const t = this.page.locator('[data-sonner-toast], ol > li, [role=status]').filter({ hasText: text });
+    const t = this.page.locator('[data-sonner-toast]:visible, ol > li:visible, [role=status]:visible').filter({ hasText: text });
     await t.first().waitFor({ timeout: 45000 }).catch(async (e) => {
       const f = path.join(this.rawDir, `toast-fail-${Date.now()}.png`);
       await this.page.screenshot({ path: f }).catch(() => {});

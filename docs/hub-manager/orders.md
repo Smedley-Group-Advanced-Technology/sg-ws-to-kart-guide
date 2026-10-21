@@ -62,7 +62,7 @@ flowchart LR
 
 ![Step 1: Mark ordered on the sprockets line](../assets/img/hub-manager/hm-ord-mark.png){ loading=lazy }
 
-1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Check the **Supplier** and tap **Save**.
+1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Type the **Supplier** (or check it if KART filled it in) and tap **Save**.
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
@@ -98,7 +98,7 @@ flowchart LR
 
 4. Check the **Supplier** and type the **Invoice reference**.
 
-5. Tap **Receive stock**. Stock and the average cost update straight away, and waiting repairs move to **Ready to repair**.
+5. Tap **Receive stock**. Stock and the average cost update straight away. KART says how many went to waiting repairs, and those repairs leave **Requires part** so mechanics can do them.
 
 !!! tip "Tip"
     Tap **Receive** instead of **Goods In** on an Ordered line to add **Freight** and **Tax / duty**, then tap **Book in**. Parts that arrive without an order go in through the **Goods In** tab of Workshop Manager. Partial deliveries are fine: receive what came, the rest stays Ordered.

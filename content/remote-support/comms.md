@@ -63,7 +63,7 @@ callouts:
 
 :::clip rs-comms-clip
 caption: claiming, answering and closing a support chat in KART Comms
-duration: 60
+duration: 40
 steps:
   - Open /comms as Riley Support
   - Tap Unassigned and open Casey Mechanic's chat

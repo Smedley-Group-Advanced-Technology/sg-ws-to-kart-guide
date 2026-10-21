@@ -14,7 +14,7 @@ Any staff member can start a direct chat with any colleague in KART Comms. It is
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/rs-direct-clip.jpg" width="1180">
 <source src="../assets/video/rs-direct-clip.mp4" type="video/mp4"><source src="../assets/video/rs-direct-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/rs-direct-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: starting a direct chat with a colleague in KART Comms (about 35 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: starting a direct chat with a colleague in KART Comms (about 40 seconds, with captions)</figcaption></figure>
 
 ![Steps 1 and 2 on one screen: Direct Chats with Ca typed in the new direct chat search](../assets/img/remote-support/rs-direct-search.png){ loading=lazy }
 

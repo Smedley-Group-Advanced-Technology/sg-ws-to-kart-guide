@@ -18,7 +18,7 @@ Support cover says who answers a hub's support chats on a given day. You set it 
 
 :::clip rs-cover-clip
 caption: setting support cover for Demo Practice Day
-duration: 35
+duration: 30
 steps:
   - On Select your Hub tap Remote Support
   - On Hub Dashboard find Demo Hub and Demo Practice Day

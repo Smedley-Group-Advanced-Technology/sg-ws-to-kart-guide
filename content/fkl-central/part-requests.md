@@ -17,7 +17,7 @@ When a hub needs a part that is not in the catalogue, the hub manager sends a re
 
 :::clip fc-review-clip
 caption: reviewing the Steering column bush request from Demo Hub
-duration: 45
+duration: 30
 steps:
   - Open FKL Central, Parts catalogue, Part requests
   - Tap Review on Steering column bush

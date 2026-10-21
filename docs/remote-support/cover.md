@@ -13,7 +13,7 @@ Support cover says who answers a hub's support chats on a given day. You set it 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/rs-cover-clip.jpg" width="1440">
 <source src="../assets/video/rs-cover-clip.mp4" type="video/mp4"><source src="../assets/video/rs-cover-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/rs-cover-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: setting support cover for Demo Practice Day (about 35 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: setting support cover for Demo Practice Day (about 30 seconds, with captions)</figcaption></figure>
 
 1. On **Select your Hub**, tap **Remote Support**.
 

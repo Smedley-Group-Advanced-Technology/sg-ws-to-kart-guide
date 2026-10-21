@@ -34,7 +34,7 @@
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/rs-comms-clip.jpg" width="1440">
 <source src="../assets/video/rs-comms-clip.mp4" type="video/mp4"><source src="../assets/video/rs-comms-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/rs-comms-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: claiming, answering and closing a support chat in KART Comms (about 60 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: claiming, answering and closing a support chat in KART Comms (about 40 seconds, with captions)</figcaption></figure>
 
 ![Steps 1 and 2 on one screen: the Support view with Unassigned open and Casey Mechanic's chat](../assets/img/remote-support/rs-support-queue.png){ loading=lazy }
 

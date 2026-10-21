@@ -26,7 +26,7 @@
   - Add or change checks.
   - Check it before publishing.
   - Publish with a note of what changed.
-  duration: 70
+  duration: 50
 - id: fc-chk-editor
   kind: screenshot
   page: fkl-central/checklists.md
@@ -121,7 +121,7 @@
   - Tap Review.
   - Link a part, add a new one, keep it local or reject.
   - Save. The hub sees the result.
-  duration: 45
+  duration: 30
 - id: fc-req-list
   kind: screenshot
   page: fkl-central/part-requests.md
@@ -3525,7 +3525,7 @@
   - Reply to the staff member.
   - Close the chat when it is solved.
   - Reopen it if needed.
-  duration: 60
+  duration: 40
 - id: rs-support-queue
   kind: screenshot
   page: remote-support/comms.md
@@ -3600,7 +3600,7 @@
   - Find the hub and today's event.
   - Choose who covers it.
   - Saved. Comms now shows them on cover.
-  duration: 35
+  duration: 30
 - id: rs-cover-button
   kind: screenshot
   page: remote-support/cover.md
@@ -3655,7 +3655,7 @@
   - Choose them.
   - Your earlier chat opens again.
   - Type and send.
-  duration: 35
+  duration: 40
 - id: rs-direct-search
   kind: screenshot
   page: remote-support/direct-chats.md

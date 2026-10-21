@@ -19,7 +19,7 @@ Any staff member can start a direct chat with any colleague in KART Comms. It is
 
 :::clip rs-direct-clip
 caption: starting a direct chat with a colleague in KART Comms
-duration: 35
+duration: 40
 steps:
   - Open /comms as Alex Mechanic
   - Type "Ca" in the new direct chat search

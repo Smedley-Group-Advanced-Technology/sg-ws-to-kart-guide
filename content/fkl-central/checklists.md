@@ -18,7 +18,7 @@ Every kart class has one master service checklist: Bambino, Cadet and Junior. Yo
 
 :::clip fc-checklist-clip
 caption: making a draft of the Cadet checklist, adding a check and publishing it
-duration: 70
+duration: 50
 steps:
   - Open FKL Central, Service checklists, Cadet
   - Tap New draft

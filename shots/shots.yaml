@@ -257,12 +257,12 @@
   - Scroll to All Users
   callouts:
   - n: 1
-    target: text=User Administration
-    note: All accounts
+    target: text=All Users
+    note: Every account
   - n: 2
     target: text=Alex Mechanic
     note: Tap to open
-  caption: 'Steps 1 and 2 on one screen: User Administration with Alex Mechanic in All Users'
+  caption: 'Steps 1 and 2 on one screen: All Users on User Administration, with Alex Mechanic'
 - id: fc-users-perms
   kind: screenshot
   page: fkl-central/users.md

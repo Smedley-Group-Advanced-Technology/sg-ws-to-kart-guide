@@ -31,16 +31,16 @@ The **Access Level** is **User** or **Admin**. Admins can do everything and see 
 ## Find a user and change permissions
 
 :::shot fc-users-list
-caption: "Steps 1 and 2 on one screen: User Administration with Alex Mechanic in All Users"
+caption: "Steps 1 and 2 on one screen: All Users on User Administration, with Alex Mechanic"
 steps:
   - Tap Admin Access
   - Scroll to All Users
 callouts:
-  - [1, "text=User Administration", "All accounts"]
+  - [1, "text=All Users", "Every account"]
   - [2, "text=Alex Mechanic", "Tap to open"]
 :::
 
-1. On **Select your Hub**, tap **Admin Access**. **User Administration** opens. **Pending User Approvals** lists sign-ups waiting.
+1. On **Select your Hub**, tap **Admin Access**. **User Administration** opens. **Pending User Approvals** lists sign-ups waiting. Scroll down to **All Users**.
 
 2. In **All Users**, tap the person, for example Alex Mechanic. **User Details** opens.
 

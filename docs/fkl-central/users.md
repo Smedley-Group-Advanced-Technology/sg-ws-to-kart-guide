@@ -24,9 +24,9 @@ The **Access Level** is **User** or **Admin**. Admins can do everything and see 
 
 ## Find a user and change permissions
 
-![Steps 1 and 2 on one screen: User Administration with Alex Mechanic in All Users](../assets/img/fkl-central/fc-users-list.png){ loading=lazy }
+![Steps 1 and 2 on one screen: All Users on User Administration, with Alex Mechanic](../assets/img/fkl-central/fc-users-list.png){ loading=lazy }
 
-1. On **Select your Hub**, tap **Admin Access**. **User Administration** opens. **Pending User Approvals** lists sign-ups waiting.
+1. On **Select your Hub**, tap **Admin Access**. **User Administration** opens. **Pending User Approvals** lists sign-ups waiting. Scroll down to **All Users**.
 
 2. In **All Users**, tap the person, for example Alex Mechanic. **User Details** opens.
 

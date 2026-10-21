@@ -16,27 +16,23 @@ Any staff member can start a direct chat with any colleague in KART Comms. It is
 <track kind="captions" src="../assets/video/rs-direct-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: starting a direct chat with a colleague in KART Comms (about 35 seconds, with captions)</figcaption></figure>
 
-1. In KART Comms, find **Direct Chats**. Tap the search box for a new direct chat.
+![Steps 1 and 2 on one screen: Direct Chats with Ca typed in the new direct chat search](../assets/img/remote-support/rs-direct-search.png){ loading=lazy }
 
-    ![Direct Chats with the new direct chat search box](../assets/img/remote-support/rs-direct-list.png){ loading=lazy }
+1. In KART Comms, tap **Direct Chats**. Tap the search box **New direct chat: find a colleague by name or initials**.
 
 2. Type part of the name or the initials, for example "Ca" or "CM".
 
-    ![Casey Mechanic found by typing Ca](../assets/img/remote-support/rs-direct-search.png){ loading=lazy }
-
 3. Tap the colleague. If you chatted before, the same chat opens again.
 
-    ![The existing chat between Alex and Casey](../assets/img/remote-support/rs-direct-open.png){ loading=lazy }
+4. Type your message and tap the send button (**Send**). Use the paper clip (**Attach file**) for a photo.
 
-4. Type your message and tap **Send**. Use **Attach file** for a photo.
-
-    ![A message typed in the direct chat with Send and Attach file](../assets/img/remote-support/rs-direct-send.png){ loading=lazy }
+    ![Steps 3 and 4 on one screen: the existing chat with Casey Mechanic and a message typed](../assets/img/remote-support/rs-direct-send.png){ loading=lazy }
 
 ## For remote support
 
-1. In the Support view, tap **Start a direct chat** to message a staff member directly.
+1. In the Support view, type the person's name in the search box, for example "Morgan". Under **Start a direct chat**, tap the person to message them directly.
 
-    ![Start a direct chat in the Support view](../assets/img/remote-support/rs-direct-support.png){ loading=lazy }
+    ![Step 1: Morgan Manager under Start a direct chat in the Support view](../assets/img/remote-support/rs-direct-support.png){ loading=lazy }
 
 !!! note "Remember"
     You cannot see new private direct chats between two colleagues, even as remote support or admin. That is by design.

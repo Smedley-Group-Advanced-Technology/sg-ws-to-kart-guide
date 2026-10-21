@@ -33,60 +33,47 @@ captions:
   - "Type and send."
 :::
 
-1. In KART Comms, find **Direct Chats**. Tap the search box for a new direct chat.
+:::shot rs-direct-search
+caption: "Steps 1 and 2 on one screen: Direct Chats with Ca typed in the new direct chat search"
+steps:
+  - Open /comms
+  - Type Ca in the search box
+callouts:
+  - [1, "css=input[placeholder^='New direct chat']", "Find a colleague"]
+  - [2, "text=Casey Mechanic", "Tap to chat"]
+:::
 
-    :::shot rs-direct-list
-    caption: Direct Chats with the new direct chat search box
-    steps:
-      - Open /comms
-    callouts:
-      - [1, "text=Direct Chats", "Your direct chats"]
-      - [2, "css=input[placeholder^='New direct chat']", "Find a colleague"]
-    :::
+1. In KART Comms, tap **Direct Chats**. Tap the search box **New direct chat: find a colleague by name or initials**.
 
 2. Type part of the name or the initials, for example "Ca" or "CM".
 
-    :::shot rs-direct-search
-    caption: Casey Mechanic found by typing Ca
-    steps:
-      - Type Ca
-    callouts:
-      - [1, "text=Casey Mechanic", "Tap to chat"]
-    :::
-
 3. Tap the colleague. If you chatted before, the same chat opens again.
 
-    :::shot rs-direct-open
-    caption: The existing chat between Alex and Casey
-    steps:
-      - Tap Casey Mechanic
-    callouts:
-      - [1, "text=Casey Mechanic", "The same chat as before"]
-    :::
-
-4. Type your message and tap **Send**. Use **Attach file** for a photo.
+4. Type your message and tap the send button (**Send**). Use the paper clip (**Attach file**) for a photo.
 
     :::shot rs-direct-send
-    caption: A message typed in the direct chat with Send and Attach file
+    caption: "Steps 3 and 4 on one screen: the existing chat with Casey Mechanic and a message typed"
     steps:
-      - Type "Can you check the 205 chain before you go?" and tap Send
+      - Tap Casey Mechanic
+      - Type "Can you check the 205 chain before you go?"
     callouts:
-      - [1, "text=Send", "Send"]
-      - [2, "css=button[aria-label='Attach file']", "Add a photo"]
+      - [3, "text=Casey Mechanic", "The same chat as before"]
+      - [4, "role=button[name='Send']", "Send"]
     :::
 
 ## For remote support
 
-1. In the Support view, tap **Start a direct chat** to message a staff member directly.
+1. In the Support view, type the person's name in the search box, for example "Morgan". Under **Start a direct chat**, tap the person to message them directly.
 
     :::shot rs-direct-support
-    caption: Start a direct chat in the Support view
+    caption: "Step 1: Morgan Manager under Start a direct chat in the Support view"
     persona: Riley Support
     device: desktop
     steps:
       - Open /comms as Riley Support
+      - Type Morgan in the search box
     callouts:
-      - [1, "text=Start a direct chat", "Message a staff member"]
+      - [1, "text=Morgan Manager", "Tap to message"]
     :::
 
 !!! note "Remember"

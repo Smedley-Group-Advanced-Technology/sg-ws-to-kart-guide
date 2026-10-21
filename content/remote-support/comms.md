@@ -19,7 +19,7 @@ state: "Riley Support on cover for Demo Hub today; Alex Mechanic's support chat 
 1. Open the KART address ending in **/comms**, for example by adding `/comms` after the address in the browser bar. Bookmark it.
 
     :::shot rs-comms-open
-    caption: KART Comms open in the browser at /comms
+    caption: "Step 1: KART Comms open in the browser at /comms (Support view)"
     steps:
       - Open /comms
     callouts:
@@ -28,41 +28,32 @@ state: "Riley Support on cover for Demo Hub today; Alex Mechanic's support chat 
 
 ## Trackside view: asking for help (hub staff)
 
-1. As hub staff you see **Remote Support** with the person **On cover** today.
+:::shot rs-trackside-cover
+caption: "Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat"
+persona: Alex Mechanic
+device: tablet
+steps:
+  - Sign in as Alex Mechanic and open /comms
+callouts:
+  - [1, "text=Demo Hub", "Your hub"]
+  - [2, "text=Remote Support", "Ask for help here"]
+:::
 
-    :::shot rs-trackside-cover
-    caption: The Trackside view with Remote Support and On cover
-    persona: Alex Mechanic
-    device: tablet
-    steps:
-      - Sign in as Alex Mechanic and open /comms
-    callouts:
-      - [1, "text=Remote Support", "Ask for help here"]
-      - [2, "text=On cover", "Who covers your hub today"]
-    :::
+1. As hub staff you see the **Trackside** view. At the top, check your hub. If KART asks, **Choose the hub you are working at**.
 
-2. If KART asks, **Choose the hub you are working at**.
+2. Tap **Remote Support**.
 
-    :::shot rs-trackside-hub
-    caption: Choose the hub you are working at
-    persona: Alex Mechanic
-    device: tablet
-    steps:
-      - Choose Demo Hub
-    callouts:
-      - [1, "text=Choose the hub you are working at", "Pick your hub"]
-    :::
-
-3. Type your message and tap **Send**. **It is routed to whoever is covering your hub today.**
+3. The header shows the hub and who is **On cover** today. Type your message and tap the send button (**Send**). It is routed to whoever is covering your hub today.
 
     :::shot rs-trackside-send
-    caption: A support message typed with Send
+    caption: "Step 3: a support message typed under the On cover header"
     persona: Alex Mechanic
     device: tablet
     steps:
-      - Type "Kart 307 shows Repair Required but the bumper is fitted" and tap Send
+      - Tap Remote Support
+      - Type "Kart 307 shows Repair Required but the bumper is fitted"
     callouts:
-      - [1, "text=Send", "Send it"]
+      - [3, "text=On cover", "Who covers your hub today"]
     :::
 
 !!! note "Remember"
@@ -89,79 +80,51 @@ captions:
   - "Reopen it if needed."
 :::
 
+:::shot rs-support-queue
+caption: "Steps 1 and 2 on one screen: the Support view with Unassigned open and Casey Mechanic's chat"
+state: "Casey Mechanic has sent an unassigned support chat"
+steps:
+  - Tap Unassigned
+callouts:
+  - [1, "text=My queue", "Your work"]
+  - [2, "role=tab[name=/Unassigned/]", "Waiting for someone"]
+:::
+
 1. Tap **My queue** for chats claimed by you and chats for hubs you cover.
 
-    :::shot rs-support-queue
-    caption: My queue with Alex Mechanic's claimed chat
-    steps:
-      - Tap My queue
-    callouts:
-      - [1, "text=My queue", "Your work"]
-      - [2, "text=Claimed by me", "You took these"]
-    :::
-
 2. Tap **Unassigned** to see chats nobody has taken.
-
-    :::shot rs-support-unassigned
-    caption: Unassigned with Casey Mechanic's chat
-    steps:
-      - Tap Unassigned
-    callouts:
-      - [1, "text=Unassigned", "Waiting for someone"]
-    :::
 
 3. Open the chat and tap **Claim**. Others see it is **Claimed by** you.
 
     :::shot rs-support-claim
-    caption: The Claim button on an unassigned chat
+    caption: "Steps 3 to 5 on one screen: Casey Mechanic's chat with Claim, a reply typed and Close chat"
+    state: "Casey Mechanic has sent an unassigned support chat"
     steps:
       - Open Casey Mechanic's chat
+      - Type a reply
     callouts:
-      - [1, "text=Claim", "Take the chat"]
+      - [3, "role=button[name='Claim']", "Take the chat"]
+      - [4, "role=button[name='Send']", "Reply"]
+      - [5, "text=Close chat", "Solved"]
     :::
 
-4. Type your reply and tap **Send**.
-
-    :::shot rs-support-reply
-    caption: A reply typed in the chat
-    steps:
-      - Tap Claim
-      - Type a reply and tap Send
-    callouts:
-      - [1, "text=Send", "Reply"]
-    :::
+4. Type your reply and tap the send button (**Send**).
 
 5. When it is solved, tap **Close chat**. The staff member can still read it.
 
-    :::shot rs-support-close
-    caption: Close chat at the top of the conversation
-    steps:
-      - Tap Close chat
-    callouts:
-      - [1, "text=Close chat", "Solved"]
-    :::
-
 6. To carry on later, open the closed chat and tap **Reopen chat**.
 
-    :::shot rs-support-reopen
-    caption: Reopen chat on a closed chat
-    steps:
-      - Open the closed chat
-    callouts:
-      - [1, "text=Reopen chat", "Open it again"]
-    :::
-
 !!! tip "Tip"
-    Use **Search** to find chats by staff member, hub or message. **My cover** and **Cover** show chats for the hubs you, or others, cover today.
+    Use **Search** to find chats by staff member, hub or message. Each chat has a tag: **My cover** for hubs you cover today, **Cover:** and a name when someone else covers it, **Unassigned** or **Claimed by**.
 
 ## AI Support
 
 **AI Support** gives automatic answers from the FKL knowledge base. It is not a person. Hub staff can use it when remote support has closed a chat or for quick how-to questions. For anything about a real kart, a status that looks wrong or missing data, message remote support instead.
 
-1. Hub staff tap **AI Support** to start an AI chat. Their AI chats are listed under **AI Chats**.
+1. Hub staff tap **AI Support** to start an AI chat and type a question. The answer appears in the chat. Their AI chats are listed under **AI Chats**. Remote support can read them under **AI** in the Support view.
 
     :::shot rs-ai-support
-    caption: The AI Support button and AI Chats list in the Trackside view
+    caption: "Step 1: the AI Support button and the AI Chats list in the Trackside view"
     persona: Alex Mechanic
     device: tablet
     steps:

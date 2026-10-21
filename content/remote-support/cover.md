@@ -4,7 +4,7 @@
 persona: Riley Support
 device: desktop
 url: /rs-dash
-state: "Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover"
+state: "Session event Demo Practice Day today at Demo Hub; no support cover set yet"
 :::
 
 Support cover says who answers a hub's support chats on a given day. You set it per event in **Remote Support**. KART Comms then routes the hub's messages to that person and shows them as **On cover**.
@@ -23,18 +23,18 @@ steps:
   - On Select your Hub tap Remote Support
   - On Hub Dashboard find Demo Hub and Demo Practice Day
   - Open Support cover and choose Riley Support
-  - Show Support cover updated and the On cover header in /comms
+  - Show Support cover updated
 captions:
   - "Open Remote Support."
   - "Find the hub and today's event."
   - "Choose who covers it."
-  - "Comms now shows them on cover."
+  - "Saved. Comms now shows them on cover."
 :::
 
 1. On **Select your Hub**, tap **Remote Support**.
 
     :::shot rs-cover-button
-    caption: The Remote Support button on Select your Hub
+    caption: "Step 1: the Remote Support button on Select your Hub"
     url: /hub-selection
     steps:
       - Sign in as Riley Support
@@ -44,33 +44,19 @@ captions:
 
 2. On **Hub Dashboard**, find the hub and the event, for example Demo Hub, **Demo Practice Day**.
 
-    :::shot rs-cover-event
-    caption: The Demo Hub tile with Demo Practice Day
-    steps:
-      - Open Hub Dashboard
-    callouts:
-      - [1, "text=Hub Dashboard", "All hubs"]
-      - [2, "text=Demo Practice Day", "Today's event"]
-    :::
-
-3. Open **Support cover** and choose the person, for example Riley Support.
-
-    :::shot rs-cover-select
-    caption: The Support cover list with Riley Support
-    steps:
-      - Open Support cover on Demo Practice Day
-    callouts:
-      - [1, "text=Support cover", "Who covers"]
-    :::
+3. Open the support cover list under the event, next to the headphones. It says **No support assigned** until someone is chosen. Choose the person, for example Riley Support.
 
 4. KART says **Support cover updated**. Choose **No support assigned** to clear it.
 
-    :::shot rs-cover-saved
-    caption: Support cover updated message
+    :::shot rs-cover-select
+    caption: "Steps 2 to 4 on one screen: the Demo Hub tile with Demo Practice Day and Riley Support on cover"
     steps:
-      - Choose Riley Support
+      - Open Hub Dashboard
+      - Choose Riley Support in the Support cover list of Demo Practice Day
     callouts:
-      - [1, "text=Support cover updated", "Saved"]
+      - [2, "text=Demo Practice Day", "Today's event"]
+      - [3, "text=Riley Support", "Who covers"]
+      - [4, "text=Support cover updated", "Saved"]
     :::
 
 !!! warning "Watch out"

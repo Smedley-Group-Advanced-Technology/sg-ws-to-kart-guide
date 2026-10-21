@@ -17,19 +17,15 @@ Support cover says who answers a hub's support chats on a given day. You set it 
 
 1. On **Select your Hub**, tap **Remote Support**.
 
-    ![The Remote Support button on Select your Hub](../assets/img/remote-support/rs-cover-button.png){ loading=lazy }
+    ![Step 1: the Remote Support button on Select your Hub](../assets/img/remote-support/rs-cover-button.png){ loading=lazy }
 
 2. On **Hub Dashboard**, find the hub and the event, for example Demo Hub, **Demo Practice Day**.
 
-    ![The Demo Hub tile with Demo Practice Day](../assets/img/remote-support/rs-cover-event.png){ loading=lazy }
-
-3. Open **Support cover** and choose the person, for example Riley Support.
-
-    ![The Support cover list with Riley Support](../assets/img/remote-support/rs-cover-select.png){ loading=lazy }
+3. Open the support cover list under the event, next to the headphones. It says **No support assigned** until someone is chosen. Choose the person, for example Riley Support.
 
 4. KART says **Support cover updated**. Choose **No support assigned** to clear it.
 
-    ![Support cover updated message](../assets/img/remote-support/rs-cover-saved.png){ loading=lazy }
+    ![Steps 2 to 4 on one screen: the Demo Hub tile with Demo Practice Day and Riley Support on cover](../assets/img/remote-support/rs-cover-select.png){ loading=lazy }
 
 !!! warning "Watch out"
     If nobody covers a hub, its chats show as **Unassigned** and every remote support person is alerted. Set cover before the event starts.

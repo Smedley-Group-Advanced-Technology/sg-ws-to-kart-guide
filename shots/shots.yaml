@@ -3701,12 +3701,12 @@
   state: Existing direct chat between Alex Mechanic and Casey Mechanic
   steps:
   - Open /comms as Riley Support
-  - Type Mo in the search box
+  - Type Morgan in the search box
   callouts:
   - n: 1
-    target: text=Start a direct chat
-    note: Message a staff member
-  caption: 'Step 1: Start a direct chat in the Support view after typing Mo'
+    target: text=Morgan Manager
+    note: Tap to message
+  caption: 'Step 1: Morgan Manager under Start a direct chat in the Support view'
 - id: rs-path-overview
   kind: screenshot
   page: remote-support/index.md

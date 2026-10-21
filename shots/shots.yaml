@@ -723,7 +723,7 @@
   steps:
   - Open Workshop Manager, Campaigns, tap New campaign
   - Type a campaign name, choose Integrated and a work type
-  - Choose Fleet class Junior, Lead mechanic Alex Mechanic, dates
+  - Choose Fleet class Junior, Lead mechanic Morgan Manager (the only name a hub manager who is not an admin can see), dates
   - Choose Selected karts only and tick three karts
   - Add the axle bearing as a required part, 1 per kart
   - Tap Create campaign and show the detail page
@@ -761,7 +761,7 @@
     kit FKL-900004
   steps:
   - Tap New campaign
-  - Fill in the name, Integrated, Part Upgrade, Junior, Alex Mechanic, the dates, three karts, the axle bearing and the instructions
+  - Fill in the name, Integrated, Part Upgrade, Junior, Morgan Manager, the dates, three karts, the axle bearing and the instructions
   callouts:
   - n: 2
     target: label=Campaign name

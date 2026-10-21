@@ -34,7 +34,8 @@ export default {
     await s.type('#campaign-description', 'Fit the new axle bearing to three Junior karts.');
     s.cue();                                                    // Choose the class, the lead mechanic and the dates.
     await s.choose(select(s, 'Fleet class'), 'Junior');
-    await s.choose(select(s, 'Lead mechanic'), 'Alex Mechanic');
+    // a hub manager who is not an admin only sees their own Workshop permission, so the list holds Morgan only
+    await s.choose(select(s, 'Lead mechanic'), 'Morgan Manager');
     await s.tap('#campaign-due');
     await s.page.locator('#campaign-due').fill(isoDate(21));
     await s.beat();
@@ -79,14 +80,14 @@ export default {
     await m.tap(row.getByRole('button', { name: 'Kart actions' }));
     await m.page.getByRole('menuitem', { name: /Reset to not started/ }).waitFor();
     await m.wait(500);
-    await m.shot('hm-camp-manage', { scroll: false, at: { 1: m.page.getByText('Karts in this campaign'), 2: m.page.getByRole('button', { name: 'Add karts' }),
+    await m.shot('hm-camp-manage', { scroll: false, at: { 1: m.page.getByText('Karts in this campaign'), 2: m.page.locator('button').filter({ hasText: /^Add karts$/ }).first(),
       3: m.page.getByRole('menuitem', { name: /Exclude kart/ }), 4: m.page.getByRole('menuitem', { name: /Reset to not started/ }) } });
     await m.page.keyboard.press('Escape');
     await m.goto(`/workshop/campaigns/${CAMPAIGN}`);
     await m.mustReload(m.page.getByRole('combobox', { name: 'Campaign status' }), 60000);
     await m.tap(m.page.getByRole('combobox', { name: 'Campaign status' }));
     await m.page.getByRole('option', { name: 'Cancelled' }).waitFor();
-    await m.shot('hm-camp-status', { scroll: false, at: { 1: m.page.getByRole('combobox', { name: 'Campaign status' }) } });
+    await m.shot('hm-camp-status', { scroll: false, at: { 1: m.page.locator('[role=combobox][aria-label="Campaign status"]').first() } });
     await m.page.keyboard.press('Escape');
     await m.close();
   },

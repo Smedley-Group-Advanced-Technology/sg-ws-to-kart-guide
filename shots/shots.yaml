@@ -837,15 +837,15 @@
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
   - Tap Hub catalogue
-  - Find a part your hub does not use
+  - Scroll down to the Hub catalogue list
   callouts:
   - n: 1
-    target: text=Hub catalogue
+    target: 'text=Hub catalogue: Demo Hub'
     note: Your hub's parts
   - n: 2
     target: text=In this hub's list
     note: Switch off to hide it
-  caption: 'Steps 1 and 2 on one screen: the Hub catalogue and the In this hub''s list switches'
+  caption: 'Steps 1 and 2 on one screen: the hub''s parts list and the In this hub''s list switches'
 - id: hm-cat-supplier
   kind: screenshot
   page: hub-manager/hub-catalogue.md

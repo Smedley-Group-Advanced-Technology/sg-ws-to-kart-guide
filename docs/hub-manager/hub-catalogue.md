@@ -10,9 +10,9 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ## Hide or show a part
 
-![Steps 1 and 2 on one screen: the Hub catalogue and the In this hub's list switches](../assets/img/hub-manager/hm-cat-hide.png){ loading=lazy }
+![Steps 1 and 2 on one screen: the hub's parts list and the In this hub's list switches](../assets/img/hub-manager/hm-cat-hide.png){ loading=lazy }
 
-1. Open **Workshop Manager > Hub catalogue**. Find the part.
+1. Open **Workshop Manager > Hub catalogue**. Scroll down past **Catalogues in use** and **Part requests** to the list called **Hub catalogue** with your hub's name. Find the part.
 
 2. For a part your hub never uses, turn off its switch in the **In this hub's list** column. KART asks if you want to hide it: add a reason if you like and tap **Hide at this hub**. It disappears from Stores (a part you still hold stock of stays until the stock is used). Turn the switch back on to show it again.
 
@@ -20,7 +20,7 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ![The supplier picker in Hub details](../assets/img/hub-manager/hm-cat-supplier.png){ loading=lazy }
 
-1. Open **Hub details** on the part and choose the supplier your hub buys from.
+1. Tap **Hub details** on the part. Choose the supplier your hub buys from in **Preferred supplier** and tap **Save preferred supplier**.
 
 ## Request a part from FKL Central
 

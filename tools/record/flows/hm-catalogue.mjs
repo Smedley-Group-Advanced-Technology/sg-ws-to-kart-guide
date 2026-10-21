@@ -14,7 +14,10 @@ export default {
   async run({ open, clip }) {
     const c = await open({ persona: 'Morgan Manager', device: 'desktop' });
     await openCatalogue(c);
-    await c.shot('hm-cat-hide', { at: { 1: tab(c, 'Hub catalogue'), 2: c.page.getByRole('columnheader', { name: "In this hub's list" }) } });
+    // Catalogues in use and Part requests come first: show the hub's list itself
+    const listTitle = c.page.getByText(/^Hub catalogue: Demo Hub/).first();
+    await c.scrollTo(listTitle, { block: 'start' });
+    await c.shot('hm-cat-hide', { scroll: false, at: { 1: listTitle, 2: c.page.getByRole('columnheader', { name: "In this hub's list" }) } });
     const bp = c.page.locator('tr').filter({ hasText: 'Brake pads (pair)' }).first();
     await c.tap(bp.getByRole('button', { name: 'Hub details' }));
     await c.dialog.getByText(/^Hub details/).first().waitFor();
@@ -22,9 +25,10 @@ export default {
     await c.shot('hm-cat-supplier', { scroll: false, at: { 1: c.dialog.getByText(/^Hub details/).first() } });
     await c.page.keyboard.press('Escape');
     await c.wait(600);
-    const reqCard = c.card('Part requests');
-    await c.scrollTo(reqCard.getByRole('button', { name: 'Request a part' }), { block: 'start' });
-    await c.shot('hm-req-open', { scroll: false, at: { 1: reqCard.getByRole('button', { name: 'Request a part' }) } });
+    // the Part requests title carries a "waiting" badge, so find the button itself
+    const reqBtn = c.page.getByRole('button', { name: 'Request a part', exact: true });
+    await c.scrollTo(reqBtn, { block: 'start' });
+    await c.shot('hm-req-open', { scroll: false, at: { 1: reqBtn } });
     await c.tap(c.page.getByRole('button', { name: 'Add hub-local part' }));
     await c.dialog.waitFor();
     await c.settle(600);
@@ -39,8 +43,8 @@ export default {
     await s.settle(600);
     s.cue();                                                    // Open Hub catalogue.
     await s.tap(tab(s, 'Hub catalogue'));
-    await s.skip(async () => { await s.mustReload(s.page.getByText('Part requests', { exact: true }), 60000); await s.settle(800); });
-    const btn = s.card('Part requests').getByRole('button', { name: 'Request a part' });
+    const btn = s.page.getByRole('button', { name: 'Request a part', exact: true });
+    await s.skip(async () => { await s.mustReload(btn, 60000); await s.settle(800); });
     await s.scrollTo(btn, { block: 'start' });
     s.cue();                                                    // Tap Request a part.
     await s.tap(btn);

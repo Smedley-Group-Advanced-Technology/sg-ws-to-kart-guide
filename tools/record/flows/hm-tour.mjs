@@ -39,9 +39,11 @@ export default {
     const row = s.page.locator('div.rounded-md.border').filter({ hasText: /Junior 303/ }).first();
     await s.scrollTo(row);
     await s.tap(row.getByRole('combobox'));
-    await s.page.getByRole('option', { name: 'Casey Mechanic' }).waitFor();
-    await s.shot('hm-alloc', { scroll: false, at: { 1: tab(s, 'Kart Allocation'), 2: s.page.getByRole('button', { name: 'Needs service only' }),
-      3: row.getByRole('combobox'), 4: s.page.getByRole('option', { name: 'Casey Mechanic' }) } });
+    // a hub manager who is not an admin only sees their own Workshop permission, so the list holds Morgan only
+    await s.page.getByRole('option', { name: 'Morgan Manager' }).waitFor();
+    // the open list hides the rest of the page from role locators: use CSS for the other callouts
+    await s.shot('hm-alloc', { scroll: false, at: { 1: s.page.locator('[role=tab]').filter({ hasText: /^Kart Allocation$/ }).first(),
+      2: s.page.locator('button').filter({ hasText: /^Needs service only$/ }).first(), 3: row.locator('button[role=combobox]').first(), 4: s.page.getByRole('option', { name: 'Morgan Manager' }) } });
     await s.page.keyboard.press('Escape');
 
     // Reports: Turn summary
@@ -56,13 +58,15 @@ export default {
 
     // Parts needed: Order qty on brake pads
     await s.goto('/workshop/manager?tab=parts-needed');
-    await s.mustReload(s.page.getByText('Brake pads (pair)').first(), 60000);
+    await s.mustReload(s.page.getByText('Chain', { exact: true }).first(), 60000);
     await s.settle(800);
-    const bp = s.page.locator('tr').filter({ hasText: 'Brake pads (pair)' }).first();
-    await s.type(bp.locator('input[type=number]').first(), '8');
+    // brake pads do not show in the list; Chain is below its reorder point
+    const bp = s.page.locator('tr').filter({ hasText: 'DEMO-CH-01' }).first();
+    await bp.locator('input[aria-label="Order qty"]').first().fill('');
+    await s.type(bp.locator('input[aria-label="Order qty"]').first(), '8');
     await s.page.evaluate(() => window.scrollTo(0, 0));
     await s.shot('hm-pn', { scroll: false, at: { 1: tab(s, 'Parts needed'), 2: s.page.getByRole('columnheader', { name: 'Still needed' }).first(),
-      3: bp.locator('input[type=number]').first(), 4: s.page.getByRole('button', { name: /^Create draft orders/ }).first() } });
+      3: bp.locator('input[aria-label="Order qty"]').first(), 4: s.page.getByRole('button', { name: /^Create draft orders/ }).first() } });
 
     // Stores: Adjust with Reorder point
     await s.goto('/workshop/parts');
@@ -79,7 +83,8 @@ export default {
     await s.mustReload(s.page.getByText('Schedule participants').first(), 60000);
     await s.settle(800);
     await s.shot('hm-sched', { fullPage: true, at: { 1: s.page.getByText('Schedule settings', { exact: true }).first(),
-      2: s.page.getByText('Scheduling mode', { exact: true }).first(), 3: s.page.getByText('Submission deadline day', { exact: true }).first(),
+      // these labels wrap their select, so point at the select itself
+      2: s.page.locator('[aria-label="Scheduling mode"]').first(), 3: s.page.locator('[aria-label="Submission deadline day"]').first(),
       4: s.page.getByText('Require start time', { exact: true }).first(), 5: s.page.getByText('Allow remote work', { exact: true }).first(),
       6: s.page.getByRole('button', { name: 'Save settings' }) } });
 
@@ -89,7 +94,8 @@ export default {
     await s.tap(s.page.getByRole('button', { name: 'Add target' }).first());
     const wd = s.page.locator('[data-testid="work-target-dialog"]');
     await wd.waitFor();
-    await s.choose(wd.locator('#work-target-person'), 'Alex Mechanic');
+    // people are listed by their initials
+    await s.choose(wd.locator('#work-target-person'), 'AM');
     await s.choose(wd.locator('#work-target-type'), 'Turns');
     await s.type(wd.locator('#work-target-quantity'), '10');
     await s.choose(wd.locator('#work-target-class'), 'Cadet');

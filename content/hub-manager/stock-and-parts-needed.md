@@ -4,7 +4,7 @@
 persona: Morgan Manager
 device: desktop
 url: /workshop/manager?tab=parts-needed
-state: "Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake pads FKL-900003 at the reorder point"
+state: "Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake pads FKL-900003 at the reorder point; chain FKL-900007 below its reorder point"
 :::
 
 **Parts needed** works out what your hub must order. It adds up repairs waiting on parts, open campaign tasks and stock at or below its reorder point, minus what is already on the Order List or ordered. One row per part.
@@ -20,7 +20,7 @@ state: "Junior 307 waiting on front bumper (FKL-900001, on order); campaign part
 caption: "Steps 1 to 4 on one screen: Parts needed with its columns, Order qty and Create draft orders"
 steps:
   - Tap Parts needed
-  - Change Order qty for brake pads to 8
+  - Change Order qty for the chain to 8
 callouts:
   - [1, "text=Parts needed", "The tab"]
   - [2, "text=Still needed", "What is left to order"]

@@ -959,7 +959,7 @@
     target: text=Unassigned
     note: Open the list
   - n: 4
-    target: text=Casey Mechanic
+    target: role=option[name="Morgan Manager"]
     note: Choose the mechanic
   caption: 'Steps 1 to 4 on one screen: Kart Allocation, Needs service only and the mechanic list open on 303'
 - id: hm-orders-clip
@@ -1195,7 +1195,7 @@
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
   - Tap Work targets, then Add target
-  - Choose Alex Mechanic and Turns, type 10 and choose Cadet
+  - Choose AM (Alex Mechanic) and Turns, type 10 and choose Cadet
   callouts:
   - n: 1
     target: text=Add work target
@@ -1253,10 +1253,10 @@
   device: desktop
   url: /workshop/manager?tab=parts-needed
   state: Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900003 at the reorder point
+    pads FKL-900003 at the reorder point; chain FKL-900007 below its reorder point
   steps:
   - Tap Parts needed
-  - Change Order qty for brake pads to 8
+  - Change Order qty for the chain to 8
   callouts:
   - n: 1
     target: text=Parts needed
@@ -1278,7 +1278,7 @@
   device: desktop
   url: /workshop/parts
   state: Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900003 at the reorder point
+    pads FKL-900003 at the reorder point; chain FKL-900007 below its reorder point
   steps:
   - Tap Adjust on the brake pads row
   callouts:

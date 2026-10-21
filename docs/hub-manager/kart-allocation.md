@@ -5,7 +5,7 @@
 
 !!! info "What changed from the Workshop App"
     - Allocation is a tab in **Workshop Manager**. Pick a mechanic per kart from a list.
-    - The list shows people with the **Workshop** permission and access to your hub (and admins). If somebody is missing, check their permissions.
+    - The list shows the Workshop staff KART lets you see. A KART admin sees everybody with the **Workshop** permission at the hub.
 
 ## Allocate a kart
 
@@ -17,7 +17,10 @@
 
 3. On the kart's row, open the list (it says **Unassigned** when nobody has it), for example for **303**.
 
-4. Choose the mechanic, for example **Casey Mechanic**. It saves straight away.
+4. Choose the mechanic. It saves straight away.
+
+!!! warning "Watch out"
+    If a mechanic is missing from the list, or a kart's list is blank, the kart may belong to somebody KART does not show you. Ask a KART admin to allocate it.
 
 !!! warning "Watch out"
     If KART says there are no mechanics yet, nobody at your hub has the **Workshop** permission. Ask a KART admin to give it, with access to your hub. See [Approvals](approvals.md).

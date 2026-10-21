@@ -18,9 +18,9 @@ This page covers three things: how your hub's weekly schedule works (**Schedule 
 
 3. Set the **Submission deadline day** and the time.
 
-4. Tick **Require start time** and **Require finish time** if you need them.
+4. Turn on **Require start time** and **Require finish time** if you need them.
 
-5. Under **Schedule participants**, tick who is included and whether they may work remotely (**Allow remote work**).
+5. Under **Schedule participants**, turn on the switch next to each person who is included. Turn on **Allow remote work** for people who may work remotely. People are shown by their initials.
 
 6. Tap **Save settings**.
 
@@ -30,7 +30,7 @@ This page covers three things: how your hub's weekly schedule works (**Schedule 
 
 1. Open **Workshop Manager > Work targets** and tap **Add target**.
 
-2. Choose the **Person** and the **Work type**: Readiness, Turns, Repairs or Campaign tasks.
+2. Choose the **Person** (shown by initials, for example **AM**) and the **Work type**: Readiness, Turns, Repairs or Campaign tasks.
 
 3. Type the target number, optionally a class and a note.
 

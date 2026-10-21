@@ -16,25 +16,25 @@ New people get into your hub in one of two ways: they sign up with your join lin
 
 ## Open Pending approvals
 
-1. On **Select your Hub**, tap **Hub Manager**.
+:::shot hm-appr-button
+caption: "Step 1: the Hub Manager button on Select your Hub"
+url: /hub-selection
+steps:
+  - Choose Demo Hub
+callouts:
+  - [1, "text=Hub Manager", "Your dashboard"]
+:::
 
-    :::shot hm-appr-button
-    caption: The Hub Manager button on Select your Hub
-    url: /hub-selection
-    steps:
-      - Choose Demo Hub
-    callouts:
-      - [1, "text=Hub Manager", "Your dashboard"]
-    :::
+1. On **Select your Hub**, tap **Hub Manager**.
 
 2. Tap the **Pending approvals** tile.
 
     :::shot hm-appr-tile
-    caption: The Pending approvals tile showing 1 waiting
+    caption: "Step 2: the Pending approvals tile showing 1 waiting"
     steps:
       - Open the Hub Manager dashboard
     callouts:
-      - [1, "text=Pending approvals", "Sign-ups and access requests"]
+      - [2, "text=Pending approvals", "Sign-ups and access requests"]
     :::
 
 ## Approve a sign-up
@@ -54,120 +54,76 @@ captions:
   - "They can sign in now."
 :::
 
-1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
+:::shot hm-appr-row
+caption: "Steps 1 and 2 on one screen: Jamie Newstarter's Sign-up row via join link and its Approve button"
+steps:
+  - Tap Pending approvals
+callouts:
+  - [1, "text=via join link", "Sign-up, hub, used your link"]
+  - [2, "text=Approve", "Let them in"]
+:::
 
-    :::shot hm-appr-row
-    caption: Jamie Newstarter's Sign-up row via join link
-    steps:
-      - Tap Pending approvals
-    callouts:
-      - [1, "text=Sign-up", "A new account"]
-      - [2, "text=via join link", "Used your link"]
-    :::
+1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
 
 2. Tap **Approve**.
 
-    :::shot hm-appr-approve
-    caption: The Approve button on the request row
-    steps:
-      - Tap Approve
-    callouts:
-      - [1, "text=Approve", "Let them in"]
-    :::
-
 3. Then give them the permissions they need (see below). A new mechanic needs **Workshop**.
-
-    :::shot hm-appr-done
-    caption: Request approved message
-    steps:
-      - Wait for Request approved
-    callouts:
-      - [1, "text=Request approved", "Done"]
-    :::
 
 !!! warning "Watch out"
     To refuse, tap **Reject** and type a **Reason**. **The applicant sees this reason.** Keep it short and polite.
 
 ## Create a join link
 
-1. Open the **Join links** tab and tap **Create join link**.
+:::shot hm-join
+caption: "Steps 1 to 3 on one screen: the Join links tab with the new link form filled in"
+steps:
+  - Tap the Join links tab
+  - Type 14 in Valid for (days), 5 in Maximum uses, "New mechanics" in Label
+callouts:
+  - [1, "text=Join links", "Your hub's links"]
+  - [2, "text=Valid for (days)", "1 to 90 days"]
+  - [3, "text=Create join link", "Then Copy link"]
+:::
 
-    :::shot hm-join-tab
-    caption: The Join links tab with Create join link
-    steps:
-      - Tap the Join links tab
-    callouts:
-      - [1, "text=Join links", "Your hub's links"]
-      - [2, "text=Create join link", "New link"]
-    :::
+1. Open the **Join links** tab. The **Create join link** form is at the top; check the **Hub**.
 
 2. Set **Valid for (days)** (1 to 90), and optionally **Maximum uses (optional)** and **Label (optional)**.
 
-    :::shot hm-join-form
-    caption: The join link form with Valid for, Maximum uses and Label
-    steps:
-      - Type 14 in Valid for (days), 5 in Maximum uses, "New mechanics" in Label
-    callouts:
-      - [1, "text=Valid for (days)", "1 to 90 days"]
-    :::
-
 3. Tap **Create join link**, then **Copy link** and send it to the new person.
-
-    :::shot hm-join-copy
-    caption: The new link with Copy link
-    steps:
-      - Tap Create join link
-      - Tap Copy link
-    callouts:
-      - [1, "text=Copy link", "Send it to the new starter"]
-    :::
 
 !!! tip "Tip"
     Tap **Revoke** to stop a link working. People who already signed up with it keep their request.
 
 ## Create a user with a temporary password
 
+:::shot hm-create-form
+caption: "Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked"
+steps:
+  - Tap the Create user tab
+  - Fill in a demo name and e-mail, choose Demo Hub and tick Workshop
+callouts:
+  - [1, "text=Full Name", "Their details"]
+  - [2, "text=Hub managers can give Workshop and Purchasing only.", "Hub and permissions"]
+  - [3, "text=Create user", "Create it"]
+:::
+
 1. Open the **Create user** tab. Fill in **Full Name**, **Initials (optional)**, **Email** and **Repeat e-mail**.
 
-    :::shot hm-create-form
-    caption: The Create user form
-    steps:
-      - Tap the Create user tab
-    callouts:
-      - [1, "text=Full Name", "Their full name"]
-      - [2, "text=Repeat e-mail", "Typed twice to avoid mistakes"]
-    :::
-
 2. Choose the **Hub** and tick **Permissions**: Workshop, and Purchasing if they place orders.
-
-    :::shot hm-create-perms
-    caption: Hub Demo Hub and the Workshop permission ticked
-    steps:
-      - Choose Demo Hub and tick Workshop
-    callouts:
-      - [1, "text=Hub managers can give Workshop and Purchasing only.", "Your limit"]
-    :::
 
 3. Tap **Create user**. KART shows a **Temporary password**. Tap **Copy password** and give it to the person in private.
 
     :::shot hm-create-password
-    caption: Temporary password with Copy password
+    caption: "Steps 3 and 4: the Temporary password with Copy password and the confirm box"
     steps:
       - Tap Create user
+      - Tick I have passed the password on
     callouts:
-      - [1, "text=Temporary password", "Shown only now"]
-      - [2, "text=Copy password", "Copy it"]
+      - [3, "text=Copy password", "Copy it, shown only now"]
+      - [4, "text=I have passed the password on", "Tick, then Done"]
     :::
 
 4. Tick **I have passed the password on** and tap **Done**. They must choose their own password at first sign-in.
-
-    :::shot hm-create-done
-    caption: I have passed the password on ticked, with Done
-    steps:
-      - Tick the box and tap Done
-    callouts:
-      - [1, "text=I have passed the password on", "Confirm"]
-    :::
 
 !!! note "Remember"
     **Awaiting first sign-in** lists accounts whose owner has not signed in yet.

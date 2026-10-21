@@ -16,81 +16,60 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ## Hide or show a part
 
+:::shot hm-cat-hide
+caption: "Steps 1 and 2 on one screen: the Hub catalogue and the In this hub's list switches"
+steps:
+  - Tap Hub catalogue
+  - Find a part your hub does not use
+callouts:
+  - [1, "text=Hub catalogue", "Your hub's parts"]
+  - [2, "text=In this hub's list", "Switch off to hide it"]
+:::
+
 1. Open **Workshop Manager > Hub catalogue**. Find the part.
 
-    :::shot hm-cat-tab
-    caption: The Hub catalogue editor
-    steps:
-      - Tap Hub catalogue
-    callouts:
-      - [1, "text=Hub catalogue", "Your hub's parts"]
-    :::
-
-2. Tap **Hide at this hub** for a part your hub never uses. It disappears from Stores. Tap **Show at this hub** to bring it back.
-
-    :::shot hm-cat-hide
-    caption: Hide at this hub on a part row
-    steps:
-      - Find a part your hub does not use
-    callouts:
-      - [1, "text=Hide at this hub", "Remove it from your Stores"]
-    :::
+2. For a part your hub never uses, turn off its switch in the **In this hub's list** column. KART asks if you want to hide it: add a reason if you like and tap **Hide at this hub**. It disappears from Stores (a part you still hold stock of stays until the stock is used). Turn the switch back on to show it again.
 
 ## Choose the preferred supplier
 
-1. Open **Hub details** on the part and choose the supplier your hub buys from.
+:::shot hm-cat-supplier
+caption: The supplier picker in Hub details
+steps:
+  - Open Hub details on brake pads FKL-900003
+callouts:
+  - [1, "text=Hub details", "Hub-specific settings"]
+:::
 
-    :::shot hm-cat-supplier
-    caption: The supplier picker in Hub details
-    steps:
-      - Open Hub details on brake pads FKL-900001
-    callouts:
-      - [1, "text=Hub details", "Hub-specific settings"]
-    :::
+1. Open **Hub details** on the part and choose the supplier your hub buys from.
 
 ## Request a part from FKL Central
 
-1. In the **Part requests** card, tap **Request a part**.
+:::shot hm-req-open
+caption: "Step 1: the Part requests card with Request a part and a request waiting"
+steps:
+  - Scroll to Part requests
+callouts:
+  - [1, "text=Request a part", "Ask FKL Central"]
+:::
 
-    :::shot hm-req-open
-    caption: The Part requests card with Steering column bush waiting
-    steps:
-      - Scroll to Part requests
-    callouts:
-      - [1, "text=Request a part", "Ask FKL Central"]
-      - [2, "text=Waiting for FKL Central", "Steering column bush"]
-    :::
+1. In the **Part requests** card, tap **Request a part**.
 
 2. Type the **Part name**.
 
-    :::shot hm-req-name
-    caption: Part name filled in
+    :::shot hm-req-form
+    caption: "Steps 2 to 4 on one screen: the Request a part form filled in"
     steps:
       - Tap Request a part
-      - Type a part name
+      - Type a part name, an MPN, quantity 2 and notes
     callouts:
-      - [1, "text=Part name", "What it is called"]
+      - [2, "text=Part name", "What it is called"]
+      - [3, "text=Manufacturer part number (MPN), if known", "Helps FKL Central match it"]
+      - [4, "text=Send request", "Send it"]
     :::
 
 3. Add the **Manufacturer part number (MPN), if known** and the **Quantity needed**.
 
-    :::shot hm-req-mpn
-    caption: MPN and Quantity needed filled in
-    steps:
-      - Type an MPN and quantity 2
-    callouts:
-      - [1, "text=Manufacturer part number (MPN), if known", "Helps FKL Central match it"]
-    :::
-
 4. Add notes (supplier, kart class, what it is for) and tap **Send request**.
-
-    :::shot hm-req-send
-    caption: Notes and Send request
-    steps:
-      - Type notes and tap Send request
-    callouts:
-      - [1, "text=Send request", "Send it"]
-    :::
 
 :::clip hm-request-part-clip
 caption: requesting a part from FKL Central in the Hub catalogue
@@ -112,15 +91,15 @@ captions:
 
 ## Add a hub-local part
 
-1. Tap **Add hub-local part**, fill in the part with its MPN and save. It appears only in your hub's Stores.
+:::shot hm-cat-local
+caption: The Add hub-local part form with MPN
+steps:
+  - Tap Add hub-local part
+callouts:
+  - [1, "text=Add hub-local part", "Only for your hub"]
+:::
 
-    :::shot hm-cat-local
-    caption: The Add hub-local part form with MPN
-    steps:
-      - Tap Add hub-local part
-    callouts:
-      - [1, "text=Add hub-local part", "Only for your hub"]
-    :::
+1. Tap **Add hub-local part**, fill in the part with its MPN and save. It appears only in your hub's Stores.
 
 !!! warning "Watch out"
     Check Stores and ask FKL Central first: a hub-local part that duplicates a master part makes ordering and reports harder.

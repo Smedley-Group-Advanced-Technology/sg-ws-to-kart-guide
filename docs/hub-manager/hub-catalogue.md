@@ -10,37 +10,31 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ## Hide or show a part
 
+![Steps 1 and 2 on one screen: the Hub catalogue and the In this hub's list switches](../assets/img/hub-manager/hm-cat-hide.png){ loading=lazy }
+
 1. Open **Workshop Manager > Hub catalogue**. Find the part.
 
-    ![The Hub catalogue editor](../assets/img/hub-manager/hm-cat-tab.png){ loading=lazy }
-
-2. Tap **Hide at this hub** for a part your hub never uses. It disappears from Stores. Tap **Show at this hub** to bring it back.
-
-    ![Hide at this hub on a part row](../assets/img/hub-manager/hm-cat-hide.png){ loading=lazy }
+2. For a part your hub never uses, turn off its switch in the **In this hub's list** column. KART asks if you want to hide it: add a reason if you like and tap **Hide at this hub**. It disappears from Stores (a part you still hold stock of stays until the stock is used). Turn the switch back on to show it again.
 
 ## Choose the preferred supplier
 
-1. Open **Hub details** on the part and choose the supplier your hub buys from.
+![The supplier picker in Hub details](../assets/img/hub-manager/hm-cat-supplier.png){ loading=lazy }
 
-    ![The supplier picker in Hub details](../assets/img/hub-manager/hm-cat-supplier.png){ loading=lazy }
+1. Open **Hub details** on the part and choose the supplier your hub buys from.
 
 ## Request a part from FKL Central
 
-1. In the **Part requests** card, tap **Request a part**.
+![Step 1: the Part requests card with Request a part and a request waiting](../assets/img/hub-manager/hm-req-open.png){ loading=lazy }
 
-    ![The Part requests card with Steering column bush waiting](../assets/img/hub-manager/hm-req-open.png){ loading=lazy }
+1. In the **Part requests** card, tap **Request a part**.
 
 2. Type the **Part name**.
 
-    ![Part name filled in](../assets/img/hub-manager/hm-req-name.png){ loading=lazy }
+    ![Steps 2 to 4 on one screen: the Request a part form filled in](../assets/img/hub-manager/hm-req-form.png){ loading=lazy }
 
 3. Add the **Manufacturer part number (MPN), if known** and the **Quantity needed**.
 
-    ![MPN and Quantity needed filled in](../assets/img/hub-manager/hm-req-mpn.png){ loading=lazy }
-
 4. Add notes (supplier, kart class, what it is for) and tap **Send request**.
-
-    ![Notes and Send request](../assets/img/hub-manager/hm-req-send.png){ loading=lazy }
 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-request-part-clip.jpg" width="1440">
 <source src="../assets/video/hm-request-part-clip.mp4" type="video/mp4"><source src="../assets/video/hm-request-part-clip.webm" type="video/webm">
@@ -52,9 +46,9 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ## Add a hub-local part
 
-1. Tap **Add hub-local part**, fill in the part with its MPN and save. It appears only in your hub's Stores.
+![The Add hub-local part form with MPN](../assets/img/hub-manager/hm-cat-local.png){ loading=lazy }
 
-    ![The Add hub-local part form with MPN](../assets/img/hub-manager/hm-cat-local.png){ loading=lazy }
+1. Tap **Add hub-local part**, fill in the part with its MPN and save. It appears only in your hub's Stores.
 
 !!! warning "Watch out"
     Check Stores and ask FKL Central first: a hub-local part that duplicates a master part makes ordering and reports harder.

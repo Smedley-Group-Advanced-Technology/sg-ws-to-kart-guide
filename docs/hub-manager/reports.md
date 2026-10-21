@@ -20,21 +20,15 @@
 
 ## Run a report
 
-1. Open **Workshop Manager > Reports**.
+![Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons](../assets/img/hub-manager/hm-rep.png){ loading=lazy }
 
-    ![The Reports tab with the report groups](../assets/img/hub-manager/hm-rep-tab.png){ loading=lazy }
+1. Open **Workshop Manager > Reports**.
 
 2. Pick a report, for example **Turn summary**.
 
-    ![Turn summary chosen](../assets/img/hub-manager/hm-rep-pick.png){ loading=lazy }
-
 3. Set the **Period** (**From** and **To**) or choose an **Event**.
 
-    ![Period from and to dates](../assets/img/hub-manager/hm-rep-period.png){ loading=lazy }
-
 4. Tap **Excel**, **PDF** or **CSV** to download it.
-
-    ![The Excel, PDF and CSV buttons](../assets/img/hub-manager/hm-rep-export.png){ loading=lazy }
 
 !!! tip "Tip"
     The screen shows the first rows only. The exports contain all of them.

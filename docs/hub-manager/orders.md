@@ -42,80 +42,66 @@ flowchart LR
 
 ## Submit a draft
 
-1. Open **Workshop Manager > Order List**. Find the **Draft** line, for example brake pads.
+![Steps 1 and 2 on one screen: the Order List with the brake pads Draft line and Submit](../assets/img/hub-manager/hm-ord-list.png){ loading=lazy }
 
-    ![The Order List with lines in every stage](../assets/img/hub-manager/hm-ord-list.png){ loading=lazy }
+1. Open **Workshop Manager > Order List**. Find the **Draft** line, for example brake pads.
 
 2. Tap **Submit** on the line.
 
-    ![Submit on the brake pads Draft line](../assets/img/hub-manager/hm-ord-submit.png){ loading=lazy }
-
 ## Approve or reject
+
+![Steps 1 to 3 on one screen: the Approval queue with Approve and Reject on the rear tyres line](../assets/img/hub-manager/hm-ord-queue.png){ loading=lazy }
 
 1. Tap **Approval queue**. It shows every line **Waiting for approval**.
 
-    ![Approval queue with the rear tyres line waiting for approval](../assets/img/hub-manager/hm-ord-queue.png){ loading=lazy }
-
 2. Check the part and quantity. Tap **Approve**.
-
-    ![Approve on the rear tyres line](../assets/img/hub-manager/hm-ord-approve.png){ loading=lazy }
 
 3. Or tap **Reject**, type a reason in **Reason (optional)** and confirm **Reject order**. The line is closed as Rejected. If the part is still needed it shows again in Parts needed.
 
-    ![The Reject order dialog with a reason](../assets/img/hub-manager/hm-ord-reject.png){ loading=lazy }
-
 ## Mark ordered
 
-1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**.
+![Step 1: Mark ordered on the sprockets line](../assets/img/hub-manager/hm-ord-mark.png){ loading=lazy }
 
-    ![Mark ordered on the sprockets line](../assets/img/hub-manager/hm-ord-mark.png){ loading=lazy }
+1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Check the **Supplier** and tap **Save**.
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
-    ![The 307 repair card showing On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
+    ![Step 2: the 307 repair card showing On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
 
 !!! warning "Watch out"
     **Mark ordered** only works on **Approved** lines. Lines made with **Add bulk order** go straight to Ordered, so only approvers can make them.
 
 ## Bulk and one-time orders
 
+![Steps 1 and 2 on one screen: Add bulk order and a one-time line in Submitted](../assets/img/hub-manager/hm-ord-bulk.png){ loading=lazy }
+
 1. For a bulk buy, tap **Add bulk order** on the Order List and add the lines.
 
-    ![The Add bulk order button](../assets/img/hub-manager/hm-ord-bulk.png){ loading=lazy }
-
 2. For a one-off purchase, use **One-time need** in Stores with a reason. It arrives here as **Submitted**, marked one-time.
-
-    ![A one-time need line in Submitted](../assets/img/hub-manager/hm-ord-onetime.png){ loading=lazy }
 
 ## Receive the parts (Goods In)
 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-goodsin-clip.jpg" width="1440">
 <source src="../assets/video/hm-goodsin-clip.mp4" type="video/mp4"><source src="../assets/video/hm-goodsin-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-goodsin-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: receiving the front bumpers for Junior 307 in Goods In (about 55 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: receiving the front bumpers for Junior 307 with Goods In on the Order List (about 55 seconds, with captions)</figcaption></figure>
 
-1. Open **Workshop Manager > Goods In**.
+![Step 1: Goods In on the front bumpers line under Ordered](../assets/img/hub-manager/hm-gi-open.png){ loading=lazy }
 
-    ![Goods In for Demo Hub](../assets/img/hub-manager/hm-gi-tab.png){ loading=lazy }
+1. Open **Workshop Manager > Order List**. Find the line under **Ordered**, for example front bumpers, and tap **Goods In** on it.
 
-2. Choose the **Part**, for example front bumper, and the order in **Against order**.
+2. The **Part** is filled in and the line is marked **Against order**. Check it is the part that arrived.
 
-    ![Part front bumper and Against order chosen](../assets/img/hub-manager/hm-gi-part.png){ loading=lazy }
+    ![Steps 2 to 5 on one screen: the Goods In form for the front bumpers order](../assets/img/hub-manager/hm-gi.png){ loading=lazy }
 
-3. Type the **Quantity** and the **Unit cost**, and choose the **Currency**.
-
-    ![Quantity, Unit cost and Currency filled in](../assets/img/hub-manager/hm-gi-cost.png){ loading=lazy }
+3. Type the **Quantity** and the **Unit cost**, and check the **Currency** (for example GBP).
 
 4. Fill in **Supplier** and **Invoice reference**.
 
-    ![Supplier and Invoice reference filled in](../assets/img/hub-manager/hm-gi-invoice.png){ loading=lazy }
-
 5. Tap **Receive stock**. Stock and the average cost update straight away, and waiting repairs move to **Ready to repair**.
 
-    ![The 307 repair now in Requires reliability actions](../assets/img/hub-manager/hm-gi-done.png){ loading=lazy }
-
 !!! tip "Tip"
-    You can also tap **Receive** on an Ordered line in the Order List and fill in **Book in** with freight and tax or duty. Partial deliveries are fine: receive what came, the rest stays Ordered.
+    Tap **Receive** instead of **Goods In** on an Ordered line to add **Freight** and **Tax / duty**, then tap **Book in**. Parts that arrive without an order go in through the **Goods In** tab of Workshop Manager. Partial deliveries are fine: receive what came, the rest stays Ordered.
 
 !!! abstract "Coming with your hub's switch-over"
     Open orders in the Workshop App are not copied. Re-enter each one in KART (Stores) so it can be received here.

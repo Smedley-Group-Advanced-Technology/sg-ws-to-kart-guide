@@ -9,21 +9,15 @@
 
 ## Allocate a kart
 
+![Steps 1 to 4 on one screen: Kart Allocation, Needs service only and the mechanic list open on 303](../assets/img/hub-manager/hm-alloc.png){ loading=lazy }
+
 1. Open **Workshop Manager** and tap **Kart Allocation**.
 
-    ![Kart Allocation with Workshop staff and the kart list](../assets/img/hub-manager/hm-alloc-tab.png){ loading=lazy }
+2. Tap **Needs service only** to see only karts that need a service. **All karts** shows them all again.
 
-2. Tick **Needs service only** to see only karts that need a service.
-
-    ![Needs service only selected](../assets/img/hub-manager/hm-alloc-filter.png){ loading=lazy }
-
-3. On the kart's row, open the list (it says **Unassigned** when nobody has it), for example for **203**.
-
-    ![The mechanic list open on the row for 203](../assets/img/hub-manager/hm-alloc-pick.png){ loading=lazy }
+3. On the kart's row, open the list (it says **Unassigned** when nobody has it), for example for **303**.
 
 4. Choose the mechanic, for example **Casey Mechanic**. It saves straight away.
-
-    ![203 allocated to Casey Mechanic](../assets/img/hub-manager/hm-alloc-done.png){ loading=lazy }
 
 !!! warning "Watch out"
     If KART says there are no mechanics yet, nobody at your hub has the **Workshop** permission. Ask a KART admin to give it, with access to your hub. See [Approvals](approvals.md).

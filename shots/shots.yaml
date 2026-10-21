@@ -595,7 +595,7 @@
   - n: 1
     target: text=Hub Manager
     note: Your dashboard
-  caption: The Hub Manager button on Select your Hub
+  caption: 'Step 1: the Hub Manager button on Select your Hub'
 - id: hm-appr-tile
   kind: screenshot
   page: hub-manager/approvals.md
@@ -606,10 +606,10 @@
   steps:
   - Open the Hub Manager dashboard
   callouts:
-  - n: 1
+  - n: 2
     target: text=Pending approvals
     note: Sign-ups and access requests
-  caption: The Pending approvals tile showing 1 waiting
+  caption: 'Step 2: the Pending approvals tile showing 1 waiting'
 - id: hm-approve-clip
   kind: clip
   page: hub-manager/approvals.md
@@ -640,41 +640,13 @@
   - Tap Pending approvals
   callouts:
   - n: 1
-    target: text=Sign-up
-    note: A new account
-  - n: 2
     target: text=via join link
-    note: Used your link
-  caption: Jamie Newstarter's Sign-up row via join link
-- id: hm-appr-approve
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Tap Approve
-  callouts:
-  - n: 1
+    note: Sign-up, hub, used your link
+  - n: 2
     target: text=Approve
     note: Let them in
-  caption: The Approve button on the request row
-- id: hm-appr-done
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Wait for Request approved
-  callouts:
-  - n: 1
-    target: text=Request approved
-    note: Done
-  caption: Request approved message
-- id: hm-join-tab
+  caption: 'Steps 1 and 2 on one screen: Jamie Newstarter''s Sign-up row via join link and its Approve button'
+- id: hm-join
   kind: screenshot
   page: hub-manager/approvals.md
   persona: Morgan Manager
@@ -683,43 +655,18 @@
   state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
   steps:
   - Tap the Join links tab
+  - Type 14 in Valid for (days), 5 in Maximum uses, "New mechanics" in Label
   callouts:
   - n: 1
     target: text=Join links
     note: Your hub's links
   - n: 2
-    target: text=Create join link
-    note: New link
-  caption: The Join links tab with Create join link
-- id: hm-join-form
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Type 14 in Valid for (days), 5 in Maximum uses, "New mechanics" in Label
-  callouts:
-  - n: 1
     target: text=Valid for (days)
     note: 1 to 90 days
-  caption: The join link form with Valid for, Maximum uses and Label
-- id: hm-join-copy
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Tap Create join link
-  - Tap Copy link
-  callouts:
-  - n: 1
-    target: text=Copy link
-    note: Send it to the new starter
-  caption: The new link with Copy link
+  - n: 3
+    target: text=Create join link
+    note: Then Copy link
+  caption: 'Steps 1 to 3 on one screen: the Join links tab with the new link form filled in'
 - id: hm-create-form
   kind: screenshot
   page: hub-manager/approvals.md
@@ -729,28 +676,18 @@
   state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
   steps:
   - Tap the Create user tab
+  - Fill in a demo name and e-mail, choose Demo Hub and tick Workshop
   callouts:
   - n: 1
     target: text=Full Name
-    note: Their full name
+    note: Their details
   - n: 2
-    target: text=Repeat e-mail
-    note: Typed twice to avoid mistakes
-  caption: The Create user form
-- id: hm-create-perms
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Choose Demo Hub and tick Workshop
-  callouts:
-  - n: 1
     target: text=Hub managers can give Workshop and Purchasing only.
-    note: Your limit
-  caption: Hub Demo Hub and the Workshop permission ticked
+    note: Hub and permissions
+  - n: 3
+    target: text=Create user
+    note: Create it
+  caption: 'Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked'
 - id: hm-create-password
   kind: screenshot
   page: hub-manager/approvals.md
@@ -760,28 +697,15 @@
   state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
   steps:
   - Tap Create user
+  - Tick I have passed the password on
   callouts:
-  - n: 1
-    target: text=Temporary password
-    note: Shown only now
-  - n: 2
+  - n: 3
     target: text=Copy password
-    note: Copy it
-  caption: Temporary password with Copy password
-- id: hm-create-done
-  kind: screenshot
-  page: hub-manager/approvals.md
-  persona: Morgan Manager
-  device: desktop
-  url: /hub-manager
-  state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
-  steps:
-  - Tick the box and tap Done
-  callouts:
-  - n: 1
+    note: Copy it, shown only now
+  - n: 4
     target: text=I have passed the password on
-    note: Confirm
-  caption: I have passed the password on ticked, with Done
+    note: Tick, then Done
+  caption: 'Steps 3 and 4: the Temporary password with Copy password and the confirm box'
 - id: hm-campaign-clip
   kind: clip
   page: hub-manager/campaigns.md
@@ -789,13 +713,13 @@
   device: desktop
   url: /workshop/manager?tab=campaigns
   state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
+    kit FKL-900004
   steps:
   - Open Workshop Manager, Campaigns, tap New campaign
   - Type a campaign name, choose Integrated and a work type
   - Choose Fleet class Junior, Lead mechanic Alex Mechanic, dates
   - Choose Selected karts only and tick three karts
-  - Add the caliper seal kit as a required part, 1 per kart
+  - Add the axle bearing as a required part, 1 per kart
   - Tap Create campaign and show the detail page
   caption: creating an integrated campaign for Juniors and adding karts
   captions:
@@ -813,158 +737,62 @@
   device: desktop
   url: /workshop/manager?tab=campaigns
   state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
+    kit FKL-900004
   steps:
   - Tap Campaigns
   callouts:
   - n: 1
-    target: text=Fleet campaigns
-    note: All campaigns
-  - n: 2
     target: text=New campaign
     note: Start a new one
-  caption: Fleet campaigns with the New campaign button
-- id: hm-camp-name
+  caption: 'Step 1: Fleet campaigns with the New campaign button'
+- id: hm-camp-form
   kind: screenshot
   page: hub-manager/campaigns.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/campaigns/new
   state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
+    kit FKL-900004
   steps:
   - Tap New campaign
-  - Type a campaign name
+  - Fill in the name, Integrated, Part Upgrade, Junior, Alex Mechanic, the dates, three karts, the axle bearing and the instructions
   callouts:
-  - n: 1
-    target: text=New fleet campaign
-    note: The form
   - n: 2
     target: label=Campaign name
     note: A clear name
-  caption: The New fleet campaign form with Campaign name filled in
-- id: hm-camp-type
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Choose Integrated
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Integrated
-    note: Part of the service
-  - n: 2
-    target: text=Standalone
-    note: Tracked on its own
-  caption: Campaign type with Integrated and Standalone
-- id: hm-camp-worktype
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Choose Part Upgrade in Work type
-  - Type a description
-  callouts:
-  - n: 1
+    note: Integrated or Standalone
+  - n: 4
     target: text=Work type
     note: What kind of job
-  caption: Work type Part Upgrade and a description
-- id: hm-camp-class
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Choose Junior, Alex Mechanic and the dates
-  callouts:
-  - n: 1
+  - n: 5
     target: text=Fleet class
-    note: Which class
-  - n: 2
-    target: text=Lead mechanic
-    note: Who leads it
-  caption: Fleet class Junior, Lead mechanic Alex Mechanic and the dates
-- id: hm-camp-karts
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Choose Selected karts only and tick 301, 302 and 305
-  callouts:
-  - n: 1
+    note: Class, lead mechanic, dates
+  - n: 6
     target: text=Selected karts only
     note: Pick the karts
-  caption: Karts with Selected karts only and three Juniors ticked
-- id: hm-camp-parts
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Add caliper seal kit FKL-900006 with quantity 1
-  callouts:
-  - n: 1
+  - n: 7
     target: text=Required parts per kart (optional)
     note: Parts each kart needs
-  caption: The caliper seal kit added as a required part, 1 per kart
-- id: hm-camp-instructions
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Type the work instructions
-  callouts:
-  - n: 1
+  - n: 8
     target: text=Work instructions
     note: Step by step for the mechanic
-  caption: Work instructions filled in
-- id: hm-camp-create
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/new
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Choose Active in Status
-  callouts:
-  - n: 1
+  - n: 9
     target: text=Create campaign
-    note: Save it
-  caption: Status and the Create campaign button
-- id: hm-camp-detail
+    note: Status, then save
+  caption: 'Steps 2 to 9 on one page: the New fleet campaign form filled in'
+- id: hm-camp-manage
   kind: screenshot
   page: hub-manager/campaigns.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/campaigns/{campaign}
   state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
+    kit FKL-900004
   steps:
   - Open Junior caliper seal upgrade
+  - Open the actions menu on the 305 row
   callouts:
   - n: 1
     target: text=Karts in this campaign
@@ -972,52 +800,13 @@
   - n: 2
     target: text=Add karts
     note: Add more
-  caption: The campaign detail page with Karts in this campaign
-- id: hm-camp-add
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/{campaign}
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Tap Add karts and tick 306
-  callouts:
-  - n: 1
-    target: text=Add karts
-    note: Add more karts
-  caption: Adding karts to the campaign
-- id: hm-camp-exclude
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/{campaign}
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Tap Exclude kart on the 308 row
-  callouts:
-  - n: 1
-    target: text=Exclude kart
+  - n: 3
+    target: text=Exclude kart...
     note: Not needed on this kart
-  caption: Exclude kart on a campaign row
-- id: hm-camp-reset
-  kind: screenshot
-  page: hub-manager/campaigns.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/campaigns/{campaign}
-  state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
-  steps:
-  - Open the actions on the 305 row
-  callouts:
-  - n: 1
-    target: text=Reset to not started
+  - n: 4
+    target: text=Reset to not started...
     note: Do it again
-  caption: Reset to not started on a campaign row
+  caption: 'Steps 1 to 4 on one screen: Karts in this campaign with Add karts and the actions menu on a row'
 - id: hm-camp-status
   kind: screenshot
   page: hub-manager/campaigns.md
@@ -1025,28 +814,14 @@
   device: desktop
   url: /workshop/campaigns/{campaign}
   state: Active integrated campaign Junior caliper seal upgrade on Juniors (301, 302, 305 assigned to Alex); caliper seal
-    kit FKL-900006
+    kit FKL-900004
   steps:
   - Open Campaign status
   callouts:
   - n: 1
-    target: text=Campaign status
+    target: label=Campaign status
     note: Change the status
   caption: Campaign status with Draft, Active, Paused, Completed and Cancelled
-- id: hm-cat-tab
-  kind: screenshot
-  page: hub-manager/hub-catalogue.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
-  steps:
-  - Tap Hub catalogue
-  callouts:
-  - n: 1
-    target: text=Hub catalogue
-    note: Your hub's parts
-  caption: The Hub catalogue editor
 - id: hm-cat-hide
   kind: screenshot
   page: hub-manager/hub-catalogue.md
@@ -1055,12 +830,16 @@
   url: /workshop/manager?tab=hub-catalogue
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
+  - Tap Hub catalogue
   - Find a part your hub does not use
   callouts:
   - n: 1
-    target: text=Hide at this hub
-    note: Remove it from your Stores
-  caption: Hide at this hub on a part row
+    target: text=Hub catalogue
+    note: Your hub's parts
+  - n: 2
+    target: text=In this hub's list
+    note: Switch off to hide it
+  caption: 'Steps 1 and 2 on one screen: the Hub catalogue and the In this hub''s list switches'
 - id: hm-cat-supplier
   kind: screenshot
   page: hub-manager/hub-catalogue.md
@@ -1069,7 +848,7 @@
   url: /workshop/manager?tab=hub-catalogue
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
-  - Open Hub details on brake pads FKL-900001
+  - Open Hub details on brake pads FKL-900003
   callouts:
   - n: 1
     target: text=Hub details
@@ -1088,11 +867,8 @@
   - n: 1
     target: text=Request a part
     note: Ask FKL Central
-  - n: 2
-    target: text=Waiting for FKL Central
-    note: Steering column bush
-  caption: The Part requests card with Steering column bush waiting
-- id: hm-req-name
+  caption: 'Step 1: the Part requests card with Request a part and a request waiting'
+- id: hm-req-form
   kind: screenshot
   page: hub-manager/hub-catalogue.md
   persona: Morgan Manager
@@ -1101,40 +877,18 @@
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
   - Tap Request a part
-  - Type a part name
+  - Type a part name, an MPN, quantity 2 and notes
   callouts:
-  - n: 1
+  - n: 2
     target: text=Part name
     note: What it is called
-  caption: Part name filled in
-- id: hm-req-mpn
-  kind: screenshot
-  page: hub-manager/hub-catalogue.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
-  steps:
-  - Type an MPN and quantity 2
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Manufacturer part number (MPN), if known
     note: Helps FKL Central match it
-  caption: MPN and Quantity needed filled in
-- id: hm-req-send
-  kind: screenshot
-  page: hub-manager/hub-catalogue.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
-  steps:
-  - Type notes and tap Send request
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Send request
     note: Send it
-  caption: Notes and Send request
+  caption: 'Steps 2 to 4 on one screen: the Request a part form filled in'
 - id: hm-request-part-clip
   kind: clip
   page: hub-manager/hub-catalogue.md
@@ -1182,73 +936,40 @@
     target: text=Workshop Manager
     note: Your extra tab
   caption: The Workshop with the Workshop Manager tab for Morgan Manager
-- id: hm-alloc-tab
+- id: hm-alloc
   kind: screenshot
   page: hub-manager/kart-allocation.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=allocation
-  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
+  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 203 and 204 allocated to Alex; 303 needs a service
+    and is unassigned
   steps:
   - Tap Kart Allocation
-  callouts:
-  - n: 1
-    target: text=Workshop staff
-    note: Mechanics and their kart counts
-  - n: 2
-    target: text=Kart allocation
-    note: One row per kart
-  caption: Kart Allocation with Workshop staff and the kart list
-- id: hm-alloc-filter
-  kind: screenshot
-  page: hub-manager/kart-allocation.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=allocation
-  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
-  steps:
   - Tap Needs service only
+  - Open the list on the 303 row
   callouts:
   - n: 1
+    target: text=Kart Allocation
+    note: The tab
+  - n: 2
     target: text=Needs service only
     note: Karts with work to do
-  caption: Needs service only selected
-- id: hm-alloc-pick
-  kind: screenshot
-  page: hub-manager/kart-allocation.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=allocation
-  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
-  steps:
-  - Open the list on the 203 row
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Unassigned
-    note: Nobody yet
-  caption: The mechanic list open on the row for 203
-- id: hm-alloc-done
-  kind: screenshot
-  page: hub-manager/kart-allocation.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=allocation
-  state: Alex Mechanic and Casey Mechanic are Workshop staff at Demo Hub; 301, 302 and 305 assigned to Alex
-  steps:
-  - Choose Casey Mechanic
-  callouts:
-  - n: 1
+    note: Open the list
+  - n: 4
     target: text=Casey Mechanic
-    note: Allocated
-  caption: 203 allocated to Casey Mechanic
+    note: Choose the mechanic
+  caption: 'Steps 1 to 4 on one screen: Kart Allocation, Needs service only and the mechanic list open on 303'
 - id: hm-orders-clip
   kind: clip
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
   - Open Workshop Manager, Order List
   - Tap Approval queue and show the rear tyres line
@@ -1269,8 +990,8 @@
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
   - Tap Order List
   callouts:
@@ -1278,125 +999,61 @@
     target: text=Draft
     note: Brake pads
   - n: 2
-    target: text=Submitted
-    note: Rear tyres
-  - n: 3
-    target: text=Approved
-    note: Sprockets
-  - n: 4
-    target: text=Ordered
-    note: Front bumpers
-  caption: The Order List with lines in every stage
-- id: hm-ord-submit
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Tap Submit on brake pads
-  callouts:
-  - n: 1
     target: text=Submit
     note: Send for approval
-  caption: Submit on the brake pads Draft line
+  caption: 'Steps 1 and 2 on one screen: the Order List with the brake pads Draft line and Submit'
 - id: hm-ord-queue
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
   - Tap Approval queue
   callouts:
   - n: 1
     target: text=Approval queue
     note: Lines waiting for you
-  caption: Approval queue with the rear tyres line waiting for approval
-- id: hm-ord-approve
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Tap Approve on rear tyres
-  callouts:
-  - n: 1
+  - n: 2
     target: text=Approve
     note: OK to order
-  caption: Approve on the rear tyres line
-- id: hm-ord-reject
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Tap Reject on a Submitted line
-  - Type "Wrong size, see new request"
-  callouts:
-  - n: 1
-    target: text=Reject order
-    note: Close the line
-  - n: 2
-    target: text=Reason (optional)
-    note: Say why
-  caption: The Reject order dialog with a reason
+  - n: 3
+    target: text=Reject
+    note: Close the line, with a reason
+  caption: 'Steps 1 to 3 on one screen: the Approval queue with Approve and Reject on the rear tyres line'
 - id: hm-ord-mark
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Tap Mark ordered on sprockets
+  - Find sprockets under Approved
   callouts:
   - n: 1
     target: text=Mark ordered
     note: Placed with the supplier
-  caption: Mark ordered on the sprockets line
+  caption: 'Step 1: Mark ordered on the sprockets line'
 - id: hm-ord-onorder
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/repairs
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
   - Open Service Queue and find the 307 card
   callouts:
-  - n: 1
+  - n: 2
     target: text=On order
     note: Mechanics see it is coming
-  caption: The 307 repair card showing On order for front bumpers
+  caption: 'Step 2: the 307 repair card showing On order for front bumpers'
 - id: hm-ord-bulk
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Tap Add bulk order
-  callouts:
-  - n: 1
-    target: text=Add bulk order
-    note: Straight to Ordered
-  caption: The Add bulk order button
-- id: hm-ord-onetime
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
@@ -1404,117 +1061,78 @@
   url: /workshop/manager?tab=orders
   state: A one-time need for caliper seal kits exists
   steps:
-  - Look at the Submitted column
+  - Look at the Order List
   callouts:
   - n: 1
+    target: text=Add bulk order
+    note: Straight to Ordered
+  - n: 2
     target: text=One-time
     note: From Stores
-  caption: A one-time need line in Submitted
+  caption: 'Steps 1 and 2 on one screen: Add bulk order and a one-time line in Submitted'
 - id: hm-goodsin-clip
   kind: clip
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=orders
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Open Workshop Manager, Goods In
-  - Choose the front bumper part and the open order in Against order
+  - Open Workshop Manager, Order List
+  - Tap Goods In on the front bumpers line under Ordered
   - Type the quantity, unit cost, currency, supplier and invoice reference
   - Tap Receive stock
-  - Show the 307 repair card now ready to repair
-  caption: receiving the front bumpers for Junior 307 in Goods In
+  - Show the 307 repair card in the Service Queue
+  caption: receiving the front bumpers for Junior 307 with Goods In on the Order List
   captions:
-  - Open Goods In.
-  - Pick the part and its order.
+  - Open the Order List.
+  - Tap Goods In on the line that arrived.
   - Type what arrived and what it cost.
   - Tap Receive stock.
   - The waiting repair is ready to do.
   duration: 55
-- id: hm-gi-tab
+- id: hm-gi-open
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
-  url: /workshop/manager?tab=goods-in
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Tap Goods In
+  - Tap Order List
   callouts:
   - n: 1
     target: text=Goods In
-    note: Record parts received
-  caption: Goods In for Demo Hub
-- id: hm-gi-part
+    note: Receive this line
+  caption: 'Step 1: Goods In on the front bumpers line under Ordered'
+- id: hm-gi
   kind: screenshot
   page: hub-manager/orders.md
   persona: Morgan Manager
   device: desktop
-  url: /workshop/manager?tab=goods-in
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
+  url: /workshop/manager?tab=orders
+  state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
+    front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Choose front bumper FKL-900004 in Part
-  - Choose the open order in Against order
+  - Tap Goods In on the front bumpers line
+  - Type 2, 45.00, GBP, the supplier and DEMO-INV-001
   callouts:
-  - n: 1
-    target: text=Part
-    note: What arrived
   - n: 2
     target: text=Against order
-    note: Which order it belongs to
-  caption: Part front bumper and Against order chosen
-- id: hm-gi-cost
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=goods-in
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Type 2 in Quantity, 45.00 in Unit cost, choose GBP
-  callouts:
-  - n: 1
-    target: text=Quantity
-    note: How many arrived
-  - n: 2
+    note: Part and its order
+  - n: 3
     target: text=Unit cost
-    note: Price per part
-  caption: Quantity, Unit cost and Currency filled in
-- id: hm-gi-invoice
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=goods-in
-  state: 'Order List: Draft brake pads FKL-900001, Submitted rear tyres FKL-900002, Approved sprockets FKL-900003, Ordered
-    front bumpers FKL-900004 (for Junior 307), Completed tie rods FKL-900005'
-  steps:
-  - Type the supplier and invoice reference DEMO-INV-001
-  callouts:
-  - n: 1
+    note: Quantity, cost, currency
+  - n: 4
     target: text=Invoice reference
     note: From the delivery note
-  caption: Supplier and Invoice reference filled in
-- id: hm-gi-done
-  kind: screenshot
-  page: hub-manager/orders.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/repairs
-  state: After front bumpers are received
-  steps:
-  - Tap Receive stock
-  - Open Service Queue
-  callouts:
-  - n: 1
-    target: text=307
-    note: Ready to repair now
-  caption: The 307 repair now in Requires reliability actions
-- id: hm-rep-tab
+  - n: 5
+    target: text=Receive stock
+    note: Book it in
+  caption: 'Steps 2 to 5 on one screen: the Goods In form for the front bumpers order'
+- id: hm-rep
   kind: screenshot
   page: hub-manager/reports.md
   persona: Morgan Manager
@@ -1523,60 +1141,23 @@
   state: Demo Hub with some completed demo services
   steps:
   - Tap Reports
-  callouts:
-  - n: 1
-    target: text=Workshop & productivity
-    note: Report groups
-  caption: The Reports tab with the report groups
-- id: hm-rep-pick
-  kind: screenshot
-  page: hub-manager/reports.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=reports
-  state: Demo Hub with some completed demo services
-  steps:
   - Choose Turn summary
-  callouts:
-  - n: 1
-    target: text=Turn summary
-    note: Services per week
-  caption: Turn summary chosen
-- id: hm-rep-period
-  kind: screenshot
-  page: hub-manager/reports.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=reports
-  state: Demo Hub with some completed demo services
-  steps:
   - Set From and To to the last two weeks
   callouts:
   - n: 1
+    target: text=Reports
+    note: The tab
+  - n: 2
+    target: text=Turn summary
+    note: Pick a report
+  - n: 3
     target: text=Period
     note: Dates
-  caption: Period from and to dates
-- id: hm-rep-export
-  kind: screenshot
-  page: hub-manager/reports.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=reports
-  state: Demo Hub with some completed demo services
-  steps:
-  - Look at the export buttons
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Excel
-    note: Spreadsheet
-  - n: 2
-    target: text=PDF
-    note: To print or send
-  - n: 3
-    target: text=CSV
-    note: Raw data
-  caption: The Excel, PDF and CSV buttons
-- id: hm-sched-settings
+    note: Excel, PDF or CSV
+  caption: 'Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons'
+- id: hm-sched
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
   persona: Morgan Manager
@@ -1587,89 +1168,25 @@
   - Open Schedule, tap Schedule settings
   callouts:
   - n: 1
-    target: text=Schedule participants
-    note: Who plans a week
+    target: text=Schedule settings
+    note: The settings page
   - n: 2
     target: text=Scheduling mode
     note: Who fills it in
-  caption: Schedule settings with participants and scheduling mode
-- id: hm-sched-mode
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/schedule/settings
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Open Scheduling mode
-  callouts:
-  - n: 1
-    target: text=Employee planned
-    note: Mechanics plan
-  - n: 2
-    target: text=Manager assigned
-    note: You plan
-  caption: Scheduling mode Employee planned or Manager assigned
-- id: hm-sched-deadline
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/schedule/settings
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Choose Friday and 12:00
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Submission deadline day
     note: When plans are due
-  caption: Submission deadline day Friday and the time
-- id: hm-sched-require
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/schedule/settings
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Tick both boxes
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Require start time
-    note: Start time required
-  - n: 2
-    target: text=Require finish time
-    note: Finish time required
-  caption: Require start time and Require finish time ticked
-- id: hm-sched-people
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/schedule/settings
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Look at the participant rows for Alex and Casey
-  callouts:
-  - n: 1
+    note: Times required
+  - n: 5
     target: text=Allow remote work
-    note: Remote work allowed
-  caption: Schedule participants with Allow remote work
-- id: hm-sched-save
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/schedule/settings
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Tap Save settings
-  callouts:
-  - n: 1
+    note: Who is included
+  - n: 6
     target: text=Save settings
     note: Save
-  caption: The Save settings button
-- id: hm-target-add
+  caption: 'Steps 1 to 6 on one page: Schedule settings with mode, deadline, required times, participants and Save settings'
+- id: hm-target
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
   persona: Morgan Manager
@@ -1677,72 +1194,22 @@
   url: /workshop/manager?tab=targets
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
-  - Tap Work targets
+  - Tap Work targets, then Add target
+  - Choose Alex Mechanic and Turns, type 10 and choose Cadet
   callouts:
   - n: 1
-    target: text=Add target
-    note: New target
-  caption: Work targets with the Add target button
-- id: hm-target-type
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=targets
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Tap Add target
-  - Choose Alex Mechanic and Turns
-  callouts:
-  - n: 1
-    target: text=Person
-    note: Who
+    target: text=Add work target
+    note: Opened with Add target
   - n: 2
     target: text=Work type
-    note: What kind of work
-  caption: Person Alex Mechanic and Work type Turns
-- id: hm-target-number
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=targets
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Type 10 in the target and choose Cadet in Class (optional)
-  callouts:
-  - n: 1
+    note: Person and type of work
+  - n: 3
     target: text=Class (optional)
-    note: Limit to one class
-  caption: Target (completed) set to 10 for Cadet
-- id: hm-target-save
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=targets
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Tap Save target
-  callouts:
-  - n: 1
+    note: Number, class, note
+  - n: 4
     target: text=Save target
     note: Save
-  caption: The saved target in the Work targets list
-- id: hm-ready-list
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=readiness
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
-  - Tap Readiness targets
-  callouts:
-  - n: 1
-    target: text=Demo Regional Race
-    note: The planning event
-  caption: Readiness targets with Demo Regional Race
+  caption: 'Steps 1 to 4 on one screen: the Add work target form filled in'
 - id: hm-ready-edit
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -1751,26 +1218,20 @@
   url: /workshop/manager?tab=readiness
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
+  - Tap Readiness targets
   - Tap Edit target on Demo Regional Race
-  callouts:
-  - n: 1
-    target: text=Edit target
-    note: Change the numbers
-  caption: Edit target for Demo Regional Race
-- id: hm-ready-numbers
-  kind: screenshot
-  page: hub-manager/schedules-and-targets.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=readiness
-  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
-  steps:
   - Type 5 Bambino, 7 Cadet, 7 Junior
   callouts:
   - n: 1
-    target: text=Enter whole numbers from 0 to 1000.
-    note: Per class
-  caption: Bambino, Cadet and Junior numbers for Demo Regional Race
+    target: text=Demo Regional Race
+    note: The planning event
+  - n: 2
+    target: text=Edit readiness target
+    note: Opened with Edit target
+  - n: 3
+    target: text=Junior
+    note: Karts per class
+  caption: 'Steps 1 to 3 on one screen: the readiness target form for Demo Regional Race'
 - id: hm-ready-overview
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -1779,100 +1240,53 @@
   url: /workshop
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
-  - Open Overview
+  - Save, then open Overview
   callouts:
-  - n: 1
+  - n: 4
     target: text=Event readiness
     note: Progress to the target
-  caption: Event readiness on Overview showing Remaining per class
-- id: hm-pn-tab
+  caption: 'Step 4: Event readiness on Overview showing Remaining per class'
+- id: hm-pn
   kind: screenshot
   page: hub-manager/stock-and-parts-needed.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/manager?tab=parts-needed
-  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900001 at the reorder point
+  state: Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900003 at the reorder point
   steps:
   - Tap Parts needed
-  callouts:
-  - n: 1
-    target: text=Kart parts
-    note: Kart parts
-  - n: 2
-    target: text=Shop consumables
-    note: Consumables
-  caption: Parts needed with Kart parts and Shop consumables
-- id: hm-pn-columns
-  kind: screenshot
-  page: hub-manager/stock-and-parts-needed.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=parts-needed
-  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900001 at the reorder point
-  steps:
-  - Look at the rows
-  callouts:
-  - n: 1
-    target: text=Demand
-    note: Repairs, campaigns, restock
-  - n: 2
-    target: text=On order
-    note: Already ordered
-  - n: 3
-    target: text=Still needed
-    note: What is left to order
-  caption: The Parts needed columns for brake pads and caliper seal kits
-- id: hm-pn-qty
-  kind: screenshot
-  page: hub-manager/stock-and-parts-needed.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=parts-needed
-  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900001 at the reorder point
-  steps:
   - Change Order qty for brake pads to 8
   callouts:
   - n: 1
+    target: text=Parts needed
+    note: The tab
+  - n: 2
+    target: text=Still needed
+    note: What is left to order
+  - n: 3
     target: text=Order qty
     note: How many to order
-  caption: Order qty changed on the brake pads row
-- id: hm-pn-create
-  kind: screenshot
-  page: hub-manager/stock-and-parts-needed.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=parts-needed
-  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900001 at the reorder point
-  steps:
-  - Tap Create draft orders
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Create draft orders
     note: Make Draft lines
-  caption: The Create draft orders button and its explanation
+  caption: 'Steps 1 to 4 on one screen: Parts needed with its columns, Order qty and Create draft orders'
 - id: hm-pn-reorder
   kind: screenshot
   page: hub-manager/stock-and-parts-needed.md
   persona: Morgan Manager
   device: desktop
   url: /workshop/parts
-  state: Junior 307 waiting on front bumper (FKL-900004, on order); campaign parts for the Junior caliper seal upgrade; brake
-    pads FKL-900001 at the reorder point
+  state: Junior 307 waiting on front bumper (FKL-900001, on order); campaign parts for the Junior caliper seal upgrade; brake
+    pads FKL-900003 at the reorder point
   steps:
   - Tap Adjust on the brake pads row
   callouts:
   - n: 1
     target: label=Reorder point
-    note: Order when stock reaches this
-  - n: 2
-    target: label=Target
-    note: Order up to this
+    note: Order when stock reaches this, then Target and Save
   caption: Adjust stock with Reorder point and Target
-- id: hm-wm-metrics
+- id: hm-wm-tabs
   kind: screenshot
   page: hub-manager/workshop-manager.md
   persona: Morgan Manager
@@ -1880,164 +1294,42 @@
   url: /workshop/manager
   state: Demo Hub as seeded
   steps:
-  - Tap Workshop Manager
+  - Tap Workshop Manager in the Workshop tab strip
   callouts:
   - n: 1
     target: text=Workshop Manager
-    note: Service metrics, fleet campaigns and kart allocation
+    note: Start here
   - n: 2
-    target: text=Service Metrics
-    note: Services and times
-  caption: Workshop Manager on the Service Metrics tab
-- id: hm-wm-blockers
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=blockers
-  state: Demo Hub as seeded
-  steps:
-  - Tap Blockers
-  callouts:
-  - n: 1
     target: text=Blockers
     note: What holds karts up
-  caption: The Blockers tab
-- id: hm-wm-time
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=time
-  state: Demo Hub as seeded
-  steps:
-  - Tap Time Tracking
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Time Tracking
     note: Time per person
-  caption: The Time Tracking tab
-- id: hm-wm-alignment
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=alignment
-  state: Demo Hub as seeded
-  steps:
-  - Tap Alignment health
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Alignment health
     note: Fleet alignment
-  caption: The Alignment health tab
-- id: hm-wm-campaigns
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=campaigns
-  state: Demo Hub as seeded
-  steps:
-  - Tap Campaigns
-  callouts:
-  - n: 1
-    target: text=Junior caliper seal upgrade
-    note: Active campaign
-  caption: The Campaigns tab with Junior caliper seal upgrade
-- id: hm-wm-targets
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=targets
-  state: Demo Hub as seeded
-  steps:
-  - Tap Work targets
-  callouts:
-  - n: 1
+  - n: 5
+    target: text=Campaigns
+    note: Fleet campaigns
+  - n: 6
     target: text=Work targets
-    note: Targets per person
-  - n: 2
-    target: text=Readiness targets
-    note: Targets per event
-  caption: The Work targets tab
-- id: hm-wm-allocation
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=allocation
-  state: Demo Hub as seeded
-  steps:
-  - Tap Kart Allocation
-  callouts:
-  - n: 1
+    note: Targets
+  - n: 7
     target: text=Kart Allocation
     note: Who does which kart
-  caption: The Kart Allocation tab
-- id: hm-wm-damage
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=damage-reports
-  state: Demo Hub as seeded
-  steps:
-  - Tap Damage Reports
-  callouts:
-  - n: 1
+  - n: 8
     target: text=Damage Reports
     note: Damage on your karts
-  caption: The Damage Reports tab
-- id: hm-wm-parts
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=parts-needed
-  state: Demo Hub as seeded
-  steps:
-  - Tap Parts needed
-  callouts:
-  - n: 1
+  - n: 9
     target: text=Parts needed
-    note: What to order
-  - n: 2
-    target: text=Order List
-    note: Orders by stage
-  - n: 3
-    target: text=Goods In
-    note: Receive parts
-  caption: The Parts needed tab
-- id: hm-wm-catalogue
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub as seeded
-  steps:
-  - Tap Hub catalogue
-  callouts:
-  - n: 1
+    note: Parts and orders
+  - n: 10
     target: text=Hub catalogue
     note: Your hub's parts
-  caption: The Hub catalogue tab
-- id: hm-wm-reports
-  kind: screenshot
-  page: hub-manager/workshop-manager.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=reports
-  state: Demo Hub as seeded
-  steps:
-  - Tap Reports
-  callouts:
-  - n: 1
+  - n: 11
     target: text=Reports
     note: Excel, PDF or CSV
-  caption: The Reports tab
+  caption: 'Steps 1 to 11 on one screen: the Workshop Manager tab and its own tabs'
 - id: home-hub-selection
   kind: screenshot
   page: index.md

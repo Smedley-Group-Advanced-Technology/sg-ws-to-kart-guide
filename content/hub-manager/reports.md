@@ -26,47 +26,26 @@ state: Demo Hub with some completed demo services
 
 ## Run a report
 
-1. Open **Workshop Manager > Reports**.
+:::shot hm-rep
+caption: "Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons"
+steps:
+  - Tap Reports
+  - Choose Turn summary
+  - Set From and To to the last two weeks
+callouts:
+  - [1, "text=Reports", "The tab"]
+  - [2, "text=Turn summary", "Pick a report"]
+  - [3, "text=Period", "Dates"]
+  - [4, "text=Excel", "Excel, PDF or CSV"]
+:::
 
-    :::shot hm-rep-tab
-    caption: The Reports tab with the report groups
-    steps:
-      - Tap Reports
-    callouts:
-      - [1, "text=Workshop & productivity", "Report groups"]
-    :::
+1. Open **Workshop Manager > Reports**.
 
 2. Pick a report, for example **Turn summary**.
 
-    :::shot hm-rep-pick
-    caption: Turn summary chosen
-    steps:
-      - Choose Turn summary
-    callouts:
-      - [1, "text=Turn summary", "Services per week"]
-    :::
-
 3. Set the **Period** (**From** and **To**) or choose an **Event**.
 
-    :::shot hm-rep-period
-    caption: Period from and to dates
-    steps:
-      - Set From and To to the last two weeks
-    callouts:
-      - [1, "text=Period", "Dates"]
-    :::
-
 4. Tap **Excel**, **PDF** or **CSV** to download it.
-
-    :::shot hm-rep-export
-    caption: The Excel, PDF and CSV buttons
-    steps:
-      - Look at the export buttons
-    callouts:
-      - [1, "text=Excel", "Spreadsheet"]
-      - [2, "text=PDF", "To print or send"]
-      - [3, "text=CSV", "Raw data"]
-    :::
 
 !!! tip "Tip"
     The screen shows the first rows only. The exports contain all of them.

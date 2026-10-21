@@ -10,13 +10,13 @@ New people get into your hub in one of two ways: they sign up with your join lin
 
 ## Open Pending approvals
 
-1. On **Select your Hub**, tap **Hub Manager**.
+![Step 1: the Hub Manager button on Select your Hub](../assets/img/hub-manager/hm-appr-button.png){ loading=lazy }
 
-    ![The Hub Manager button on Select your Hub](../assets/img/hub-manager/hm-appr-button.png){ loading=lazy }
+1. On **Select your Hub**, tap **Hub Manager**.
 
 2. Tap the **Pending approvals** tile.
 
-    ![The Pending approvals tile showing 1 waiting](../assets/img/hub-manager/hm-appr-tile.png){ loading=lazy }
+    ![Step 2: the Pending approvals tile showing 1 waiting](../assets/img/hub-manager/hm-appr-tile.png){ loading=lazy }
 
 ## Approve a sign-up
 
@@ -25,55 +25,43 @@ New people get into your hub in one of two ways: they sign up with your join lin
 <track kind="captions" src="../assets/video/hm-approve-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: approving Jamie Newstarter's join request (about 40 seconds, with captions)</figcaption></figure>
 
-1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
+![Steps 1 and 2 on one screen: Jamie Newstarter's Sign-up row via join link and its Approve button](../assets/img/hub-manager/hm-appr-row.png){ loading=lazy }
 
-    ![Jamie Newstarter's Sign-up row via join link](../assets/img/hub-manager/hm-appr-row.png){ loading=lazy }
+1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
 
 2. Tap **Approve**.
 
-    ![The Approve button on the request row](../assets/img/hub-manager/hm-appr-approve.png){ loading=lazy }
-
 3. Then give them the permissions they need (see below). A new mechanic needs **Workshop**.
-
-    ![Request approved message](../assets/img/hub-manager/hm-appr-done.png){ loading=lazy }
 
 !!! warning "Watch out"
     To refuse, tap **Reject** and type a **Reason**. **The applicant sees this reason.** Keep it short and polite.
 
 ## Create a join link
 
-1. Open the **Join links** tab and tap **Create join link**.
+![Steps 1 to 3 on one screen: the Join links tab with the new link form filled in](../assets/img/hub-manager/hm-join.png){ loading=lazy }
 
-    ![The Join links tab with Create join link](../assets/img/hub-manager/hm-join-tab.png){ loading=lazy }
+1. Open the **Join links** tab. The **Create join link** form is at the top; check the **Hub**.
 
 2. Set **Valid for (days)** (1 to 90), and optionally **Maximum uses (optional)** and **Label (optional)**.
 
-    ![The join link form with Valid for, Maximum uses and Label](../assets/img/hub-manager/hm-join-form.png){ loading=lazy }
-
 3. Tap **Create join link**, then **Copy link** and send it to the new person.
-
-    ![The new link with Copy link](../assets/img/hub-manager/hm-join-copy.png){ loading=lazy }
 
 !!! tip "Tip"
     Tap **Revoke** to stop a link working. People who already signed up with it keep their request.
 
 ## Create a user with a temporary password
 
-1. Open the **Create user** tab. Fill in **Full Name**, **Initials (optional)**, **Email** and **Repeat e-mail**.
+![Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked](../assets/img/hub-manager/hm-create-form.png){ loading=lazy }
 
-    ![The Create user form](../assets/img/hub-manager/hm-create-form.png){ loading=lazy }
+1. Open the **Create user** tab. Fill in **Full Name**, **Initials (optional)**, **Email** and **Repeat e-mail**.
 
 2. Choose the **Hub** and tick **Permissions**: Workshop, and Purchasing if they place orders.
 
-    ![Hub Demo Hub and the Workshop permission ticked](../assets/img/hub-manager/hm-create-perms.png){ loading=lazy }
-
 3. Tap **Create user**. KART shows a **Temporary password**. Tap **Copy password** and give it to the person in private.
 
-    ![Temporary password with Copy password](../assets/img/hub-manager/hm-create-password.png){ loading=lazy }
+    ![Steps 3 and 4: the Temporary password with Copy password and the confirm box](../assets/img/hub-manager/hm-create-password.png){ loading=lazy }
 
 4. Tick **I have passed the password on** and tap **Done**. They must choose their own password at first sign-in.
-
-    ![I have passed the password on ticked, with Done](../assets/img/hub-manager/hm-create-done.png){ loading=lazy }
 
 !!! note "Remember"
     **Awaiting first sign-in** lists accounts whose owner has not signed in yet.

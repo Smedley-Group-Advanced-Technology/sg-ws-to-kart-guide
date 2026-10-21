@@ -14,11 +14,11 @@
   url: /fkl-central?tab=checklists
   state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
   steps:
-  - Open FKL Central, Service checklists
-  - Tap New draft on the Cadet row
-  - Tap Add check in a section, type the Label, choose By hand, tap Save check
-  - Tap Check before publishing
-  - Tap Publish, type What changed and confirm
+  - Open FKL Central, Service checklists, Cadet
+  - Tap New draft
+  - Open the Steering section, tap Add check, type the Label, tap Save check
+  - Show Check before publishing with No errors
+  - Tap Publish, type What changed and tap Publish
   caption: making a draft of the Cadet checklist, adding a check and publishing it
   captions:
   - Open Service checklists.
@@ -27,54 +27,30 @@
   - Check it before publishing.
   - Publish with a note of what changed.
   duration: 70
-- id: fc-chk-list
+- id: fc-chk-editor
   kind: screenshot
   page: fkl-central/checklists.md
   persona: Taylor Central
   device: desktop
   url: /fkl-central?tab=checklists
-  state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
+  state: Cadet draft open, Steering section opened
   steps:
-  - Tap Service checklists
+  - Tap Cadet, then New draft
+  - Open the Steering section
   callouts:
-  - n: 1
-    target: text=Kart class
-    note: One row per class
   - n: 2
-    target: text=Published
-    note: The version in use
-  caption: Service checklists with a row per kart class and the Shared checklist
-- id: fc-chk-draft
-  kind: screenshot
-  page: fkl-central/checklists.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=checklists
-  state: Published Bambino, Cadet and Junior v1 checklists; no open drafts
-  steps:
-  - Find the Cadet row
-  callouts:
-  - n: 1
-    target: text=New draft
-    note: Start a change
-  caption: New draft on the Cadet row
-- id: fc-chk-add
-  kind: screenshot
-  page: fkl-central/checklists.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=checklists
-  state: Cadet draft open
-  steps:
-  - Tap New draft
-  callouts:
-  - n: 1
-    target: text=Add section
-    note: New section
-  - n: 2
+    target: 'text=Cadet: version 2'
+    note: Your draft
+  - n: 3
     target: text=Add check
-    note: New check
-  caption: The checklist editor with Add section and Add check
+    note: New check in this section
+  - n: 6
+    target: text=Check before publishing
+    note: Catch mistakes first
+  - n: 7
+    target: text=Publish
+    note: With a note of what changed
+  caption: 'Steps 2, 3, 6 and 7 on one screen: the Cadet draft in the editor with Add check, Check before publishing and Publish'
 - id: fc-chk-check
   kind: screenshot
   page: fkl-central/checklists.md
@@ -83,76 +59,30 @@
   url: /fkl-central?tab=checklists
   state: Cadet draft open
   steps:
-  - Tap Add check
+  - Tap Add check in the Steering section
   - Type "Rear sprocket guard secure" in Label
   callouts:
-  - n: 1
+  - n: 4
     target: text=Label
     note: What the mechanic checks
-  - n: 2
-    target: text=By hand (the mechanic ticks it)
-    note: Ticked by hand
-  caption: The check dialog with Label, Optional and Answer
-- id: fc-chk-save
-  kind: screenshot
-  page: fkl-central/checklists.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=checklists
-  state: Cadet draft open
-  steps:
-  - Look at Readings
-  callouts:
-  - n: 1
+  - n: 5
     target: text=Add reading
     note: A value to type in
-  - n: 2
-    target: text=Save check
-    note: Save
-  caption: Readings with Add reading and Save check
-- id: fc-chk-verify
-  kind: screenshot
-  page: fkl-central/checklists.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=checklists
-  state: Cadet draft open with the new check
-  steps:
-  - Tap Check before publishing
-  callouts:
-  - n: 1
-    target: text=Check before publishing
-    note: Catch mistakes first
-  caption: Check before publishing in the editor
-- id: fc-chk-publish
-  kind: screenshot
-  page: fkl-central/checklists.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=checklists
-  state: Cadet draft open with the new check
-  steps:
-  - Tap Publish
-  - Type "Added rear sprocket guard check"
-  callouts:
-  - n: 1
-    target: text=What changed (required)
-    note: Tell the hubs what is new
-  caption: Publish with What changed (required)
+  caption: 'Steps 4 and 5: the Add check dialog with Label, Optional, Answer and Add reading'
 - id: fc-chk-mechanic
   kind: screenshot
   page: fkl-central/checklists.md
   persona: Alex Mechanic
   device: tablet
   url: /workshop/in-service
-  state: Alex has 203 in service
+  state: Alex has started the service on Cadet 203
   steps:
-  - Open Servicing for 203
+  - Start the service on 203 and open Servicing
   callouts:
   - n: 1
-    target: css=[role=grid]
+    target: role=button[name='Unchecked']
     note: One cell per check
-  caption: The Cadet checklist as a mechanic sees it on Servicing
+  caption: 'Step 1: the Cadet checklist as a mechanic sees it on Servicing'
 - id: fc-path-overview
   kind: screenshot
   page: fkl-central/index.md
@@ -200,15 +130,15 @@
   url: /fkl-central?tab=bom
   state: Pending part request Steering column bush from Demo Hub
   steps:
-  - Tap Part requests
+  - Tap Parts catalogue, then Part requests
   callouts:
   - n: 1
     target: text=Part requests
     note: With a badge
   - n: 2
-    target: text=Steering column bush
-    note: From Demo Hub
-  caption: Part requests with Steering column bush waiting
+    target: text=Review
+    note: Open the request
+  caption: 'Steps 1 and 2 on one screen: Part requests with Steering column bush waiting and Review'
 - id: fc-req-review
   kind: screenshot
   page: fkl-central/part-requests.md
@@ -219,75 +149,19 @@
   steps:
   - Tap Review on Steering column bush
   callouts:
-  - n: 1
-    target: text=Review part request
-    note: Four choices
-  caption: The Review part request dialog
-- id: fc-req-link
-  kind: screenshot
-  page: fkl-central/part-requests.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Pending part request Steering column bush from Demo Hub
-  steps:
-  - Choose Link an existing part
-  callouts:
-  - n: 1
+  - n: 3
     target: text=Link an existing part
     note: Already in the catalogue
-  - n: 2
-    target: text=Link part
-    note: Link it
-  caption: Link an existing part with the part search
-- id: fc-req-add
-  kind: screenshot
-  page: fkl-central/part-requests.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Pending part request Steering column bush from Demo Hub
-  steps:
-  - Choose Add a new part
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Add a new part
     note: New master part
-  - n: 2
-    target: text=An MPN is required for a new part.
-    note: MPN needed
-  caption: Add a new part with name, MPN and category
-- id: fc-req-local
-  kind: screenshot
-  page: fkl-central/part-requests.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Pending part request Steering column bush from Demo Hub
-  steps:
-  - Choose Keep as a hub-local part
-  callouts:
-  - n: 1
-    target: text=Keep local
+  - n: 5
+    target: text=Keep as a hub-local part
     note: Only that hub sees it
-  caption: Keep as a hub-local part
-- id: fc-req-reject
-  kind: screenshot
-  page: fkl-central/part-requests.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Pending part request Steering column bush from Demo Hub
-  steps:
-  - Choose Reject
-  callouts:
-  - n: 1
-    target: text=Reason (shown to the hub)
-    note: The hub reads this
-  - n: 2
-    target: text=Reject request
-    note: Reject
-  caption: Reject with Reason (shown to the hub)
+  - n: 6
+    target: text=Reject
+    note: With a reason
+  caption: 'Steps 3 to 6 on one screen: the Review part request dialog with its four choices'
 - id: fc-parts-master
   kind: screenshot
   page: fkl-central/parts-catalogue.md
@@ -298,77 +172,21 @@
     seal kit); default catalogue FKL Master
   steps:
   - Tap Parts catalogue
+  - Type FKL-900001 in the search box
   callouts:
   - n: 1
     target: text=Master parts
     note: The master list
   - n: 2
-    target: text=Add part
-    note: New part
-  caption: Master parts with the search box and Add part
-- id: fc-parts-search
-  kind: screenshot
-  page: fkl-central/parts-catalogue.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
-    seal kit); default catalogue FKL Master
-  steps:
-  - Type FKL-900004 in the search box
-  callouts:
-  - n: 1
     target: css=input[placeholder='Search name, FKL number or MPN']
     note: Search
-  caption: Searching master parts for FKL-900004
-- id: fc-parts-edit
-  kind: screenshot
-  page: fkl-central/parts-catalogue.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
-    seal kit); default catalogue FKL Master
-  steps:
-  - Find the front bumper row
-  callouts:
-  - n: 1
-    target: text=Edit part
+  - n: 3
+    target: role=button[name='Edit part']
     note: Change details
-  - n: 2
-    target: text=Suppliers
-    note: Supplier list
-  caption: Edit part and Suppliers on the front bumper row
-- id: fc-parts-add
-  kind: screenshot
-  page: fkl-central/parts-catalogue.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
-    seal kit); default catalogue FKL Master
-  steps:
-  - Tap Add part
-  callouts:
-  - n: 1
-    target: text=Manufacturer part no.
-    note: Required
-  caption: The Add part form
-- id: fc-cat-list
-  kind: screenshot
-  page: fkl-central/parts-catalogue.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=bom
-  state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
-    seal kit); default catalogue FKL Master
-  steps:
-  - Tap Catalogues
-  callouts:
-  - n: 1
-    target: text=Catalogues
-    note: Sets of parts
-  caption: The Catalogues tab with FKL Master
+  - n: 4
+    target: text=Add part
+    note: New part
+  caption: 'Steps 1 to 4 on one screen: Master parts searched for FKL-900001, with Edit part and Add part'
 - id: fc-cat-generation
   kind: screenshot
   page: fkl-central/parts-catalogue.md
@@ -378,12 +196,17 @@
   state: Master parts include FKL-900001 to FKL-900006 (brake pads, rear tyres, sprockets, front bumpers, tie rods, caliper
     seal kit); default catalogue FKL Master
   steps:
-  - Open a catalogue
+  - Tap Catalogues
+  - Tap New catalogue and type a name
   callouts:
   - n: 1
+    target: text=Catalogues
+    note: Sets of parts
+  - n: 2
     target: text=Kart generation
     note: One exact generation
-  caption: Kart generation on a catalogue
+  caption: 'Steps 1 and 2 on one screen: the New catalogue form; the Kart generation can be chosen once the catalogue has
+    parts'
 - id: fc-cat-hubs
   kind: screenshot
   page: fkl-central/parts-catalogue.md
@@ -395,10 +218,10 @@
   steps:
   - Tap Hub catalogues
   callouts:
-  - n: 1
+  - n: 3
     target: text=Hub catalogues
     note: Per hub
-  caption: Hub catalogues showing the catalogue in use per hub
+  caption: 'Step 3: Hub catalogues showing the catalogue in use per hub'
 - id: fc-thr-tab
   kind: screenshot
   page: fkl-central/servicing-thresholds.md
@@ -410,71 +233,18 @@
   - Tap Servicing
   callouts:
   - n: 1
-    target: text=Tyre tread threshold
-    note: Minimum tread depth
+    target: text=Servicing
+    note: The limits
   - n: 2
-    target: text=Front spindle alignment limits
-    note: Toe and camber
-  caption: The Servicing tab with the thresholds
-- id: fc-thr-battery
-  kind: screenshot
-  page: fkl-central/servicing-thresholds.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=servicing
-  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
-  steps:
-  - Scroll to Battery voltage threshold
-  callouts:
-  - n: 1
-    target: text=Battery voltage threshold
-    note: Minimum battery voltage (V)
-  caption: Battery voltage threshold with the minimum voltage
-- id: fc-thr-axle
-  kind: screenshot
-  page: fkl-central/servicing-thresholds.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=servicing
-  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
-  steps:
-  - Scroll to Axle run-out tolerance
-  callouts:
-  - n: 1
+    target: label=Minimum battery voltage (V)
+    note: Change the value
+  - n: 3
     target: text=Axle run-out tolerance
     note: Maximum axle run-out (mm)
-  caption: Axle run-out tolerance with the maximum run-out
-- id: fc-thr-save
-  kind: screenshot
-  page: fkl-central/servicing-thresholds.md
-  persona: Taylor Central
-  device: desktop
-  url: /fkl-central?tab=servicing
-  state: 'Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, battery 40 V, axle run-out 0.3 mm'
-  steps:
-  - Tap Save
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Save
-    note: Save the limits
-  caption: The Save button on the Servicing tab
-- id: fc-users-tab
-  kind: screenshot
-  page: fkl-central/users.md
-  persona: Taylor Central
-  device: desktop
-  url: /admin?tab=users
-  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
-  steps:
-  - Tap Admin Access
-  callouts:
-  - n: 1
-    target: text=User Administration
-    note: All accounts
-  - n: 2
-    target: text=Pending User Approvals
-    note: Waiting sign-ups
-  caption: User Administration on the Admin page
+    note: Save this box
+  caption: 'Steps 1 to 4 on one screen: the Servicing tab with the battery voltage threshold and its Save button'
 - id: fc-users-list
   kind: screenshot
   page: fkl-central/users.md
@@ -483,16 +253,17 @@
   url: /admin?tab=users
   state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
   steps:
+  - Tap Admin Access
   - Scroll to All Users
   callouts:
   - n: 1
-    target: text=All Users
-    note: Every account
+    target: text=User Administration
+    note: All accounts
   - n: 2
     target: text=Alex Mechanic
     note: Tap to open
-  caption: All Users with Alex Mechanic
-- id: fc-users-hubs
+  caption: 'Steps 1 and 2 on one screen: User Administration with Alex Mechanic in All Users'
+- id: fc-users-perms
   kind: screenshot
   page: fkl-central/users.md
   persona: Taylor Central
@@ -502,58 +273,42 @@
   steps:
   - Tap Alex Mechanic
   callouts:
-  - n: 1
-    target: text=Hub Access
-    note: Which hubs
-  - n: 2
+  - n: 3
     target: text=Save Hub Access
-    note: Save
-  caption: Hub Access with Demo Hub ticked and Save Hub Access
-- id: fc-users-perms
-  kind: screenshot
-  page: fkl-central/users.md
-  persona: Taylor Central
-  device: desktop
-  url: /admin?tab=users
-  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
-  steps:
-  - Scroll to Permissions
-  callouts:
-  - n: 1
-    target: text=Permissions
-    note: What they can do
-  - n: 2
+    note: Which hubs
+  - n: 4
     target: text=Save Permissions
-    note: Save
-  caption: Permissions with Workshop ticked and Save Permissions
+    note: What they can do
+  caption: 'Steps 3 and 4 on one screen: User Details for Alex Mechanic with Hub Access and Permissions'
 - id: fc-users-create
   kind: screenshot
   page: fkl-central/users.md
   persona: Taylor Central
   device: desktop
   url: /admin?tab=users
-  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  state: Jamie Newstarter has no account yet
   steps:
   - Tap Create user
+  - Fill in the name, initials, e-mail twice and hub, tick Workshop
   callouts:
   - n: 1
-    target: text=Create user
-    note: New account
-  caption: The Create user form on the Admin page
+    target: role=button[name='Create user']
+    note: Create the account
+  caption: 'Step 1: the Create user form on the Admin page, filled in for Jamie Newstarter'
 - id: fc-users-temp
   kind: screenshot
   page: fkl-central/users.md
   persona: Taylor Central
   device: desktop
   url: /admin?tab=users
-  state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
+  state: Jamie Newstarter has no account yet
   steps:
-  - 'Fill in the form for a demo account and tap Create user (recorder: delete the account afterwards)'
+  - Fill in the form for Jamie Newstarter and tap Create user
   callouts:
-  - n: 1
+  - n: 2
     target: text=Copy password
     note: Copy it
-  caption: Temporary password with Copy password and the confirm tick
+  caption: 'Step 2: Temporary password with Copy password and the confirm tick'
 - id: fc-users-deactivate
   kind: screenshot
   page: fkl-central/users.md
@@ -562,26 +317,26 @@
   url: /admin?tab=users
   state: Demo users as seeded; Jamie Newstarter pending at Demo Hub
   steps:
-  - Open a demo user's details
+  - Open Casey Mechanic's details
   callouts:
   - n: 1
     target: text=Deactivate user
     note: Soft switch-off
-  caption: Deactivate user in the user details
+  caption: 'Step 1: Deactivate user under Account access in User Details'
 - id: fc-users-reactivate
   kind: screenshot
   page: fkl-central/users.md
   persona: Taylor Central
   device: desktop
   url: /admin?tab=users
-  state: A demo account deactivated for the shot
+  state: Casey Mechanic deactivated for the shot
   steps:
-  - Open the deactivated demo user
+  - Tap Deactivate user and confirm, then look at Account access
   callouts:
-  - n: 1
+  - n: 2
     target: text=Reactivate user
     note: Switch back on
-  caption: Reactivate user on a deactivated account
+  caption: 'Step 2: Reactivate user on a deactivated account'
 - id: hm-appr-button
   kind: screenshot
   page: hub-manager/approvals.md
@@ -3712,7 +3467,7 @@
   - n: 1
     target: text=KART Comms
     note: The messenger
-  caption: KART Comms open in the browser at /comms
+  caption: 'Step 1: KART Comms open in the browser at /comms (Support view)'
 - id: rs-trackside-cover
   kind: screenshot
   page: remote-support/comms.md
@@ -3725,27 +3480,12 @@
   - Sign in as Alex Mechanic and open /comms
   callouts:
   - n: 1
+    target: text=Demo Hub
+    note: Your hub
+  - n: 2
     target: text=Remote Support
     note: Ask for help here
-  - n: 2
-    target: text=On cover
-    note: Who covers your hub today
-  caption: The Trackside view with Remote Support and On cover
-- id: rs-trackside-hub
-  kind: screenshot
-  page: remote-support/comms.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
-  steps:
-  - Choose Demo Hub
-  callouts:
-  - n: 1
-    target: text=Choose the hub you are working at
-    note: Pick your hub
-  caption: Choose the hub you are working at
+  caption: 'Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat'
 - id: rs-trackside-send
   kind: screenshot
   page: remote-support/comms.md
@@ -3755,12 +3495,13 @@
   state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
     chat from Casey Mechanic
   steps:
-  - Type "Kart 307 shows Repair Required but the bumper is fitted" and tap Send
+  - Tap Remote Support
+  - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
-  - n: 1
-    target: text=Send
-    note: Send it
-  caption: A support message typed with Send
+  - n: 3
+    target: text=On cover
+    note: Who covers your hub today
+  caption: 'Step 3: a support message typed under the On cover header'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md
@@ -3791,94 +3532,38 @@
   persona: Riley Support
   device: desktop
   url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
+  state: Casey Mechanic has sent an unassigned support chat
   steps:
-  - Tap My queue
+  - Tap Unassigned
   callouts:
   - n: 1
     target: text=My queue
     note: Your work
   - n: 2
-    target: text=Claimed by me
-    note: You took these
-  caption: My queue with Alex Mechanic's claimed chat
-- id: rs-support-unassigned
-  kind: screenshot
-  page: remote-support/comms.md
-  persona: Riley Support
-  device: desktop
-  url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
-  steps:
-  - Tap Unassigned
-  callouts:
-  - n: 1
-    target: text=Unassigned
+    target: role=tab[name=/Unassigned/]
     note: Waiting for someone
-  caption: Unassigned with Casey Mechanic's chat
+  caption: 'Steps 1 and 2 on one screen: the Support view with Unassigned open and Casey Mechanic''s chat'
 - id: rs-support-claim
   kind: screenshot
   page: remote-support/comms.md
   persona: Riley Support
   device: desktop
   url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
+  state: Casey Mechanic has sent an unassigned support chat
   steps:
   - Open Casey Mechanic's chat
+  - Type a reply
   callouts:
-  - n: 1
-    target: text=Claim
+  - n: 3
+    target: role=button[name='Claim']
     note: Take the chat
-  caption: The Claim button on an unassigned chat
-- id: rs-support-reply
-  kind: screenshot
-  page: remote-support/comms.md
-  persona: Riley Support
-  device: desktop
-  url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
-  steps:
-  - Tap Claim
-  - Type a reply and tap Send
-  callouts:
-  - n: 1
-    target: text=Send
+  - n: 4
+    target: role=button[name='Send']
     note: Reply
-  caption: A reply typed in the chat
-- id: rs-support-close
-  kind: screenshot
-  page: remote-support/comms.md
-  persona: Riley Support
-  device: desktop
-  url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
-  steps:
-  - Tap Close chat
-  callouts:
-  - n: 1
+  - n: 5
     target: text=Close chat
     note: Solved
-  caption: Close chat at the top of the conversation
-- id: rs-support-reopen
-  kind: screenshot
-  page: remote-support/comms.md
-  persona: Riley Support
-  device: desktop
-  url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
-  steps:
-  - Open the closed chat
-  callouts:
-  - n: 1
-    target: text=Reopen chat
-    note: Open it again
-  caption: Reopen chat on a closed chat
+  caption: 'Steps 3 to 5 on one screen: Casey Mechanic''s chat with Claim, a reply typed and Close chat'
 - id: rs-ai-support
   kind: screenshot
   page: remote-support/comms.md
@@ -3896,25 +3581,25 @@
   - n: 2
     target: text=AI Chats
     note: Earlier AI chats
-  caption: The AI Support button and AI Chats list in the Trackside view
+  caption: 'Step 1: the AI Support button and the AI Chats list in the Trackside view'
 - id: rs-cover-clip
   kind: clip
   page: remote-support/cover.md
   persona: Riley Support
   device: desktop
   url: /rs-dash
-  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  state: Session event Demo Practice Day today at Demo Hub; no support cover set yet
   steps:
   - On Select your Hub tap Remote Support
   - On Hub Dashboard find Demo Hub and Demo Practice Day
   - Open Support cover and choose Riley Support
-  - Show Support cover updated and the On cover header in /comms
+  - Show Support cover updated
   caption: setting support cover for Demo Practice Day
   captions:
   - Open Remote Support.
   - Find the hub and today's event.
   - Choose who covers it.
-  - Comms now shows them on cover.
+  - Saved. Comms now shows them on cover.
   duration: 35
 - id: rs-cover-button
   kind: screenshot
@@ -3922,59 +3607,35 @@
   persona: Riley Support
   device: desktop
   url: /hub-selection
-  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  state: Session event Demo Practice Day today at Demo Hub; no support cover set yet
   steps:
   - Sign in as Riley Support
   callouts:
   - n: 1
     target: text=Remote Support
     note: Remote Support Dashboard
-  caption: The Remote Support button on Select your Hub
-- id: rs-cover-event
-  kind: screenshot
-  page: remote-support/cover.md
-  persona: Riley Support
-  device: desktop
-  url: /rs-dash
-  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
-  steps:
-  - Open Hub Dashboard
-  callouts:
-  - n: 1
-    target: text=Hub Dashboard
-    note: All hubs
-  - n: 2
-    target: text=Demo Practice Day
-    note: Today's event
-  caption: The Demo Hub tile with Demo Practice Day
+  caption: 'Step 1: the Remote Support button on Select your Hub'
 - id: rs-cover-select
   kind: screenshot
   page: remote-support/cover.md
   persona: Riley Support
   device: desktop
   url: /rs-dash
-  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
+  state: Session event Demo Practice Day today at Demo Hub; no support cover set yet
   steps:
-  - Open Support cover on Demo Practice Day
+  - Open Hub Dashboard
+  - Choose Riley Support in the Support cover list of Demo Practice Day
   callouts:
-  - n: 1
-    target: text=Support cover
+  - n: 2
+    target: text=Demo Practice Day
+    note: Today's event
+  - n: 3
+    target: text=Riley Support
     note: Who covers
-  caption: The Support cover list with Riley Support
-- id: rs-cover-saved
-  kind: screenshot
-  page: remote-support/cover.md
-  persona: Riley Support
-  device: desktop
-  url: /rs-dash
-  state: Session event Demo Practice Day today at Demo Hub; Riley Support set as support cover
-  steps:
-  - Choose Riley Support
-  callouts:
-  - n: 1
+  - n: 4
     target: text=Support cover updated
     note: Saved
-  caption: Support cover updated message
+  caption: 'Steps 2 to 4 on one screen: the Demo Hub tile with Demo Practice Day and Riley Support on cover'
 - id: rs-direct-clip
   kind: clip
   page: remote-support/direct-chats.md
@@ -3995,23 +3656,6 @@
   - Your earlier chat opens again.
   - Type and send.
   duration: 35
-- id: rs-direct-list
-  kind: screenshot
-  page: remote-support/direct-chats.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /comms
-  state: Existing direct chat between Alex Mechanic and Casey Mechanic
-  steps:
-  - Open /comms
-  callouts:
-  - n: 1
-    target: text=Direct Chats
-    note: Your direct chats
-  - n: 2
-    target: css=input[placeholder^='New direct chat']
-    note: Find a colleague
-  caption: Direct Chats with the new direct chat search box
 - id: rs-direct-search
   kind: screenshot
   page: remote-support/direct-chats.md
@@ -4020,26 +3664,16 @@
   url: /comms
   state: Existing direct chat between Alex Mechanic and Casey Mechanic
   steps:
-  - Type Ca
+  - Open /comms
+  - Type Ca in the search box
   callouts:
   - n: 1
+    target: css=input[placeholder^='New direct chat']
+    note: Find a colleague
+  - n: 2
     target: text=Casey Mechanic
     note: Tap to chat
-  caption: Casey Mechanic found by typing Ca
-- id: rs-direct-open
-  kind: screenshot
-  page: remote-support/direct-chats.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /comms
-  state: Existing direct chat between Alex Mechanic and Casey Mechanic
-  steps:
-  - Tap Casey Mechanic
-  callouts:
-  - n: 1
-    target: text=Casey Mechanic
-    note: The same chat as before
-  caption: The existing chat between Alex and Casey
+  caption: 'Steps 1 and 2 on one screen: Direct Chats with Ca typed in the new direct chat search'
 - id: rs-direct-send
   kind: screenshot
   page: remote-support/direct-chats.md
@@ -4048,15 +3682,16 @@
   url: /comms
   state: Existing direct chat between Alex Mechanic and Casey Mechanic
   steps:
-  - Type "Can you check the 205 chain before you go?" and tap Send
+  - Tap Casey Mechanic
+  - Type "Can you check the 205 chain before you go?"
   callouts:
-  - n: 1
-    target: text=Send
+  - n: 3
+    target: text=Casey Mechanic
+    note: The same chat as before
+  - n: 4
+    target: role=button[name='Send']
     note: Send
-  - n: 2
-    target: css=button[aria-label='Attach file']
-    note: Add a photo
-  caption: A message typed in the direct chat with Send and Attach file
+  caption: 'Steps 3 and 4 on one screen: the existing chat with Casey Mechanic and a message typed'
 - id: rs-direct-support
   kind: screenshot
   page: remote-support/direct-chats.md
@@ -4066,11 +3701,12 @@
   state: Existing direct chat between Alex Mechanic and Casey Mechanic
   steps:
   - Open /comms as Riley Support
+  - Type Mo in the search box
   callouts:
   - n: 1
     target: text=Start a direct chat
     note: Message a staff member
-  caption: Start a direct chat in the Support view
+  caption: 'Step 1: Start a direct chat in the Support view after typing Mo'
 - id: rs-path-overview
   kind: screenshot
   page: remote-support/index.md

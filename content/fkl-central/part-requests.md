@@ -30,69 +30,37 @@ captions:
   - "Save. The hub sees the result."
 :::
 
-1. Open **Parts catalogue** and tap **Part requests**. Requests waiting are under **Waiting**.
+:::shot fc-req-list
+caption: "Steps 1 and 2 on one screen: Part requests with Steering column bush waiting and Review"
+steps:
+  - Tap Parts catalogue, then Part requests
+callouts:
+  - [1, "text=Part requests", "With a badge"]
+  - [2, "text=Review", "Open the request"]
+:::
 
-    :::shot fc-req-list
-    caption: Part requests with Steering column bush waiting
-    steps:
-      - Tap Part requests
-    callouts:
-      - [1, "text=Part requests", "With a badge"]
-      - [2, "text=Steering column bush", "From Demo Hub"]
-    :::
+1. Open **Parts catalogue** and tap **Part requests**. Requests waiting are under **Waiting**.
 
 2. Tap **Review** on the request.
 
-    :::shot fc-req-review
-    caption: The Review part request dialog
-    steps:
-      - Tap Review on Steering column bush
-    callouts:
-      - [1, "text=Review part request", "Four choices"]
-    :::
+:::shot fc-req-review
+caption: "Steps 3 to 6 on one screen: the Review part request dialog with its four choices"
+steps:
+  - Tap Review on Steering column bush
+callouts:
+  - [3, "text=Link an existing part", "Already in the catalogue"]
+  - [4, "text=Add a new part", "New master part"]
+  - [5, "text=Keep as a hub-local part", "Only that hub sees it"]
+  - [6, "text=Reject", "With a reason"]
+:::
 
 3. If the part already exists, choose **Link an existing part**, search for it and tap **Link part**.
 
-    :::shot fc-req-link
-    caption: Link an existing part with the part search
-    steps:
-      - Choose Link an existing part
-    callouts:
-      - [1, "text=Link an existing part", "Already in the catalogue"]
-      - [2, "text=Link part", "Link it"]
-    :::
+4. If it is new, choose **Add a new part** (chosen at the start). Check the **Part name**, the **Manufacturer part number (MPN)** and the **Part category**, then tap **Add part**. An MPN is required for a new part.
 
-4. If it is new, choose **Add a new part**, check the name and MPN and tap **Add part**.
-
-    :::shot fc-req-add
-    caption: Add a new part with name, MPN and category
-    steps:
-      - Choose Add a new part
-    callouts:
-      - [1, "text=Add a new part", "New master part"]
-      - [2, "text=An MPN is required for a new part.", "MPN needed"]
-    :::
-
-5. If only that hub needs it, choose **Keep as a hub-local part** and tap **Keep local**.
-
-    :::shot fc-req-local
-    caption: Keep as a hub-local part
-    steps:
-      - Choose Keep as a hub-local part
-    callouts:
-      - [1, "text=Keep local", "Only that hub sees it"]
-    :::
+5. If only that hub needs it, choose **Keep as a hub-local part**. You can add a supplier and unit cost. Tap **Keep local**.
 
 6. To refuse, choose **Reject**, type the **Reason (shown to the hub)** and tap **Reject request**.
-
-    :::shot fc-req-reject
-    caption: Reject with Reason (shown to the hub)
-    steps:
-      - Choose Reject
-    callouts:
-      - [1, "text=Reason (shown to the hub)", "The hub reads this"]
-      - [2, "text=Reject request", "Reject"]
-    :::
 
 !!! tip "Tip"
     After adding a new part, complete the other details (supplier, cost, fits) in **Master parts**.

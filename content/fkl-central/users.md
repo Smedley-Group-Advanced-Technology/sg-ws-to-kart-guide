@@ -30,94 +30,83 @@ The **Access Level** is **User** or **Admin**. Admins can do everything and see 
 
 ## Find a user and change permissions
 
-1. On **Select your Hub**, tap **Admin Access**. Open **User Administration**.
+:::shot fc-users-list
+caption: "Steps 1 and 2 on one screen: User Administration with Alex Mechanic in All Users"
+steps:
+  - Tap Admin Access
+  - Scroll to All Users
+callouts:
+  - [1, "text=User Administration", "All accounts"]
+  - [2, "text=Alex Mechanic", "Tap to open"]
+:::
 
-    :::shot fc-users-tab
-    caption: User Administration on the Admin page
-    steps:
-      - Tap Admin Access
-    callouts:
-      - [1, "text=User Administration", "All accounts"]
-      - [2, "text=Pending User Approvals", "Waiting sign-ups"]
-    :::
+1. On **Select your Hub**, tap **Admin Access**. **User Administration** opens. **Pending User Approvals** lists sign-ups waiting.
 
-2. In **All Users**, tap the person, for example Alex Mechanic.
-
-    :::shot fc-users-list
-    caption: All Users with Alex Mechanic
-    steps:
-      - Scroll to All Users
-    callouts:
-      - [1, "text=All Users", "Every account"]
-      - [2, "text=Alex Mechanic", "Tap to open"]
-    :::
+2. In **All Users**, tap the person, for example Alex Mechanic. **User Details** opens.
 
 3. Under **Hub Access**, tick the hubs and tap **Save Hub Access**.
 
-    :::shot fc-users-hubs
-    caption: Hub Access with Demo Hub ticked and Save Hub Access
+    :::shot fc-users-perms
+    caption: "Steps 3 and 4 on one screen: User Details for Alex Mechanic with Hub Access and Permissions"
     steps:
       - Tap Alex Mechanic
     callouts:
-      - [1, "text=Hub Access", "Which hubs"]
-      - [2, "text=Save Hub Access", "Save"]
+      - [3, "text=Save Hub Access", "Which hubs"]
+      - [4, "text=Save Permissions", "What they can do"]
     :::
 
-4. Under **Permissions**, tick what they need and tap **Save Permissions**.
-
-    :::shot fc-users-perms
-    caption: Permissions with Workshop ticked and Save Permissions
-    steps:
-      - Scroll to Permissions
-    callouts:
-      - [1, "text=Permissions", "What they can do"]
-      - [2, "text=Save Permissions", "Save"]
-    :::
+4. Under **Permissions**, tick what they need and tap **Save Permissions**. The **Access Level** above is **User** or **Admin**.
 
 ## Create a user
 
-1. Tap **Create user**. Fill in the name, e-mail twice, hub and permissions, then tap **Create user**.
+:::shot fc-users-create
+caption: "Step 1: the Create user form on the Admin page, filled in for Jamie Newstarter"
+state: "Jamie Newstarter has no account yet"
+steps:
+  - Tap Create user
+  - Fill in the name, initials, e-mail twice and hub, tick Workshop
+callouts:
+  - [1, "role=button[name='Create user']", "Create the account"]
+:::
 
-    :::shot fc-users-create
-    caption: The Create user form on the Admin page
-    steps:
-      - Tap Create user
-    callouts:
-      - [1, "text=Create user", "New account"]
-    :::
+1. Under **All Users**, tap **Create user**. Fill in the name, initials, e-mail twice, hub and permissions, then tap **Create user**.
 
-2. Copy the **Temporary password** and pass it on privately. Tick **I have passed the password on** and tap **Done**.
+2. Copy the **Temporary password** and pass it on privately. Tick **I have passed the password on** and tap **Done**. At the first sign-in the person sets their own password.
 
     :::shot fc-users-temp
-    caption: Temporary password with Copy password and the confirm tick
+    caption: "Step 2: Temporary password with Copy password and the confirm tick"
+    state: "Jamie Newstarter has no account yet"
     steps:
-      - "Fill in the form for a demo account and tap Create user (recorder: delete the account afterwards)"
+      - "Fill in the form for Jamie Newstarter and tap Create user"
     callouts:
-      - [1, "text=Copy password", "Copy it"]
+      - [2, "text=Copy password", "Copy it"]
     :::
 
 ## Deactivate a user
 
-1. Open the user and tap **Deactivate user**. They can no longer sign in, and their permissions stop working.
+:::shot fc-users-deactivate
+caption: "Step 1: Deactivate user under Account access in User Details"
+steps:
+  - Open Casey Mechanic's details
+callouts:
+  - [1, "text=Deactivate user", "Soft switch-off"]
+:::
 
-    :::shot fc-users-deactivate
-    caption: Deactivate user in the user details
-    steps:
-      - Open a demo user's details
-    callouts:
-      - [1, "text=Deactivate user", "Soft switch-off"]
-    :::
+1. Open the user and tap **Deactivate user** under **Account access**. Type the **Reason for deactivation** and tap **Deactivate user** again to confirm. They can no longer sign in, and they are hidden from pickers. Their work records stay.
 
-2. To undo it, open the user again and tap **Reactivate user**.
+2. To undo it, open the user again, tap **Reactivate user** and confirm. They can sign in again with their existing permissions and hub access.
 
     :::shot fc-users-reactivate
-    caption: Reactivate user on a deactivated account
-    state: "A demo account deactivated for the shot"
+    caption: "Step 2: Reactivate user on a deactivated account"
+    state: "Casey Mechanic deactivated for the shot"
     steps:
-      - Open the deactivated demo user
+      - Tap Deactivate user and confirm, then look at Account access
     callouts:
-      - [1, "text=Reactivate user", "Switch back on"]
+      - [2, "text=Reactivate user", "Switch back on"]
     :::
+
+!!! warning "Watch out"
+    **Delete User** under **Danger Zone** is only for GDPR erasure requests. To remove someone's access, deactivate them instead.
 
 !!! tip "Tip"
     **Send Password Reset Email** helps someone who forgot their password. **Hub join links** creates and revokes sign-up links for any hub.

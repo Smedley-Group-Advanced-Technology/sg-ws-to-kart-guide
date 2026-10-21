@@ -10,21 +10,15 @@
 
 ## Change a threshold
 
-1. Open **FKL Central** and tap **Servicing**.
+![Steps 1 to 4 on one screen: the Servicing tab with the battery voltage threshold and its Save button](../assets/img/fkl-central/fc-thr-tab.png){ loading=lazy }
 
-    ![The Servicing tab with the thresholds](../assets/img/fkl-central/fc-thr-tab.png){ loading=lazy }
+1. Open **FKL Central** and tap **Servicing**. You see **Tyre tread threshold**, **Front spindle alignment limits**, **Battery voltage threshold** and **Axle run-out tolerance**.
 
-2. Change the value, for example **Battery voltage threshold**.
+2. Change the value, for example **Minimum battery voltage (V)** under **Battery voltage threshold**.
 
-    ![Battery voltage threshold with the minimum voltage](../assets/img/fkl-central/fc-thr-battery.png){ loading=lazy }
+3. Check the other boxes as well, for example **Axle run-out tolerance**.
 
-3. Check **Axle run-out tolerance** as well.
-
-    ![Axle run-out tolerance with the maximum run-out](../assets/img/fkl-central/fc-thr-axle.png){ loading=lazy }
-
-4. Tap **Save**.
-
-    ![The Save button on the Servicing tab](../assets/img/fkl-central/fc-thr-save.png){ loading=lazy }
+4. Tap **Save** in the box you changed. Each box has its own **Save**.
 
 !!! note "Remember"
     Without admin rights you see **Only admins can change these settings. You can see the current values.**

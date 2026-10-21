@@ -16,46 +16,24 @@ state: "Default thresholds: tyre tread 2.0 mm, toe -1 to 1, camber -2 to 0, batt
 
 ## Change a threshold
 
-1. Open **FKL Central** and tap **Servicing**.
+:::shot fc-thr-tab
+caption: "Steps 1 to 4 on one screen: the Servicing tab with the battery voltage threshold and its Save button"
+steps:
+  - Tap Servicing
+callouts:
+  - [1, "text=Servicing", "The limits"]
+  - [2, "label=Minimum battery voltage (V)", "Change the value"]
+  - [3, "text=Axle run-out tolerance", "Maximum axle run-out (mm)"]
+  - [4, "text=Save", "Save this box"]
+:::
 
-    :::shot fc-thr-tab
-    caption: The Servicing tab with the thresholds
-    steps:
-      - Tap Servicing
-    callouts:
-      - [1, "text=Tyre tread threshold", "Minimum tread depth"]
-      - [2, "text=Front spindle alignment limits", "Toe and camber"]
-    :::
+1. Open **FKL Central** and tap **Servicing**. You see **Tyre tread threshold**, **Front spindle alignment limits**, **Battery voltage threshold** and **Axle run-out tolerance**.
 
-2. Change the value, for example **Battery voltage threshold**.
+2. Change the value, for example **Minimum battery voltage (V)** under **Battery voltage threshold**.
 
-    :::shot fc-thr-battery
-    caption: Battery voltage threshold with the minimum voltage
-    steps:
-      - Scroll to Battery voltage threshold
-    callouts:
-      - [1, "text=Battery voltage threshold", "Minimum battery voltage (V)"]
-    :::
+3. Check the other boxes as well, for example **Axle run-out tolerance**.
 
-3. Check **Axle run-out tolerance** as well.
-
-    :::shot fc-thr-axle
-    caption: Axle run-out tolerance with the maximum run-out
-    steps:
-      - Scroll to Axle run-out tolerance
-    callouts:
-      - [1, "text=Axle run-out tolerance", "Maximum axle run-out (mm)"]
-    :::
-
-4. Tap **Save**.
-
-    :::shot fc-thr-save
-    caption: The Save button on the Servicing tab
-    steps:
-      - Tap Save
-    callouts:
-      - [1, "text=Save", "Save the limits"]
-    :::
+4. Tap **Save** in the box you changed. Each box has its own **Save**.
 
 !!! note "Remember"
     Without admin rights you see **Only admins can change these settings. You can see the current values.**

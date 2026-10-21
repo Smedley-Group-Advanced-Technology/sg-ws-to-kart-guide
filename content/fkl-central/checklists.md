@@ -20,11 +20,11 @@ Every kart class has one master service checklist: Bambino, Cadet and Junior. Yo
 caption: making a draft of the Cadet checklist, adding a check and publishing it
 duration: 70
 steps:
-  - Open FKL Central, Service checklists
-  - Tap New draft on the Cadet row
-  - Tap Add check in a section, type the Label, choose By hand, tap Save check
-  - Tap Check before publishing
-  - Tap Publish, type What changed and confirm
+  - Open FKL Central, Service checklists, Cadet
+  - Tap New draft
+  - Open the Steering section, tap Add check, type the Label, tap Save check
+  - Show Check before publishing with No errors
+  - Tap Publish, type What changed and tap Publish
 captions:
   - "Open Service checklists."
   - "Make a new draft for the class."
@@ -33,86 +33,43 @@ captions:
   - "Publish with a note of what changed."
 :::
 
-1. Open **FKL Central > Service checklists**. Each **Kart class** has a row with its **Published** version.
+:::shot fc-chk-editor
+caption: "Steps 2, 3, 6 and 7 on one screen: the Cadet draft in the editor with Add check, Check before publishing and Publish"
+state: Cadet draft open, Steering section opened
+steps:
+  - Tap Cadet, then New draft
+  - Open the Steering section
+callouts:
+  - [2, "text=Cadet: version 2", "Your draft"]
+  - [3, "text=Add check", "New check in this section"]
+  - [6, "text=Check before publishing", "Catch mistakes first"]
+  - [7, "text=Publish", "With a note of what changed"]
+:::
 
-    :::shot fc-chk-list
-    caption: Service checklists with a row per kart class and the Shared checklist
-    steps:
-      - Tap Service checklists
-    callouts:
-      - [1, "text=Kart class", "One row per class"]
-      - [2, "text=Published", "The version in use"]
-    :::
+1. Open **FKL Central > Service checklists**. Choose the kart class at the top: **Bambino**, **Cadet**, **Junior** or **Shared checklist**. The **Published** box shows the version in use.
 
-2. Tap **New draft** on the class, for example Cadet. If a draft exists, tap **Continue editing**.
+2. Tap **New draft**, for example on Cadet. If a draft exists, tap **Continue editing**. The editor opens on the draft.
 
-    :::shot fc-chk-draft
-    caption: New draft on the Cadet row
-    steps:
-      - Find the Cadet row
-    callouts:
-      - [1, "text=New draft", "Start a change"]
-    :::
+3. Tap a section to open it, then tap **Add check** at the bottom of the section (or type a name under **New section** and tap **Add section**).
 
-3. In the editor, tap **Add check** in the right section (or **Add section**).
-
-    :::shot fc-chk-add
-    caption: The checklist editor with Add section and Add check
-    state: Cadet draft open
-    steps:
-      - Tap New draft
-    callouts:
-      - [1, "text=Add section", "New section"]
-      - [2, "text=Add check", "New check"]
-    :::
-
-4. Type the **Label**. Choose the **Answer**: **By hand (the mechanic ticks it)** or from readings. Tick **Optional** if it may be skipped.
+4. Type the **Label**. Choose the **Answer**: **By hand (the mechanic ticks it)** or from readings. Switch on **Optional** if it may be skipped.
 
     :::shot fc-chk-check
-    caption: The check dialog with Label, Optional and Answer
+    caption: "Steps 4 and 5: the Add check dialog with Label, Optional, Answer and Add reading"
     state: Cadet draft open
     steps:
-      - Tap Add check
+      - Tap Add check in the Steering section
       - Type "Rear sprocket guard secure" in Label
     callouts:
-      - [1, "text=Label", "What the mechanic checks"]
-      - [2, "text=By hand (the mechanic ticks it)", "Ticked by hand"]
+      - [4, "text=Label", "What the mechanic checks"]
+      - [5, "text=Add reading", "A value to type in"]
     :::
 
-5. For a measured check, add readings with **Add reading**. Then tap **Save check**.
+5. For a measured check, add readings with **Add reading**. Then tap **Save check** at the bottom of the dialog.
 
-    :::shot fc-chk-save
-    caption: Readings with Add reading and Save check
-    state: Cadet draft open
-    steps:
-      - Look at Readings
-    callouts:
-      - [1, "text=Add reading", "A value to type in"]
-      - [2, "text=Save check", "Save"]
-    :::
+6. Look at **Check before publishing**. It checks the draft by itself and says **No errors** or lists what to fix. Tap **Check again** after a change.
 
-6. Tap **Check before publishing** and fix anything it reports.
-
-    :::shot fc-chk-verify
-    caption: Check before publishing in the editor
-    state: Cadet draft open with the new check
-    steps:
-      - Tap Check before publishing
-    callouts:
-      - [1, "text=Check before publishing", "Catch mistakes first"]
-    :::
-
-7. Tap **Publish**. Type a note in **What changed (required)** and confirm.
-
-    :::shot fc-chk-publish
-    caption: Publish with What changed (required)
-    state: Cadet draft open with the new check
-    steps:
-      - Tap Publish
-      - Type "Added rear sprocket guard check"
-    callouts:
-      - [1, "text=What changed (required)", "Tell the hubs what is new"]
-    :::
+7. Tap **Publish**. Type a note in **What changed (required)** and tap **Publish** in the dialog.
 
 !!! warning "Watch out"
     Publishing changes the checklist for every hub with that kart class from the next service. Tell hub managers before you publish. Tap **Discard draft** to throw a draft away.
@@ -125,15 +82,15 @@ captions:
 1. Mechanics tap each cell to cycle it **Unchecked**, **Good**, **Blocked**. Keep labels short so they fit the cell.
 
     :::shot fc-chk-mechanic
-    caption: The Cadet checklist as a mechanic sees it on Servicing
+    caption: "Step 1: the Cadet checklist as a mechanic sees it on Servicing"
     persona: Alex Mechanic
     device: tablet
     url: /workshop/in-service
-    state: Alex has 203 in service
+    state: Alex has started the service on Cadet 203
     steps:
-      - Open Servicing for 203
+      - Start the service on 203 and open Servicing
     callouts:
-      - [1, "css=[role=grid]", "One cell per check"]
+      - [1, "role=button[name='Unchecked']", "One cell per check"]
     :::
 
 !!! abstract "Coming soon"

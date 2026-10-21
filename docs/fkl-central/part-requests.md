@@ -14,29 +14,21 @@ When a hub needs a part that is not in the catalogue, the hub manager sends a re
 <track kind="captions" src="../assets/video/fc-review-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: reviewing the Steering column bush request from Demo Hub (about 45 seconds, with captions)</figcaption></figure>
 
-1. Open **Parts catalogue** and tap **Part requests**. Requests waiting are under **Waiting**.
+![Steps 1 and 2 on one screen: Part requests with Steering column bush waiting and Review](../assets/img/fkl-central/fc-req-list.png){ loading=lazy }
 
-    ![Part requests with Steering column bush waiting](../assets/img/fkl-central/fc-req-list.png){ loading=lazy }
+1. Open **Parts catalogue** and tap **Part requests**. Requests waiting are under **Waiting**.
 
 2. Tap **Review** on the request.
 
-    ![The Review part request dialog](../assets/img/fkl-central/fc-req-review.png){ loading=lazy }
+![Steps 3 to 6 on one screen: the Review part request dialog with its four choices](../assets/img/fkl-central/fc-req-review.png){ loading=lazy }
 
 3. If the part already exists, choose **Link an existing part**, search for it and tap **Link part**.
 
-    ![Link an existing part with the part search](../assets/img/fkl-central/fc-req-link.png){ loading=lazy }
+4. If it is new, choose **Add a new part** (chosen at the start). Check the **Part name**, the **Manufacturer part number (MPN)** and the **Part category**, then tap **Add part**. An MPN is required for a new part.
 
-4. If it is new, choose **Add a new part**, check the name and MPN and tap **Add part**.
-
-    ![Add a new part with name, MPN and category](../assets/img/fkl-central/fc-req-add.png){ loading=lazy }
-
-5. If only that hub needs it, choose **Keep as a hub-local part** and tap **Keep local**.
-
-    ![Keep as a hub-local part](../assets/img/fkl-central/fc-req-local.png){ loading=lazy }
+5. If only that hub needs it, choose **Keep as a hub-local part**. You can add a supplier and unit cost. Tap **Keep local**.
 
 6. To refuse, choose **Reject**, type the **Reason (shown to the hub)** and tap **Reject request**.
-
-    ![Reject with Reason (shown to the hub)](../assets/img/fkl-central/fc-req-reject.png){ loading=lazy }
 
 !!! tip "Tip"
     After adding a new part, complete the other details (supplier, cost, fits) in **Master parts**.

@@ -10,38 +10,30 @@ The FKL Central parts catalogue is the single master list of parts. Every part h
 
 ## Master parts
 
+![Steps 1 to 4 on one screen: Master parts searched for FKL-900001, with Edit part and Add part](../assets/img/fkl-central/fc-parts-master.png){ loading=lazy }
+
 1. Open **FKL Central** and tap **Parts catalogue**. You land on **Master parts**.
 
-    ![Master parts with the search box and Add part](../assets/img/fkl-central/fc-parts-master.png){ loading=lazy }
+2. Search by name, FKL number or MPN, for example "FKL-900001" (front bumper).
 
-2. Search by name, FKL number or MPN, for example "FKL-900004".
+3. Tap the pencil (**Edit part**) to change a part, or the lorry just left of it (**Suppliers**) to manage its supplier list.
 
-    ![Searching master parts for FKL-900004](../assets/img/fkl-central/fc-parts-search.png){ loading=lazy }
-
-3. Tap **Edit part** to change a part, or **Suppliers** to manage its supplier list.
-
-    ![Edit part and Suppliers on the front bumper row](../assets/img/fkl-central/fc-parts-edit.png){ loading=lazy }
-
-4. To add a part, tap **Add part**. An MPN is required.
-
-    ![The Add part form](../assets/img/fkl-central/fc-parts-add.png){ loading=lazy }
+4. To add a part, tap **Add part**. The **Manufacturer part no.** is required.
 
 !!! tip "Tip"
     **Import / export by MPN** and **Import BOM** handle many parts at once.
 
 ## Catalogues and generations
 
-1. Tap **Catalogues**. Each catalogue is a set of parts. The default is FKL Master.
+![Steps 1 and 2 on one screen: the New catalogue form; the Kart generation can be chosen once the catalogue has parts](../assets/img/fkl-central/fc-cat-generation.png){ loading=lazy }
 
-    ![The Catalogues tab with FKL Master](../assets/img/fkl-central/fc-cat-list.png){ loading=lazy }
+1. Tap **Catalogues**. Each catalogue is a named list of parts. The default is FKL Master. Tap **Open** to see its parts.
 
-2. Open a catalogue and set its **Kart generation** to make it a generation catalogue.
+2. To make a generation catalogue, tap **New catalogue**, type the **Name** and tap **Save**. Tap **Open** on it and add its parts with **Add part by MPN**. Then tap the pencil (**Edit catalogue**), choose the **Kart generation** and tap **Save**. A catalogue needs parts before it can get a generation. The default catalogue, FKL Master, lists every part, so it cannot be a generation catalogue.
 
-    ![Kart generation on a catalogue](../assets/img/fkl-central/fc-cat-generation.png){ loading=lazy }
+3. Tap **Hub catalogues** to see which catalogue each hub works from. Tap **Open** on a hub to see why, or to pin a catalogue.
 
-3. Tap **Hub catalogues** to see which catalogue each hub works from.
-
-    ![Hub catalogues showing the catalogue in use per hub](../assets/img/fkl-central/fc-cat-hubs.png){ loading=lazy }
+    ![Step 3: Hub catalogues showing the catalogue in use per hub](../assets/img/fkl-central/fc-cat-hubs.png){ loading=lazy }
 
 !!! note "Remember"
     A generation catalogue is exact: Gen3.1 does not include Gen3.0 or Gen3.2. A hub whose karts are all of generations with such a catalogue works from those catalogues; other hubs keep their current list.

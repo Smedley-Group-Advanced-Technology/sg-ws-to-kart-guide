@@ -16,81 +16,53 @@ The FKL Central parts catalogue is the single master list of parts. Every part h
 
 ## Master parts
 
+:::shot fc-parts-master
+caption: "Steps 1 to 4 on one screen: Master parts searched for FKL-900001, with Edit part and Add part"
+steps:
+  - Tap Parts catalogue
+  - Type FKL-900001 in the search box
+callouts:
+  - [1, "text=Master parts", "The master list"]
+  - [2, "css=input[placeholder='Search name, FKL number or MPN']", "Search"]
+  - [3, "role=button[name='Edit part']", "Change details"]
+  - [4, "text=Add part", "New part"]
+:::
+
 1. Open **FKL Central** and tap **Parts catalogue**. You land on **Master parts**.
 
-    :::shot fc-parts-master
-    caption: Master parts with the search box and Add part
-    steps:
-      - Tap Parts catalogue
-    callouts:
-      - [1, "text=Master parts", "The master list"]
-      - [2, "text=Add part", "New part"]
-    :::
+2. Search by name, FKL number or MPN, for example "FKL-900001" (front bumper).
 
-2. Search by name, FKL number or MPN, for example "FKL-900004".
+3. Tap the pencil (**Edit part**) to change a part, or the lorry just left of it (**Suppliers**) to manage its supplier list.
 
-    :::shot fc-parts-search
-    caption: Searching master parts for FKL-900004
-    steps:
-      - Type FKL-900004 in the search box
-    callouts:
-      - [1, "css=input[placeholder='Search name, FKL number or MPN']", "Search"]
-    :::
-
-3. Tap **Edit part** to change a part, or **Suppliers** to manage its supplier list.
-
-    :::shot fc-parts-edit
-    caption: Edit part and Suppliers on the front bumper row
-    steps:
-      - Find the front bumper row
-    callouts:
-      - [1, "text=Edit part", "Change details"]
-      - [2, "text=Suppliers", "Supplier list"]
-    :::
-
-4. To add a part, tap **Add part**. An MPN is required.
-
-    :::shot fc-parts-add
-    caption: The Add part form
-    steps:
-      - Tap Add part
-    callouts:
-      - [1, "text=Manufacturer part no.", "Required"]
-    :::
+4. To add a part, tap **Add part**. The **Manufacturer part no.** is required.
 
 !!! tip "Tip"
     **Import / export by MPN** and **Import BOM** handle many parts at once.
 
 ## Catalogues and generations
 
-1. Tap **Catalogues**. Each catalogue is a set of parts. The default is FKL Master.
+:::shot fc-cat-generation
+caption: "Steps 1 and 2 on one screen: the New catalogue form; the Kart generation can be chosen once the catalogue has parts"
+steps:
+  - Tap Catalogues
+  - Tap New catalogue and type a name
+callouts:
+  - [1, "text=Catalogues", "Sets of parts"]
+  - [2, "text=Kart generation", "One exact generation"]
+:::
 
-    :::shot fc-cat-list
-    caption: The Catalogues tab with FKL Master
-    steps:
-      - Tap Catalogues
-    callouts:
-      - [1, "text=Catalogues", "Sets of parts"]
-    :::
+1. Tap **Catalogues**. Each catalogue is a named list of parts. The default is FKL Master. Tap **Open** to see its parts.
 
-2. Open a catalogue and set its **Kart generation** to make it a generation catalogue.
+2. To make a generation catalogue, tap **New catalogue**, type the **Name** and tap **Save**. Tap **Open** on it and add its parts with **Add part by MPN**. Then tap the pencil (**Edit catalogue**), choose the **Kart generation** and tap **Save**. A catalogue needs parts before it can get a generation. The default catalogue, FKL Master, lists every part, so it cannot be a generation catalogue.
 
-    :::shot fc-cat-generation
-    caption: Kart generation on a catalogue
-    steps:
-      - Open a catalogue
-    callouts:
-      - [1, "text=Kart generation", "One exact generation"]
-    :::
-
-3. Tap **Hub catalogues** to see which catalogue each hub works from.
+3. Tap **Hub catalogues** to see which catalogue each hub works from. Tap **Open** on a hub to see why, or to pin a catalogue.
 
     :::shot fc-cat-hubs
-    caption: Hub catalogues showing the catalogue in use per hub
+    caption: "Step 3: Hub catalogues showing the catalogue in use per hub"
     steps:
       - Tap Hub catalogues
     callouts:
-      - [1, "text=Hub catalogues", "Per hub"]
+      - [3, "text=Hub catalogues", "Per hub"]
     :::
 
 !!! note "Remember"

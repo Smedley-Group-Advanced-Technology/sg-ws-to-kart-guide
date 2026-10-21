@@ -19,15 +19,15 @@ main { padding: 6mm 12mm 0 12mm; display: grid; grid-template-columns: 1.45fr 1f
 h2 { font-family: "Arial Black", Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12pt;
   margin: 0 0 3mm 0; border-bottom: 1.2mm solid #0000ff; padding-bottom: 1mm; }
 ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
-ol li { counter-increment: s; position: relative; padding: 0 0 0 11mm; margin: 0 0 3.2mm 0; font-size: 11.5pt; line-height: 1.3; }
-ol li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 8mm; height: 8mm; background: #0000ff; color: #fff;
-  font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 11pt; text-align: center; line-height: 8mm; }
-b { font-family: Monaco, "Courier New", monospace; font-weight: bold; font-size: 10.5pt; background: #f0f0f0; padding: 0 1mm; }
-.status { display: flex; align-items: flex-start; gap: 3mm; margin: 0 0 2.6mm 0; font-size: 10.5pt; line-height: 1.25; }
+ol li { counter-increment: s; position: relative; padding: 0.6mm 0 0 11.5mm; margin: 0 0 3.6mm 0; min-height: 8.6mm; font-size: 13pt; line-height: 1.3; }
+ol li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 8.6mm; height: 8.6mm; background: #0000ff; color: #fff;
+  font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 12pt; text-align: center; line-height: 8.6mm; }
+b { font-family: Monaco, "Courier New", monospace; font-weight: bold; font-size: 11.5pt; background: #f0f0f0; padding: 0 1mm; }
+.status { display: flex; align-items: flex-start; gap: 3mm; margin: 0 0 3mm 0; font-size: 11.5pt; line-height: 1.3; }
 .sw { flex: 0 0 6mm; height: 6mm; border: 0.3mm solid #000; }
-.box { margin-top: 5mm; border-left: 2mm solid #ff0000; border-top: 0.6mm solid #ff0000; border-right: 0.6mm solid #ff0000; border-bottom: 0.6mm solid #ff0000; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.box { margin-top: 5mm; border-left: 2mm solid #ff0000; border-top: 0.6mm solid #ff0000; border-right: 0.6mm solid #ff0000; border-bottom: 0.6mm solid #ff0000; padding: 3mm 4mm; font-size: 12pt; line-height: 1.35; }
 .box strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
-.note { margin-top: 4mm; background: #e8ddfc; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.note { margin-top: 4mm; background: #e8ddfc; padding: 3mm 4mm; font-size: 12pt; line-height: 1.35; }
 .note strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
 footer { position: absolute; bottom: 0; left: 0; right: 0; background: #141414; color: #fff; font-size: 8.5pt; padding: 3mm 12mm; display: flex; justify-content: space-between; }
 </style>
@@ -41,16 +41,16 @@ footer { position: absolute; bottom: 0; left: 0; right: 0; background: #141414; 
 <main>
 <section><h2>Steps</h2><ol>
 <li>Select your Hub &gt; <b>FKL Central</b>.</li>
-<li><b>Parts catalogue</b> &gt; <b>Master parts</b>: search, <b>Add part</b> (MPN required), <b>Edit part</b>, <b>Suppliers</b>.</li>
-<li><b>Catalogues</b> and <b>Hub catalogues</b>: which parts each hub sees; exact kart generations.</li>
+<li><b>Parts catalogue</b> &gt; <b>Master parts</b>: search, <b>Add part</b> (MPN required), <b>Edit part</b> (pencil), <b>Suppliers</b>.</li>
+<li><b>Catalogues</b>: <b>New catalogue</b>, add parts, then set its exact <b>Kart generation</b>. <b>Hub catalogues</b>: what each hub sees.</li>
 <li><b>Part requests</b> &gt; <b>Review</b>: <b>Link part</b>, <b>Add part</b>, <b>Keep local</b> or <b>Reject request</b>.</li>
 <li><b>Master review</b>: check hub-local parts, merge into a master part.</li>
-<li><b>Service checklists</b>: <b>New draft</b> for a kart class, <b>Add check</b>.</li>
-<li><b>Check before publishing</b>, then <b>Publish</b> with <b>What changed (required)</b>.</li>
-<li><b>Servicing</b>: tyre tread, alignment, battery voltage, axle run-out. <b>Save</b>.</li>
+<li><b>Service checklists</b>: choose the class, <b>New draft</b>, open a section, <b>Add check</b>.</li>
+<li><b>Check before publishing</b> says No errors? <b>Publish</b> with <b>What changed (required)</b>.</li>
+<li><b>Servicing</b>: tyre tread, alignment, battery voltage, axle run-out. Each box has its own <b>Save</b>.</li>
 <li>Admins: <b>Admin Access</b> &gt; <b>User Administration</b> &gt; <b>All Users</b>.</li>
 <li>Set <b>Hub Access</b> and <b>Permissions</b>; save each.</li>
-<li><b>Deactivate user</b> is a soft switch-off; <b>Reactivate user</b> undoes it.</li>
+<li><b>Deactivate user</b> with a reason is a soft switch-off; <b>Reactivate user</b> undoes it.</li>
 </ol></section>
 <section>
 <div class="note"><strong>Remember</strong>Your hub lead and FKL Central agree new parts. Hub managers can give only Workshop and Purchasing.</div>

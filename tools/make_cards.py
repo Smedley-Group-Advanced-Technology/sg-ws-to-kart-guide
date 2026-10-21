@@ -20,15 +20,15 @@ main { padding: 6mm 12mm 0 12mm; display: grid; grid-template-columns: 1.45fr 1f
 h2 { font-family: "Arial Black", Arial, sans-serif; font-weight: 900; text-transform: uppercase; letter-spacing: 0.08em; font-size: 12pt;
   margin: 0 0 3mm 0; border-bottom: 1.2mm solid #0000ff; padding-bottom: 1mm; }
 ol { margin: 0; padding: 0; list-style: none; counter-reset: s; }
-ol li { counter-increment: s; position: relative; padding: 0 0 0 11mm; margin: 0 0 3.2mm 0; font-size: 11.5pt; line-height: 1.3; }
-ol li::before { content: counter(s); position: absolute; left: 0; top: -0.3mm; width: 8mm; height: 8mm; background: #0000ff; color: #fff;
-  font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 11pt; text-align: center; line-height: 8mm; }
-b { font-family: Monaco, "Courier New", monospace; font-weight: bold; font-size: 10.5pt; background: #f0f0f0; padding: 0 1mm; }
-.status { display: flex; align-items: flex-start; gap: 3mm; margin: 0 0 2.6mm 0; font-size: 10.5pt; line-height: 1.25; }
+ol li { counter-increment: s; position: relative; padding: 0.6mm 0 0 11.5mm; margin: 0 0 3.6mm 0; min-height: 8.6mm; font-size: 13pt; line-height: 1.3; }
+ol li::before { content: counter(s); position: absolute; left: 0; top: 0; width: 8.6mm; height: 8.6mm; background: #0000ff; color: #fff;
+  font-family: "Arial Black", Arial, sans-serif; font-weight: 900; font-size: 12pt; text-align: center; line-height: 8.6mm; }
+b { font-family: Monaco, "Courier New", monospace; font-weight: bold; font-size: 11.5pt; background: #f0f0f0; padding: 0 1mm; }
+.status { display: flex; align-items: flex-start; gap: 3mm; margin: 0 0 3mm 0; font-size: 11.5pt; line-height: 1.3; }
 .sw { flex: 0 0 6mm; height: 6mm; border: 0.3mm solid #000; }
-.box { margin-top: 5mm; border-left: 2mm solid #ff0000; border-top: 0.6mm solid #ff0000; border-right: 0.6mm solid #ff0000; border-bottom: 0.6mm solid #ff0000; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.box { margin-top: 5mm; border-left: 2mm solid #ff0000; border-top: 0.6mm solid #ff0000; border-right: 0.6mm solid #ff0000; border-bottom: 0.6mm solid #ff0000; padding: 3mm 4mm; font-size: 12pt; line-height: 1.35; }
 .box strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
-.note { margin-top: 4mm; background: #e8ddfc; padding: 3mm 4mm; font-size: 10.5pt; line-height: 1.3; }
+.note { margin-top: 4mm; background: #e8ddfc; padding: 3mm 4mm; font-size: 12pt; line-height: 1.35; }
 .note strong { font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 1mm; }
 footer { position: absolute; bottom: 0; left: 0; right: 0; background: #141414; color: #fff; font-size: 8.5pt; padding: 3mm 12mm; display: flex; justify-content: space-between; }
 """
@@ -55,21 +55,22 @@ CARDS = {
         "Fitted a part? [[Add part used]]. Every part, every time.",
         "Stopping work? [[Pause]] and pick a [[Pause reason]]. Resume from [[Paused services]].",
         "Tap [[Complete service]], tick the declaration, [[Confirm]].",
-        "Problem on a kart: [[Report a kart problem]]. Each finding becomes a repair.",
-        "Must not be used? Raise a reliability ticket (needs Reliability).",
+        "Problem on a kart: [[Report a kart problem]]. An incident is information only; each finding becomes a repair.",
+        "Must not be used? Raise a stopping reliability ticket (needs Reliability). It takes the kart out of use.",
         "Repair done: [[Log remedy / complete repair]] with the parts used.",
         "Campaign tasks: [[Campaign work]], [[Start work]], fit parts, [[Complete work]].",
         "Find a kart: [[Open kart]], type the number (e.g. 207) or scan the QR.",
-    ], True, ("Watch out", "Incidents never stop a kart. Only a stopping reliability ticket does. Never use the Workshop App after your hub's switch time.")),
+    ], True, ("Watch out", "Incidents are information only and never stop a kart. Only a stopping reliability ticket takes a kart out of use. After your hub's switch time, never record anything in the Workshop App.")),
     "hub-manager-card": ("Hub manager", "Everything a mechanic does, plus", [
         "Open [[Workshop Manager]], the last Workshop tab.",
         "[[Kart Allocation]]: give karts to mechanics.",
         "[[Campaigns]] > [[New campaign]]: Integrated or Standalone, karts, parts.",
         "[[Work targets]] per person; [[Readiness targets]] per planning event.",
         "[[Parts needed]] > [[Create draft orders]].",
-        "[[Order List]]: [[Submit]] drafts, then [[Approval queue]]: [[Approve]] or [[Reject]].",
+        "[[Order List]] stages: Draft, Submitted, approval by the hub manager, Ordered, then Goods In.",
+        "[[Submit]] drafts. The hub manager approves in [[Approval queue]]: [[Approve]] or [[Reject]].",
         "After ordering with the supplier: [[Mark ordered]] (Approved lines only).",
-        "[[Goods In]]: part, order, quantity, unit cost, invoice ref., [[Receive stock]].",
+        "[[Goods In]] on the Ordered line: quantity, unit cost, invoice ref., [[Receive stock]].",
         "[[Hub catalogue]]: hide parts, preferred supplier, [[Request a part]].",
         "[[Hub Manager]] > [[Pending approvals]]: approve sign-ups, join links, [[Create user]].",
         "Mark a kart used by hand: [[Requires service]] on its Overview tile; [[Undo]] if wrong.",
@@ -77,16 +78,16 @@ CARDS = {
     ], True, ("Watch out", "Until your hub's stock is moved, Parts needed may list parts that are on the shelf: check the shelf before ordering.")),
     "fkl-central-card": ("FKL Central and admin", "Master data for every hub", [
         "Select your Hub > [[FKL Central]].",
-        "[[Parts catalogue]] > [[Master parts]]: search, [[Add part]] (MPN required), [[Edit part]], [[Suppliers]].",
-        "[[Catalogues]] and [[Hub catalogues]]: which parts each hub sees; exact kart generations.",
+        "[[Parts catalogue]] > [[Master parts]]: search, [[Add part]] (MPN required), [[Edit part]] (pencil), [[Suppliers]].",
+        "[[Catalogues]]: [[New catalogue]], add parts, then set its exact [[Kart generation]]. [[Hub catalogues]]: what each hub sees.",
         "[[Part requests]] > [[Review]]: [[Link part]], [[Add part]], [[Keep local]] or [[Reject request]].",
         "[[Master review]]: check hub-local parts, merge into a master part.",
-        "[[Service checklists]]: [[New draft]] for a kart class, [[Add check]].",
-        "[[Check before publishing]], then [[Publish]] with [[What changed (required)]].",
-        "[[Servicing]]: tyre tread, alignment, battery voltage, axle run-out. [[Save]].",
+        "[[Service checklists]]: choose the class, [[New draft]], open a section, [[Add check]].",
+        "[[Check before publishing]] says No errors? [[Publish]] with [[What changed (required)]].",
+        "[[Servicing]]: tyre tread, alignment, battery voltage, axle run-out. Each box has its own [[Save]].",
         "Admins: [[Admin Access]] > [[User Administration]] > [[All Users]].",
         "Set [[Hub Access]] and [[Permissions]]; save each.",
-        "[[Deactivate user]] is a soft switch-off; [[Reactivate user]] undoes it.",
+        "[[Deactivate user]] with a reason is a soft switch-off; [[Reactivate user]] undoes it.",
     ], False, ("Watch out", "Publishing a checklist changes it for every hub with that kart class from the next service. Tell the hub managers first.")),
     "remote-support-card": ("Remote support", "KART Comms, cover and direct chats", [
         "Open the KART address ending in [[/comms]]. You see the [[Support]] view.",
@@ -95,9 +96,9 @@ CARDS = {
         "Reply and [[Send]]. Ask for the kart number.",
         "Solved: [[Close chat]]. Need more: [[Reopen chat]].",
         "[[Search]] finds chats by staff member, hub or message.",
-        "[[Start a direct chat]] to message a staff member.",
+        "Type a name in the search box, then tap them under [[Start a direct chat]].",
         "Select your Hub > [[Remote Support]] > [[Hub Dashboard]].",
-        "Per event, set [[Support cover]]. Only Remote support holders can be chosen.",
+        "Per event, choose who covers it in the [[Support cover]] list. Only Remote support holders are offered.",
         "No cover? Chats show [[Unassigned]] and all remote support is alerted.",
     ], False, ("Remember", "New direct chats between two colleagues are private to them. Remote support and admins do not see them. AI Support is automatic, not a person.")),
     "switch-over-day-card": ("Switch-over day", "Day-one checklist for your hub", [

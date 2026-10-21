@@ -24,12 +24,10 @@ jobs:
           python-version: "3.12"
       - name: Install MkDocs Material (pinned)
         run: pip install -r requirements.txt
-      - name: Check text and shot list
-        run: python tools/check_guide.py
-      # Non-strict for now: screenshots, clips and GIFs are recorded later, so missing-media warnings are expected.
-      # Switch to `mkdocs build --strict` (and add `--media` to the check above) once every file in shots/shots.yaml exists.
+      - name: Check text, shot list and media
+        run: python tools/check_guide.py --media
       - name: Build site
-        run: mkdocs build
+        run: mkdocs build --strict
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site

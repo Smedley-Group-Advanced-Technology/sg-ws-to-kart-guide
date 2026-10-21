@@ -4,8 +4,9 @@ import { HUB } from '../lib/config.mjs';
 import { asPersona } from '../lib/db.mjs';
 
 export const column = (s, stage) => s.page.locator(`[data-testid="order-column-${stage}"]`);
+// the innermost card with the text and a button (the has locator is relative to each card, so it starts from the page)
 export const line = (scope, text) => scope.locator('.bg-card, [class*=border]').filter({ hasText: text })
-  .filter({ has: scope.locator('button') }).last();
+  .filter({ has: scope.page().locator('button') }).last();
 const tab = (s, name) => s.page.getByRole('tab', { name, exact: true });
 
 export async function openOrders(s) {
@@ -103,10 +104,11 @@ export default {
     await d.getByText('Against order').first().waitFor();
     await g.wait(800);
     g.cue();                                                    // Type what arrived and what it cost.
-    const field = (label) => d.locator('div.space-y-1').filter({ has: d.getByText(label, { exact: true }) }).locator('input').first();
-    await g.type(field('Quantity'), '2');
+    const field = (label) => d.locator('div.space-y-1').filter({ has: g.page.getByText(label, { exact: true }) }).locator('input').first();
+    // quantity, currency and supplier come from the order line
+    if (!(await field('Quantity').inputValue())) await g.type(field('Quantity'), '2');
     await g.type(field('Unit cost'), '45.00');
-    await g.type(field('Currency'), 'GBP');
+    if (!(await field('Currency').inputValue())) await g.type(field('Currency'), 'GBP');
     if (!(await field('Supplier').inputValue())) await g.type(field('Supplier'), 'Demo Kart Supplies Ltd');
     await g.type(field('Invoice reference'), 'DEMO-INV-001');
     const save = d.getByRole('button', { name: 'Receive stock' });
@@ -118,8 +120,11 @@ export default {
     await g.wait(1200);
     g.cue();                                                    // The waiting repair is ready to do.
     await g.goto('/workshop/repairs', { settle: false });
-    await g.skip(async () => { await g.mustReload(g.page.getByRole('button', { name: '307', exact: true }), 60000); await g.settle(800); });
-    await g.hover(g.page.getByRole('button', { name: '307', exact: true }));
+    // the repair card says Junior 7 (kart 307); after Goods In it is listed with the repairs ready to do
+    const card307 = g.page.getByText(/^Junior 3?07$/);
+    await g.skip(async () => { await g.mustReload(card307, 60000); await g.settle(800); });
+    await g.scrollTo(card307);
+    await g.hover(card307);
     await g.wait(3000);
     const rg = await g.close();
     clip('hm-goodsin-clip', rg, { poster: 3 });

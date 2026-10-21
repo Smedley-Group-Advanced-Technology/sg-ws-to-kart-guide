@@ -66,7 +66,7 @@ flowchart LR
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
-    ![Step 2: the 307 repair card showing On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
+    ![Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
 
 !!! warning "Watch out"
     **Mark ordered** only works on **Approved** lines. Lines made with **Add bulk order** go straight to Ordered, so only approvers can make them.
@@ -94,9 +94,9 @@ flowchart LR
 
     ![Steps 2 to 5 on one screen: the Goods In form for the front bumpers order](../assets/img/hub-manager/hm-gi.png){ loading=lazy }
 
-3. Type the **Quantity** and the **Unit cost**, and check the **Currency** (for example GBP).
+3. Check the **Quantity**: KART fills in what was ordered. Type the **Unit cost** and check the **Currency** (for example GBP).
 
-4. Fill in **Supplier** and **Invoice reference**.
+4. Check the **Supplier** and type the **Invoice reference**.
 
 5. Tap **Receive stock**. Stock and the average cost update straight away, and waiting repairs move to **Ready to repair**.
 

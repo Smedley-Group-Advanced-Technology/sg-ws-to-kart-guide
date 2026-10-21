@@ -45,29 +45,33 @@ duration: 40
 steps:
   - Open the Hub Manager dashboard and tap Pending approvals
   - On Requests, show Jamie's Sign-up row via join link
+  - Tick Workshop
   - Tap Approve
   - Show Request approved and the empty list
 captions:
   - "Open Pending approvals."
   - "Check who is asking and for which hub."
+  - "Tick Workshop for a new mechanic."
   - "Tap Approve."
   - "They can sign in now."
 :::
 
 :::shot hm-appr-row
-caption: "Steps 1 and 2 on one screen: Jamie Newstarter's Sign-up row via join link and its Approve button"
+caption: "Steps 1 to 3 on one screen: Jamie Newstarter's Sign-up row via join link, Workshop ticked and the Approve button"
 steps:
   - Tap Pending approvals
+  - Tick Workshop
 callouts:
   - [1, "text=via join link", "Sign-up, hub, used your link"]
-  - [2, "text=Approve", "Let them in"]
+  - [2, "text=Workshop", "Permissions"]
+  - [3, "text=Approve", "Let them in"]
 :::
 
 1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
 
-2. Tap **Approve**.
+2. For a sign-up, tick the permissions they need: **Workshop**, and **Purchasing** if they place orders. A new mechanic needs **Workshop**.
 
-3. Then give them the permissions they need (see below). A new mechanic needs **Workshop**.
+3. Tap **Approve**. KART shows **Request approved** and they can sign in.
 
 !!! warning "Watch out"
     To refuse, tap **Reject** and type a **Reason**. **The applicant sees this reason.** Keep it short and polite.

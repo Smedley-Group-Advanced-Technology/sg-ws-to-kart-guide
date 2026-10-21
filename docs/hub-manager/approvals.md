@@ -25,13 +25,13 @@ New people get into your hub in one of two ways: they sign up with your join lin
 <track kind="captions" src="../assets/video/hm-approve-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: approving Jamie Newstarter's join request (about 40 seconds, with captions)</figcaption></figure>
 
-![Steps 1 and 2 on one screen: Jamie Newstarter's Sign-up row via join link and its Approve button](../assets/img/hub-manager/hm-appr-row.png){ loading=lazy }
+![Steps 1 to 3 on one screen: Jamie Newstarter's Sign-up row via join link, Workshop ticked and the Approve button](../assets/img/hub-manager/hm-appr-row.png){ loading=lazy }
 
 1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
 
-2. Tap **Approve**.
+2. For a sign-up, tick the permissions they need: **Workshop**, and **Purchasing** if they place orders. A new mechanic needs **Workshop**.
 
-3. Then give them the permissions they need (see below). A new mechanic needs **Workshop**.
+3. Tap **Approve**. KART shows **Request approved** and they can sign in.
 
 !!! warning "Watch out"
     To refuse, tap **Reject** and type a **Reason**. **The applicant sees this reason.** Keep it short and polite.

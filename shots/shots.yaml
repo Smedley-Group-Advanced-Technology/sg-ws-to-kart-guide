@@ -620,12 +620,14 @@
   steps:
   - Open the Hub Manager dashboard and tap Pending approvals
   - On Requests, show Jamie's Sign-up row via join link
+  - Tick Workshop
   - Tap Approve
   - Show Request approved and the empty list
   caption: approving Jamie Newstarter's join request
   captions:
   - Open Pending approvals.
   - Check who is asking and for which hub.
+  - Tick Workshop for a new mechanic.
   - Tap Approve.
   - They can sign in now.
   duration: 40
@@ -638,14 +640,18 @@
   state: Jamie Newstarter pending at Demo Hub (signed up with a Demo Hub join link)
   steps:
   - Tap Pending approvals
+  - Tick Workshop
   callouts:
   - n: 1
     target: text=via join link
     note: Sign-up, hub, used your link
   - n: 2
+    target: text=Workshop
+    note: Permissions
+  - n: 3
     target: text=Approve
     note: Let them in
-  caption: 'Steps 1 and 2 on one screen: Jamie Newstarter''s Sign-up row via join link and its Approve button'
+  caption: 'Steps 1 to 3 on one screen: Jamie Newstarter''s Sign-up row via join link, Workshop ticked and the Approve button'
 - id: hm-join
   kind: screenshot
   page: hub-manager/approvals.md
@@ -1047,12 +1053,12 @@
   state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
     front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Open Service Queue and find the 307 card
+  - Open Service Queue and find the Junior 7 card
   callouts:
   - n: 2
     target: text=On order
     note: Mechanics see it is coming
-  caption: 'Step 2: the 307 repair card showing On order for front bumpers'
+  caption: 'Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers'
 - id: hm-ord-bulk
   kind: screenshot
   page: hub-manager/orders.md
@@ -1117,7 +1123,7 @@
     front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
   - Tap Goods In on the front bumpers line
-  - Type 2, 45.00, GBP, the supplier and DEMO-INV-001
+  - Type 45.00 and DEMO-INV-001 (quantity, currency and supplier come from the order)
   callouts:
   - n: 2
     target: text=Against order

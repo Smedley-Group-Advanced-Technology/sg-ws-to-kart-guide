@@ -106,10 +106,10 @@ callouts:
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
     :::shot hm-ord-onorder
-    caption: "Step 2: the 307 repair card showing On order for front bumpers"
+    caption: "Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers"
     url: /workshop/repairs
     steps:
-      - Open Service Queue and find the 307 card
+      - Open Service Queue and find the Junior 7 card
     callouts:
       - [2, "text=On order", "Mechanics see it is coming"]
     :::
@@ -168,7 +168,7 @@ callouts:
     caption: "Steps 2 to 5 on one screen: the Goods In form for the front bumpers order"
     steps:
       - Tap Goods In on the front bumpers line
-      - Type 2, 45.00, GBP, the supplier and DEMO-INV-001
+      - Type 45.00 and DEMO-INV-001 (quantity, currency and supplier come from the order)
     callouts:
       - [2, "text=Against order", "Part and its order"]
       - [3, "text=Unit cost", "Quantity, cost, currency"]
@@ -176,9 +176,9 @@ callouts:
       - [5, "text=Receive stock", "Book it in"]
     :::
 
-3. Type the **Quantity** and the **Unit cost**, and check the **Currency** (for example GBP).
+3. Check the **Quantity**: KART fills in what was ordered. Type the **Unit cost** and check the **Currency** (for example GBP).
 
-4. Fill in **Supplier** and **Invoice reference**.
+4. Check the **Supplier** and type the **Invoice reference**.
 
 5. Tap **Receive stock**. Stock and the average cost update straight away, and waiting repairs move to **Ready to repair**.
 

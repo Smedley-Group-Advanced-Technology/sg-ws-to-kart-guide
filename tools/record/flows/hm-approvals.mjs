@@ -33,7 +33,11 @@ export default {
     const approve = s.dialog.getByRole('button', { name: 'Approve', exact: true }).first();
     await s.hover(s.dialog.getByText('Jamie Newstarter').first());
     await s.wait(1200);
-    await s.shot('hm-appr-row', { scroll: false, at: { 1: s.dialog.getByText('via join link').first(), 2: approve } });
+    s.cue();                                                    // Tick Workshop for a new mechanic.
+    const ws = s.dialog.getByRole('checkbox', { name: 'Workshop' }).first();
+    await s.tap(ws);
+    await s.wait(600);
+    await s.shot('hm-appr-row', { scroll: false, at: { 1: s.dialog.getByText('via join link').first(), 2: ws, 3: approve } });
     s.cue();                                                    // Tap Approve.
     await s.tap(approve);
     s.cue();                                                    // They can sign in now.

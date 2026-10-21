@@ -1,7 +1,7 @@
 # Reliability tickets: stop a kart
 
 
-A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation. This is the only normal way to take a kart out of use.
+A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation (KART does not offer it when karts are handed out for an event). This is the only normal way to take a kart out of use.
 
 You need the **Reliability** permission to raise tickets. In this guide Casey Mechanic has it and Alex Mechanic does not.
 
@@ -25,11 +25,11 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
     ![Kart 207 and the Reliability type chosen](../assets/img/mechanic/mech-ticket-type.png){ loading=lazy }
 
-3. Tap **Continue**. The reliability ticket form opens with this kart.
+3. Tap **Continue**. The reliability ticket form opens with this kart. **Kart Number** shows the kart's number in its class, so Cadet 207 shows as **07**.
 
     ![The reliability ticket form opened for Cadet 207](../assets/img/mechanic/mech-ticket-form.png){ loading=lazy }
 
-4. Choose the **Effect of Issue**, for example **Cut out not restarted**.
+4. Choose the **Effect of Issue** (what the kart did), for example **Cut out not restarted**.
 
     ![Effect of Issue set to Cut out not restarted](../assets/img/mechanic/mech-ticket-effect.png){ loading=lazy }
 
@@ -67,7 +67,7 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
 3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
-    ![Cadet 207 no longer Repair Required on the Readiness board](../assets/img/mechanic/mech-ticket-closed.png){ loading=lazy }
+    ![Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no longer red)](../assets/img/mechanic/mech-ticket-closed.png){ loading=lazy }
 
 !!! note "Remember"
     On your hub's switch-over day, close any stopping ticket whose fault is already fixed. Karts that were Repair Required in KART stay that way until their ticket or repair is closed, whatever the Workshop App said.

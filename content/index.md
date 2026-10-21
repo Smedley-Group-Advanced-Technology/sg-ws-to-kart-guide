@@ -16,7 +16,7 @@ url: /hub-selection
 
 Welcome. This is the official FAT Karting League guide for everyone who works on karts, runs a hub workshop or supports a hub from FKL Central or remote support.
 
-Your hub's workshop work is moving from the **FKL Workshop App** (we call it "the Workshop App" in this guide) into **KART**, the FKL Kart Allocation & Reliability Tracking app. KART is the app the league already uses for kart allocation, reliability tickets and events. From your hub's switch-over day, all workshop work happens in KART too: services, repairs, parts, campaigns, schedules and orders.
+Your hub's workshop work is moving from the **FKL Workshop App** (we call it "the Workshop App" in this guide) into **KART**, the FKL Kart Allocation & Reliability Tracking app. KART is the app the league already uses for kart allocation (deciding which karts go out at events), reliability tickets and events. From your hub's switch-over day, all workshop work happens in KART too: services, repairs, parts, campaigns, schedules and orders.
 
 :::shot home-hub-selection
 caption: The KART hub selection screen with the Workshop card
@@ -61,7 +61,15 @@ New to KART? Start with [Signing in and access](start/sign-in-and-access.md), th
 </div>
 
 !!! note "Remember"
-    No hub has switched yet. Your hub lead confirms your hub's switch-over date and time at least 24 hours before. Until then, keep working the way your hub lead tells you.
+    No hub that uses the Workshop App has switched yet. (A few hubs never used the Workshop App and already work in KART.) Your hub lead confirms your hub's switch-over date and time at least 24 hours before. Until then, keep working the way your hub lead tells you.
+
+## Who to ask for help
+
+- **Your hub lead** (the person who runs your hub; in KART they usually have the Hub Manager permission): accounts, access, how your hub works, the switch-over date.
+- **KART Comms support**: people in remote support who help with KART problems, such as a kart showing the wrong status. See [KART Comms](remote-support/comms.md).
+- The **FKL Support** button in KART gives automatic answers. It is not a person.
+
+The [Who to contact](switch-over/index.md#who-to-contact) table on the switch-over page has the full list.
 
 !!! tip "Tip"
     Every step in this guide has a picture or a short video. The videos have captions, so you can watch them with the sound off in the workshop.

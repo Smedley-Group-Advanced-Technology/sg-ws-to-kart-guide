@@ -17,7 +17,7 @@ Every kart in KART has one workshop status. The status decides whether the kart 
 | <span class="swatch sw-inprogress"></span> sky blue | **In Progress** (part of Requires service) | A mechanic has started the service. | **Start service**. It ends with **Complete service**. | In Progress |
 | <span class="swatch sw-paused"></span> slate grey | **Paused** (part of Requires service) | The service was paused with a reason. | **Pause**. It ends when someone resumes the service. | Paused |
 | <span class="swatch sw-repair-needed"></span> purple | **Repair Needed (usable)** | An open repair that does not stop the kart. The kart stays available. | A finding that becomes a repair. It ends when the repair is completed. | Repair Needed (Usable) |
-| <span class="swatch sw-repair-required"></span> red | **Repair Required** | The kart must not be used. It is not offered for allocation. | A stopping reliability ticket, or a repair that blocks the kart. It ends when the ticket is resolved and its repair is completed. | Repair Required |
+| <span class="swatch sw-repair-required"></span> red | **Repair Required** | The kart must not be used. It is not offered for allocation (KART does not offer it when karts are handed out for an event). | A stopping reliability ticket, or a repair that blocks the kart. It ends when the ticket is resolved and its repair is completed. | Repair Required |
 | <span class="swatch sw-ready-to-repair"></span> orange | **Ready to repair** (part of Repair Required) | The repair can be done now. | The parts are in the hub, or no parts are needed. | Ready to Repair |
 | <span class="swatch sw-waiting"></span> dark red | **Waiting on parts** (part of Repair Required) | The repair waits for parts. Once ordered, the card says **On order**. | The parts are received in Goods In, then it becomes Ready to repair. | Waiting on Parts |
 | <span class="swatch sw-campaign"></span> indigo | **Campaign Required** | The kart has an open task in an active campaign. Its normal status does not change and it stays usable. | The hub manager starts an integrated campaign. It ends when the task is completed or the kart is excluded. | (new) |
@@ -35,13 +35,13 @@ Every kart in KART has one workshop status. The status decides whether the kart 
 
     ![The list of Repair Required karts, 207 and 307](../assets/img/start/start-status-drilldown.png){ loading=lazy }
 
-3. Look under the board for the reason tags, for example **Missing Components** on Junior 308.
+3. Scroll further down to the kart tiles. Each tile shows short tags, for example **Missing Components** on Junior 308.
 
     ![Kart tiles with reason tags such as Missing Components on 308 and Campaign on the Juniors](../assets/img/start/start-status-tags.png){ loading=lazy }
 
 ## Reason tags
 
-Under the board each kart can carry tags. They tell you why a kart is not simply Ready:
+Each kart can carry tags. They tell you why a kart is not simply Ready. The **Reasons** row under each class on the board uses the names below. The kart tiles use shorter words: **Damaged** for a damage ticket and **Campaign** for campaign work.
 
 - **Requires service**: used since its last service.
 - **Reliability**: an open reliability ticket.
@@ -69,7 +69,6 @@ stateDiagram-v2
     P --> IP: Resume
     IP --> Ready: Complete service, nothing open
     IP --> RN: Complete service, a repair is open
-    IP --> RR: Complete service, a stopping ticket is open
     Ready --> RN: a finding becomes a repair
     Ready --> RR: stopping reliability ticket raised
     RN --> Ready: repair completed
@@ -80,7 +79,13 @@ stateDiagram-v2
     Do not change a kart's status by hand to make the board look right. If a status looks wrong, report it through KART Comms support with the kart number. See [Troubleshooting](../troubleshooting.md).
 
 !!! tip "Tip"
-    A kart with a started or paused service also counts as needing service everywhere in KART, including the Fleet Status card and Race to Chassis colours.
+    A kart with a started or paused service also counts as needing service everywhere in KART, including the Fleet Status card and Race to Chassis colours. While it is in service or paused it is **Not available**, so its tile is red.
+
+!!! note "Remember"
+    **Tile colours are not status colours.** On the kart tiles under the board, the background shows availability: green means preferred, yellow means available, red means not available. The status colours in the table above are used on the Readiness board and on status badges.
+
+!!! note "Remember"
+    You cannot complete a service while a reliability ticket on the kart is still open. A kart with a stopping ticket stays **Repair Required** until the ticket is resolved and its repair is completed.
 
 ## Other words on the kart page
 

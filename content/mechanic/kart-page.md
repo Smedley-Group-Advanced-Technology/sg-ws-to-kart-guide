@@ -55,7 +55,7 @@ captions:
       - [2, "text=Scan QR code", "Or scan the label"]
     :::
 
-3. Tap **Open**. The kart page opens.
+3. Tap **Open**. The kart page opens. **Unavailable** means KART does not offer the kart when karts are handed out for an event (allocation).
 
     :::shot mech-kart-page
     caption: The kart page of Cadet 207 with its badges and counts

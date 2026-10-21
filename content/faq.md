@@ -39,7 +39,7 @@ Tell your hub manager. They can correct the times in the service report. Next ti
 Yes, in the service, the repair or the campaign task. KART takes them from stock and orders from that. It matters most in the first days after the switch-over, when stock is moved.
 
 **How do I mark a kart used after testing?**
-Ask your hub manager to tap **Requires service** on the kart's tile. On event days Race to Chassis does it for you.
+Ask your hub manager to tap the **Requires service** button on the kart's tile. On event days Race to Chassis does it for you.
 
 **I put a race number on the wrong chassis.**
 Drag it back, or onto the right chassis. If KART marked the wrong chassis used, tap **Undo** in the message.
@@ -48,7 +48,10 @@ Drag it back, or onto the right chassis. If KART marked the wrong chassis used, 
 **Open kart** on Overview: type the number (for example 207) or scan its QR code.
 
 **How do I ask for help?**
-KART Comms support, at the address ending in **/comms**. Include the kart number. See [KART Comms](remote-support/comms.md).
+Ask your hub lead first. For KART problems, message remote support in KART Comms (KART's messenger; ask your hub lead to bookmark it on the tablet). Include the kart number. The **FKL Support** button gives automatic answers and is not a person. See [Getting help](start/finding-your-way.md#getting-help).
+
+**Who is my hub lead?**
+The person who runs your hub. In KART they usually have the Hub Manager permission, so this guide also says "hub manager".
 
 ## For hub managers
 
@@ -80,4 +83,4 @@ Check whether it is hidden at your hub in **Hub catalogue**. If it is not in the
 Changes to event or workshop staff's daily work need the approvers' sign-off and updated SOPs and training first. Talk to the KART product owner.
 
 **When does my hub switch?**
-Your hub lead confirms the date and time at least 24 hours before. No hub has switched yet.
+Your hub lead confirms the date and time at least 24 hours before. No hub that uses the Workshop App has switched yet.

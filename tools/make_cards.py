@@ -52,7 +52,7 @@ CARDS = {
         "Start on [[Overview]]: check the [[Readiness board]] against the karts.",
         "Open [[Service Queue]], tap a kart under [[Requires service]], tap [[Start service]].",
         "On [[Servicing]] tap each cell: Unchecked, [[Good]], [[Blocked]]. Type readings.",
-        "Fitted a part? [[Add part used]]. Every part, every time.",
+        "Fitted a part? Under [[Components replaced]] tap [[Select]], then [[Add to components replaced]]. Every part, every time.",
         "Stopping work? [[Pause]] and pick a [[Pause reason]]. Resume from [[Paused services]].",
         "Tap [[Complete service]], tick the declaration, [[Confirm]].",
         "Problem on a kart: [[Report a kart problem]]. An incident is information only; each finding becomes a repair.",
@@ -134,7 +134,8 @@ for name, (title, sub, steps, show_status, box) in CARDS.items():
         right.append(f'<div class="note"><strong>{html.escape(k)}</strong>{html.escape(v)}</div>')
     right.append(f'<div class="box"><strong>{html.escape(box[0])}</strong>{html.escape(box[1])}</div>')
     if show_status:
-        right.append('<div class="note"><strong>Help</strong>KART Comms support at the address ending in /comms. Give the kart number.</div>')
+        first = "Ask your hub lead first. " if name == "mechanic-card" else ""
+        right.append(f'<div class="note"><strong>Help</strong>{first}KART problems: message remote support in KART Comms (bookmark the KART address ending in /comms). Give the kart number. The FKL Support button gives automatic answers only.</div>')
     items = "\n".join(f"<li>{b(s)}</li>" for s in steps)
     doc = f"""<!doctype html>
 <html lang="en">

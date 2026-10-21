@@ -7,7 +7,7 @@ url: /workshop
 state: "Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)"
 :::
 
-A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation. This is the only normal way to take a kart out of use.
+A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation (KART does not offer it when karts are handed out for an event). This is the only normal way to take a kart out of use.
 
 You need the **Reliability** permission to raise tickets. In this guide Casey Mechanic has it and Alex Mechanic does not.
 
@@ -58,7 +58,7 @@ captions:
       - [2, "text=Continue opens the reliability ticket form", "What happens next"]
     :::
 
-3. Tap **Continue**. The reliability ticket form opens with this kart.
+3. Tap **Continue**. The reliability ticket form opens with this kart. **Kart Number** shows the kart's number in its class, so Cadet 207 shows as **07**.
 
     :::shot mech-ticket-form
     caption: The reliability ticket form opened for Cadet 207
@@ -69,7 +69,7 @@ captions:
       - [1, "text=Kart Type *", "Already filled in"]
     :::
 
-4. Choose the **Effect of Issue**, for example **Cut out not restarted**.
+4. Choose the **Effect of Issue** (what the kart did), for example **Cut out not restarted**.
 
     :::shot mech-ticket-effect
     caption: Effect of Issue set to Cut out not restarted
@@ -162,7 +162,7 @@ captions:
 3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
     :::shot mech-ticket-closed
-    caption: Cadet 207 no longer Repair Required on the Readiness board
+    caption: "Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no longer red)"
     url: /workshop
     state: After the 207 ticket is resolved
     steps:

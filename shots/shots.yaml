@@ -2348,7 +2348,8 @@
   - n: 1
     target: text=#207
     note: Available again
-  caption: Cadet 207 no longer Repair Required on the Readiness board
+  caption: 'Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no
+    longer red)'
 - id: mech-repair-lanes
   kind: screenshot
   page: mechanic/repairs-and-parts.md

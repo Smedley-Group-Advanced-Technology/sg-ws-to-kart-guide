@@ -11,7 +11,7 @@ A kart needs a service after it has been used. KART needs to know which karts we
 ## How karts get marked used
 
 - **On the event day:** putting a race number on a chassis in Race to Chassis marks that chassis used. KART says **It stays Ready during the event and requires service after the event day.** See [Race to Chassis](race-to-chassis.md).
-- **By hand:** a hub manager or admin taps **Requires service** on the kart's tile on Overview. Mechanics do not see this button. Ask your hub manager if a kart was used outside an event, for example for testing.
+- **By hand:** a hub manager or admin taps the **Requires service** button on the kart's tile on Overview. Mechanics do not see this button. (Mechanics only see the red **Requires service** words on a tile, which show the kart's status. They are not a button.) Ask your hub manager if a kart was used outside an event, for example for testing.
 
 ## Mark a kart used by hand (hub managers)
 

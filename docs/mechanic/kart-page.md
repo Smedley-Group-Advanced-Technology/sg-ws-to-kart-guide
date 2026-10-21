@@ -23,7 +23,7 @@ Every kart has its own page. It shows the kart's status, what is open on it, and
 
     ![The Open kart dialog with 207 typed in Kart number](../assets/img/mechanic/mech-kart-number.png){ loading=lazy }
 
-3. Tap **Open**. The kart page opens.
+3. Tap **Open**. The kart page opens. **Unavailable** means KART does not offer the kart when karts are handed out for an event (allocation).
 
     ![The kart page of Cadet 207 with its badges and counts](../assets/img/mechanic/mech-kart-page.png){ loading=lazy }
 

@@ -4,12 +4,12 @@
 On your hub's switch-over day, your workshop stops recording in the Workshop App and starts recording everything in KART. This page explains what happens, what you need to do before and on the day, and what comes later.
 
 !!! warning "Watch out"
-    **No hub has switched yet.** Dates are proposed and still waiting for approval. **Your hub lead confirms the date and time at least 24 hours before.** Do not plan around a date until your hub lead has confirmed it.
+    **No hub that uses the Workshop App has switched yet.** Dates are proposed and still waiting for approval. **Your hub lead confirms the date and time at least 24 hours before.** Do not plan around a date until your hub lead has confirmed it.
 
 !!! info "What changed from the Workshop App"
     - After the switch time, the Workshop App is for looking things up only. Everything new goes into KART.
     - There is no going back: once your hub works in KART, nothing is copied back to the Workshop App.
-    - Some hubs already run their workshop in KART. Past records from other hubs (old services, repairs, incidents and finished campaigns) have already been copied into KART as history.
+    - A few hubs never used the Workshop App and already run their workshop in KART. Past records from some hubs (old services, repairs, incidents and finished campaigns) have already been copied into KART as history. That changes nothing for your hub until its own switch-over.
 
 ## The plan at a glance
 
@@ -61,7 +61,7 @@ flowchart LR
     |---|---|
     | **Kart status** | Each kart takes its Workshop App status. Karts that are already Repair Required in KART stay that way until their KART ticket or repair is closed, whatever the Workshop App says. Changes someone made in KART after the kart's last Workshop App change are kept. |
     | **Open services** | Moved with **0 active time**: their timer starts from zero at the switch. Finish or cancel them in KART. |
-    | **Open repairs and incidents** | Moved as open repairs and incidents, in the Service Queue and on the ICU board. |
+    | **Open repairs and incidents** | Moved as open repairs and incidents, in the Service Queue and on the ICU board (the list of an event's open incidents, in **Event Operations**). |
     | **Open campaigns** | Continue in **Campaign work**. |
     | **Typed notes** | **Not copied.** Only system texts and short labels come across. Note anything important on paper before the switch. |
 
@@ -87,7 +87,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 
     ![KART open on the workshop tablet as the only app for recording](../assets/img/switch-over/so-day-2-freeze.png){ loading=lazy }
 
-3. Open KART > Workshop and check the fleet board against the karts in front of you. Report anything wrong through KART Comms support, with the kart number.
+3. Open KART > Workshop and check the fleet board against the karts in front of you. Report anything wrong through KART Comms support, with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
 
     ![The Readiness board to compare with the karts in the workshop](../assets/img/switch-over/so-day-3-board.png){ loading=lazy }
 
@@ -111,7 +111,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 
     ![Campaign work with open tasks](../assets/img/switch-over/so-day-8-campaign.png){ loading=lazy }
 
-9. New fault: log an incident (information) and, if the kart must not be used, raise a stopping reliability ticket.
+9. New fault on a kart: tap **Report a kart problem**. Choose **Incident** if the kart can still be used, or **Reliability** (a stopping ticket) if it must not be used.
 
     ![Report a kart problem with Incident and Reliability](../assets/img/switch-over/so-day-9-report.png){ loading=lazy }
 
@@ -131,7 +131,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 | Cannot sign in, no Workshop access, wrong hub | Your **hub lead**, who asks a KART admin to give the Workshop permission and hub access |
 | Fleet board or kart status looks wrong, a moved record is missing | **KART Comms support** (remote support). Include the kart number |
 | Part missing from the parts list, wrong part number, supplier | **FKL Central** (parts catalogue), through your hub lead |
-| Process questions, the SOP | Your **hub lead**, then the **KART product owner** |
+| Process questions, the SOP (your hub's written procedures) | Your **hub lead**, then the **KART product owner** (the person responsible for KART across the league; your hub lead passes it on) |
 | KART unavailable | Paper, then enter it in KART later. Never the Workshop App |
 
 ## Later: the Workshop App is retired

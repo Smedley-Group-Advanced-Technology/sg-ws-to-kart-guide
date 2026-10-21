@@ -16,7 +16,11 @@ Every finding, every damaged component and every stopping ticket becomes a **rep
 
 ## Find a repair
 
-1. Open the **Service Queue** and scroll to the exception lanes.
+1. Open the **Service Queue** and scroll to the exception lanes: the three lanes under the red **Exceptions** bar. Every open repair is here, whatever it came from, even though the bar talks about blocked services.
+
+    - **Requires reliability actions**: repairs you can do now (Ready to repair), including repairs from incidents.
+    - **Requires part**: repairs waiting for a part.
+    - **Requires Support**: repairs that need help from outside the workshop, such as a specialist or a decision. Ask your hub manager about these.
 
     :::shot mech-repair-lanes
     caption: The exception lanes Requires reliability actions, Requires part and Requires Support
@@ -39,7 +43,7 @@ Every finding, every damaged component and every stopping ticket becomes a **rep
       - [1, "text=Repair priority, top first. Work top to bottom.", "Start at the top"]
     :::
 
-3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by class and its number in the class: **Junior 7** is kart 307.
+3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by class and its number in the class: **Junior 7** is kart 307. Small tags say where the work happens (**In shop** or **Remote**) and **Files** opens photos.
 
     :::shot mech-repair-card
     caption: The repair card for Junior 307 showing Waiting on front bumper and On order
@@ -134,7 +138,7 @@ captions:
       - [1, "text=Remedy", "What kind of fix"]
     :::
 
-3. If the repair has parts, choose a **Remedy per part**: **Replaced** or **Used part installed** take stock; **Repaired** and **Inspected and reused** do not.
+3. If the repair has parts, **Remedy per part** is at the top of the dialog. Choose one answer per part: **Replaced** or **Used part installed** take the part from stock; **Repaired** and **Inspected and reused** do not.
 
     :::shot mech-remedy-parts
     caption: Remedy per part on the 307 repair with Replaced chosen for the front bumper
@@ -147,7 +151,7 @@ captions:
       - [2, "text=Replaced", "New part fitted: takes stock"]
     :::
 
-4. Type a short note in **What was done**.
+4. Type a short note in **Remedy notes (optional)**, for example what you tightened.
 
     :::shot mech-remedy-notes
     caption: What was done filled in
@@ -157,7 +161,7 @@ captions:
       - [1, "text=What was done", "A short note"]
     :::
 
-5. Add a photo under **Files** if it helps.
+5. If a photo helps, tap **Add files** under **Files**.
 
     :::shot mech-remedy-files
     caption: The Files field in the remedy dialog

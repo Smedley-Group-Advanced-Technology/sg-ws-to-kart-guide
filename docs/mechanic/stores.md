@@ -5,7 +5,7 @@
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Inventory** is now the **Parts** tab in **Stores**. **Consumables** is the second tab.
-    - The parts list comes from the FKL Central master catalogue. Every part has an FKL part number (for example FKL-900001).
+    - The parts list comes from the master catalogue kept by FKL Central (the league's central team). Every part has an FKL part number (for example FKL-900001). The note **Parts catalogue and BoM are managed in FKL Central** on the Stores page means the same: FKL Central keeps the parts list and the BoM (bill of materials: which parts make up each kart).
     - Every stock correction asks for a **Reason**.
 
 ## Find a part
@@ -14,7 +14,7 @@
 
     ![Stores with the Parts and Consumables tabs](../assets/img/mechanic/mech-stores-tab.png){ loading=lazy }
 
-2. Type a name, FKL number or MPN in **Search name, FKL number or MPN**, for example "brake pad".
+2. Type a name, FKL number or MPN (the manufacturer's own part number) in **Search name, FKL number or MPN**, for example "brake pad".
 
     ![Searching Stores for brake pad](../assets/img/mechanic/mech-stores-search.png){ loading=lazy }
 
@@ -22,7 +22,7 @@
 
     ![The kart class filter and Needs reordering only](../assets/img/mechanic/mech-stores-filter.png){ loading=lazy }
 
-4. Read the row: **Location**, **Stock**, **Reorder point** and **Target**.
+4. Read the row: **Location** (where it is kept), **Stock** (how many are on the shelf), **Reorder point** (when stock falls to this number, it is time to order) and **Target** (how many the hub wants to hold).
 
     ![A Stores row showing Location, Stock, Reorder point and Target](../assets/img/mechanic/mech-stores-row.png){ loading=lazy }
 
@@ -52,11 +52,11 @@
 
 ## Ask for a part to be ordered
 
-1. On the part's row, tap **Add to order list**, type the quantity and confirm. It goes on the Order List as **Submitted** for your hub manager to approve.
+1. On the part's row, under **Actions**, tap the box icon with a plus (**Add to order list**). Check the **Quantity** and tap **Add**. It goes on the Order List (the hub's list of parts to order) as **Submitted** for your hub manager to approve.
 
     ![Add to order list with a quantity for brake pads](../assets/img/mechanic/mech-stores-order.png){ loading=lazy }
 
-2. For a one-off need (for example a campaign), tap **One-time need** and give a **Reason**.
+2. For a one-off need (for example a campaign), tap the clipboard icon with a plus (**One-time need**) instead, and give a **Reason**.
 
     ![The One-time need dialog with Reason](../assets/img/mechanic/mech-stores-onetime.png){ loading=lazy }
 
@@ -64,4 +64,4 @@
     Until your hub's stock is moved from the Workshop App, the counts in Stores may be wrong. Check the shelf before ordering. Open orders from the Workshop App are re-entered in KART so they can be received there.
 
 !!! abstract "Coming soon"
-    The **Hub price** badge in Stores will be renamed **Hub description** when the supplier field change goes live.
+    A small change to how supplier details are shown: the **Hub price** label in Stores will be renamed **Hub description**. Nothing changes in how you work.

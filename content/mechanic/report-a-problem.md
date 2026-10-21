@@ -110,7 +110,7 @@ captions:
       - [1, "text=Impact location", "Where it was hit"]
     :::
 
-7. In the finding, choose the **Issue type** (for example **Loose**) and type the **Item / component** (for example "Bumper mount").
+7. Fill in the finding (**Finding 1**): its **Issue type**, for example **Loose**, and its **Item / component**, for example "Bumper mount".
 
     :::shot mech-report-finding
     caption: Finding 1 with Issue type Loose and Item / component Bumper mount
@@ -123,7 +123,7 @@ captions:
       - [2, "text=Item / component", "What part of the kart"]
     :::
 
-8. Answer **Is a replacement part required?** If yes, pick the part so it can be ordered.
+8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet.
 
     :::shot mech-report-part
     caption: Is a replacement part required? answered No
@@ -156,7 +156,7 @@ captions:
       - [2, "text=Report problem", "Save the report"]
     :::
 
-11. The kart now shows **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**.
+11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by class and its number in the class: **Bambino 6** is kart 106.
 
     :::shot mech-report-result
     caption: The new repair card for 106 in the Service Queue
@@ -173,11 +173,11 @@ captions:
     If the kart must not be used, the answer **Yes, it should not be used** is not enough. Raise a reliability ticket, or ask a colleague with the Reliability permission to do it. The finding has a link that opens the reliability ticket form in a new tab.
 
 !!! note "Remember"
-    **Without findings the incident stays open on the ICU board until it is inspected.** When you inspect it later, open the kart page and use **Log findings**. If nothing needs repairing, choose **Resolved: no fault found**.
+    **Without findings the incident stays open on the ICU board until it is inspected.** The ICU board is the list of an event's open incidents in priority order (in **Event Operations**, pick the event, then **ICU board**). It was **ICU Workflow** in the Workshop App. When you inspect it later, open the kart page and use **Log findings**. If nothing needs repairing, choose **Resolved: no fault found**.
 
 ## Report driver feedback and do the Power / Performance inspection
 
-1. Tap **Report a kart problem**, choose the kart (for example **302**) and choose **Driver feedback**.
+1. Open **Report a kart problem** for the kart, as in steps 1 and 2 above (for example kart **302**). Then choose **Driver feedback**.
 
     :::shot mech-feedback-type
     caption: Driver feedback chosen for Junior 302
@@ -208,7 +208,7 @@ captions:
       - [1, "text=Notes / details", "In the driver's words"]
     :::
 
-4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail.
+4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. The findings section below it is marked optional, but every failed check should get a finding.
 
     :::shot mech-feedback-inspection
     caption: The Power / Performance inspection checklist with Pass and Fail answers
@@ -241,4 +241,4 @@ captions:
     :::
 
 !!! tip "Tip"
-    If KART says **No Power / Performance inspection checklist is published. The report is saved without an inspection.**, tell your hub manager so FKL Central can publish it.
+    If KART says **No Power / Performance inspection checklist is published. The report is saved without an inspection.**, tell your hub manager so FKL Central (the league's central team) can publish it.

@@ -5,7 +5,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 !!! info "What changed from the Workshop App"
     - **Start Turn** is now **Start service**. The checklist is on the **Servicing** tab. (Some older notes call this screen "In Service"; on screen it says **Servicing**.)
-    - Each kart class (Bambino, Cadet, Junior) has its own checklist, set by FKL Central.
+    - Each kart class (Bambino, Cadet, Junior) has its own checklist, set by FKL Central (the league's central team that looks after checklists and the parts list).
     - You can only have **one** kart in service at a time. Starting another offers **Pause and switch**.
     - Karts that need a service show **Requires service** (the Workshop App said Turn Required).
 
@@ -64,7 +64,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
     ![The Components replaced section with its search box](../assets/img/mechanic/mech-svc-components.png){ loading=lazy }
 
-2. Type part of the name in **Search components…**, then tap **Select** on the part.
+2. Type part of the name in **Search components…**. Matching parts appear with a **Select** button. Tap **Select** on the part you fitted.
 
     ![Searching Components replaced for brake pads, with the Select button](../assets/img/mechanic/mech-svc-parts.png){ loading=lazy }
 
@@ -89,7 +89,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
     ![The Service and Inspection Declaration with the confirm tick box](../assets/img/mechanic/mech-svc-declaration.png){ loading=lazy }
 
-3. Tap **Confirm**. KART sets the kart **Ready**, or **Repair Needed (usable)** or **Repair Required** if repairs or a stopping ticket are still open.
+3. Tap **Confirm**. KART sets the kart **Ready**, or **Repair Needed (usable)** if a repair is still open.
 
     ![Kart 203 back as Ready on the Overview board](../assets/img/mechanic/mech-svc-done.png){ loading=lazy }
 
@@ -98,7 +98,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
     - **checks still unchecked**: answer every required check.
     - **blocked checks must be resolved first**: fix the blocked check or turn it into a repair.
-    - **outstanding tickets must be resolved first**: a reliability ticket on this kart is still open.
+    - **outstanding tickets must be resolved first**: a reliability ticket on this kart is still open (any ticket, even a Performance one). Do the repair first. Then someone with the Reliability permission sets the ticket to **Resolved**. See [Reliability tickets](reliability-ticket.md).
     - **outstanding campaign tasks must be completed first**: finish the campaign task, see [Campaign work](campaign-work.md).
 
 !!! tip "Tip"
@@ -106,7 +106,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 ## Already have a kart in service?
 
-1. If you start another kart (tap it, then **Start service**) while one is running, KART says **You already have a kart in service**.
+1. If you tap **Start service** on another kart while one is running, KART says **You already have a kart in service**.
 
     ![The You already have a kart in service dialog with Pause and switch](../assets/img/mechanic/mech-svc-switch.png){ loading=lazy }
 

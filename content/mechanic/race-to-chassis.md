@@ -7,12 +7,12 @@ url: /r2c
 state: "Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session 1; Cadet 207 and Junior 307 Repair Required"
 :::
 
-Race to Chassis (R2C) links each race number to the chassis (kart) it drives in each session. On the event day it also marks karts used, so they need a service after the event. You can drag numbers onto chassis (tablet and laptop) or use the tap grid (phone).
+Race to Chassis (R2C) links each race number (the driver's number for the day) to the chassis (kart) it drives in each session (each time out on track). On the event day it also marks karts used, so they need a service after the event. You can drag numbers onto chassis (tablet and laptop) or use the tap grid (phone).
 
 !!! info "What changed from the Workshop App"
     - **On Event > Race to Chassis** is now in **Event Operations**: pick the event, then **Race to Chassis**.
     - New since 19 October: **drag and drop**. Drag a race number onto a chassis. On phones the tap grid stays the default. Each device remembers the view you last chose.
-    - Everything the tap grid did still happens on each drop: reasons, track use overrides, marking karts used with **Undo**, and the reassignment log.
+    - Everything the tap grid did still happens on each drop: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
 
 ## Open Race to Chassis
 
@@ -27,7 +27,7 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
       - [1, "text=Event Operations", "Events and drivers"]
     :::
 
-2. Tap today's event, **Demo Practice Day**.
+2. Under **Existing Events**, tap today's event, **Demo Practice Day**. (Do not use **Upload Driver File** at the top: that creates a new event.)
 
     :::shot mech-r2c-pick-event
     caption: Demo Practice Day in the Event Operations list
@@ -69,9 +69,9 @@ captions:
   - "Drag the number back to take it off."
 :::
 
-1. Tap the kart class at the top, for example **Junior**. The chassis show each kart's number in its class, so Junior 301 is chassis **01**.
+The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. The chassis border colour shows **Available** (green), **Unpreferred** (yellow), **Unavailable** (red) or **Not in fleet** (grey).
 
-2. Find the race number in the **Race Number** list.
+1. At the top, tap the kart class, for example **Junior**. Check the right session is selected. The **Race Number** list on the right holds the numbers to place.
 
     :::shot mech-r2c-dd-view
     caption: The drag and drop view with Chassis Number and Race Number columns
@@ -83,7 +83,7 @@ captions:
       - [3, "text=Chassis Number", "Karts of this hub"]
     :::
 
-3. Drag the number onto the chassis, for example race number **5** onto chassis **01** (Junior 301).
+2. Drag the number onto the chassis, for example race number **5** onto chassis **01** (Junior 301).
 
     :::gif mech-r2c-drag-gif
     caption: Dragging race number 5 onto chassis 01, Junior 301
@@ -91,7 +91,7 @@ captions:
       - Drag race number 5 onto chassis 01 slowly
     :::
 
-4. KART says **Chassis 01 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
+3. KART says **Chassis 01 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
 
     :::shot mech-r2c-marked
     caption: Chassis 01 marked used message with Undo
@@ -102,7 +102,7 @@ captions:
       - [2, "text=Undo", "Only for a mistake"]
     :::
 
-5. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
+4. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
 
     :::shot mech-r2c-takeoff
     caption: Take off chassis for a chassis with a race number
@@ -208,7 +208,7 @@ captions:
       - [1, "text=Logged. Why did the race number change chassis?", "Pick a reason"]
     :::
 
-2. Choose a reason in **Select a reason** and tap **Save reason**. The reason is optional: **Skip** closes the question and the move is still logged. The clock button next to **Clear Session** counts the moves. On a wide screen it says **Reassignments**.
+2. Choose a reason in **Select a reason**, then tap **Save reason**. The reason is optional: **Skip** closes the question and the move is still logged. The clock button next to **Clear Session** counts the moves. On a wide screen it says **Reassignments**.
 
     :::shot mech-r2c-reassign-save
     caption: A reason chosen and the count of moves on the clock button

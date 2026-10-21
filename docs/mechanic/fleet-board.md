@@ -23,7 +23,7 @@
 
     ![Next Event, Work targets, Event readiness and Campaigns cards](../assets/img/mechanic/mech-board-cards.png){ loading=lazy }
 
-3. Check **Event readiness**. It shows how many event-usable karts each class still needs for **Demo Regional Race**.
+3. Check **Event readiness**. It shows how many event-usable karts (Ready or Repair Needed (usable), and available) each class still needs for **Demo Regional Race**. This is a planning event: an event your hub prepares karts for, with readiness targets.
 
     ![Event readiness for Demo Regional Race with Remaining counts per class](../assets/img/mechanic/mech-board-readiness.png){ loading=lazy }
 
@@ -31,7 +31,7 @@
 
     ![The Fleet Status card with counts per problem type](../assets/img/mechanic/mech-board-fleet-status.png){ loading=lazy }
 
-5. Scroll to the **Readiness board**. Tap **Reload board** if a colleague has just changed something.
+5. Scroll to the **Readiness board**. If a colleague has just changed something, tap the round arrows icon at its top right (**Reload board**).
 
     ![The Readiness board with the Reload board button](../assets/img/mechanic/mech-board-reload.png){ loading=lazy }
 
@@ -48,7 +48,10 @@
     ![Junior Karts tiles with Campaign tags and Missing Components on 308](../assets/img/mechanic/mech-board-tiles.png){ loading=lazy }
 
 !!! note "Remember"
-    Tile colours: red background means not available, green means preferred, yellow means available. With only the Workshop permission the **Available** and **Preferred** ticks are greyed out. Colleagues with **Reliability** can change them.
+    Tile colours show availability, not the status: red background means not available, green means preferred, yellow means available. A kart that is in service or paused is not available, so its tile is red. **View log book** on a tile opens the kart's record of past work. With only the Workshop permission the **Available** and **Preferred** ticks are greyed out. Colleagues with **Reliability** can change them.
 
 !!! tip "Tip"
-    Start every shift on Overview. Compare the board with the karts in front of you. If something does not match, report it in KART Comms with the kart number.
+    Start every shift on Overview. Compare the board with the karts in front of you. If something does not match, report it in KART Comms support with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
+
+!!! note "Remember"
+    The **Work targets** card may show **Turns** with a count, such as 0 / 5 completed. "Turns" there means services: it is your target number of services.

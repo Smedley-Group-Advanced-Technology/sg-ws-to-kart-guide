@@ -9,7 +9,7 @@ url: /auth
 This page shows how to sign in to KART, set your own password the first time, wait for approval, join a hub with a link and ask for access to another hub.
 
 !!! info "What changed from the Workshop App"
-    - You sign in to **KART** with your KART account, not your Workshop App account. Your hub lead makes sure you have one before your hub's switch-over day.
+    - You sign in to **KART** with your KART account, not your Workshop App account. Your hub lead (the person who runs your hub) makes sure you have one before your hub's switch-over day.
     - The Workshop App had roles such as mechanic or purchaser. KART uses **permissions** instead. A mechanic needs the **Workshop** permission and access to the hub. See [Users and permissions](../fkl-central/users.md).
     - In KART you can belong to more than one hub. You pick the hub each time on the hub selection screen.
 
@@ -80,7 +80,7 @@ captions:
       - [2, "text=Select your Hub", "Pick your hub next"]
     :::
 
-5. On a phone it looks the same, just narrower.
+5. Using a phone? The sign-in card is the same, just narrower. Follow the same steps.
 
     :::shot start-signin-phone
     caption: The KART sign-in card on a phone
@@ -279,7 +279,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
 
 ## Ask for access to another hub
 
-1. On **Select your Hub**, open the hub list. Hubs you cannot use yet are greyed out with a lock and **Request Access**.
+1. On **Select your Hub**, tap the hub you need in the hub list. Hubs you cannot use yet are greyed out with a lock and **Request Access**, but you can still choose them.
 
     :::shot start-locked-hub
     caption: Demo Hub North greyed out with a lock and Request Access
@@ -291,7 +291,7 @@ Your hub manager can send you a join link. It takes you straight to your hub, an
       - [2, "text=Request Access", "Ask for access"]
     :::
 
-2. Choose that hub, then tap one of its cards, for example **Technical**. KART shows **Hub Access Required**.
+2. With that hub chosen, tap one of its cards, for example **Technical**. KART shows **Hub Access Required**.
 
     :::shot start-request-access-dialog
     caption: The Hub Access Required dialog

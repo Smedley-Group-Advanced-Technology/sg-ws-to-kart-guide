@@ -16,12 +16,12 @@ Find what you see in the left column. Each row says why it happens and what to d
 | Cannot start services at all | Your account has no **Workshop** permission | Ask your hub lead |
 | **Complete service** greyed out: **checks still unchecked** | Required checks are not answered | Answer every required check |
 | **Complete service** greyed out: **blocked checks must be resolved first** | A check is set to Blocked | Fix it and set it to Good, or report a problem so it becomes a repair |
-| **Complete service** greyed out: **outstanding tickets must be resolved first** | A reliability ticket on the kart is still open | Finish the repair; someone with Reliability resolves the ticket |
+| **Complete service** greyed out: **outstanding tickets must be resolved first** | A reliability ticket on the kart is still open (any ticket, even a Performance one) | Finish the repair; someone with Reliability resolves the ticket |
 | **Complete service** greyed out: **outstanding campaign tasks must be completed first** | An integrated campaign task is open on this kart | Finish it in **Campaign work** |
 | Kart shows **Repair Required** but was fixed | The stopping ticket is still open, or its repair is not completed | Complete the repair with **Log remedy / complete repair**, then resolve the ticket. See [Reliability tickets](mechanic/reliability-ticket.md) |
 | Kart logged with an incident is still available | Incidents never stop a kart | Raise a stopping reliability ticket if it must not be used |
 | Race to Chassis shows **Past Event - Editing Restricted** | The event is not today; only administrators can change other days | Nothing to do, or ask an admin |
-| **Chassis 207 is not available** in Race to Chassis | The kart is Repair Required or not available | Use another chassis. Only with your hub manager's OK: reason and **Assign anyway** |
+| **Chassis 07 is not available** in Race to Chassis (07 is the kart's number in its class, so Cadet 207 or Junior 307) | The kart is Repair Required or not available | Use another chassis. Only with your hub manager's OK: reason and **Assign anyway** |
 | A part is not in Stores | Hidden at your hub, or not in the catalogue | Ask your hub manager to show it or use **Request a part** |
 | **Parts needed** lists parts that are on the shelf | Before the stock move, KART counts can be lower than the shelf | Check the shelf before ordering. Record every part used in KART |
 | **Mark ordered** is not offered | The line is not **Approved** yet | Approve it first (hub manager or admin) |
@@ -35,7 +35,7 @@ Find what you see in the left column. Each row says why it happens and what to d
 
 ## Still stuck?
 
-1. Open KART Comms and send a message to remote support with the kart number and what you see.
+1. Open KART Comms (KART's messenger, see [Getting help](start/finding-your-way.md#getting-help)) and send a message to remote support with the kart number and what you see.
 
     ![A support message in KART Comms describing the problem](assets/img/general/gen-trouble-comms.png){ loading=lazy }
 

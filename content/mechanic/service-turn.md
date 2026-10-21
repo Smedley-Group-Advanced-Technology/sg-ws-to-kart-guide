@@ -11,7 +11,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 !!! info "What changed from the Workshop App"
     - **Start Turn** is now **Start service**. The checklist is on the **Servicing** tab. (Some older notes call this screen "In Service"; on screen it says **Servicing**.)
-    - Each kart class (Bambino, Cadet, Junior) has its own checklist, set by FKL Central.
+    - Each kart class (Bambino, Cadet, Junior) has its own checklist, set by FKL Central (the league's central team that looks after checklists and the parts list).
     - You can only have **one** kart in service at a time. Starting another offers **Pause and switch**.
     - Karts that need a service show **Requires service** (the Workshop App said Turn Required).
 
@@ -151,7 +151,7 @@ captions:
       - [1, "text=Components replaced", "Parts that fit this kart"]
     :::
 
-2. Type part of the name in **Search components…**, then tap **Select** on the part.
+2. Type part of the name in **Search components…**. Matching parts appear with a **Select** button. Tap **Select** on the part you fitted.
 
     :::shot mech-svc-parts
     caption: Searching Components replaced for brake pads, with the Select button
@@ -217,7 +217,7 @@ captions:
       - [2, "role=checkbox", "Tick to confirm"]
     :::
 
-3. Tap **Confirm**. KART sets the kart **Ready**, or **Repair Needed (usable)** or **Repair Required** if repairs or a stopping ticket are still open.
+3. Tap **Confirm**. KART sets the kart **Ready**, or **Repair Needed (usable)** if a repair is still open.
 
     :::shot mech-svc-done
     caption: Kart 203 back as Ready on the Overview board
@@ -235,7 +235,7 @@ captions:
 
     - **checks still unchecked**: answer every required check.
     - **blocked checks must be resolved first**: fix the blocked check or turn it into a repair.
-    - **outstanding tickets must be resolved first**: a reliability ticket on this kart is still open.
+    - **outstanding tickets must be resolved first**: a reliability ticket on this kart is still open (any ticket, even a Performance one). Do the repair first. Then someone with the Reliability permission sets the ticket to **Resolved**. See [Reliability tickets](reliability-ticket.md).
     - **outstanding campaign tasks must be completed first**: finish the campaign task, see [Campaign work](campaign-work.md).
 
 !!! tip "Tip"
@@ -243,7 +243,7 @@ captions:
 
 ## Already have a kart in service?
 
-1. If you start another kart (tap it, then **Start service**) while one is running, KART says **You already have a kart in service**.
+1. If you tap **Start service** on another kart while one is running, KART says **You already have a kart in service**.
 
     :::shot mech-svc-switch
     caption: The You already have a kart in service dialog with Pause and switch

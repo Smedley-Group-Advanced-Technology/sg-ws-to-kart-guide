@@ -18,7 +18,7 @@ KART uses three words for problems with a kart. Knowing the difference saves you
 
 ## Stopping or not stopping
 
-- A **stopping** ticket makes the kart **Repair Required**. It is not offered for allocation until the ticket is resolved and its repair is completed. Cadet **207** is the example.
+- A **stopping** ticket makes the kart **Repair Required**. It is not offered for allocation (KART does not offer it when karts are handed out for an event) until the ticket is resolved and its repair is completed. Cadet **207** is the example.
 - A **non-stopping** problem leaves the kart available. An open repair without a stopping ticket shows as **Repair Needed (usable)**, like Bambino **106**.
 - A **Performance** ticket never stops the kart.
 
@@ -44,7 +44,7 @@ flowchart TD
 
 ## See the difference on screen
 
-1. Open **Overview** and look at Bambino **106**. It shows **Repair Needed (usable)**: the incident found a loose bumper mount, and the kart can still be used.
+1. Open **Overview** and look at the tile of Bambino **106**. **Available** is still ticked: the incident found a loose bumper mount, and the kart can still be used. On the Readiness board and on its kart page it counts as **Repair Needed (usable)**.
 
     ![Bambino 106 after an incident, still Available on its tile](../assets/img/start/start-problem-106.png){ loading=lazy }
 
@@ -52,12 +52,12 @@ flowchart TD
 
     ![Cadet 207 showing Repair Required and not available](../assets/img/start/start-problem-207.png){ loading=lazy }
 
-3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes.
+3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by class and its number in the class: **Junior 7** is kart 307, **Bambino 6** is kart 106.
 
     ![Repair cards for 106, 207 and 307 in the Service Queue exception lanes](../assets/img/start/start-problem-queue.png){ loading=lazy }
 
 !!! note "Remember"
-    Root cause (why it failed) stays on the reliability ticket. The remedy (what you did) goes on the repair. Engineering closes the ticket.
+    Root cause (why it failed) stays on the reliability ticket. The remedy (what you did) goes on the repair. When the fault is fixed, someone with the Reliability permission sets the ticket to **Resolved**. See [Reliability tickets](../mechanic/reliability-ticket.md).
 
 ## Where next
 

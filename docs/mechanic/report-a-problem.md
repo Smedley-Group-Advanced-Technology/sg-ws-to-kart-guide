@@ -49,11 +49,11 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Impact location Front selected](../assets/img/mechanic/mech-report-impact.png){ loading=lazy }
 
-7. In the finding, choose the **Issue type** (for example **Loose**) and type the **Item / component** (for example "Bumper mount").
+7. Fill in the finding (**Finding 1**): its **Issue type**, for example **Loose**, and its **Item / component**, for example "Bumper mount".
 
     ![Finding 1 with Issue type Loose and Item / component Bumper mount](../assets/img/mechanic/mech-report-finding.png){ loading=lazy }
 
-8. Answer **Is a replacement part required?** If yes, pick the part so it can be ordered.
+8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet.
 
     ![Is a replacement part required? answered No](../assets/img/mechanic/mech-report-part.png){ loading=lazy }
 
@@ -65,7 +65,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Add finding and Report problem buttons at the bottom of the dialog](../assets/img/mechanic/mech-report-submit.png){ loading=lazy }
 
-11. The kart now shows **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**.
+11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by class and its number in the class: **Bambino 6** is kart 106.
 
     ![The new repair card for 106 in the Service Queue](../assets/img/mechanic/mech-report-result.png){ loading=lazy }
 
@@ -73,11 +73,11 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
     If the kart must not be used, the answer **Yes, it should not be used** is not enough. Raise a reliability ticket, or ask a colleague with the Reliability permission to do it. The finding has a link that opens the reliability ticket form in a new tab.
 
 !!! note "Remember"
-    **Without findings the incident stays open on the ICU board until it is inspected.** When you inspect it later, open the kart page and use **Log findings**. If nothing needs repairing, choose **Resolved: no fault found**.
+    **Without findings the incident stays open on the ICU board until it is inspected.** The ICU board is the list of an event's open incidents in priority order (in **Event Operations**, pick the event, then **ICU board**). It was **ICU Workflow** in the Workshop App. When you inspect it later, open the kart page and use **Log findings**. If nothing needs repairing, choose **Resolved: no fault found**.
 
 ## Report driver feedback and do the Power / Performance inspection
 
-1. Tap **Report a kart problem**, choose the kart (for example **302**) and choose **Driver feedback**.
+1. Open **Report a kart problem** for the kart, as in steps 1 and 2 above (for example kart **302**). Then choose **Driver feedback**.
 
     ![Driver feedback chosen for Junior 302](../assets/img/mechanic/mech-feedback-type.png){ loading=lazy }
 
@@ -89,7 +89,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Notes / details filled in with what the driver said](../assets/img/mechanic/mech-feedback-describe.png){ loading=lazy }
 
-4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail.
+4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. The findings section below it is marked optional, but every failed check should get a finding.
 
     ![The Power / Performance inspection checklist with Pass and Fail answers](../assets/img/mechanic/mech-feedback-inspection.png){ loading=lazy }
 
@@ -102,4 +102,4 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
     ![Report problem at the bottom of the driver feedback report](../assets/img/mechanic/mech-feedback-submit.png){ loading=lazy }
 
 !!! tip "Tip"
-    If KART says **No Power / Performance inspection checklist is published. The report is saved without an inspection.**, tell your hub manager so FKL Central can publish it.
+    If KART says **No Power / Performance inspection checklist is published. The report is saved without an inspection.**, tell your hub manager so FKL Central (the league's central team) can publish it.

@@ -46,7 +46,13 @@ KART has no side menu. You move around with the hub selection cards, the **Back*
 
 ## The header buttons
 
-1. Look at the buttons at the top right of most pages.
+1. Look at the buttons at the top right of most pages:
+
+    - The two clocks show your hub's local time and UTC (world time).
+    - **SOP Viewer** opens your hub's SOPs (standard operating procedures: the written way your hub does each job).
+    - **FKL Support** opens automatic help answers. It is not a person. For a person, see [Getting help](#getting-help).
+    - The bell shows your notifications. The flag changes the language. The sun switches between light and dark screens.
+    - The arrow at the far right signs you out.
 
     ![Header buttons SOP Viewer, FKL Support, notifications, language, theme and sign out](../assets/img/start/start-header.png){ loading=lazy }
 
@@ -56,7 +62,7 @@ KART has no side menu. You move around with the hub selection cards, the **Back*
 
 ## Back buttons
 
-1. Most pages have a **Back** button at the top left. Tap it to go back one step.
+1. Most pages have a back arrow at the top left. Tap it to go back one step. It often names the page it goes back to, for example **Back**, **Workshop** or **Back to Hub Selection**.
 
     ![The Back button at the top left of the Workshop page](../assets/img/start/start-back.png){ loading=lazy }
 
@@ -86,4 +92,13 @@ KART can be added to the home screen of a tablet or phone. The icon is called **
     ![The browser menu with Add to Home Screen](../assets/img/start/start-a2hs-menu.png){ loading=lazy }
 
 !!! warning "Watch out"
-    The home-screen icon opens KART on **FKL Support** (the help chat) if you have it, otherwise on **Select your Hub**. A browser bookmark of the hub selection page is often quicker for workshop work.
+    The home-screen icon opens KART on **FKL Support** (the automatic help chat) if you have it, otherwise on **Select your Hub**. A browser bookmark of the hub selection page is often quicker for workshop work.
+
+## Getting help
+
+- **Ask your hub lead first.** The hub lead is the person who runs your hub. In KART they usually have the Hub Manager permission. They help with accounts, access and how your hub works.
+- **KART problems** (a wrong status, a missing record, an error): message remote support in **KART Comms**, KART's messenger. It has no button in KART. Ask your hub lead to save it as a bookmark on the workshop tablet. See [KART Comms](../remote-support/comms.md).
+- **FKL Support** (blue button at the top, round button at the bottom right) gives automatic answers to questions about KART. It is not a person.
+
+!!! note "Remember"
+    Always give the kart number when you ask about a kart.

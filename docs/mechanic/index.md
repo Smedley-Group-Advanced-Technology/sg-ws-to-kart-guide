@@ -3,10 +3,13 @@
 
 This section is for mechanics. Work through the pages in this order the first time. After that, use them as a reference.
 
+!!! abstract "Coming with your hub's switch-over"
+    Every screen on these pages already works in KART today. Your hub starts using them for workshop work on its switch-over day. Until then, keep recording in the Workshop App the way your hub lead tells you, and use these pages to practise. See [Switch-over day](../switch-over/index.md).
+
 !!! info "What changed from the Workshop App"
     - You need a KART account with the **Workshop** permission and access to your hub. Check this with your hub lead **before** your hub's switch-over day.
     - The Workshop App's **Readiness**, **Repair Workflow**, **Campaign Work** and **Weekly Work Schedule** are now the Workshop tabs **Overview**, **Service Queue**, **Campaign work** and **Schedule**.
-    - "Turn Required" is now **Requires service**.
+    - "Turn Required" is now **Requires service**. It means the same: the kart has been used and needs a service.
 
 ![The Workshop Overview as a mechanic sees it, without the Workshop Manager tab](../assets/img/mechanic/mech-path-overview.png){ loading=lazy }
 
@@ -32,3 +35,9 @@ This section is for mechanics. Work through the pages in this order the first ti
 
 !!! note "Remember"
     What you can do depends on your permissions. With only **Workshop** you cannot raise reliability tickets or tick **Available** and **Preferred**. A colleague with the **Reliability** permission, such as Casey Mechanic in this guide, can.
+
+## Who to ask
+
+- **Your hub lead** (the person who runs your hub) for accounts, access and how your hub works.
+- **KART Comms support** (remote support) for KART problems. Give the kart number. See [Getting help](../start/finding-your-way.md#getting-help).
+- Words you do not know are in the [Glossary](../glossary.md).

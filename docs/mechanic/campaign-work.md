@@ -6,7 +6,7 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Campaign Work** task view is now the **Campaign work** tab.
     - Your own tasks come first under **Assigned to me**.
-    - Karts with open tasks of an **integrated** campaign show a yellow **Campaign** tag and the status **Campaign Required**. The kart stays usable.
+    - Karts with open tasks of an **integrated** campaign (a campaign added to the service checklist) show a **Campaign** tag on their tile and count under **Campaign Required** on the board. The kart stays usable.
     - Parts you fit on a task are taken from your hub's stock.
 
 ## Watch it first
@@ -22,7 +22,7 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 
     ![The Campaign work tab with Assigned to me and All open karts](../assets/img/mechanic/mech-camp-tab.png){ loading=lazy }
 
-2. Find the kart under **Assigned to me**, for example **301**, and open its task.
+2. Find the kart under **Assigned to me**, for example **Junior 301**, and tap **Open** on its row.
 
     ![Junior 301, 302 and 305 under Assigned to me for Junior caliper seal upgrade](../assets/img/mechanic/mech-camp-pick.png){ loading=lazy }
 
@@ -30,11 +30,11 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 
     ![The campaign task page for 301 with Start work](../assets/img/mechanic/mech-camp-start.png){ loading=lazy }
 
-4. If the campaign asks for a reading, tap **Record measurement** and type it.
+4. If the campaign asks for a reading, type it in the measurement box, then tap **Record measurement**.
 
     ![Record measurement on a campaign task](../assets/img/mechanic/mech-camp-measure.png){ loading=lazy }
 
-5. Under **Parts fitted**, tap **Fit** for each campaign part, check the **Quantity** and tap **Confirm**. KART takes it from the hub's stock. Tap **Fit another part** if you used something else.
+5. Under **Parts fitted**, tap **Fit** next to each campaign part you fitted. KART asks for the **Quantity**: check it and tap **Confirm**. KART takes the part from the hub's stock. Used something extra? Tap **Fit another part**.
 
     ![Parts fitted with the caliper seal kit and the Fit button](../assets/img/mechanic/mech-camp-fit.png){ loading=lazy }
 
@@ -49,12 +49,12 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 
 ## When you cannot finish a task
 
-1. Tap **Unable to complete** on the task and give the reason, for example a part that does not fit. Your hub manager decides what happens next.
+1. Tap **Unable to complete...** on the task. A **Reason (required)** box opens: type why, for example a part that does not fit, and tap **Confirm**. Your hub manager decides what happens next.
 
     ![Unable to complete with a reason on a campaign task](../assets/img/mechanic/mech-camp-unable.png){ loading=lazy }
 
 !!! note "Remember"
-    Tasks only move while the campaign is **Active**. In an **integrated** campaign the task is also part of the service: **Complete service** waits until the campaign task is done. If a reading is out of tolerance, the kart may need recalibration before you can complete.
+    Tasks only move while the campaign is **Active**. In an **integrated** campaign the task is also part of the service: **Complete service** waits until the campaign task is done. If a reading is outside the allowed range, the kart may need adjusting and measuring again before you can complete.
 
 !!! tip "Tip"
     A kart that was already serviced and only has campaign work left shows **Complete campaign work** on Servicing.

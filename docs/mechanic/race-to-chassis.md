@@ -88,9 +88,9 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 
     ![The Chassis reassignment question asking why the race number changed chassis](../assets/img/mechanic/mech-r2c-reassign.png){ loading=lazy }
 
-2. Choose a reason in **Select a reason** and tap **Save reason**. The move appears under **Reassignments**.
+2. Choose a reason in **Select a reason** and tap **Save reason**. The reason is optional: **Skip** closes the question and the move is still logged. The clock button next to **Clear Session** counts the moves. On a wide screen it says **Reassignments**.
 
-    ![A reason chosen and the Reassignments count](../assets/img/mechanic/mech-r2c-reassign-save.png){ loading=lazy }
+    ![A reason chosen and the count of moves on the clock button](../assets/img/mechanic/mech-r2c-reassign-save.png){ loading=lazy }
 
 ## Past events are read-only
 

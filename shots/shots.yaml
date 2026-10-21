@@ -2388,7 +2388,7 @@
   - n: 2
     target: text=Reassignments
     note: All moves today
-  caption: A reason chosen and the Reassignments count
+  caption: A reason chosen and the count of moves on the clock button
 - id: mech-r2c-past
   kind: screenshot
   page: mechanic/race-to-chassis.md

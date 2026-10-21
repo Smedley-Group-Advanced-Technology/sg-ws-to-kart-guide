@@ -208,10 +208,10 @@ captions:
       - [1, "text=Logged. Why did the race number change chassis?", "Pick a reason"]
     :::
 
-2. Choose a reason in **Select a reason** and tap **Save reason**. The move appears under **Reassignments**.
+2. Choose a reason in **Select a reason** and tap **Save reason**. The reason is optional: **Skip** closes the question and the move is still logged. The clock button next to **Clear Session** counts the moves. On a wide screen it says **Reassignments**.
 
     :::shot mech-r2c-reassign-save
-    caption: A reason chosen and the Reassignments count
+    caption: A reason chosen and the count of moves on the clock button
     steps:
       - Choose a reason and tap Save reason
     callouts:

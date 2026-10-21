@@ -16,11 +16,14 @@ export default {
     await q.wait(800);
     await q.shot('mech-r2c-takeoff', { scroll: false, at: { 1: q.page.getByText('Take off chassis').first() } });
     await q.page.keyboard.press('Escape');
-    await q.tap(slot(q, 1)).catch(() => {});
-    await q.wait(500);
+    await q.wait(400);
+    // a fresh grid for the reassignment (the take off menu leaves chassis 01 selected)
+    await openR2C(q);
+    await q.tap(q.page.locator('[data-testid="r2c-class-Cadet"]'));
+    await q.settle(800);
     try {
       await q.drag(race(q, 2), slot(q, 3));
-      await q.page.getByText('Logged. Why did the race number change chassis?').first().waitFor({ timeout: 30000 });
+      await q.page.getByRole('dialog').getByText('Chassis reassignment', { exact: true }).waitFor({ timeout: 30000 });
       await q.wait(600);
       await q.shot('mech-r2c-reassign', { scroll: false });
       const dlg = q.dialog;

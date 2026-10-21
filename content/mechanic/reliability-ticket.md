@@ -159,7 +159,10 @@ captions:
       - [1, "text=Resolved", "The fault is fixed"]
     :::
 
-3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
+3. Tap **Update** at the top of the ticket. When the ticket is resolved, the kart leaves Repair Required. If it has no other stopping ticket, it shows as available again.
+
+    !!! warning "Watch out"
+        If **System at fault** is **Battery**, pick the battery before you tap **Update**. If no battery is picked, the ticket is not saved and KART shows "Missing fields". Check that the kart really changed on the board.
 
     :::shot mech-ticket-closed
     caption: Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag

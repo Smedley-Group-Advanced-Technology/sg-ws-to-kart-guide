@@ -23,7 +23,7 @@ New people get into your hub in one of two ways: they sign up with your join lin
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-approve-clip.jpg" width="1440">
 <source src="../assets/video/hm-approve-clip.mp4" type="video/mp4"><source src="../assets/video/hm-approve-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-approve-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: approving Jamie Newstarter's join request (about 40 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: approving Jamie Newstarter's join request (about 15 seconds, with captions)</figcaption></figure>
 
 ![Steps 1 to 3 on one screen: Jamie Newstarter's Sign-up row via join link, Workshop ticked and the Approve button](../assets/img/hub-manager/hm-appr-row.png){ loading=lazy }
 

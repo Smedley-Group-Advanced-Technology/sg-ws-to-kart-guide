@@ -38,7 +38,7 @@ flowchart LR
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-orders-clip.jpg" width="1440">
 <source src="../assets/video/hm-orders-clip.mp4" type="video/mp4"><source src="../assets/video/hm-orders-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-orders-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: approving rear tyres in the approval queue and marking sprockets ordered (about 60 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: approving rear tyres in the approval queue and marking sprockets ordered (about 35 seconds, with captions)</figcaption></figure>
 
 ## Submit a draft
 
@@ -84,7 +84,7 @@ flowchart LR
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-goodsin-clip.jpg" width="1440">
 <source src="../assets/video/hm-goodsin-clip.mp4" type="video/mp4"><source src="../assets/video/hm-goodsin-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-goodsin-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: receiving the front bumpers for Junior 307 with Goods In on the Order List (about 55 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: receiving the front bumpers for Junior 307 with Goods In on the Order List (about 30 seconds, with captions)</figcaption></figure>
 
 ![Step 1: Goods In on the front bumpers line under Ordered](../assets/img/hub-manager/hm-gi-open.png){ loading=lazy }
 

@@ -13,7 +13,7 @@
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-fleet-board-clip.jpg" width="1180">
 <source src="../assets/video/mech-fleet-board-clip.mp4" type="video/mp4"><source src="../assets/video/mech-fleet-board-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-fleet-board-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: a tour of the Overview tab and the Readiness board (about 60 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: a tour of the Overview tab and the Readiness board (about 40 seconds, with captions)</figcaption></figure>
 
 1. Tap **Overview** in the tab strip.
 

@@ -39,7 +39,7 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-request-part-clip.jpg" width="1440">
 <source src="../assets/video/hm-request-part-clip.mp4" type="video/mp4"><source src="../assets/video/hm-request-part-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-request-part-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: requesting a part from FKL Central in the Hub catalogue (about 40 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: requesting a part from FKL Central in the Hub catalogue (about 45 seconds, with captions)</figcaption></figure>
 
 !!! note "Remember"
     The request shows as **Waiting for FKL Central** until it is reviewed. Then it says **Linked to an existing part**, **Added as a new part**, **Added as a hub-local part** or **Rejected** with the reason. Tap **Withdraw** if you no longer need it.

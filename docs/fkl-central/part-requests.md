@@ -12,7 +12,7 @@ When a hub needs a part that is not in the catalogue, the hub manager sends a re
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/fc-review-clip.jpg" width="1440">
 <source src="../assets/video/fc-review-clip.mp4" type="video/mp4"><source src="../assets/video/fc-review-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/fc-review-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: reviewing the Steering column bush request from Demo Hub (about 30 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: reviewing the Steering column bush request from Demo Hub (about 25 seconds, with captions)</figcaption></figure>
 
 ![Steps 1 and 2 on one screen: Part requests with Steering column bush waiting and Review](../assets/img/fkl-central/fc-req-list.png){ loading=lazy }
 

@@ -14,7 +14,7 @@ This page shows how to sign in to KART, set your own password the first time, wa
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/start-sign-in-clip.jpg" width="1180">
 <source src="../assets/video/start-sign-in-clip.mp4" type="video/mp4"><source src="../assets/video/start-sign-in-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/start-sign-in-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: signing in to KART and opening the Workshop for Demo Hub (about 40 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: signing in to KART and opening the Workshop for Demo Hub (about 35 seconds, with captions)</figcaption></figure>
 
 1. Open KART in your browser. Your hub lead gives you the address. Save it as a bookmark.
 

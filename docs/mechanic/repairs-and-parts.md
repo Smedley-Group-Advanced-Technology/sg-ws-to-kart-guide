@@ -27,7 +27,7 @@ Every finding, every damaged component and every stopping ticket becomes a **rep
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-repair-clip.jpg" width="1180">
 <source src="../assets/video/mech-repair-clip.mp4" type="video/mp4"><source src="../assets/video/mech-repair-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-repair-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: repairing Bambino 106, logging the remedy and recording the parts used (about 80 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: repairing Bambino 106, logging the remedy and recording the parts used (about 45 seconds, with captions)</figcaption></figure>
 
 1. On the card, tap **Open kart page**.
 

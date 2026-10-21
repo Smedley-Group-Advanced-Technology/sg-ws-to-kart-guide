@@ -27,7 +27,7 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-r2c-drag-clip.jpg" width="1180">
 <source src="../assets/video/mech-r2c-drag-clip.mp4" type="video/mp4"><source src="../assets/video/mech-r2c-drag-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-r2c-drag-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: putting race numbers on chassis with drag and drop (about 60 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: putting race numbers on chassis with drag and drop (about 70 seconds, with captions)</figcaption></figure>
 
 1. Tap the kart class at the top, for example **Junior**. The chassis show each kart's number in its class, so Junior 301 is chassis **01**.
 
@@ -55,7 +55,7 @@ Race to Chassis (R2C) links each race number to the chassis (kart) it drives in 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-r2c-tap-clip.jpg" width="390">
 <source src="../assets/video/mech-r2c-tap-clip.mp4" type="video/mp4"><source src="../assets/video/mech-r2c-tap-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-r2c-tap-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: putting a race number on a chassis with the tap grid on a phone (about 45 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: putting a race number on a chassis with the tap grid on a phone (about 25 seconds, with captions)</figcaption></figure>
 
 1. Tap the cell for the race number and session, for example race number **7** in the **Current session**.
 

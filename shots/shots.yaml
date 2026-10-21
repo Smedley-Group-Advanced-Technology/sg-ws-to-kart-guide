@@ -121,7 +121,7 @@
   - Tap Review.
   - Link a part, add a new one, keep it local or reject.
   - Save. The hub sees the result.
-  duration: 30
+  duration: 25
 - id: fc-req-list
   kind: screenshot
   page: fkl-central/part-requests.md
@@ -385,7 +385,7 @@
   - Tick Workshop for a new mechanic.
   - Tap Approve.
   - They can sign in now.
-  duration: 40
+  duration: 15
 - id: hm-appr-row
   kind: screenshot
   page: hub-manager/approvals.md
@@ -490,7 +490,7 @@
   - Pick all karts or only some.
   - Add the parts each kart needs.
   - Tap Create campaign.
-  duration: 75
+  duration: 80
 - id: hm-camp-list
   kind: screenshot
   page: hub-manager/campaigns.md
@@ -668,7 +668,7 @@
   - Tap Request a part.
   - Say what the part is and how many.
   - Send the request to FKL Central.
-  duration: 40
+  duration: 45
 - id: hm-cat-local
   kind: screenshot
   page: hub-manager/hub-catalogue.md
@@ -744,7 +744,7 @@
   - Tap Approve.
   - When you have placed the order, tap Mark ordered.
   - The line moves to Ordered.
-  duration: 60
+  duration: 35
 - id: hm-ord-list
   kind: screenshot
   page: hub-manager/orders.md
@@ -852,7 +852,7 @@
   - Type what arrived and what it cost.
   - Tap Receive stock.
   - The waiting repair is ready to do.
-  duration: 55
+  duration: 30
 - id: hm-gi-open
   kind: screenshot
   page: hub-manager/orders.md
@@ -1132,7 +1132,7 @@
   - Fit the campaign parts.
   - Tap Complete work.
   - The task is done.
-  duration: 65
+  duration: 30
 - id: mech-camp-tab
   kind: screenshot
   page: mechanic/campaign-work.md
@@ -1283,7 +1283,7 @@
   - The Readiness board counts every status.
   - Tap a number to list those karts.
   - Each kart tile shows its tags.
-  duration: 60
+  duration: 40
 - id: mech-board-open
   kind: screenshot
   page: mechanic/fleet-board.md
@@ -1468,7 +1468,7 @@
   - The top shows status and open work.
   - History shows everything done to the kart.
   - The QR code tab prints a label.
-  duration: 45
+  duration: 35
 - id: mech-kart-open
   kind: screenshot
   page: mechanic/kart-page.md
@@ -1648,7 +1648,7 @@
   - Undo puts the kart back as it was.
   - On the event day, Race to Chassis marks karts used for you.
   - They stay Ready today and need a service after the event.
-  duration: 50
+  duration: 45
 - id: mech-used-tile
   kind: screenshot
   page: mechanic/mark-used.md
@@ -1756,7 +1756,7 @@
   - Add a note for the next mechanic.
   - Your paused karts wait in the bar.
   - Tap a kart to carry on.
-  duration: 50
+  duration: 35
 - id: mech-pause-button
   kind: screenshot
   page: mechanic/pause-and-resume.md
@@ -1945,7 +1945,7 @@
   - KART marks the chassis used for today.
   - An unavailable chassis asks for a reason.
   - Drag the number back to take it off.
-  duration: 60
+  duration: 70
 - id: mech-r2c-dd-view
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2031,7 +2031,7 @@
   - Tap the race number cell.
   - Then tap the chassis it drives.
   - Switch views with the button at the bottom.
-  duration: 45
+  duration: 25
 - id: mech-r2c-tap-cell
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2186,7 +2186,7 @@
   - 'Pick the effect: cut out, not restarted.'
   - Leave the status Ongoing and submit.
   - The kart is now Repair Required.
-  duration: 75
+  duration: 40
 - id: mech-ticket-open
   kind: screenshot
   page: mechanic/reliability-ticket.md
@@ -2431,7 +2431,7 @@
   - Choose the remedy and say what you did.
   - Record every part you used.
   - Confirm. The repair is closed.
-  duration: 80
+  duration: 45
 - id: mech-repair-kartpage
   kind: screenshot
   page: mechanic/repairs-and-parts.md
@@ -3600,7 +3600,7 @@
   - Find the hub and today's event.
   - Choose who covers it.
   - Saved. Comms now shows them on cover.
-  duration: 30
+  duration: 15
 - id: rs-cover-button
   kind: screenshot
   page: remote-support/cover.md
@@ -4035,7 +4035,7 @@
   - KART opens on Select your Hub.
   - Choose your hub.
   - Tap Workshop. It opens in a new tab.
-  duration: 40
+  duration: 35
 - id: start-signin-page
   kind: screenshot
   page: start/sign-in-and-access.md

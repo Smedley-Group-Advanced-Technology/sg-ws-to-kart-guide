@@ -14,7 +14,7 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-campaign-clip.jpg" width="1180">
 <source src="../assets/video/mech-campaign-clip.mp4" type="video/mp4"><source src="../assets/video/mech-campaign-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-campaign-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: doing the Junior caliper seal upgrade on Junior 301 (about 65 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: doing the Junior caliper seal upgrade on Junior 301 (about 30 seconds, with captions)</figcaption></figure>
 
 ## Do a campaign task
 

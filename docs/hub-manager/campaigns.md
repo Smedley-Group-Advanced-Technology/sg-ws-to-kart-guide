@@ -13,7 +13,7 @@ A fleet campaign is one job done on many karts: a part upgrade, a software updat
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/hm-campaign-clip.jpg" width="1440">
 <source src="../assets/video/hm-campaign-clip.mp4" type="video/mp4"><source src="../assets/video/hm-campaign-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/hm-campaign-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: creating an integrated campaign for Juniors and adding karts (about 75 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: creating an integrated campaign for Juniors and adding karts (about 80 seconds, with captions)</figcaption></figure>
 
 ![Step 1: Fleet campaigns with the New campaign button](../assets/img/hub-manager/hm-camp-list.png){ loading=lazy }
 

@@ -13,7 +13,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-pause-clip.jpg" width="1180">
 <source src="../assets/video/mech-pause-clip.mp4" type="video/mp4"><source src="../assets/video/mech-pause-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-pause-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: pausing Cadet 203 with a reason and resuming Junior 304 (about 50 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: pausing Cadet 203 with a reason and resuming Junior 304 (about 35 seconds, with captions)</figcaption></figure>
 
 ## Pause
 

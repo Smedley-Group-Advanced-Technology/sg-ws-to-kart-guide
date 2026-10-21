@@ -22,6 +22,24 @@ def dedent(body: str, ind: str) -> str:
     return "\n".join(out)
 
 
+def mp4_seconds(path: Path) -> float | None:
+    """Length of a recorded clip from its mp4 'mvhd' box, so captions state the real length."""
+    if not path.exists():
+        return None
+    data = path.read_bytes()
+    i = data.find(b"mvhd")
+    if i < 0:
+        return None
+    version = data[i + 4]
+    if version == 1:
+        scale = int.from_bytes(data[i + 24:i + 28], "big")
+        length = int.from_bytes(data[i + 28:i + 36], "big")
+    else:
+        scale = int.from_bytes(data[i + 16:i + 20], "big")
+        length = int.from_bytes(data[i + 20:i + 24], "big")
+    return length / scale if scale else None
+
+
 def esc_alt(s: str) -> str:
     return s.replace("[", "(").replace("]", ")").replace('"', "'")
 
@@ -66,8 +84,11 @@ def main(src: Path, repo: Path) -> None:
             if kind == "clip":
                 entry["captions"] = data["captions"]
                 entry["duration"] = int(data["duration"])
-                if not 30 <= entry["duration"] <= 90:
+                if not 10 <= entry["duration"] <= 90:
                     raise SystemExit(f"{page}: {sid} duration out of range")
+                real = mp4_seconds(repo / "docs" / "assets" / "video" / f"{sid}.mp4")
+                if real:
+                    entry["duration"] = max(5, int(round(real / 5.0)) * 5)
             shots.append(entry)
             alt = esc_alt(entry["caption"])
             if kind == "shot":

@@ -47,11 +47,11 @@ export default {
     await s.tap(pop.getByRole('button', { name: 'Save' }));
     s.cue();                                                    // Add any part you fitted.
     const comp = s.page.locator('.bg-card').filter({ has: s.page.getByPlaceholder('Search components…') }).first();
-    await s.scrollTo(comp.getByPlaceholder('Search components…'), { block: 'start' });
+    await s.scrollTo(comp.getByText(/^Components replaced/).first(), { block: 'start' });   // heading clear of the sticky header
     await s.shot('mech-svc-components', { scroll: false, at: { 1: comp.getByText(/^Components replaced/).first() } });
     await s.type(comp.getByPlaceholder('Search components…'), 'brake pad');
     await s.wait(800);
-    await s.shot('mech-svc-parts', { scroll: false, at: { 1: comp.getByText(/^Components replaced/).first(), 2: comp.getByRole('button', { name: 'Select' }).first() } });
+    await s.shot('mech-svc-parts', { scroll: false, at: { 1: comp.getByPlaceholder('Search components…'), 2: comp.getByRole('button', { name: 'Select' }).first() } });
     await s.tap(comp.getByRole('button', { name: 'Select' }).first());
     await s.tap(comp.getByRole('button', { name: /Add to components replaced/ }));
     await s.settle(600);

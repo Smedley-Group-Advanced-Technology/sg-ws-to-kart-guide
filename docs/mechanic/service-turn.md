@@ -45,7 +45,7 @@ A service (the Workshop App called it a "turn") is the check every kart gets aft
 
 2. For a measured check, type the reading in the cell, for example tyre depth or the voltage of each battery.
 
-    ![A measured check with tyre depth and battery voltage readings](../assets/img/mechanic/mech-svc-reading.png){ loading=lazy }
+    ![A measured check, Battery voltage, with both readings typed in and marked Pass](../assets/img/mechanic/mech-svc-reading.png){ loading=lazy }
 
 3. If a check cannot pass, set it to **Blocked**. KART asks **Why is this blocked?**
 

@@ -162,7 +162,7 @@ captions:
 3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
     :::shot mech-ticket-closed
-    caption: "Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no longer red)"
+    caption: Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag
     url: /workshop
     state: After the 207 ticket is resolved
     steps:

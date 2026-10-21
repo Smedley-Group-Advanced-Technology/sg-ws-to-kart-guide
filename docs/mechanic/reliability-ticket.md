@@ -67,7 +67,7 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
 3. Tap **Update** at the top of the ticket. When the ticket is resolved and its repair is completed, the kart leaves Repair Required.
 
-    ![Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no longer red)](../assets/img/mechanic/mech-ticket-closed.png){ loading=lazy }
+    ![Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag](../assets/img/mechanic/mech-ticket-closed.png){ loading=lazy }
 
 !!! note "Remember"
     On your hub's switch-over day, close any stopping ticket whose fault is already fixed. Karts that were Repair Required in KART stay that way until their ticket or repair is closed, whatever the Workshop App said.

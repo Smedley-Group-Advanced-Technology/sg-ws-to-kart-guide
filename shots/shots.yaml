@@ -2348,8 +2348,7 @@
   - n: 1
     target: text=#207
     note: Available again
-  caption: 'Where to check Cadet 207 on the board (picture taken before the ticket was resolved: after it, the tile is no
-    longer red)'
+  caption: Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag
 - id: mech-repair-lanes
   kind: screenshot
   page: mechanic/repairs-and-parts.md
@@ -2750,7 +2749,7 @@
     note: Answer honestly
   - n: 2
     target: text=Recorded for the workshop
-    note: Only a reliability ticket stops it
+    note: An incident never stops the kart
   caption: Would this stop the kart from being used? with the note that an incident never stops the kart
 - id: mech-report-submit
   kind: screenshot
@@ -3097,13 +3096,12 @@
   url: /workshop/in-service
   state: Cadet 203 in the Requires service lane; Alex has no service running (304 paused is fine); Cadet class checklist published
   steps:
-  - Type 3.5 in a tyre depth reading
   - Type 51.2 and 51.0 in the battery voltage readings
   callouts:
   - n: 1
     target: css=input[inputmode=decimal]
     note: Type the reading here
-  caption: A measured check with tyre depth and battery voltage readings
+  caption: A measured check, Battery voltage, with both readings typed in and marked Pass
 - id: mech-svc-blocked
   kind: screenshot
   page: mechanic/service-turn.md
@@ -3158,8 +3156,8 @@
   - Type brake pad in Search components
   callouts:
   - n: 1
-    target: text=Components replaced
-    note: Every part you fitted
+    target: placeholder=Search components…
+    note: Type part of the name
   - n: 2
     target: text=Select
     note: Pick the part

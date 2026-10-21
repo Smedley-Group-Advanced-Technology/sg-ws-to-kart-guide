@@ -32,7 +32,7 @@ export default {
     const c = await open({ persona: 'Riley Support', device: 'desktop' });
     await openSupport(c);
     await c.shot('rs-path-overview', { scroll: false, at: { 1: c.page.getByText('Support', { exact: true }).first(), 2: tab(c, 'My queue') },
-      place: { 1: 'right', 2: 'below' } });
+      place: { 1: 'right', 2: 'right' } });
     await c.shot('rs-comms-open', { scroll: false, at: { 1: c.page.getByText('KART Comms', { exact: true }).first() } });
     await c.tap(tab(c, 'Unassigned'));
     await c.page.getByText('Casey Mechanic').first().waitFor();

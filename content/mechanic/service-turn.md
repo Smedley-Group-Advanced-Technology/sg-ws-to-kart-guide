@@ -103,10 +103,9 @@ captions:
 2. For a measured check, type the reading in the cell, for example tyre depth or the voltage of each battery.
 
     :::shot mech-svc-reading
-    caption: A measured check with tyre depth and battery voltage readings
+    caption: A measured check, Battery voltage, with both readings typed in and marked Pass
     url: /workshop/in-service
     steps:
-      - Type 3.5 in a tyre depth reading
       - Type 51.2 and 51.0 in the battery voltage readings
     callouts:
       - [1, "css=input[inputmode=decimal]", "Type the reading here"]
@@ -159,7 +158,7 @@ captions:
     steps:
       - Type brake pad in Search components
     callouts:
-      - [1, "text=Components replaced", "Every part you fitted"]
+      - [1, "placeholder=Search components…", "Type part of the name"]
       - [2, "text=Select", "Pick the part"]
     :::
 

@@ -142,7 +142,7 @@ captions:
       - Show the note under the question
     callouts:
       - [1, "text=Would this stop the kart from being used?", "Answer honestly"]
-      - [2, "text=Recorded for the workshop", "Only a reliability ticket stops it"]
+      - [2, "text=Recorded for the workshop", "An incident never stops the kart"]
     :::
 
 10. Tap **Add finding** if you found something else. Then tap **Report problem**.

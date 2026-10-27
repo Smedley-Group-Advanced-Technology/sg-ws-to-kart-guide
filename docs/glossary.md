@@ -88,6 +88,7 @@
 | **Requires Support** | Service Queue lane for repairs that need help from outside the workshop | (new) |
 | **Root cause** | Why a fault happened. It stays on the reliability ticket | Root cause |
 | **Service** | The check every kart gets after use | Turn |
+| **Services (Work targets)** | On the Work targets card, your target number of services | Turns |
 | **Service Queue** | The Workshop tab with karts to service and repair cards | Repair Workflow |
 | **Servicing** | The Workshop tab with the checklist of your current service | In Service / turn checklist |
 | **Session** | One time out on track at an event. Race to Chassis has a column or button per session | Session |
@@ -102,7 +103,6 @@
 | **Target (stock)** | How many of a part the hub wants to hold | Target |
 | **Technical** | The KART area for reliability tickets and damage (Karting Reliability Tracker) | (new) |
 | **Track use override** | Permission for a not-available kart to run until the end of the event | Track use override |
-| **Services (Work targets)** | On the Work targets card, your target number of services | Turns |
 | **Unavailable** | Not offered for allocation. Shown on the kart page; on tiles Available is not ticked | Not available |
 | **Waiting on parts** | A repair waiting for parts | Waiting on Parts |
 | **Work targets** | Targets per person: readiness, services, repairs or campaign tasks | Workshop Planning |

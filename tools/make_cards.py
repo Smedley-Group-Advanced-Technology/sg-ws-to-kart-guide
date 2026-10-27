@@ -135,7 +135,7 @@ for name, (title, sub, steps, show_status, box) in CARDS.items():
     right.append(f'<div class="box"><strong>{html.escape(box[0])}</strong>{html.escape(box[1])}</div>')
     if show_status:
         first = "KART problems: tell your hub manager (hub lead), with the kart number. " if name == "mechanic-card" else ""
-        right.append(f'<div class="note"><strong>Help</strong>{first}Help with KART: AI Support in KART Comms first (bookmark the KART address ending in /comms); it escalates to Remote Support or FKL Central. Give the kart number.</div>')
+        right.append(f'<div class="note"><strong>Help</strong>{first}Help with KART: AI Support in KART Comms first (bookmark the KART address ending in /comms); it escalates to Remote Support or FKL Central.</div>')
     items = "\n".join(f"<li>{b(s)}</li>" for s in steps)
     doc = f"""<!doctype html>
 <html lang="en">

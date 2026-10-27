@@ -26,9 +26,9 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
 
 3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-4. Once remote support has a chat with you, **Remote Support** also appears in the list. Its header shows the hub and who is **On cover** today. Type your message and tap the send button (**Send**).
+4. Once the AI has passed your chat on, **Remote Support** also appears in the list, so you can reply in that chat later. Its header shows the hub and who is **On cover** today. Type your reply and tap the send button (**Send**).
 
-    ![Step 4: a support message typed under the On cover header](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
+    ![Step 4: a reply in an escalated support chat, under the On cover header](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
 
 !!! note "Remember"
     If nobody is on cover the header says **Unassigned** and every remote support person is alerted.

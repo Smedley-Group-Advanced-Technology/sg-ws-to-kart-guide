@@ -3500,7 +3500,7 @@
   - n: 4
     target: text=On cover
     note: Who covers your hub today
-  caption: 'Step 4: a support message typed under the On cover header'
+  caption: 'Step 4: a reply in an escalated support chat, under the On cover header'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md
@@ -4605,12 +4605,13 @@
   state: Demo Hub as seeded
   steps:
   - Open /comms as Alex Mechanic
+  - Tap AI Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
   - n: 1
-    target: text=Remote Support
-    note: Ask for help
-  caption: A support message in KART Comms describing the problem
+    target: text=AI Support
+    note: Start here
+  caption: A question to AI Support in KART Comms describing the problem
 - id: gen-where-tabs
   kind: screenshot
   page: where-did-it-go.md

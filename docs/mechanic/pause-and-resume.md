@@ -34,7 +34,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
     ![The Paused services bar with 203 and 304](../assets/img/mechanic/mech-pause-done.png){ loading=lazy }
 
 !!! note "Remember"
-    The reasons are: **Waiting on Manager Decision**, **Waiting on Another Mechanic**, **Waiting on Tool**, **Waiting on Diagnosis**, **Waiting on parts**, **End of Shift** and **Other**.
+    The reasons are: **Waiting on Manager Decision**, **Waiting on Another Mechanic**, **Waiting on Tool**, **Waiting on Diagnosis**, **Waiting on parts**, **End of Shift**, **Lunch Break** and **Other**.
 
 ## Resume
 

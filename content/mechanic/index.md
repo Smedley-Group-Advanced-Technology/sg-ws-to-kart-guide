@@ -53,5 +53,6 @@ callouts:
 ## Who to ask
 
 - **Your hub lead** (the person who runs your hub) for accounts, access and how your hub works.
-- **KART Comms support** (remote support) for KART problems. Give the kart number. See [Getting help](../start/finding-your-way.md#getting-help).
+- **Your hub manager (hub lead)** also for KART problems, such as a status that looks wrong. Give the kart number.
+- **KART Comms**: start with **AI Support**; the AI escalates to Remote Support or FKL Central. See [Getting help](../start/finding-your-way.md#getting-help).
 - Words you do not know are in the [Glossary](../glossary.md).

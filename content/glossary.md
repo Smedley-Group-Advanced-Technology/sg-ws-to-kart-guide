@@ -7,7 +7,7 @@
 |---|---|---|
 | **Admin** | The highest access level. Admins can do everything at every hub | admin |
 | **Admin Access** | The button on Select your Hub that opens the Admin page | Manage Users |
-| **AI Support** | Automatic answers in KART Comms. Not a person | (new) |
+| **AI Support** | Automatic answers in KART Comms and the first point of contact for KART help. Not a person. It escalates to Remote Support or FKL Central | (new) |
 | **Allocation** | Handing out karts for an event. A kart that is "not offered for allocation" is not handed out. (The **Kart Allocation** tab in Workshop Manager is different: it gives karts to mechanics to service) | (new) |
 | **Approval queue** | Order lines waiting for the hub's manager or an admin to approve | (new) |
 | **Approved** | Order stage: OK to order | (new) |
@@ -48,8 +48,8 @@
 | **Integrated campaign** | A campaign added to the service checklist. Complete service waits until its task is done | Integrated |
 | **Join link** | A sign-up link for one hub, made by a hub manager or admin | (new) |
 | **KART** | FKL Kart Allocation & Reliability Tracking, the league's main app | (new) |
-| **KART Comms** | KART's messenger, where you ask remote support for help. It has no button in KART: open the address ending in /comms or a bookmark | (new) |
-| **KART Comms support** | Asking remote support for help in KART Comms. Give the kart number | (new) |
+| **KART Comms** | KART's messenger. For help, start with AI Support; the AI escalates to Remote Support or FKL Central. It has no button in KART: open the address ending in /comms or a bookmark | (new) |
+| **KART Comms support** | Help with KART in KART Comms: AI Support first, which escalates to Remote Support or FKL Central. Give the kart number | (new) |
 | **Kart page** | One kart's page: status, open work, history, QR code | Kart page |
 | **KART product owner** | The person responsible for KART across the league. Your hub lead passes process questions on | (new) |
 | **Log book** | **View log book** on a kart tile: the kart's record of services, repairs, campaigns and events | Kart history |
@@ -77,7 +77,7 @@
 | **Reliability** | The permission to raise tickets; also a report type | Reliability |
 | **Reliability ticket** | A fault for engineering. Stops the kart unless its effect is Performance | (new to the workshop) |
 | **Remedy** | What you did to fix a repair, such as Tightened / Secured | Remedy |
-| **Remote support** | The people who answer help messages in KART Comms | (new) |
+| **Remote support** | The people who answer the help chats AI Support escalates in KART Comms | (new) |
 | **Reorder point** | When stock falls to this number, it is time to order more | Reorder level |
 | **Repair** | Work to fix something. Comes from findings, damage or tickets | Repair |
 | **Repair Needed (usable)** | An open repair that does not stop the kart | Repair Needed (Usable) |
@@ -102,7 +102,7 @@
 | **Target (stock)** | How many of a part the hub wants to hold | Target |
 | **Technical** | The KART area for reliability tickets and damage (Karting Reliability Tracker) | (new) |
 | **Track use override** | Permission for a not-available kart to run until the end of the event | Track use override |
-| **Turns (Work targets)** | On the Work targets card, "Turns" means your target number of services | Turns |
+| **Services (Work targets)** | On the Work targets card, your target number of services | Turns |
 | **Unavailable** | Not offered for allocation. Shown on the kart page; on tiles Available is not ticked | Not available |
 | **Waiting on parts** | A repair waiting for parts | Waiting on Parts |
 | **Work targets** | Targets per person: readiness, services, repairs or campaign tasks | Workshop Planning |

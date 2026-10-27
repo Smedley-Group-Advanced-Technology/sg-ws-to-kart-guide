@@ -1,10 +1,10 @@
 # KART Comms
 
 
-**KART Comms** is KART's messenger. Hub staff see the **Trackside** view: they message remote support and colleagues. Remote support and admins see the **Support** view: a queue of chats to claim, answer and close.
+**KART Comms** is KART's messenger. Hub staff see the **Trackside** view: they ask **AI Support** first (the AI escalates to Remote Support or FKL Central) and message colleagues. Remote support and admins see the **Support** view: a queue of chats to claim, answer and close.
 
 !!! info "What changed from the Workshop App"
-    - Help with KART goes through KART Comms support, not the Workshop App.
+    - Help with KART starts with **AI Support** in KART Comms, not the Workshop App. The AI escalates to Remote Support or FKL Central when a person is needed.
     - KART Comms has no menu link. Open it at the address ending in `/comms`, or use the KART Comms desktop app.
     - Mentions with **@** and two letters list colleagues by name and initials, never e-mail addresses.
 
@@ -16,15 +16,19 @@
 
 ## Trackside view: asking for help (hub staff)
 
-![Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat](../assets/img/remote-support/rs-trackside-cover.png){ loading=lazy }
+![Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat](../assets/img/remote-support/rs-trackside-cover.png){ loading=lazy }
+
+AI Support is always the first point of contact. Only the AI passes a chat on to Remote Support or FKL Central.
 
 1. As hub staff you see the **Trackside** view. At the top, check your hub. If KART asks, **Choose the hub you are working at**.
 
-2. Tap **Remote Support**.
+2. Tap **AI Support** and type your question, with the kart number. See [AI Support](#ai-support).
 
-3. The header shows the hub and who is **On cover** today. Type your message and tap the send button (**Send**). It is routed to whoever is covering your hub today.
+3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-    ![Step 3: a support message typed under the On cover header](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
+4. Once remote support has a chat with you, **Remote Support** also appears in the list. Its header shows the hub and who is **On cover** today. Type your message and tap the send button (**Send**).
+
+    ![Step 4: a support message typed under the On cover header](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
 
 !!! note "Remember"
     If nobody is on cover the header says **Unassigned** and every remote support person is alerted.
@@ -57,9 +61,9 @@
 
 ## AI Support
 
-**AI Support** gives automatic answers from the FKL knowledge base. It is not a person. Hub staff can use it when remote support has closed a chat or for quick how-to questions. For anything about a real kart, a status that looks wrong or missing data, message remote support instead.
+**AI Support** gives automatic answers from the FKL knowledge base. It is not a person, and it is the first point of contact for help with KART. When it cannot solve a problem, it escalates the chat to Remote Support or FKL Central (**Ask remote support**). For a status that looks wrong on a real kart, also tell your hub manager (hub lead), with the kart number.
 
-1. Hub staff tap **AI Support** to start an AI chat and type a question. The answer appears in the chat. Their AI chats are listed under **AI Chats**. Remote support can read them under **AI** in the Support view.
+1. Hub staff tap **AI Support** to start an AI chat and type a question. The answer appears in the chat. Their AI chats are listed under **AI Chats**. Remote support can read them under **AI** in the Support view, and answers escalated chats there.
 
     ![Step 1: the AI Support button and the AI Chats list in the Trackside view](../assets/img/remote-support/rs-ai-support.png){ loading=lazy }
 

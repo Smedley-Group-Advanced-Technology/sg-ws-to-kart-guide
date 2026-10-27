@@ -21,7 +21,7 @@ Find what you see in the left column. Each row says why it happens and what to d
 | Kart shows **Repair Required** but was fixed | The stopping ticket is still open, or its repair is not completed | Complete the repair with **Log remedy / complete repair**, then resolve the ticket. See [Reliability tickets](mechanic/reliability-ticket.md) |
 | Kart logged with an incident is still available | Incidents never stop a kart | Raise a stopping reliability ticket if it must not be used |
 | Race to Chassis shows **Past Event - Editing Restricted** | The event is not today; only administrators can change other days | Nothing to do, or ask an admin |
-| **Chassis 07 is not available** in Race to Chassis (07 is the kart's number in its class, so Cadet 207 or Junior 307) | The kart is Repair Required or not available | Use another chassis. Only with your hub manager's OK: reason and **Assign anyway** |
+| **Kart 307 is not available** in Race to Chassis (chassis 07 in the Junior grid; the grid shows the kart's number in its class) | The kart is Repair Required or not available | Use another chassis. Only with your hub manager's OK: reason and **Assign anyway** |
 | A part is not in Stores | Hidden at your hub, or not in the catalogue | Ask your hub manager to show it or use **Request a part** |
 | **Parts needed** lists parts that are on the shelf | Before the stock move, KART counts can be lower than the shelf | Check the shelf before ordering. Record every part used in KART |
 | **Mark ordered** is not offered | The line is not **Approved** yet | Approve it first (hub manager or admin) |

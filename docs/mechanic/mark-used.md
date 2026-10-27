@@ -20,7 +20,7 @@ A kart needs a service after it has been used. KART needs to know which karts we
 <track kind="captions" src="../assets/video/mech-mark-used-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used (about 45 seconds, with captions)</figcaption></figure>
 
-1. On **Overview**, find the kart's tile, for example **#101**.
+1. On **Overview**, find the kart's tile, for example **Kart 101**.
 
     ![The tile for Bambino 101 with its Requires service button](../assets/img/mechanic/mech-used-tile.png){ loading=lazy }
 

@@ -65,7 +65,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Add finding and Report problem buttons at the bottom of the dialog](../assets/img/mechanic/mech-report-submit.png){ loading=lazy }
 
-11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by class and its number in the class: **Bambino 6** is kart 106.
+11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by its number, for example **Kart 106**.
 
     ![The new repair card for 106 in the Service Queue](../assets/img/mechanic/mech-report-result.png){ loading=lazy }
 

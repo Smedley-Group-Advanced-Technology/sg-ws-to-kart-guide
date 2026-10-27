@@ -58,7 +58,7 @@ flowchart TD
       - Open the Workshop Overview
       - Scroll to the Bambino Karts tiles
     callouts:
-      - [1, "text=#106", "Bambino 106"]
+      - [1, "text=Kart 106", "Bambino 106"]
       - [2, "css=[data-kart='106'] input[type=checkbox]", "Available stays ticked"]
     :::
 
@@ -69,11 +69,11 @@ flowchart TD
     steps:
       - Scroll to the Cadet Karts tiles
     callouts:
-      - [1, "text=#207", "Cadet 207"]
+      - [1, "text=Kart 207", "Cadet 207"]
       - [2, "text=Reliability", "Stopping reliability ticket"]
     :::
 
-3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by class and its number in the class: **Junior 7** is kart 307, **Bambino 6** is kart 106.
+3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by its number, for example **Kart 307** or **Kart 106**.
 
     :::shot start-problem-queue
     caption: Repair cards for 106, 207 and 307 in the Service Queue exception lanes

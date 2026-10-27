@@ -58,8 +58,8 @@ steps:
   - Open Race to Chassis for Demo Practice Day on the tablet
   - Tap Junior at the top
   - Drag race number 5 onto chassis 01 (Junior 301)
-  - Show the Chassis 01 marked used message with Undo
-  - Drag race number 6 onto chassis 07 (Junior 307) and show Chassis 07 is not available
+  - Show the Kart 301 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
   - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
 captions:
@@ -91,10 +91,10 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
       - Drag race number 5 onto chassis 01 slowly
     :::
 
-3. KART says **Chassis 01 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
+3. KART says **Kart 301 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
 
     :::shot mech-r2c-marked
-    caption: Chassis 01 marked used message with Undo
+    caption: Kart 301 marked used message with Undo
     steps:
       - Drop race number 5 on chassis 01
     callouts:
@@ -171,10 +171,10 @@ captions:
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example Junior chassis **07** (Junior 307). KART says **Chassis 07 is not available** and why.
+1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number and says **Kart 307 is not available** and why.
 
     :::shot mech-r2c-unavailable
-    caption: Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway
+    caption: Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway
     steps:
       - Drag race number 6 onto chassis 07
     callouts:

@@ -38,7 +38,9 @@ Each included person has a **Default week** line under their switches. It shows 
     - The default week is saved straight away. It does not need **Save settings**.
     - It never fills a week that the person has already saved, and it never submits anything for them.
     - It also fills **Set week** when you plan a week for someone with nothing planned yet.
-    - The finish time must be after the start time. Remote days are only possible when **Allow remote work** is on.
+    - The finish time must be after the start time. If **Require start time** or **Require finish time** is on, each working day in the default week needs that time too.
+    - Remote days are only possible when **Allow remote work** is on. If you turn it off later, the person's remote days are filled in as in shop.
+    - If you remove someone from the schedule, their default week is kept. It applies again if you include them again.
 
 ## Work targets
 

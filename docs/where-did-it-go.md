@@ -52,7 +52,7 @@ Every Workshop App screen and where to find it in KART, grouped by the Workshop 
 | Parts Ordered / Order list | Workshop Manager > **Order List** (**Approval queue**, **Approve**, **Reject**, **Mark ordered**, **Add bulk order**) | Hub manager; approve: the hub's manager or admin; order and receive: also Purchasing | [Orders](hub-manager/orders.md) |
 | Parts Received | Workshop Manager > **Goods In**, or **Receive** on an Order List line | Hub manager or Purchasing | [Orders](hub-manager/orders.md) |
 | One-time and bulk orders | Stores **One-time need**; Order List **Add bulk order** | Workshop (one-time); hub manager (bulk) | [Orders](hub-manager/orders.md) |
-| Inventory | Workshop > **Stores**, **Parts** tab (**Adjust**, **Add inventory**) | Workshop | [Stores](mechanic/stores.md) |
+| Inventory | Workshop > **Stores**, **Parts** tab (**Adjust**, **Add inventory**) | Workshop; **Adjust**: hub manager or admin | [Stores](mechanic/stores.md) |
 | Consumables | Workshop > **Stores**, **Consumables** tab | Workshop | [Stores](mechanic/stores.md) |
 | Parts Catalog | FKL Central > **Parts catalogue** > **Master parts**; hub view in Workshop Manager > **Hub catalogue** | FKL Central; hub manager | [Parts catalogue](fkl-central/parts-catalogue.md) |
 | Catalog Requests | Hub side: Workshop Manager > **Hub catalogue** > **Request a part**. Review: FKL Central > **Parts catalogue** > **Part requests** | Hub manager; FKL Central | [Hub catalogue](hub-manager/hub-catalogue.md), [Part requests](fkl-central/part-requests.md) |

@@ -18,10 +18,10 @@ Admins manage every KART account on the **Admin** page: approvals, join links, n
 
 | Permission | What it lets the person do |
 |---|---|
-| **Workshop** | Use the Workshop: start services, raise and update repairs, record parts, campaign work, Stores, Schedule. Needs access to the hub too. |
+| **Workshop** | Use the Workshop: start services, raise and update repairs, record parts, campaign work, Stores, Schedule. Needs access to the hub too. Includes **Reliability**: ticking Workshop ticks Reliability, and KART adds Reliability whenever Workshop is given. |
 | **Reliability** | Raise and edit reliability tickets and damage, and tick Available or Preferred on karts. |
-| **Hub Manager** | Everything in the Workshop plus Workshop Manager, the Hub Manager dashboard, approvals for their hubs, marking karts used and approving orders. Ticking it also ticks Reliability, Customer feedback and Workshop. |
-| **Purchasing** | Order actions: submit, mark ordered, receive and cancel. Not approve. |
+| **Hub Manager** | Everything in the Workshop plus Workshop Manager, the Hub Manager dashboard, approvals for their hubs, adjusting stock, marking karts used and approving orders. Ticking it also ticks Reliability, Customer feedback and Workshop. Hub managers can give Workshop and Reliability to people at their hubs. |
+| **Purchasing** | Order actions: submit, mark ordered, receive and cancel. Not approve. Only admins give it. |
 | **FKL Central** | All FKL Central tabs and reading all hubs. |
 | **Remote support** | The Remote Support dashboard, the Support view of KART Comms and reading all hubs. Only remote support holders can be set as support cover. |
 | **Customer feedback** | The customer feedback screens. |

@@ -48,7 +48,7 @@ callouts:
     Print the [mechanic quick reference card](../cards/index.md) and keep it on the workbench.
 
 !!! note "Remember"
-    What you can do depends on your permissions. With only **Workshop** you cannot raise reliability tickets or tick **Available** and **Preferred**. A colleague with the **Reliability** permission, such as Casey Mechanic in this guide, can.
+    What you can do depends on your permissions. **Workshop includes Reliability**, so with Workshop you can also raise reliability tickets and tick **Available** and **Preferred**. If you cannot, ask your hub manager to check your permissions.
 
 ## Who to ask
 

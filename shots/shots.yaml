@@ -382,7 +382,7 @@
   captions:
   - Open Pending approvals.
   - Check who is asking and for which hub.
-  - Tick Workshop for a new mechanic.
+  - Tick Workshop for a new mechanic. Reliability ticks too.
   - Tap Approve.
   - They can sign in now.
   duration: 15
@@ -406,7 +406,8 @@
   - n: 3
     target: text=Approve
     note: Let them in
-  caption: 'Steps 1 to 3 on one screen: Jamie Newstarter''s Sign-up row via join link, Workshop ticked and the Approve button'
+  caption: 'Steps 1 to 3 on one screen: Jamie Newstarter''s Sign-up row via join link, Workshop and Reliability ticked and
+    the Approve button'
 - id: hm-join
   kind: screenshot
   page: hub-manager/approvals.md
@@ -443,12 +444,12 @@
     target: text=Full Name
     note: Their details
   - n: 2
-    target: text=Hub managers can give Workshop and Purchasing only.
+    target: text=Hub managers can give Workshop and Reliability only. Workshop includes Reliability.
     note: Hub and permissions
   - n: 3
     target: text=Create user
     note: Create it
-  caption: 'Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked'
+  caption: 'Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop and Reliability ticked'
 - id: hm-create-password
   kind: screenshot
   page: hub-manager/approvals.md
@@ -3350,7 +3351,7 @@
 - id: mech-stores-adjust
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3365,7 +3366,7 @@
 - id: mech-stores-adjust-stock
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3384,7 +3385,7 @@
 - id: mech-stores-adjust-reason
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3399,7 +3400,7 @@
 - id: mech-stores-adjust-save
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,

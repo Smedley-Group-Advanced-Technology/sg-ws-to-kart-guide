@@ -21,10 +21,10 @@ export default {
       await box.locator('[data-testid="schedule-default-end"]').fill('16:30');
     }
     await m.page.evaluate(() => document.activeElement && document.activeElement.blur());
-    await d.locator('[data-day]').first().evaluate((e) => e.scrollIntoView({ block: 'start' }));
+    await d.evaluate((e) => { e.scrollTop = 0; });
     await m.wait(500);
     await m.shot('hm-sched-default', { scroll: false, at: { 1: d.getByText(/^Default week: AM/).first(),
-      2: d.locator('[data-day]').first().getByText('Working', { exact: true }), 3: d.locator('[data-testid="schedule-default-save"]') } });
+      2: d.locator('[data-day]').first().getByText('Working', { exact: true }) } });
     await m.tap(d.locator('[data-testid="schedule-default-save"]'));
     await m.page.getByText('Default week saved').first().waitFor({ timeout: 15000 });
     await m.close();
@@ -35,8 +35,8 @@ export default {
     await s.tap(s.page.getByRole('button', { name: 'Upcoming week' }));
     await s.settle(800);
     await s.tap(s.page.getByRole('button', { name: 'Plan my week' }));
-    const note = s.page.getByText('Filled from your default week', { exact: true }).first();
-    await note.waitFor({ timeout: 15000 });
+    const note = s.page.locator('[data-testid="schedule-from-default"]');
+    await note.waitFor({ timeout: 60000 });
     await s.wait(600);
     await s.shot('mech-sched-default', { at: { 1: note }, block: 'start' });
     await s.close();

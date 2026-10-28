@@ -24,7 +24,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-incident-clip.jpg" width="1180">
 <source src="../assets/video/mech-incident-clip.mp4" type="video/mp4"><source src="../assets/video/mech-incident-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-incident-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: reporting an incident on Bambino 106 and finding it on the ICU board (about 45 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: reporting an incident on Bambino 106 and finding it on the ICU board (about 35 seconds, with captions)</figcaption></figure>
 
 1. On **Overview**, tap **Report a kart problem**.
 

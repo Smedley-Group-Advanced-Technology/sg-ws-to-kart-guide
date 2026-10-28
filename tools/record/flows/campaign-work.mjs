@@ -4,7 +4,7 @@ import { CAMPAIGN } from '../lib/config.mjs';
 import { taskId } from '../lib/shots.mjs';
 import { tab } from './service-turn.mjs';
 
-const row = (s, kart) => s.page.locator('a,button,[role=link]').filter({ hasText: new RegExp(`^\\s*Junior ${kart}\\b`) });
+const row = (s, kart) => s.page.locator('a,button,[role=link]').filter({ hasText: new RegExp(`^\\s*Kart ${kart}\\b`) });
 
 export default {
   shots: ['mech-campaign-clip', 'mech-camp-tab', 'so-day-8-campaign', 'mech-camp-pick', 'mech-camp-start', 'mech-camp-fit',

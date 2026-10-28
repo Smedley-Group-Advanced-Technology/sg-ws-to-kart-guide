@@ -26,7 +26,7 @@
   - Add or change checks.
   - Check it before publishing.
   - Publish with a note of what changed.
-  duration: 50
+  duration: 40
 - id: fc-chk-editor
   kind: screenshot
   page: fkl-central/checklists.md
@@ -488,7 +488,7 @@
   - Pick all karts or only some.
   - Add the parts each kart needs.
   - Tap Create campaign.
-  duration: 80
+  duration: 75
 - id: hm-camp-list
   kind: screenshot
   page: hub-manager/campaigns.md
@@ -669,7 +669,7 @@
   - Tap Request a part.
   - Say what the part is, who makes it and which karts it fits.
   - Send the request to FKL Central.
-  duration: 45
+  duration: 60
 - id: hm-path-overview
   kind: screenshot
   page: hub-manager/index.md
@@ -731,7 +731,7 @@
   - Tap Approve.
   - When you have placed the order, tap Mark ordered.
   - The line moves to Ordered.
-  duration: 35
+  duration: 30
 - id: hm-ord-list
   kind: screenshot
   page: hub-manager/orders.md
@@ -839,7 +839,7 @@
   - Type what arrived and what it cost.
   - Tap Receive stock.
   - The waiting repair is ready to do.
-  duration: 30
+  duration: 25
 - id: hm-gi-open
   kind: screenshot
   page: hub-manager/orders.md
@@ -951,9 +951,6 @@
   - n: 2
     target: text=Working
     note: Switch the day on
-  - n: 3
-    target: text=Save default week
-    note: Saved straight away
   caption: The default week editor for Alex Mechanic (AM), Monday to Friday 08:00 to 16:30
 - id: hm-target
   kind: screenshot
@@ -1291,7 +1288,7 @@
   - The Readiness board counts every status.
   - Tap a number to list those karts.
   - Each kart tile shows its tags.
-  duration: 40
+  duration: 35
 - id: mech-board-open
   kind: screenshot
   page: mechanic/fleet-board.md
@@ -1476,7 +1473,7 @@
   - The top shows status and open work.
   - History shows everything done to the kart.
   - The QR code tab prints a label.
-  duration: 35
+  duration: 30
 - id: mech-kart-open
   kind: screenshot
   page: mechanic/kart-page.md
@@ -1656,7 +1653,7 @@
   - Undo puts the kart back as it was.
   - On the event day, Race to Chassis marks karts used for you.
   - They stay Ready today and need a service after the event.
-  duration: 45
+  duration: 35
 - id: mech-used-tile
   kind: screenshot
   page: mechanic/mark-used.md
@@ -1764,7 +1761,7 @@
   - Add a note for the next mechanic.
   - Your paused karts wait in the bar.
   - Tap a kart to carry on.
-  duration: 35
+  duration: 20
 - id: mech-pause-button
   kind: screenshot
   page: mechanic/pause-and-resume.md
@@ -1953,7 +1950,7 @@
   - KART marks the chassis used for today.
   - An unavailable chassis asks for a reason.
   - Drag the number back to take it off.
-  duration: 70
+  duration: 50
 - id: mech-r2c-dd-view
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2194,7 +2191,7 @@
   - 'Pick the effect: cut out, not restarted.'
   - Leave the status Ongoing and submit.
   - The kart is now Repair Required.
-  duration: 40
+  duration: 35
 - id: mech-ticket-open
   kind: screenshot
   page: mechanic/reliability-ticket.md
@@ -2439,7 +2436,7 @@
   - Choose the remedy and say what you did.
   - Record every part you used.
   - Confirm. The repair is closed.
-  duration: 45
+  duration: 35
 - id: mech-repair-kartpage
   kind: screenshot
   page: mechanic/repairs-and-parts.md
@@ -2605,7 +2602,7 @@
   - Pick Incident and say what happened.
   - Tap Report problem.
   - The incident is on the ICU board for the workshop.
-  duration: 45
+  duration: 35
 - id: mech-report-open
   kind: screenshot
   page: mechanic/report-a-problem.md

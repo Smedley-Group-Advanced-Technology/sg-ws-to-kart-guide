@@ -44,8 +44,10 @@ export default {
     const r = await s.close();
     clip('mech-pause-clip', r, { poster: 3 });
 
-    // Casey: repair work on 205 while its service is open (an incident with a finding gives 205 a repair)
-    asPersona('Casey Mechanic', `select public.ws_log_incident('${kartId(205)}', 'Impact', ARRAY['Rear'], 'Rear bumper touched the barrier',
+    // Casey: repair work on 205 while its service is open (an incident with a finding gives 205 a repair; since KART
+    // MF-5 only the inspection may send findings, so its transaction flag is set to stand for such a repair)
+    asPersona('Casey Mechanic', `select set_config('fkl.ws_dfi_findings', 'on', true);
+      select public.ws_log_incident('${kartId(205)}', 'Impact', ARRAY['Rear'], 'Rear bumper touched the barrier',
       '[{"issue_type": "Loose", "component_name": "Rear bumper", "notes": "Rear bumper bracket loose", "blocking": false, "parts_required": false}]'::jsonb,
       NULL, NULL, 'Incident', NULL, NULL, NULL);
       select public.ws_start_repair_work(id) from public.workshop_repairs where kart_id = '${kartId(205)}' and status <> 'completed';`);

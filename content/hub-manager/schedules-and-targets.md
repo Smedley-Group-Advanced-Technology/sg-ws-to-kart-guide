@@ -57,7 +57,6 @@ Each included person has a **Default week** line under their switches. It shows 
     callouts:
       - [1, "text=Default week: AM", "One person's usual week"]
       - [2, "text=Working", "Switch the day on"]
-      - [3, "text=Save default week", "Saved straight away"]
     :::
 
 3. Tap **Save default week**. To remove it, tap **Clear default week**.

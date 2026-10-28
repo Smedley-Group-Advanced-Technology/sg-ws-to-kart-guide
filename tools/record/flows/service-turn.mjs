@@ -103,7 +103,7 @@ export default {
 
 export const tab = (s, name) => s.page.locator('a,button,[role=tab]').filter({ hasText: new RegExp(`^\\s*${name}\\s*$`) });
 export const lane = (s, name) => s.page.locator('h3').filter({ hasText: new RegExp(`^${name}`) });
-export const kartButton = (s, n) => s.page.getByRole('button', { name: n, exact: true });
+export const kartButton = (s, n) => s.page.getByRole('button', { name: `Kart ${n}`, exact: true }); // KART MF-40 names
 
 async function openSection(s, name) {
   const head = s.page.getByText(name, { exact: true }).first();

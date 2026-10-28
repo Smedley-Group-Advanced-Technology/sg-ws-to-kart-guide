@@ -13,7 +13,7 @@ Every kart class has one master service checklist: Bambino, Cadet and Junior. Yo
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/fc-checklist-clip.jpg" width="1440">
 <source src="../assets/video/fc-checklist-clip.mp4" type="video/mp4"><source src="../assets/video/fc-checklist-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/fc-checklist-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: making a draft of the Cadet checklist, adding a check and publishing it (about 50 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: making a draft of the Cadet checklist, adding a check and publishing it (about 40 seconds, with captions)</figcaption></figure>
 
 ![Steps 2, 3, 6 and 7 on one screen: the Cadet draft in the editor with Add check, Check before publishing and Publish](../assets/img/fkl-central/fc-chk-editor.png){ loading=lazy }
 

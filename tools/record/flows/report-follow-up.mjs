@@ -84,11 +84,11 @@ export default {
     await d.locator('[data-testid="dfi-fail"]').last().click().catch(() => {});
     await f.scrollTo(d.getByText(/^Power \/ Performance inspection/));
     await f.shot('mech-feedback-inspection', { at: { 1: d.getByText(/^Power \/ Performance inspection/), 2: d.getByText(/^(Inspection findings|Other findings) \(optional\)/) }, optional: [2] });
-    await f.tap(d.getByRole('button', { name: /Add finding/ }));
+    // the finding of the failed check (in the check itself); Other findings stays empty below it
     const iss = d.getByRole('combobox').filter({ hasText: 'Choose' }).first();
     await f.tap(iss);
     await f.tap(f.page.getByRole('option', { name: 'Worn', exact: true }));
-    await f.type(d.getByPlaceholder('e.g. Tie rod, brake cable, bumper mount'), 'Throttle cable');
+    await f.type(d.getByPlaceholder('e.g. Tie rod, brake cable, bumper mount').first(), 'Throttle cable');
     await f.shot('mech-feedback-finding', { at: { 1: d.getByText(/^(Inspection findings|Other findings) \(optional\)/) } });
     await f.shot('mech-feedback-submit', { at: { 1: d.getByRole('button', { name: 'Report problem' }) } });
     await f.close();

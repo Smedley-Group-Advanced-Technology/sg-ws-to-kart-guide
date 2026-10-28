@@ -21,9 +21,10 @@ export default {
   reset: true,
   async run({ open, clip }) {
     // a one-time need from Stores (Alex Mechanic), shown as Submitted, marked one-time
-    asPersona('Alex Mechanic', `select public.ws_create_stock_order('${HUB}',
-      (select id from public.workshop_parts_catalog where manufacturer_part_number = 'DEMO-CSK-01'), 2, 'one_time', 'needed',
-      'Junior caliper seal upgrade', NULL);`);
+    // (ws_create_one_time_order, as the One-time need dialog; ws_create_stock_order refuses one-time lines now)
+    asPersona('Alex Mechanic', `select public.ws_create_one_time_order('${HUB}',
+      (select id from public.workshop_parts_catalog where manufacturer_part_number = 'DEMO-CSK-01'), 2,
+      'Junior caliper seal upgrade', gen_random_uuid());`);
 
     // ---------- approve and mark ordered, recorded ----------
     const s = await open({ persona: 'Morgan Manager', device: 'desktop', record: true });

@@ -113,13 +113,13 @@
   steps:
   - Open FKL Central, Parts catalogue, Part requests
   - Tap Review on Steering column bush
-  - Choose Add a new part, check name, MPN and category
+  - Choose Add a new part, check name, MPN, part fit and supplier
   - Tap Add part and show Part added to the catalogue
   caption: reviewing the Steering column bush request from Demo Hub
   captions:
   - Open Part requests.
   - Tap Review.
-  - Link a part, add a new one, keep it local or reject.
+  - Link a part, add a new one or reject.
   - Save. The hub sees the result.
   duration: 25
 - id: fc-req-list
@@ -154,14 +154,11 @@
     note: Already in the catalogue
   - n: 4
     target: text=Add a new part
-    note: New master part
+    note: New master part, prefilled
   - n: 5
-    target: text=Keep as a hub-local part
-    note: Only that hub sees it
-  - n: 6
     target: text=Reject
     note: With a reason
-  caption: 'Steps 3 to 6 on one screen: the Review part request dialog with its four choices'
+  caption: 'Steps 3 to 5 on one screen: the Review part request dialog with its three choices'
 - id: fc-parts-master
   kind: screenshot
   page: fkl-central/parts-catalogue.md
@@ -382,7 +379,7 @@
   captions:
   - Open Pending approvals.
   - Check who is asking and for which hub.
-  - Tick Workshop for a new mechanic.
+  - Tick Workshop for a new mechanic. Reliability ticks too.
   - Tap Approve.
   - They can sign in now.
   duration: 15
@@ -406,7 +403,8 @@
   - n: 3
     target: text=Approve
     note: Let them in
-  caption: 'Steps 1 to 3 on one screen: Jamie Newstarter''s Sign-up row via join link, Workshop ticked and the Approve button'
+  caption: 'Steps 1 to 3 on one screen: Jamie Newstarter''s Sign-up row via join link, Workshop and Reliability ticked and
+    the Approve button'
 - id: hm-join
   kind: screenshot
   page: hub-manager/approvals.md
@@ -443,12 +441,12 @@
     target: text=Full Name
     note: Their details
   - n: 2
-    target: text=Hub managers can give Workshop and Purchasing only.
+    target: text=Hub managers can give Workshop and Reliability only. Workshop includes Reliability.
     note: Hub and permissions
   - n: 3
     target: text=Create user
     note: Create it
-  caption: 'Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked'
+  caption: 'Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop and Reliability ticked'
 - id: hm-create-password
   kind: screenshot
   page: hub-manager/approvals.md
@@ -613,8 +611,8 @@
   callouts:
   - n: 1
     target: text=Hub details
-    note: Hub-specific settings
-  caption: The supplier picker in Hub details
+    note: Preferred and backup supplier
+  caption: The preferred and backup supplier pickers in Hub details
 - id: hm-req-open
   kind: screenshot
   page: hub-manager/hub-catalogue.md
@@ -638,18 +636,21 @@
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
   - Tap Request a part
-  - Type a part name, an MPN, quantity 2 and notes
+  - Type a part name, manufacturer, MPN, supplier, supplier part number and link, tick Cadet and Cadet Gen3.1
   callouts:
   - n: 2
-    target: text=Part name
-    note: What it is called
+    target: text=Manufacturer part number (MPN)
+    note: Required, with name and manufacturer
   - n: 3
-    target: text=Manufacturer part number (MPN), if known
-    note: Helps FKL Central match it
+    target: text=Link to the part (optional)
+    note: Supplier details and a web link
   - n: 4
+    target: text=Compatible kart types
+    note: Which karts it fits
+  - n: 5
     target: text=Send request
     note: Send it
-  caption: 'Steps 2 to 4 on one screen: the Request a part form filled in'
+  caption: 'Steps 2 to 5 on one screen: the Request a part form filled in'
 - id: hm-request-part-clip
   kind: clip
   page: hub-manager/hub-catalogue.md
@@ -660,29 +661,15 @@
   steps:
   - Open Workshop Manager, Hub catalogue
   - Tap Request a part
-  - Fill in Part name, MPN, Quantity needed and Notes
+  - Fill in Part name, Manufacturer, MPN, Supplier and Compatible kart types
   - Tap Send request and show it as Waiting for FKL Central
   caption: requesting a part from FKL Central in the Hub catalogue
   captions:
   - Open Hub catalogue.
   - Tap Request a part.
-  - Say what the part is and how many.
+  - Say what the part is, who makes it and which karts it fits.
   - Send the request to FKL Central.
   duration: 45
-- id: hm-cat-local
-  kind: screenshot
-  page: hub-manager/hub-catalogue.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
-  steps:
-  - Tap Add hub-local part
-  callouts:
-  - n: 1
-    target: text=Add hub-local part
-    note: Only for your hub
-  caption: The Add hub-local part form with MPN
 - id: hm-path-overview
   kind: screenshot
   page: hub-manager/index.md
@@ -808,12 +795,12 @@
   state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
     front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Open Service Queue and find the Junior 7 card
+  - Open Service Queue and find the Kart 307 card
   callouts:
   - n: 2
     target: text=On order
     note: Mechanics see it is coming
-  caption: 'Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers'
+  caption: 'Step 2: the repair card for Kart 307 with On order for front bumpers'
 - id: hm-ord-bulk
   kind: screenshot
   page: hub-manager/orders.md
@@ -902,14 +889,14 @@
   state: Demo Hub with some completed demo services
   steps:
   - Tap Reports
-  - Choose Turn summary
+  - Choose Service summary
   - Set From and To to the last two weeks
   callouts:
   - n: 1
     target: text=Reports
     note: The tab
   - n: 2
-    target: text=Turn summary
+    target: text=Service summary
     note: Pick a report
   - n: 3
     target: text=Period
@@ -917,7 +904,7 @@
   - n: 4
     target: text=Excel
     note: Excel, PDF or CSV
-  caption: 'Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons'
+  caption: 'Steps 1 to 4 on one screen: the Reports tab, Service summary, the period and the export buttons'
 - id: hm-sched
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -956,7 +943,7 @@
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
   - Tap Work targets, then Add target
-  - Choose AM (Alex Mechanic) and Turns, type 10 and choose Cadet
+  - Choose AM (Alex Mechanic) and Services, type 10 and choose Cadet
   callouts:
   - n: 1
     target: text=Add work target
@@ -1419,10 +1406,10 @@
   - Scroll to the Junior Karts tiles
   callouts:
   - n: 1
-    target: text=#301
+    target: text=Kart 301
     note: 'Campaign tag: caliper seal upgrade'
   - n: 2
-    target: text=#308
+    target: text=Kart 308
     note: Missing Components
   - n: 3
     target: text=View log book
@@ -1640,7 +1627,7 @@
   - Show Kart marked as requiring service and tap Undo
   - Show Mark used undone
   - Switch to Race to Chassis for Demo Practice Day, tap Bambino and drag race number 8 onto chassis 04 (Bambino 104)
-  - Show Chassis 04 marked used and the event day note
+  - Show Kart 104 marked used and the event day note
   caption: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used
   captions:
   - Hub managers can mark a kart used on its tile.
@@ -1660,7 +1647,7 @@
   - Scroll to Bambino Karts
   callouts:
   - n: 1
-    target: text=#101
+    target: text=Kart 101
     note: Bambino 101
   - n: 2
     target: role=button[name='Requires service']
@@ -1935,8 +1922,8 @@
   - Open Race to Chassis for Demo Practice Day on the tablet
   - Tap Junior at the top
   - Drag race number 5 onto chassis 01 (Junior 301)
-  - Show the Chassis 01 marked used message with Undo
-  - Drag race number 6 onto chassis 07 (Junior 307) and show Chassis 07 is not available
+  - Show the Kart 301 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
   - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
   caption: putting race numbers on chassis with drag and drop
@@ -1995,7 +1982,7 @@
   - n: 2
     target: text=Undo
     note: Only for a mistake
-  caption: Chassis 01 marked used message with Undo
+  caption: Kart 301 marked used message with Undo
 - id: mech-r2c-takeoff
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2120,7 +2107,7 @@
   - n: 3
     target: text=Assign anyway
     note: Gives a track use override
-  caption: Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway
+  caption: Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway
 - id: mech-r2c-cancel
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2365,7 +2352,7 @@
   - Open Overview and find 207
   callouts:
   - n: 1
-    target: text=#207
+    target: text=Kart 207
     note: Available again
   caption: Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag
 - id: mech-repair-lanes
@@ -2417,7 +2404,7 @@
   - Find the 307 card in Requires part
   callouts:
   - n: 1
-    target: text=Junior 7
+    target: text=Kart 307
     note: Junior 307
   - n: 2
     target: 'text=Waiting on:'
@@ -2437,7 +2424,7 @@
   steps:
   - On the 106 card tap Open kart page
   - Tap Start repair under Current work, wait a few seconds, tap Stop repair work
-  - Back in the Service Queue, tap Log remedy / complete repair on the 106 card
+  - Log remedy / complete repair opens on its own
   - Choose Tightened / Secured in Remedy, type What was done
   - Tap Confirm repair complete
   - Show 106 back as Ready on Overview
@@ -2446,7 +2433,7 @@
   - Open the kart page from the repair card.
   - Tap Start repair when you begin.
   - Tap Stop repair work when you finish.
-  - Tap Log remedy / complete repair.
+  - Log remedy / complete repair opens straight away.
   - Choose the remedy and say what you did.
   - Record every part you used.
   - Confirm. The repair is closed.
@@ -2595,32 +2582,6 @@
     target: text=Confirm repair complete
     note: Done
   caption: Confirm repair complete at the bottom of the remedy dialog
-- id: mech-incident-clip
-  kind: clip
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Tap Report a kart problem on Overview
-  - Choose 106 in Kart
-  - Choose Incident, Incident type Impact / Contact, describe it, Impact location Front
-  - Add a finding, Issue type Loose, Item / component Bumper mount
-  - Answer No, it is still usable
-  - Tap Report problem
-  - Show 106 as Repair Needed (usable) and its repair card in the Service Queue
-  caption: reporting an incident on Bambino 106 with a loose bumper mount finding
-  captions:
-  - Tap Report a kart problem.
-  - Choose the kart.
-  - Pick Incident and say what happened.
-  - Add what you found.
-  - Say whether it stops the kart.
-  - Tap Report problem.
-  - The finding is now a repair.
-  duration: 70
 - id: mech-report-open
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2716,95 +2677,6 @@
     target: text=Impact location
     note: Where it was hit
   caption: Impact location Front selected
-- id: mech-report-finding
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - In Finding 1 choose Issue type Loose
-  - Type "Bumper mount" in Item / component
-  - Type "Front bumper mount bolt loose" in Notes
-  callouts:
-  - n: 1
-    target: text=Finding 1
-    note: Each finding becomes a repair
-  - n: 2
-    target: text=Item / component
-    note: What part of the kart
-  caption: Finding 1 with Issue type Loose and Item / component Bumper mount
-- id: mech-report-part
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Answer No to Is a replacement part required?
-  callouts:
-  - n: 1
-    target: text=Is a replacement part required?
-    note: Yes adds the part to the repair
-  caption: Is a replacement part required? answered No
-- id: mech-report-stop
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Choose No, it is still usable
-  - Show the note under the question
-  callouts:
-  - n: 1
-    target: text=Would this stop the kart from being used?
-    note: Answer honestly
-  - n: 2
-    target: text=Recorded for the workshop
-    note: An incident never stops the kart
-  caption: Would this stop the kart from being used? with the note that an incident never stops the kart
-- id: mech-report-submit
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Scroll to the bottom of the dialog
-  callouts:
-  - n: 1
-    target: text=Add finding
-    note: Another finding
-  - n: 2
-    target: text=Report problem
-    note: Save the report
-  caption: Add finding and Report problem buttons at the bottom of the dialog
-- id: mech-report-result
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop/repairs
-  state: After the 106 incident is reported
-  steps:
-  - Open Service Queue
-  callouts:
-  - n: 1
-    target: text=Incident
-    note: Repair from the incident
-  - n: 2
-    target: text=106
-    note: Bambino 106
-  caption: The new repair card for 106 in the Service Queue
 - id: mech-feedback-type
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2867,8 +2739,8 @@
     target: text=Power / Performance inspection
     note: Answer every check
   - n: 2
-    target: text=Inspection findings (optional)
-    note: A failed check needs a finding
+    target: text=Other findings (optional)
+    note: Anything else you found
   caption: The Power / Performance inspection checklist with Pass and Fail answers
 - id: mech-feedback-finding
   kind: screenshot
@@ -2882,8 +2754,8 @@
   - Add a finding with Issue type Worn and Item / component "Throttle cable"
   callouts:
   - n: 1
-    target: text=Inspection findings (optional)
-    note: One finding per failed check
+    target: text=Other findings (optional)
+    note: Anything else you found
   caption: A finding added for a failed inspection check
 - id: mech-feedback-submit
   kind: screenshot
@@ -3256,7 +3128,7 @@
   - Open Overview and find 203
   callouts:
   - n: 1
-    target: text=#203
+    target: text=Kart 203
     note: Ready again
   caption: Kart 203 back as Ready on the Overview board
 - id: mech-svc-switch
@@ -3369,7 +3241,7 @@
 - id: mech-stores-adjust
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3384,7 +3256,7 @@
 - id: mech-stores-adjust-stock
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3403,7 +3275,7 @@
 - id: mech-stores-adjust-reason
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3418,7 +3290,7 @@
 - id: mech-stores-adjust-save
   kind: screenshot
   page: mechanic/stores.md
-  persona: Alex Mechanic
+  persona: Morgan Manager
   device: tablet
   url: /workshop/parts
   state: 'Demo Hub stock: front bumpers FKL-900001 (0 in stock, on order), brake pads FKL-900003, caliper seal kit FKL-900004,
@@ -3502,8 +3374,8 @@
     note: Your hub
   - n: 2
     target: text=Remote Support
-    note: Ask for help here
-  caption: 'Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat'
+    note: Your chat with remote support
+  caption: 'Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat'
 - id: rs-trackside-send
   kind: screenshot
   page: remote-support/comms.md
@@ -3516,10 +3388,10 @@
   - Tap Remote Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
-  - n: 3
+  - n: 4
     target: text=On cover
     note: Who covers your hub today
-  caption: 'Step 3: a support message typed under the On cover header'
+  caption: 'Step 4: a reply in an escalated support chat, under the On cover header'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md
@@ -3989,7 +3861,7 @@
   - Scroll to the Bambino Karts tiles
   callouts:
   - n: 1
-    target: text=#106
+    target: text=Kart 106
     note: Bambino 106
   - n: 2
     target: css=[data-kart='106'] input[type=checkbox]
@@ -4006,7 +3878,7 @@
   - Scroll to the Cadet Karts tiles
   callouts:
   - n: 1
-    target: text=#207
+    target: text=Kart 207
     note: Cadet 207
   - n: 2
     target: text=Reliability
@@ -4424,7 +4296,7 @@
   - Scroll to the Junior Karts tiles
   callouts:
   - n: 1
-    target: text=#308
+    target: text=Kart 308
     note: Junior 308
   - n: 2
     target: text=Missing Components
@@ -4624,12 +4496,13 @@
   state: Demo Hub as seeded
   steps:
   - Open /comms as Alex Mechanic
+  - Tap AI Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
   - n: 1
-    target: text=Remote Support
-    note: Ask for help
-  caption: A support message in KART Comms describing the problem
+    target: text=AI Support
+    note: Start here
+  caption: A question to AI Support in KART Comms describing the problem
 - id: gen-where-tabs
   kind: screenshot
   page: where-did-it-go.md

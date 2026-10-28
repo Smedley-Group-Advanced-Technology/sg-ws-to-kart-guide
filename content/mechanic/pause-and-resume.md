@@ -81,7 +81,7 @@ captions:
     :::
 
 !!! note "Remember"
-    The reasons are: **Waiting on Manager Decision**, **Waiting on Another Mechanic**, **Waiting on Tool**, **Waiting on Diagnosis**, **Waiting on parts**, **End of Shift** and **Other**.
+    The reasons are: **Waiting on Manager Decision**, **Waiting on Another Mechanic**, **Waiting on Tool**, **Waiting on Diagnosis**, **Waiting on parts**, **End of Shift**, **Lunch Break** and **Other**.
 
 ## Resume
 

@@ -11,16 +11,16 @@ KART uses three words for problems with a kart. Knowing the difference saves you
 
 !!! info "What changed from the Workshop App"
     - In the Workshop App an incident could make a kart Repair Required. **In KART, incidents are information only.** They never make a kart Repair Required or unavailable.
-    - **Only a stopping reliability ticket (or a blocking open repair) takes a kart out of use.**
+    - **A stopping reliability ticket, an open damage ticket, missing batteries or a blocking open repair take a kart out of use.**
     - "Create New Kart Report" is now **Report a kart problem**.
 
 ## The three words
 
 | | What it is | Who raises it | Does it stop the kart? | Example at Demo Hub |
 |---|---|---|---|---|
-| **Incident** | Something that happened to the kart or what a driver reported. Information for the workshop. | Anyone with the Workshop permission | **No, never** | 106 hit the barrier; the finding was a loose bumper mount |
+| **Incident** | Something that happened to the kart or what a driver reported. Tells the workshop to look at the kart. | Any staff member with access to the hub (Workshop: **Report a kart problem**; Technical: **Log incident**) | **No, never** | 106 hit the barrier; the workshop found a loose bumper mount |
 | **Reliability ticket** | A fault for engineering to investigate. It has an effect, such as "Cut out not restarted". | Mechanics with the **Reliability** permission | **Yes**, when the effect is anything other than **Performance** | 207 cut out and would not restart |
-| **Repair** | The work to fix something. Every finding and every damaged component becomes a repair. | Created by KART from findings, damage or tickets | Only when it belongs to a stopping ticket or is marked as blocking | 307 broken front bumper, waiting on parts |
+| **Repair** | The work to fix something. Every damaged component and every stopping ticket becomes a repair. | Created by KART from damage, tickets and failed inspection checks | Only when it belongs to a stopping ticket or is marked as blocking | 307 broken front bumper, waiting on parts |
 
 ## Stopping or not stopping
 
@@ -29,16 +29,16 @@ KART uses three words for problems with a kart. Knowing the difference saves you
 - A **Performance** ticket never stops the kart.
 
 !!! warning "Watch out"
-    When you log a finding, KART asks **Would this stop the kart from being used?** Answering **Yes, it should not be used** does **not** stop the kart by itself. KART reminds you: **This answer does not stop the kart: it stays available. If it must not be used, raise a reliability ticket for it.**
+    When you add a finding to a failed Power / Performance check, KART asks **Would this stop the kart from being used?** Answering **Yes, it should not be used** does **not** stop the kart by itself. KART reminds you: **This answer does not stop the kart: it stays available. If it must not be used, raise a reliability ticket for it.**
 
 ## Which one do I raise?
 
 ```mermaid
 flowchart TD
     A[Something is wrong with a kart] --> B{Is it safe to use?}
-    B -- Yes --> C[Report a kart problem: Incident or Driver feedback]
-    C --> D[Add findings. Each finding becomes a repair]
-    D --> E[Kart shows Repair Needed and stays available]
+    B -- Yes --> C[Report a kart problem or Tracker Log incident: Incident]
+    C --> D[Workshop inspects: Raise reliability ticket, Record damage or Resolved: no fault found]
+    D --> E[Kart stays available unless the ticket stops it]
     B -- No --> F{Do you have the Reliability permission?}
     F -- Yes --> G[Report a kart problem: Reliability. Raise a stopping ticket]
     F -- No --> H[Tell a colleague with Reliability or your hub manager now]
@@ -50,7 +50,7 @@ flowchart TD
 
 ## See the difference on screen
 
-1. Open **Overview** and look at the tile of Bambino **106**. **Available** is still ticked: the incident found a loose bumper mount, and the kart can still be used. On the Readiness board and on its kart page it counts as **Repair Needed (usable)**.
+1. Open **Overview** and look at the tile of Bambino **106**. **Available** is still ticked: an older incident left a repair for a loose bumper mount, and the kart can still be used. On the Readiness board and on its kart page it counts as **Repair Needed (usable)**.
 
     :::shot start-problem-106
     caption: Bambino 106 after an incident, still Available on its tile
@@ -58,7 +58,7 @@ flowchart TD
       - Open the Workshop Overview
       - Scroll to the Bambino Karts tiles
     callouts:
-      - [1, "text=#106", "Bambino 106"]
+      - [1, "text=Kart 106", "Bambino 106"]
       - [2, "css=[data-kart='106'] input[type=checkbox]", "Available stays ticked"]
     :::
 
@@ -69,11 +69,11 @@ flowchart TD
     steps:
       - Scroll to the Cadet Karts tiles
     callouts:
-      - [1, "text=#207", "Cadet 207"]
+      - [1, "text=Kart 207", "Cadet 207"]
       - [2, "text=Reliability", "Stopping reliability ticket"]
     :::
 
-3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by class and its number in the class: **Junior 7** is kart 307, **Bambino 6** is kart 106.
+3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by its number, for example **Kart 307** or **Kart 106**.
 
     :::shot start-problem-queue
     caption: Repair cards for 106, 207 and 307 in the Service Queue exception lanes
@@ -91,6 +91,6 @@ flowchart TD
 
 ## Where next
 
-- [Report a problem](../mechanic/report-a-problem.md) for incidents, findings and driver feedback.
+- [Report a problem](../mechanic/report-a-problem.md) for incidents, driver feedback and following an incident up.
 - [Reliability tickets](../mechanic/reliability-ticket.md) to stop a kart.
 - [Repairs and parts used](../mechanic/repairs-and-parts.md) to fix it.

@@ -7,7 +7,7 @@
 |---|---|---|
 | **Admin** | The highest access level. Admins can do everything at every hub | admin |
 | **Admin Access** | The button on Select your Hub that opens the Admin page | Manage Users |
-| **AI Support** | Automatic answers in KART Comms. Not a person | (new) |
+| **AI Support** | Automatic answers in KART Comms and the first point of contact for KART help. Not a person. It escalates to Remote Support or FKL Central | (new) |
 | **Allocation** | Handing out karts for an event. A kart that is "not offered for allocation" is not handed out. (The **Kart Allocation** tab in Workshop Manager is different: it gives karts to mechanics to service) | (new) |
 | **Approval queue** | Order lines waiting for the hub's manager or an admin to approve | (new) |
 | **Approved** | Order stage: OK to order | (new) |
@@ -33,7 +33,7 @@
 | **Event Operations** | The KART area for events, Race to Chassis and the ICU board | On Event |
 | **Event usable** | Ready or Repair Needed (usable), and available | Usable |
 | **Exception lanes** | The three lanes under the red Exceptions bar in the Service Queue: Requires reliability actions, Requires part and Requires Support. All open repairs are here | Repair Workflow |
-| **Finding** | Something found on a kart during a report. Each finding becomes a repair | Finding |
+| **Finding** | Something found on a kart. Only in the Power / Performance inspection now; anything else found is a reliability ticket or a damage record | Finding |
 | **FKL Central** | The central team and its KART area: master parts, checklists, thresholds | Parts catalog manager |
 | **FKL part number** | The league's number for a part, such as FKL-900001 | Part number |
 | **FKL Support** | The button that gives automatic answers about KART. Not a person | (new) |
@@ -42,15 +42,15 @@
 | **Hub catalogue** | Your hub's view of the master parts catalogue | Parts Catalog (hub) |
 | **Hub lead** | The person who runs your hub. In KART they usually have the Hub Manager permission. Ask them first | Hub manager |
 | **Hub Manager** | The permission and dashboard for running a hub | hub_manager |
-| **Hub-local part** | A part only one hub uses, not in the master catalogue | Local part |
+| **Hub-local part** | A part one hub added before every part had to be on the master list. No new ones can be added; FKL Central adopts them in **Master review** | Local part |
 | **ICU board** | Open incidents of an event in priority order | ICU Workflow |
 | **In Progress** | A service has been started | In Progress |
-| **Incident** | Information about something that happened to a kart. Never stops it | Incident |
+| **Incident** | Information about something that happened to a kart: asks the workshop to look at it. Never stops it. Logged with **Report a kart problem** or the Tracker's **Log incident** | Incident |
 | **Integrated campaign** | A campaign added to the service checklist. Complete service waits until its task is done | Integrated |
 | **Join link** | A sign-up link for one hub, made by a hub manager or admin | (new) |
 | **KART** | FKL Kart Allocation & Reliability Tracking, the league's main app | (new) |
-| **KART Comms** | KART's messenger, where you ask remote support for help. It has no button in KART: open the address ending in /comms or a bookmark | (new) |
-| **KART Comms support** | Asking remote support for help in KART Comms. Give the kart number | (new) |
+| **KART Comms** | KART's messenger. For help, start with AI Support; the AI escalates to Remote Support or FKL Central. It has no button in KART: open the address ending in /comms or a bookmark | (new) |
+| **KART Comms support** | Help with KART in KART Comms: AI Support first, which escalates to Remote Support or FKL Central. Give the kart number | (new) |
 | **Kart page** | One kart's page: status, open work, history, QR code | Kart page |
 | **KART product owner** | The person responsible for KART across the league. Your hub lead passes process questions on | (new) |
 | **Log book** | **View log book** on a kart tile: the kart's record of services, repairs, campaigns and events | Kart history |
@@ -69,7 +69,7 @@
 | **Planning event** | An event your hub prepares karts for, with readiness targets, such as Demo Regional Race | (new) |
 | **Power / Performance inspection** | The checklist for low power feedback, inside a Driver feedback report | Power / Performance Inspection |
 | **Preferred** | A kart flagged to be used first | Preferred |
-| **Purchasing** | Permission for order actions, but not approval | purchaser |
+| **Purchasing** | Permission for order actions, but not approval. Given by admins only | purchaser |
 | **Race to Chassis (R2C)** | Linking race numbers to chassis per session | Race to Chassis |
 | **Readiness board** | Counts of every status on Overview | Readiness |
 | **Readiness targets** | Event-usable karts each class needs for a planning event | Workshop Planning |
@@ -78,9 +78,9 @@
 | **Reliability** | The permission to raise tickets; also a report type | Reliability |
 | **Reliability ticket** | A fault for engineering. Stops the kart unless its effect is Performance | (new to the workshop) |
 | **Remedy** | What you did to fix a repair, such as Tightened / Secured | Remedy |
-| **Remote support** | The people who answer help messages in KART Comms | (new) |
+| **Remote support** | The people who answer the help chats AI Support escalates in KART Comms | (new) |
 | **Reorder point** | When stock falls to this number, it is time to order more | Reorder level |
-| **Repair** | Work to fix something. Comes from findings, damage or tickets | Repair |
+| **Repair** | Work to fix something. Comes from damage, tickets or failed inspection checks | Repair |
 | **Repair Needed (usable)** | An open repair that does not stop the kart | Repair Needed (Usable) |
 | **Repair Required** | The kart must not be used; a stopping ticket or blocking repair is open | Repair Required |
 | **Requires part** | Service Queue lane for repairs waiting for a part | Waiting on Parts |
@@ -89,6 +89,7 @@
 | **Requires Support** | Service Queue lane for repairs that need help from outside the workshop | (new) |
 | **Root cause** | Why a fault happened. It stays on the reliability ticket | Root cause |
 | **Service** | The check every kart gets after use | Turn |
+| **Services (Work targets)** | On the Work targets card, your target number of services | Turns |
 | **Service Queue** | The Workshop tab with karts to service and repair cards | Repair Workflow |
 | **Servicing** | The Workshop tab with the checklist of your current service | In Service / turn checklist |
 | **Session** | One time out on track at an event. Race to Chassis has a column or button per session | Session |
@@ -102,9 +103,8 @@
 | **Target (stock)** | How many of a part the hub wants to hold | Target |
 | **Technical** | The KART area for reliability tickets and damage (Karting Reliability Tracker) | (new) |
 | **Track use override** | Permission for a not-available kart to run until the end of the event | Track use override |
-| **Turns (Work targets)** | On the Work targets card, "Turns" means your target number of services | Turns |
 | **Unavailable** | Not offered for allocation. Shown on the kart page; on tiles Available is not ticked | Not available |
 | **Waiting on parts** | A repair waiting for parts | Waiting on Parts |
 | **Work targets** | Targets per person: readiness, services, repairs or campaign tasks | Workshop Planning |
-| **Workshop** | The permission and the KART area for servicing, parts and repairs | mechanic |
+| **Workshop** | The permission and the KART area for servicing, parts and repairs. The permission includes Reliability | mechanic |
 | **Workshop Manager** | The hub manager's Workshop tab | Management |

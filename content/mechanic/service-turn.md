@@ -226,7 +226,7 @@ captions:
       - Tap Confirm
       - Open Overview and find 203
     callouts:
-      - [1, "text=#203", "Ready again"]
+      - [1, "text=Kart 203", "Ready again"]
     :::
 
 !!! warning "Watch out"

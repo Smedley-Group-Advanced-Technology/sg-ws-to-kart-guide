@@ -62,11 +62,11 @@ flowchart LR
 
 ![Step 1: Mark ordered on the sprockets line](../assets/img/hub-manager/hm-ord-mark.png){ loading=lazy }
 
-1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Type the **Supplier** (or check it if KART filled it in) and tap **Save**.
+1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Type the **Supplier** (or check it if KART filled it in) and tap **Save**. Under the box KART lists your hub's **Preferred supplier** and **Backup supplier** for the part: tap **Use** to fill one in. Choose them in [Hub catalogue](hub-catalogue.md#choose-the-preferred-supplier).
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
-    ![Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
+    ![Step 2: the repair card for Kart 307 with On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
 
 !!! warning "Watch out"
     **Mark ordered** only works on **Approved** lines. Lines made with **Add bulk order** go straight to Ordered, so only approvers can make them.

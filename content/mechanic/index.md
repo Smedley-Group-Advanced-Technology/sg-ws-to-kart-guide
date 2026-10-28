@@ -34,7 +34,7 @@ callouts:
 3. [The fleet board](fleet-board.md): what the Overview tells you at the start of a shift.
 4. [Doing a service](service-turn.md): start, check, complete.
 5. [Pause and resume](pause-and-resume.md): stop for a reason and pick up again.
-6. [Report a problem](report-a-problem.md): incidents, findings and driver feedback.
+6. [Report a problem](report-a-problem.md): incidents, driver feedback and following an incident up.
 7. [Reliability tickets](reliability-ticket.md): take an unsafe kart out of use.
 8. [Repairs and parts used](repairs-and-parts.md): fix it and record every part.
 9. [Campaign work](campaign-work.md): fleet campaigns, task by task.
@@ -48,10 +48,11 @@ callouts:
     Print the [mechanic quick reference card](../cards/index.md) and keep it on the workbench.
 
 !!! note "Remember"
-    What you can do depends on your permissions. With only **Workshop** you cannot raise reliability tickets or tick **Available** and **Preferred**. A colleague with the **Reliability** permission, such as Casey Mechanic in this guide, can.
+    What you can do depends on your permissions. **Workshop includes Reliability**, so with Workshop you can also raise reliability tickets and tick **Available** and **Preferred**. If you cannot, ask your hub manager to check your permissions.
 
 ## Who to ask
 
 - **Your hub lead** (the person who runs your hub) for accounts, access and how your hub works.
-- **KART Comms support** (remote support) for KART problems. Give the kart number. See [Getting help](../start/finding-your-way.md#getting-help).
+- **Your hub manager (hub lead)** also for KART problems, such as a status that looks wrong. Give the kart number.
+- **KART Comms**: start with **AI Support**; the AI escalates to Remote Support or FKL Central. See [Getting help](../start/finding-your-way.md#getting-help).
 - Words you do not know are in the [Glossary](../glossary.md).

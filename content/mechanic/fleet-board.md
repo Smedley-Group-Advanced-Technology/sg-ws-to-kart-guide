@@ -120,8 +120,8 @@ captions:
     steps:
       - Scroll to the Junior Karts tiles
     callouts:
-      - [1, "text=#301", "Campaign tag: caliper seal upgrade"]
-      - [2, "text=#308", "Missing Components"]
+      - [1, "text=Kart 301", "Campaign tag: caliper seal upgrade"]
+      - [2, "text=Kart 308", "Missing Components"]
       - [3, "text=View log book", "The kart's log book"]
     :::
 
@@ -129,7 +129,7 @@ captions:
     Tile colours show availability, not the status: red background means not available, green means preferred, yellow means available. A kart that is in service or paused is not available, so its tile is red. **View log book** on a tile opens the kart's record of past work. With only the Workshop permission the **Available** and **Preferred** ticks are greyed out. Colleagues with **Reliability** can change them.
 
 !!! tip "Tip"
-    Start every shift on Overview. Compare the board with the karts in front of you. If something does not match, report it in KART Comms support with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
+    Start every shift on Overview. Compare the board with the karts in front of you. If something does not match, tell your hub manager (hub lead), with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
 
 !!! note "Remember"
-    The **Work targets** card may show **Turns** with a count, such as 0 / 5 completed. "Turns" there means services: it is your target number of services.
+    The **Work targets** card may show **Services** with a count, such as 0 / 5 completed: your target number of services.

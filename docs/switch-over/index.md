@@ -87,7 +87,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 
     ![KART open on the workshop tablet as the only app for recording](../assets/img/switch-over/so-day-2-freeze.png){ loading=lazy }
 
-3. Open KART > Workshop and check the fleet board against the karts in front of you. Report anything wrong through KART Comms support, with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
+3. Open KART > Workshop and check the fleet board against the karts in front of you. If anything is wrong, tell your hub manager (hub lead), with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
 
     ![The Readiness board to compare with the karts in the workshop](../assets/img/switch-over/so-day-3-board.png){ loading=lazy }
 
@@ -129,7 +129,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 | Question | Ask |
 |---|---|
 | Cannot sign in, no Workshop access, wrong hub | Your **hub lead**, who asks a KART admin to give the Workshop permission and hub access |
-| Fleet board or kart status looks wrong, a moved record is missing | **KART Comms support** (remote support). Include the kart number |
+| Fleet board or kart status looks wrong, a moved record is missing | Your **hub manager (hub lead)**, with the kart number. For help with KART itself: **AI Support** in KART Comms, which escalates to Remote Support or FKL Central |
 | Part missing from the parts list, wrong part number, supplier | **FKL Central** (parts catalogue), through your hub lead |
 | Process questions, the SOP (your hub's written procedures) | Your **hub lead**, then the **KART product owner** (the person responsible for KART across the league; your hub lead passes it on) |
 | KART unavailable | Paper, then enter it in KART later. Never the Workshop App |

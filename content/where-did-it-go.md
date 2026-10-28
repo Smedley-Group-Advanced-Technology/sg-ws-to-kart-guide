@@ -41,8 +41,8 @@ callouts:
 | Mark used | Race to Chassis marks karts used on the event day; hub managers use **Requires service** on the Overview tile; **Undo** / **Undo mark used** | Workshop; by hand hub manager | [Marking karts used](mechanic/mark-used.md) |
 | Repair Workflow | Workshop > **Service Queue**, lanes **Requires reliability actions** and **Requires part**; **Log remedy / complete repair** | Workshop; priority order hub manager | [Repairs and parts used](mechanic/repairs-and-parts.md) |
 | Waiting on Parts | Lane **Requires part**; cards show **On order** once ordered | Workshop | [Repairs and parts used](mechanic/repairs-and-parts.md) |
-| Create New Kart Report | **Report a kart problem** (Overview or kart page): Incident, Driver feedback, Reliability, Damage | Workshop; Reliability and Damage need Reliability | [Report a problem](mechanic/report-a-problem.md) |
-| Incident edit, findings, remedy | Findings in the report dialog; **Log findings** on the kart page; remedy on **Log remedy / complete repair** | Workshop; corrections admin or hub manager | [Report a problem](mechanic/report-a-problem.md) |
+| Create New Kart Report | **Report a kart problem** (Overview or kart page): Incident, Driver feedback, Reliability, Damage; **Log incident** on the Tracker (Technical card) | Workshop; **Log incident**: any staff member with hub access; Reliability and Damage need Reliability | [Report a problem](mechanic/report-a-problem.md) |
+| Incident edit, findings, remedy | Findings are replaced: on the incident (kart page or ICU board) use **Raise reliability ticket** or **Record damage**; **Edit incident**; remedy of older finding repairs on **Log remedy / complete repair** | Workshop (ticket and damage need Reliability); corrections admin or hub manager | [Report a problem](mechanic/report-a-problem.md#follow-up-an-incident-after-inspecting-the-kart) |
 | Power / Performance Inspection | **Power / Performance inspection** inside a **Driver feedback** report | Workshop | [Report a problem](mechanic/report-a-problem.md) |
 | Resolve no damage | **Resolved: no fault found** | Workshop | [Repairs and parts used](mechanic/repairs-and-parts.md) |
 | Campaign Work (tasks) | Workshop > **Campaign work** | Workshop | [Campaign work](mechanic/campaign-work.md) |
@@ -65,11 +65,11 @@ callouts:
 | Parts Ordered / Order list | Workshop Manager > **Order List** (**Approval queue**, **Approve**, **Reject**, **Mark ordered**, **Add bulk order**) | Hub manager; approve: the hub's manager or admin; order and receive: also Purchasing | [Orders](hub-manager/orders.md) |
 | Parts Received | Workshop Manager > **Goods In**, or **Receive** on an Order List line | Hub manager or Purchasing | [Orders](hub-manager/orders.md) |
 | One-time and bulk orders | Stores **One-time need**; Order List **Add bulk order** | Workshop (one-time); hub manager (bulk) | [Orders](hub-manager/orders.md) |
-| Inventory | Workshop > **Stores**, **Parts** tab (**Adjust**, **Add inventory**) | Workshop | [Stores](mechanic/stores.md) |
+| Inventory | Workshop > **Stores**, **Parts** tab (**Adjust**, **Add inventory**) | Workshop; **Adjust**: hub manager or admin | [Stores](mechanic/stores.md) |
 | Consumables | Workshop > **Stores**, **Consumables** tab | Workshop | [Stores](mechanic/stores.md) |
 | Parts Catalog | FKL Central > **Parts catalogue** > **Master parts**; hub view in Workshop Manager > **Hub catalogue** | FKL Central; hub manager | [Parts catalogue](fkl-central/parts-catalogue.md) |
 | Catalog Requests | Hub side: Workshop Manager > **Hub catalogue** > **Request a part**. Review: FKL Central > **Parts catalogue** > **Part requests** | Hub manager; FKL Central | [Hub catalogue](hub-manager/hub-catalogue.md), [Part requests](fkl-central/part-requests.md) |
-| Add local part | Workshop Manager > **Hub catalogue** > **Add hub-local part** (MPN required). Supplier field change: Coming soon | Hub manager, FKL Central, admin | [Hub catalogue](hub-manager/hub-catalogue.md) |
+| Add local part | Not in KART: every part is on the FKL master list. Use Workshop Manager > **Hub catalogue** > **Request a part** | Hub manager, FKL Central, admin | [Hub catalogue](hub-manager/hub-catalogue.md) |
 
 ## Management menu
 
@@ -98,9 +98,9 @@ callouts:
 
 !!! abstract "Coming soon"
     - FKL calendar sync page for admins.
-    - Supplier field changes in **Add hub-local part** and the **Hub price** badge.
+    - The **Hub price** badge in Stores renamed **Hub description**.
     - Removing the old 4-box front alignment entry from the checklists.
     - Repairs moved from the Workshop App listed under their incidents on the kart page, with their photos.
 
 !!! tip "Tip"
-    Cannot find something? Ask in KART Comms support, or check [Troubleshooting](troubleshooting.md).
+    Cannot find something? Ask your hub manager (hub lead), or check [Troubleshooting](troubleshooting.md).

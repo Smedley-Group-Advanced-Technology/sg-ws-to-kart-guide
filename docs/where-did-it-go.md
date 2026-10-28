@@ -39,7 +39,7 @@ Every Workshop App screen and where to find it in KART, grouped by the Workshop 
 
 | In the Workshop App | In KART (how to get there) | Who can use it | Guide page |
 |---|---|---|---|
-| Race to Chassis | **Event Operations** > pick the event > **Race to Chassis**. Drag and drop on tablets and laptops, tap grid on phones | Signed in; other days admins only | [Race to Chassis](mechanic/race-to-chassis.md) |
+| Race to Chassis | **Event Operations** > pick the event > **Race to Chassis**. Drag and drop on tablets and laptops, chassis list on phones | Signed in; other days admins only | [Race to Chassis](mechanic/race-to-chassis.md) |
 | Chassis reassignment | Reason question after a move, **Reassignments** on Race to Chassis, kart page **Chassis reassignments** | Event and workshop staff | [Race to Chassis](mechanic/race-to-chassis.md) |
 | Track use override | **Assign anyway** in Race to Chassis, or ticking Available with a reason; overrides end with the event | Per screen | [Race to Chassis](mechanic/race-to-chassis.md) |
 | ICU Workflow | **Event Operations** > pick the event > **ICU board** | Workshop to edit; others read only | [Report a problem](mechanic/report-a-problem.md) |

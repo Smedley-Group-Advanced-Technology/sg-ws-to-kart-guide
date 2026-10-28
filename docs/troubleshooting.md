@@ -12,7 +12,7 @@ Find what you see in the left column. Each row says why it happens and what to d
 | A hub is greyed out with a lock | You have no access to that hub | Tap **Request Access**. See [Signing in and access](start/sign-in-and-access.md) |
 | **Waiting for approval** after signing up | A manager of the hub (or an admin, without a join code) has not approved you yet | Wait, or ask your hub manager to check **Pending approvals** |
 | Cannot start a service: **You already have a kart in service** | One active service per mechanic | Tap **Pause and switch**, or finish the first service |
-| Cannot start a service: another mechanic's service | **Another mechanic is servicing this kart.** | Ask your hub manager to re-allocate it in the Service Queue |
+| Cannot start a service: another mechanic's service | **Another mechanic is servicing this kart.** | Tap **Take over** on the kart page and give a reason. See [Pause and resume](mechanic/pause-and-resume.md) |
 | Cannot start services at all | Your account has no **Workshop** permission | Ask your hub lead |
 | **Complete service** greyed out: **checks still unchecked** | Required checks are not answered | Answer every required check |
 | **Complete service** greyed out: **blocked checks must be resolved first** | A check is set to Blocked | Fix it and set it to Good, or report a problem so it becomes a repair |

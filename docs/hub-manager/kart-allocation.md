@@ -26,4 +26,4 @@
     If KART says there are no mechanics yet, nobody at your hub has the **Workshop** permission. Ask a KART admin to give it, with access to your hub. See [Approvals](approvals.md).
 
 !!! tip "Tip"
-    If a mechanic paused a service and left, you can re-allocate the kart here so somebody else can carry on.
+    If a mechanic paused a service and left, any mechanic of the hub can **Take over** the service with a reason, or you can re-allocate the kart here first. You see who took it over and why on the kart page, the **In progress** card and the service report. See [Pause and resume](../mechanic/pause-and-resume.md).

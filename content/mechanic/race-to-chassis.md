@@ -154,10 +154,11 @@ The list shows one session of one class: tap the kart class (**Junior**, **Cadet
 2. Tap the race number this kart runs with, for example **07**. Grey numbers are already on another kart in this session; the kart is shown under the number. KART says **Kart 302 marked used**, with **Undo**, as in drag and drop.
 
     :::shot mech-r2c-list-picker
-    caption: The race number picker for Kart 302, with taken numbers in grey
+    caption: The race number picker for Kart 303, with 07 in grey because Kart 302 has it
     device: phone
     steps:
-      - Tap Kart 302
+      - Put race number 07 on Kart 302
+      - Tap Kart 303
     callouts:
       - [1, "text=Tap the race number this kart runs with.", "Pick the race number"]
       - [2, "css=[data-testid='r2c-race-picker']", "Grey: taken, with its kart"]

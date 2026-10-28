@@ -2019,7 +2019,7 @@
   - Tap the chassis, then its race number.
   - A number another kart has asks before it moves.
   - Switch views with the button at the bottom.
-  duration: 45
+  duration: 35
 - id: mech-r2c-list
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2048,7 +2048,8 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Tap Kart 302
+  - Put race number 07 on Kart 302
+  - Tap Kart 303
   callouts:
   - n: 1
     target: text=Tap the race number this kart runs with.
@@ -2056,7 +2057,7 @@
   - n: 2
     target: css=[data-testid='r2c-race-picker']
     note: 'Grey: taken, with its kart'
-  caption: The race number picker for Kart 302, with taken numbers in grey
+  caption: The race number picker for Kart 303, with 07 in grey because Kart 302 has it
 - id: mech-r2c-list-move
   kind: screenshot
   page: mechanic/race-to-chassis.md

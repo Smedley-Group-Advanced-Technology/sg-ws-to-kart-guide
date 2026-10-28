@@ -56,7 +56,7 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-r2c-list-clip.jpg" width="390">
 <source src="../assets/video/mech-r2c-list-clip.mp4" type="video/mp4"><source src="../assets/video/mech-r2c-list-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-r2c-list-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: putting a race number on a chassis with the chassis list on a phone (about 45 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: putting a race number on a chassis with the chassis list on a phone (about 35 seconds, with captions)</figcaption></figure>
 
 The list shows one session of one class: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its status (**Available**, **Unpreferred**, **Unavailable** or **Not in fleet**, plus tags such as **Requires service**) and, on the right, the race number it has in this session (a dot when it has none).
 
@@ -66,7 +66,7 @@ The list shows one session of one class: tap the kart class (**Junior**, **Cadet
 
 2. Tap the race number this kart runs with, for example **07**. Grey numbers are already on another kart in this session; the kart is shown under the number. KART says **Kart 302 marked used**, with **Undo**, as in drag and drop.
 
-    ![The race number picker for Kart 302, with taken numbers in grey](../assets/img/mechanic/mech-r2c-list-picker.png){ loading=lazy }
+    ![The race number picker for Kart 303, with 07 in grey because Kart 302 has it](../assets/img/mechanic/mech-r2c-list-picker.png){ loading=lazy }
 
 3. If you pick a grey number, KART asks, for example, **Move race number 07 to Kart 303?** Tap **Move** to move it (the other kart is left without a race number), or **Cancel**. After the move KART asks why it changed chassis (see below).
 

@@ -5,7 +5,7 @@ KART uses three words for problems with a kart. Knowing the difference saves you
 
 !!! info "What changed from the Workshop App"
     - In the Workshop App an incident could make a kart Repair Required. **In KART, incidents are information only.** They never make a kart Repair Required or unavailable.
-    - **Only a stopping reliability ticket (or a blocking open repair) takes a kart out of use.**
+    - **A stopping reliability ticket, an open damage ticket, missing batteries or a blocking open repair take a kart out of use.**
     - "Create New Kart Report" is now **Report a kart problem**.
 
 ## The three words

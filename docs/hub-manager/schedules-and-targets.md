@@ -30,7 +30,7 @@ This page covers three things: how your hub's weekly schedule works (**Schedule 
 
 1. Open **Workshop Manager > Work targets** and tap **Add target**.
 
-2. Choose the **Person** (shown by initials, for example **AM**) and the **Work type**: Readiness, Turns, Repairs or Campaign tasks.
+2. Choose the **Person** (shown by initials, for example **AM**) and the **Work type**: Readiness, Services, Repairs or Campaign tasks.
 
 3. Type the target number, optionally a class and a note.
 

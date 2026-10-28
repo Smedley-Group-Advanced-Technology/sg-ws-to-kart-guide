@@ -902,14 +902,14 @@
   state: Demo Hub with some completed demo services
   steps:
   - Tap Reports
-  - Choose Turn summary
+  - Choose Service summary
   - Set From and To to the last two weeks
   callouts:
   - n: 1
     target: text=Reports
     note: The tab
   - n: 2
-    target: text=Turn summary
+    target: text=Service summary
     note: Pick a report
   - n: 3
     target: text=Period
@@ -917,7 +917,7 @@
   - n: 4
     target: text=Excel
     note: Excel, PDF or CSV
-  caption: 'Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons'
+  caption: 'Steps 1 to 4 on one screen: the Reports tab, Service summary, the period and the export buttons'
 - id: hm-sched
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -956,7 +956,7 @@
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
   - Tap Work targets, then Add target
-  - Choose AM (Alex Mechanic) and Turns, type 10 and choose Cadet
+  - Choose AM (Alex Mechanic) and Services, type 10 and choose Cadet
   callouts:
   - n: 1
     target: text=Add work target
@@ -3483,8 +3483,8 @@
     note: Your hub
   - n: 2
     target: text=Remote Support
-    note: Ask for help here
-  caption: 'Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat'
+    note: Your chat with remote support
+  caption: 'Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat'
 - id: rs-trackside-send
   kind: screenshot
   page: remote-support/comms.md
@@ -3497,10 +3497,10 @@
   - Tap Remote Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
-  - n: 3
+  - n: 4
     target: text=On cover
     note: Who covers your hub today
-  caption: 'Step 3: a support message typed under the On cover header'
+  caption: 'Step 4: a reply in an escalated support chat, under the On cover header'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md
@@ -4605,12 +4605,13 @@
   state: Demo Hub as seeded
   steps:
   - Open /comms as Alex Mechanic
+  - Tap AI Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
   - n: 1
-    target: text=Remote Support
-    note: Ask for help
-  caption: A support message in KART Comms describing the problem
+    target: text=AI Support
+    note: Start here
+  caption: A question to AI Support in KART Comms describing the problem
 - id: gen-where-tabs
   kind: screenshot
   page: where-did-it-go.md

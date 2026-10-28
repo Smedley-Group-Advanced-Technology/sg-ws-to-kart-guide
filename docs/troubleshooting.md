@@ -35,9 +35,9 @@ Find what you see in the left column. Each row says why it happens and what to d
 
 ## Still stuck?
 
-1. Open KART Comms (KART's messenger, see [Getting help](start/finding-your-way.md#getting-help)) and send a message to remote support with the kart number and what you see.
+1. Tell your hub manager (hub lead) what you see, with the kart number. For help with KART itself, open **KART Comms** and start with **AI Support**; the AI escalates to Remote Support or FKL Central when a person is needed (see [Getting help](start/finding-your-way.md#getting-help)).
 
-    ![A support message in KART Comms describing the problem](assets/img/general/gen-trouble-comms.png){ loading=lazy }
+    ![A question to AI Support in KART Comms describing the problem](assets/img/general/gen-trouble-comms.png){ loading=lazy }
 
 !!! tip "Tip"
     A screenshot helps. Attach it with **Attach file**.

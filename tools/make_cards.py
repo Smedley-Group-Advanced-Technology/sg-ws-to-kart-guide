@@ -60,7 +60,7 @@ CARDS = {
         "Repair done: [[Log remedy / complete repair]] with the parts used.",
         "Campaign tasks: [[Campaign work]], [[Start work]], fit parts, [[Complete work]].",
         "Find a kart: [[Open kart]], type the number (e.g. 207) or scan the QR.",
-    ], True, ("Watch out", "Incidents are information only and never stop a kart. Only a stopping reliability ticket takes a kart out of use. After your hub's switch time, never record anything in the Workshop App.")),
+    ], True, ("Watch out", "Incidents are information only and never stop a kart. A stopping reliability ticket, an open damage ticket or missing batteries take a kart out of use. After your hub's switch time, never record anything in the Workshop App.")),
     "hub-manager-card": ("Hub manager", "Everything a mechanic does, plus", [
         "Open [[Workshop Manager]], the last Workshop tab.",
         "[[Kart Allocation]]: give karts to mechanics.",
@@ -100,11 +100,11 @@ CARDS = {
         "Select your Hub > [[Remote Support]] > [[Hub Dashboard]].",
         "Per event, choose who covers it in the [[Support cover]] list. Only Remote support holders are offered.",
         "No cover? Chats show [[Unassigned]] and all remote support is alerted.",
-    ], False, ("Remember", "New direct chats between two colleagues are private to them. Remote support and admins do not see them. AI Support is automatic, not a person.")),
+    ], False, ("Remember", "New direct chats between two colleagues are private to them. Remote support and admins do not see them. AI Support is automatic, not a person. Hub staff ask it first; it escalates chats to remote support.")),
     "switch-over-day-card": ("Switch-over day", "Day-one checklist for your hub", [
         "Before the day: sign in to KART and check you see [[Workshop]] for your hub. If not, tell the hub lead now.",
         "From the switch time: do not open the Workshop App to record anything.",
-        "Open KART > [[Workshop]]. Check the fleet board against the karts. Report anything wrong in KART Comms support.",
+        "Open KART > [[Workshop]]. Check the fleet board against the karts. Tell your hub manager (hub lead) about anything wrong, with the kart number.",
         "Open [[Servicing]]: pick up the carried-over services. Complete or cancel each.",
         "Work the [[Service Queue]] for karts showing [[Requires service]] (was Turn Required).",
         "Work the open repairs. Record the parts used on each repair.",
@@ -134,8 +134,8 @@ for name, (title, sub, steps, show_status, box) in CARDS.items():
         right.append(f'<div class="note"><strong>{html.escape(k)}</strong>{html.escape(v)}</div>')
     right.append(f'<div class="box"><strong>{html.escape(box[0])}</strong>{html.escape(box[1])}</div>')
     if show_status:
-        first = "Ask your hub lead first. " if name == "mechanic-card" else ""
-        right.append(f'<div class="note"><strong>Help</strong>{first}KART problems: message remote support in KART Comms (bookmark the KART address ending in /comms). Give the kart number. The FKL Support button gives automatic answers only.</div>')
+        first = "KART problems: tell your hub manager (hub lead), with the kart number. " if name == "mechanic-card" else ""
+        right.append(f'<div class="note"><strong>Help</strong>{first}Help with KART: AI Support in KART Comms first (bookmark the KART address ending in /comms); it escalates to Remote Support or FKL Central.</div>')
     items = "\n".join(f"<li>{b(s)}</li>" for s in steps)
     doc = f"""<!doctype html>
 <html lang="en">

@@ -1,7 +1,7 @@
 # Frequently asked questions
 
 !!! info "What changed from the Workshop App"
-    Most answers come down to three changes: workshop work is now in **KART**, "Turn Required" is now **Requires service**, and only a **stopping reliability ticket** takes a kart out of use.
+    Most answers come down to three changes: workshop work is now in **KART**, "Turn Required" is now **Requires service**, and karts are taken out of use by a **stopping reliability ticket**, an open **damage ticket** or missing batteries (**Missing Components**).
 
 ## For mechanics
 
@@ -48,7 +48,7 @@ Drag it back, or onto the right chassis. If KART marked the wrong chassis used, 
 **Open kart** on Overview: type the number (for example 207) or scan its QR code.
 
 **How do I ask for help?**
-Ask your hub lead first. For KART problems, message remote support in KART Comms (KART's messenger; ask your hub lead to bookmark it on the tablet). Include the kart number. The **FKL Support** button gives automatic answers and is not a person. See [Getting help](start/finding-your-way.md#getting-help).
+Tell your hub manager (hub lead) first, with the kart number. For help with KART itself, open **KART Comms** and start with **AI Support**; the AI escalates to Remote Support or FKL Central when a person is needed (KART Comms is KART's messenger; ask your hub lead to bookmark it on the tablet). The **FKL Support** button gives automatic answers and is not a person. See [Getting help](start/finding-your-way.md#getting-help).
 
 **Who is my hub lead?**
 The person who runs your hub. In KART they usually have the Hub Manager permission, so this guide also says "hub manager".

@@ -29,7 +29,7 @@ steps:
   - Show Kart marked as requiring service and tap Undo
   - Show Mark used undone
   - Switch to Race to Chassis for Demo Practice Day, tap Bambino and drag race number 8 onto chassis 04 (Bambino 104)
-  - Show Chassis 04 marked used and the event day note
+  - Show Kart 104 marked used and the event day note
 captions:
   - "Hub managers can mark a kart used on its tile."
   - "KART confirms and offers Undo."
@@ -38,14 +38,14 @@ captions:
   - "They stay Ready today and need a service after the event."
 :::
 
-1. On **Overview**, find the kart's tile, for example **#101**.
+1. On **Overview**, find the kart's tile, for example **Kart 101**.
 
     :::shot mech-used-tile
     caption: The tile for Bambino 101 with its Requires service button
     steps:
       - Scroll to Bambino Karts
     callouts:
-      - [1, "text=#101", "Bambino 101"]
+      - [1, "text=Kart 101", "Bambino 101"]
       - [2, "role=button[name='Requires service']", "Only for hub managers and admins"]
     :::
 

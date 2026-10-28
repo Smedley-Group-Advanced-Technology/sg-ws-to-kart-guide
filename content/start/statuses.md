@@ -66,7 +66,7 @@ Every kart in KART has one workshop status. The status decides whether the kart 
     steps:
       - Scroll to the Junior Karts tiles
     callouts:
-      - [1, "text=#308", "Junior 308"]
+      - [1, "text=Kart 308", "Junior 308"]
       - [2, "text=Missing Components", "A battery is missing"]
       - [3, "text=Campaign", "Open campaign task"]
     :::
@@ -108,7 +108,7 @@ stateDiagram-v2
 ```
 
 !!! warning "Watch out"
-    Do not change a kart's status by hand to make the board look right. If a status looks wrong, report it through KART Comms support with the kart number. See [Troubleshooting](../troubleshooting.md).
+    Do not change a kart's status by hand to make the board look right. If a status looks wrong, tell your hub manager (hub lead), with the kart number. See [Troubleshooting](../troubleshooting.md).
 
 !!! tip "Tip"
     A kart with a started or paused service also counts as needing service everywhere in KART, including the Fleet Status card and Race to Chassis colours. While it is in service or paused it is **Not available**, so its tile is red.

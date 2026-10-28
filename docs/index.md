@@ -24,7 +24,7 @@ Your hub's workshop work is moving from the **FKL Workshop App** (we call it "th
 !!! info "What changed from the Workshop App"
     - The Workshop App was a separate app. KART is the league's main app, and the workshop is one area inside it.
     - "Turn Required" is now called **Requires service**. It means exactly the same thing: the kart has been used and needs a service.
-    - Incidents are information only. Only a stopping reliability ticket takes a kart out of use. See [Incidents, tickets and repairs](start/problems-explained.md).
+    - Incidents are information only. A stopping reliability ticket, an open damage ticket or missing batteries take a kart out of use. See [Incidents, tickets and repairs](start/problems-explained.md).
 
 ## Pick your role
 
@@ -52,7 +52,7 @@ New to KART? Start with [Signing in and access](start/sign-in-and-access.md), th
 ## Who to ask for help
 
 - **Your hub lead** (the person who runs your hub; in KART they usually have the Hub Manager permission): accounts, access, how your hub works, the switch-over date.
-- **KART Comms support**: people in remote support who help with KART problems, such as a kart showing the wrong status. See [KART Comms](remote-support/comms.md).
+- **KART problems**, such as a kart showing the wrong status: tell your hub manager (hub lead), with the kart number. For help with KART itself, start with **AI Support** in **KART Comms**; the AI escalates to Remote Support or FKL Central. See [KART Comms](remote-support/comms.md).
 - The **FKL Support** button in KART gives automatic answers. It is not a person.
 
 The [Who to contact](switch-over/index.md#who-to-contact) table on the switch-over page has the full list.

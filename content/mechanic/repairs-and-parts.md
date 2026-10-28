@@ -43,14 +43,14 @@ Every damaged component, every stopping ticket and every failed Power / Performa
       - [1, "text=Repair priority, top first. Work top to bottom.", "Start at the top"]
     :::
 
-3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by class and its number in the class: **Junior 7** is kart 307. Small tags say where the work happens (**In shop** or **Remote**) and **Files** opens photos.
+3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by its number, for example **Kart 307**. Small tags say where the work happens (**In shop** or **Remote**) and **Files** opens photos.
 
     :::shot mech-repair-card
     caption: The repair card for Junior 307 showing Waiting on front bumper and On order
     steps:
       - Find the 307 card in Requires part
     callouts:
-      - [1, "text=Junior 7", "Junior 307"]
+      - [1, "text=Kart 307", "Junior 307"]
       - [2, "text=Waiting on:", "The part it needs"]
       - [3, "text=On order", "Already ordered"]
     :::
@@ -63,7 +63,7 @@ duration: 80
 steps:
   - On the 106 card tap Open kart page
   - Tap Start repair under Current work, wait a few seconds, tap Stop repair work
-  - Back in the Service Queue, tap Log remedy / complete repair on the 106 card
+  - Log remedy / complete repair opens on its own
   - Choose Tightened / Secured in Remedy, type What was done
   - Tap Confirm repair complete
   - Show 106 back as Ready on Overview
@@ -71,7 +71,7 @@ captions:
   - "Open the kart page from the repair card."
   - "Tap Start repair when you begin."
   - "Tap Stop repair work when you finish."
-  - "Tap Log remedy / complete repair."
+  - "Log remedy / complete repair opens straight away."
   - "Choose the remedy and say what you did."
   - "Record every part you used."
   - "Confirm. The repair is closed."
@@ -99,7 +99,7 @@ captions:
       - [2, "text=Start repair", "Start the repair clock"]
     :::
 
-3. Tap **Pause repair** for a break, then **Resume repair**. Tap **Stop repair work** when you finish.
+3. Tap **Pause repair** for a break, then **Resume repair**. Tap **Stop repair work** when you finish. On an incident or damage repair, **Log remedy / complete repair** then opens straight away (see the next section). Pausing never opens it.
 
     :::shot mech-repair-stop
     caption: Pause repair and Stop repair work while repair work is running
@@ -112,12 +112,18 @@ captions:
       - [2, "text=Stop repair work", "Finished for now"]
     :::
 
+!!! tip "Stopping for now, not finished?"
+    Tap **Cancel** or close the remedy dialog. The repair work stays stopped and the repair stays open. Tap **Start repair** (or **Resume repair**) later, or complete it from **Log remedy / complete repair**.
+
+!!! note "Repairs on a reliability ticket"
+    A repair on a stopping reliability ticket has no remedy dialog, so nothing opens when you stop its work. It is completed in the **Service Queue** (drag the card to **Completed**) or when the ticket is closed.
+
 !!! note "Remember"
     If the kart is also in service, starting repair work pauses the service. The service then shows the extra repair minutes. See [Pause and resume](pause-and-resume.md).
 
 ## Log the remedy and complete the repair
 
-1. Back in the **Service Queue**, tap **Log remedy / complete repair** on the card.
+1. The dialog opens on its own when you tap **Stop repair work**. To open it later, tap **Log remedy / complete repair** on the card in the **Service Queue** or next to the repair on the kart page.
 
     :::shot mech-remedy-open
     caption: Log remedy / complete repair on the 106 card

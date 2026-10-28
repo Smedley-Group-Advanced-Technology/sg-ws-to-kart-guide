@@ -48,7 +48,7 @@ caption: "Steps 1 to 4 on one screen: the Add work target form filled in"
 url: /workshop/manager?tab=targets
 steps:
   - Tap Work targets, then Add target
-  - Choose AM (Alex Mechanic) and Turns, type 10 and choose Cadet
+  - Choose AM (Alex Mechanic) and Services, type 10 and choose Cadet
 callouts:
   - [1, "text=Add work target", "Opened with Add target"]
   - [2, "text=Work type", "Person and type of work"]
@@ -58,7 +58,7 @@ callouts:
 
 1. Open **Workshop Manager > Work targets** and tap **Add target**.
 
-2. Choose the **Person** (shown by initials, for example **AM**) and the **Work type**: Readiness, Turns, Repairs or Campaign tasks.
+2. Choose the **Person** (shown by initials, for example **AM**) and the **Work type**: Readiness, Services, Repairs or Campaign tasks.
 
 3. Type the target number, optionally a class and a note.
 

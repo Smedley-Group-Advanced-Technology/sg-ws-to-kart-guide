@@ -66,7 +66,7 @@ flowchart LR
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
-    ![Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
+    ![Step 2: the repair card for Kart 307 with On order for front bumpers](../assets/img/hub-manager/hm-ord-onorder.png){ loading=lazy }
 
 !!! warning "Watch out"
     **Mark ordered** only works on **Approved** lines. Lines made with **Add bulk order** go straight to Ordered, so only approvers can make them.

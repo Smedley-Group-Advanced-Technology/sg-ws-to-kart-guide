@@ -5,7 +5,7 @@ KART uses three words for problems with a kart. Knowing the difference saves you
 
 !!! info "What changed from the Workshop App"
     - In the Workshop App an incident could make a kart Repair Required. **In KART, incidents are information only.** They never make a kart Repair Required or unavailable.
-    - **Only a stopping reliability ticket (or a blocking open repair) takes a kart out of use.**
+    - **A stopping reliability ticket, an open damage ticket, missing batteries or a blocking open repair take a kart out of use.**
     - "Create New Kart Report" is now **Report a kart problem**.
 
 ## The three words
@@ -52,7 +52,7 @@ flowchart TD
 
     ![Cadet 207 showing Repair Required and not available](../assets/img/start/start-problem-207.png){ loading=lazy }
 
-3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by class and its number in the class: **Junior 7** is kart 307, **Bambino 6** is kart 106.
+3. Open the **Service Queue**. The repairs for 106, 207 and 307 are cards in the exception lanes (the three lanes under the red **Exceptions** bar). Repair cards name a kart by its number, for example **Kart 307** or **Kart 106**.
 
     ![Repair cards for 106, 207 and 307 in the Service Queue exception lanes](../assets/img/start/start-problem-queue.png){ loading=lazy }
 

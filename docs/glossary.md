@@ -26,7 +26,7 @@
 | **Consumables** | Workshop supplies, on the second Stores tab | Consumables |
 | **Cover (support cover)** | The remote support person who answers a hub's chats today | (new) |
 | **Damage** | Damaged components, recorded with Record New Damage. Each becomes a repair | Damage report |
-| **Direct chat** | A chat between two colleagues in KART Comms. New ones are private to the two | (new) |
+| **Direct chat** | A chat between two colleagues in KART Comms. New ones are private to the two. Only remote support can start a new one with a remote support person | (new) |
 | **Draft** | Order stage: created from Parts needed, not submitted yet | (new) |
 | **Driver feedback** | A report of what the driver said. Can include the Power / Performance inspection | Driver feedback |
 | **Effect of Issue** | On a reliability ticket: what the kart did, such as Cut out not restarted. Any effect except Performance stops the kart | (new) |

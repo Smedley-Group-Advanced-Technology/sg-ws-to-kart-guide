@@ -1,15 +1,16 @@
 // KART Comms: the Support view as Riley Support (desktop) with an unassigned chat from Casey Mechanic (claim, reply,
-// close, reopen: screenshots and clip), and the Trackside view as Alex Mechanic (tablet): the Remote Support chat
-// with On cover and the AI Support entry point (no AI answer: the local stack has no OpenAI key).
+// close, reopen: screenshots and clip), and the AI Support entry point of the Trackside view as Alex Mechanic (tablet;
+// no AI answer: the local stack has no OpenAI key). The Trackside cover / reply shots are in rs-trackside.mjs (D-38).
 import { HUB, PERSONAS } from '../lib/config.mjs';
-import { asPersona, sql } from '../lib/db.mjs';
+import { sql } from '../lib/db.mjs';
 
 const tab = (s, name) => s.page.locator('[role=tab]').filter({ hasText: new RegExp(`^${name}`) }).first();
 
-// a support chat from Casey Mechanic that nobody has taken yet (routing as notify-direct-message sets it)
+// a support chat from Casey Mechanic that nobody has taken yet (routing as notify-direct-message sets it). Since D-38
+// (KART 20261029070000) a client cannot create a support thread, so it is an older thread, created server-side.
 export function caseyUnassigned() {
   const casey = PERSONAS['Casey Mechanic'].id;
-  asPersona('Casey Mechanic', `INSERT INTO public.direct_threads (user_id, kind) VALUES ('${casey}', 'support');
+  sql(`INSERT INTO public.direct_threads (user_id, kind) VALUES ('${casey}', 'support');
 INSERT INTO public.direct_messages (thread_id, sender_user_id, sender_role, content)
   SELECT id, '${casey}', 'user', 'Junior 304 battery reads 38 V after charging. Can it go out today?'
     FROM public.direct_threads WHERE user_id = '${casey}' AND kind = 'support';`);
@@ -25,7 +26,7 @@ async function openSupport(s) {
 
 export default {
   shots: ['rs-path-overview', 'rs-comms-open', 'rs-support-queue', 'rs-support-claim', 'rs-comms-clip',
-    'rs-trackside-cover', 'rs-trackside-send', 'rs-ai-support'],
+    'rs-ai-support'],
   reset: true,
   async run({ open, clip }) {
     caseyUnassigned();
@@ -86,15 +87,7 @@ export default {
     await a.goto('/comms');
     await a.mustReload(a.page.getByText('Remote Support').first(), 60000);
     await a.settle(800);
-    const hubSel = a.page.getByRole('combobox').first();
-    const rsBtn = a.page.getByRole('button').filter({ hasText: /^Remote Support/ }).first();
-    await a.shot('rs-trackside-cover', { scroll: false, at: { 1: hubSel, 2: rsBtn } });
     await a.shot('rs-ai-support', { scroll: false, at: { 1: a.page.getByRole('button', { name: 'AI Support' }), 2: tab(a, 'AI Chats') } });
-    await a.tap(rsBtn);
-    await a.page.getByText('On cover', { exact: true }).first().waitFor({ timeout: 60000 });
-    await a.settle(600);
-    await a.type(a.page.getByPlaceholder(/Type a message/), 'Kart 307 shows Repair Required but the bumper is fitted');
-    await a.shot('rs-trackside-send', { scroll: false, at: { 3: a.page.getByText('On cover', { exact: true }).first() } });
     await a.close();
   },
 };

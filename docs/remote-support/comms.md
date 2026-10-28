@@ -16,9 +16,9 @@
 
 ## Trackside view: asking for help (hub staff)
 
-![Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat](../assets/img/remote-support/rs-trackside-cover.png){ loading=lazy }
+![Steps 1 and 2 on one screen: the Trackside view with the hub and AI Support](../assets/img/remote-support/rs-trackside-cover.png){ loading=lazy }
 
-AI Support is always the first point of contact. Only the AI passes a chat on to Remote Support or FKL Central.
+AI Support is always the first point of contact. Only the AI passes a chat on to Remote Support or FKL Central. You cannot start a new Remote Support chat yourself, and you cannot start a direct chat with a remote support person (see [Direct chats](direct-chats.md)).
 
 1. As hub staff you see the **Trackside** view. At the top, check your hub. If KART asks, **Choose the hub you are working at**.
 
@@ -26,9 +26,11 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
 
 3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-4. Once the AI has passed your chat on, **Remote Support** also appears in the list, so you can reply in that chat later. Its header shows the hub and who is **On cover** today. Type your reply and tap the send button (**Send**).
+4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button.
 
-    ![Step 4: a reply in an escalated support chat, under the On cover header](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
+    ![Step 4: an escalated AI chat with Requires support and a reply typed](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
+
+If you already had a **Remote Support** chat from before, it stays in your list under **Direct Chats**. Its header shows the hub and who is **On cover** today, and you can still read and reply there.
 
 !!! note "Remember"
     If nobody is on cover the header says **Unassigned** and every remote support person is alerted.

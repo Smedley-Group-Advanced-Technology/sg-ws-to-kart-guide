@@ -19,7 +19,7 @@
 | **Campaign Required** | Board status for karts with an open task of an active integrated campaign. The kart stays usable | (new) |
 | **Campaign work** | The Workshop tab where mechanics do campaign tasks | Campaign Work |
 | **Chassis** | The kart, by its number, in Race to Chassis | Chassis |
-| **Chassis list** | The Race to Chassis view for phones: tap a chassis, then its race number | Race to Chassis grid, tap grid |
+| **Chassis list** | The Race to Chassis view for phones: tap a chassis, then its race number | Race to Chassis grid |
 | **Chassis reassignment** | A race number moved to a different chassis, logged with a reason | Chassis reassignment |
 | **Completed** | Order stage: received. Also a finished service, repair or task | Received |
 | **Components replaced** | Every part fitted during a service, recorded on Servicing | Components, Parts used |

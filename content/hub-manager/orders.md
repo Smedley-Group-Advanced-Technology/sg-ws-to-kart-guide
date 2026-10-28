@@ -101,7 +101,7 @@ callouts:
   - [1, "text=Mark ordered", "Placed with the supplier"]
 :::
 
-1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Type the **Supplier** (or check it if KART filled it in) and tap **Save**.
+1. Place the order with the supplier. Then find the line under **Approved** and tap **Mark ordered**. Type the **Supplier** (or check it if KART filled it in) and tap **Save**. Under the box KART lists your hub's **Preferred supplier** and **Backup supplier** for the part: tap **Use** to fill one in. Choose them in [Hub catalogue](hub-catalogue.md#choose-the-preferred-supplier).
 
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 

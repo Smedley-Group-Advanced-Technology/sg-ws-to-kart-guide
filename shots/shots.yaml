@@ -113,13 +113,13 @@
   steps:
   - Open FKL Central, Parts catalogue, Part requests
   - Tap Review on Steering column bush
-  - Choose Add a new part, check name, MPN and category
+  - Choose Add a new part, check name, MPN, part fit and supplier
   - Tap Add part and show Part added to the catalogue
   caption: reviewing the Steering column bush request from Demo Hub
   captions:
   - Open Part requests.
   - Tap Review.
-  - Link a part, add a new one, keep it local or reject.
+  - Link a part, add a new one or reject.
   - Save. The hub sees the result.
   duration: 25
 - id: fc-req-list
@@ -154,14 +154,11 @@
     note: Already in the catalogue
   - n: 4
     target: text=Add a new part
-    note: New master part
+    note: New master part, prefilled
   - n: 5
-    target: text=Keep as a hub-local part
-    note: Only that hub sees it
-  - n: 6
     target: text=Reject
     note: With a reason
-  caption: 'Steps 3 to 6 on one screen: the Review part request dialog with its four choices'
+  caption: 'Steps 3 to 5 on one screen: the Review part request dialog with its three choices'
 - id: fc-parts-master
   kind: screenshot
   page: fkl-central/parts-catalogue.md
@@ -614,8 +611,8 @@
   callouts:
   - n: 1
     target: text=Hub details
-    note: Hub-specific settings
-  caption: The supplier picker in Hub details
+    note: Preferred and backup supplier
+  caption: The preferred and backup supplier pickers in Hub details
 - id: hm-req-open
   kind: screenshot
   page: hub-manager/hub-catalogue.md
@@ -639,18 +636,21 @@
   state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
   steps:
   - Tap Request a part
-  - Type a part name, an MPN, quantity 2 and notes
+  - Type a part name, manufacturer, MPN, supplier, supplier part number and link, tick Cadet and Cadet Gen3.1
   callouts:
   - n: 2
-    target: text=Part name
-    note: What it is called
+    target: text=Manufacturer part number (MPN)
+    note: Required, with name and manufacturer
   - n: 3
-    target: text=Manufacturer part number (MPN), if known
-    note: Helps FKL Central match it
+    target: text=Link to the part (optional)
+    note: Supplier details and a web link
   - n: 4
+    target: text=Compatible kart types
+    note: Which karts it fits
+  - n: 5
     target: text=Send request
     note: Send it
-  caption: 'Steps 2 to 4 on one screen: the Request a part form filled in'
+  caption: 'Steps 2 to 5 on one screen: the Request a part form filled in'
 - id: hm-request-part-clip
   kind: clip
   page: hub-manager/hub-catalogue.md
@@ -661,29 +661,15 @@
   steps:
   - Open Workshop Manager, Hub catalogue
   - Tap Request a part
-  - Fill in Part name, MPN, Quantity needed and Notes
+  - Fill in Part name, Manufacturer, MPN, Supplier and Compatible kart types
   - Tap Send request and show it as Waiting for FKL Central
   caption: requesting a part from FKL Central in the Hub catalogue
   captions:
   - Open Hub catalogue.
   - Tap Request a part.
-  - Say what the part is and how many.
+  - Say what the part is, who makes it and which karts it fits.
   - Send the request to FKL Central.
   duration: 45
-- id: hm-cat-local
-  kind: screenshot
-  page: hub-manager/hub-catalogue.md
-  persona: Morgan Manager
-  device: desktop
-  url: /workshop/manager?tab=hub-catalogue
-  state: Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub
-  steps:
-  - Tap Add hub-local part
-  callouts:
-  - n: 1
-    target: text=Add hub-local part
-    note: Only for your hub
-  caption: The Add hub-local part form with MPN
 - id: hm-path-overview
   kind: screenshot
   page: hub-manager/index.md

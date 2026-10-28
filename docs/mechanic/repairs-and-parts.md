@@ -1,7 +1,7 @@
 # Repairs and parts used
 
 
-Every finding, every damaged component and every stopping ticket becomes a **repair**. Repairs show as cards in the **Service Queue**. You time the work, then log the remedy and the parts you used.
+Every damaged component, every stopping ticket and every failed Power / Performance check becomes a **repair**. Repairs show as cards in the **Service Queue**. You time the work, then log the remedy and the parts you used.
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Repair Workflow** is now in the **Service Queue**, in the exception lanes **Requires reliability actions** (ready to repair) and **Requires part** (waiting on parts).

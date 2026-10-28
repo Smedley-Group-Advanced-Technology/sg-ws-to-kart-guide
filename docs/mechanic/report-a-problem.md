@@ -1,29 +1,25 @@
 # Report a problem
 
 
-Use **Report a kart problem** for anything that happened to a kart or anything you found on it. The type you pick decides which records KART creates. This page covers incidents, findings and driver feedback. To stop a kart, see [Reliability tickets](reliability-ticket.md).
+Use **Report a kart problem** for anything that happened to a kart or anything you found on it. The type you pick decides which records KART creates. This page covers incidents, driver feedback and what to do after you inspect a kart. To stop a kart, see [Reliability tickets](reliability-ticket.md).
 
 !!! info "What changed from the Workshop App"
     - **Create New Kart Report** is now the **Report a kart problem** button on Overview and on the kart page.
     - **Incidents are information only.** They never make a kart Repair Required or unavailable. To take a kart out of use, raise a stopping reliability ticket.
+    - An incident tells the workshop to **look at a kart**. What you find is recorded the standard way: a **reliability ticket** (for example a loose bolt, root cause operational or poor quality control) or a **damage record**. There are no "inspection findings" any more.
+    - Events staff and contractors log incidents on the **Tracker** with **Log incident**. They do not need the Workshop permission.
     - The **Power / Performance Inspection** is now part of the **Driver feedback** report.
-    - Findings are entered in the same dialog. Each finding becomes a repair.
 
 ## The four types
 
 | Type | Use it for | What KART creates |
 |---|---|---|
-| **Incident** | Impact, spin or anything that happened on track | A workshop incident, plus a repair for each finding |
-| **Driver feedback** | What the driver reported, for example low power or noise | A workshop incident, plus repairs for failed checks and findings |
+| **Incident** | Impact, spin or anything that happened on track | A workshop incident on the ICU board |
+| **Driver feedback** | What the driver reported, for example low power or noise | A workshop incident, plus repairs for failed inspection checks |
 | **Reliability** | A fault for engineering to investigate | Opens the reliability ticket form. Needs the Reliability permission |
 | **Damage** | Damaged components | Opens Record New Damage. Each component becomes a repair. Needs the Reliability permission |
 
-## Report an incident with a finding
-
-<figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-incident-clip.jpg" width="1180">
-<source src="../assets/video/mech-incident-clip.mp4" type="video/mp4"><source src="../assets/video/mech-incident-clip.webm" type="video/webm">
-<track kind="captions" src="../assets/video/mech-incident-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: reporting an incident on Bambino 106 with a loose bumper mount finding (about 70 seconds, with captions)</figcaption></figure>
+## Report an incident
 
 1. On **Overview**, tap **Report a kart problem**.
 
@@ -49,31 +45,37 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Impact location Front selected](../assets/img/mechanic/mech-report-impact.png){ loading=lazy }
 
-7. Fill in the finding (**Finding 1**): its **Issue type**, for example **Loose**, and its **Item / component**, for example "Bumper mount".
-
-    ![Finding 1 with Issue type Loose and Item / component Bumper mount](../assets/img/mechanic/mech-report-finding.png){ loading=lazy }
-
-8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet. **Add part** lists only FKL master parts that fit this kart's type and generation, the same list as **Record New Damage**.
-
-    ![Is a replacement part required? answered No](../assets/img/mechanic/mech-report-part.png){ loading=lazy }
-
-9. Answer **Would this stop the kart from being used?** Here: **No, it is still usable**.
-
-    ![Would this stop the kart from being used? with the note that an incident never stops the kart](../assets/img/mechanic/mech-report-stop.png){ loading=lazy }
-
-10. Tap **Add finding** if you found something else. Then tap **Report problem**.
-
-    ![Add finding and Report problem buttons at the bottom of the dialog](../assets/img/mechanic/mech-report-submit.png){ loading=lazy }
-
-11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by its number, for example **Kart 106**.
-
-    ![The new repair card for 106 in the Service Queue](../assets/img/mechanic/mech-report-result.png){ loading=lazy }
-
-!!! warning "Watch out"
-    If the kart must not be used, the answer **Yes, it should not be used** is not enough. Raise a reliability ticket, or ask a colleague with the Reliability permission to do it. The finding has a link that opens the reliability ticket form in a new tab.
+7. Tap **Report problem**. KART says **Workshop incident logged. It is on the ICU board for the workshop.** The kart's status does not change.
 
 !!! note "Remember"
-    **Without findings the incident stays open on the ICU board until it is inspected.** The ICU board is the list of an event's open incidents in priority order (in **Event Operations**, pick the event, then **ICU board**). It was **ICU Workflow** in the Workshop App. When you inspect it later, open the kart page and use **Log findings**. If nothing needs repairing, choose **Resolved: no fault found**.
+    **The incident stays open on the ICU board until the workshop inspects the kart.** The ICU board is the list of an event's open incidents in priority order (in **Event Operations**, pick the event, then **ICU board**). It was **ICU Workflow** in the Workshop App. When you inspect the kart, follow the incident up as described below.
+
+## Log an incident from the Tracker (events staff and contractors)
+
+On an event you may not have the Workshop permission, for example as a contractor. You can still log an incident for any kart of a hub you have access to.
+
+1. On **Select your Hub**, tap the **Technical** card of your hub. It opens the Karting Reliability Tracker (the **Tracker**).
+2. Tap **Log incident**, next to **New Reliability Issue** and **Record New Damage**.
+3. Choose the **Kart**, the **Incident type** (and the **Impact location** for an impact) and type what happened in **Notes / details**.
+4. Tap **Report problem**. You stay on the Tracker. The incident goes on the ICU board for the workshop.
+
+!!! warning "Watch out"
+    An incident never takes a kart out of use. If the kart must not be used, raise a reliability ticket (**New Reliability Issue**, needs the Reliability permission) or tell someone with the Reliability permission straight away.
+
+## Follow up an incident after inspecting the kart
+
+Open the kart page (or the **ICU board**). Every open incident shows three actions:
+
+| Action | When | What happens |
+|---|---|---|
+| **Raise reliability ticket** | You found a fault, for example a loose bolt (root cause operational or poor quality control) | The ticket form opens on the Tracker with the kart filled in. When you tap **Submit Issue**, the incident is resolved and linked to the ticket (**Open linked ticket**); no new incident is created. KART says **Incident resolved with this ticket.** |
+| **Record damage** | You found damaged components | **Record New Damage** opens with the kart filled in. When you record the damage, the incident is resolved and names the damage ticket. Each component becomes a repair |
+| **Resolved: no fault found** | Nothing needs repairing | The incident is closed. The kart's status does not change |
+
+**Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. The ticket may be **Ongoing** or already **Resolved** (fixed trackside). An incident that still has open repairs from before shows **Complete the open repairs first, then raise a reliability ticket or record damage.** instead of the two buttons. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
+
+!!! tip "Tip"
+    Repairs that were logged as findings before this change stay on the kart page under their incident. Complete them as usual with **Log remedy / complete repair**.
 
 ## Report driver feedback and do the Power / Performance inspection
 
@@ -89,11 +91,11 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Notes / details filled in with what the driver said](../assets/img/mechanic/mech-feedback-describe.png){ loading=lazy }
 
-4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. The findings section below it is marked optional, but every failed check should get a finding.
+4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. A failed check needs a finding, which becomes a repair.
 
     ![The Power / Performance inspection checklist with Pass and Fail answers](../assets/img/mechanic/mech-feedback-inspection.png){ loading=lazy }
 
-5. For a failed check, add the finding under **Inspection findings (optional)**.
+5. For a failed check, add its finding in the check. Use **Other findings (optional)** for anything else you found on the kart.
 
     ![A finding added for a failed inspection check](../assets/img/mechanic/mech-feedback-finding.png){ loading=lazy }
 

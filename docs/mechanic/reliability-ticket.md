@@ -7,7 +7,9 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 
 !!! info "What changed from the Workshop App"
     - In the Workshop App an incident could stop a kart. In KART a **stopping reliability ticket**, an open damage ticket, missing batteries or a blocking repair do.
-    - Tickets live in KART's **Technical** area (the Karting Reliability Tracker). Saving a ticket also creates a linked workshop incident, so the workshop sees it.
+    - Tickets live in KART's **Technical** area (the Karting Reliability Tracker). A ticket raised with **Report a kart problem** gets a new linked workshop incident when you save it, so the workshop sees it.
+    - A ticket raised from an existing incident (**Raise reliability ticket** on the kart page or ICU board) does not create a new incident: it is linked to that incident and resolves it. KART says **Incident resolved with this ticket.**
+    - The Tracker also has **Log incident** for events staff and contractors. See [Report a problem](report-a-problem.md#log-an-incident-from-the-tracker-events-staff-and-contractors).
     - The root cause stays on the ticket. The remedy (what you did) goes on the repair.
 
 ## Raise a stopping ticket

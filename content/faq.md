@@ -23,6 +23,12 @@ There is no side menu. Use **Back**, the hub selection cards and the Workshop ta
 **I logged an incident. Why is the kart still available?**
 Incidents are information only. If the kart must not be used, raise a stopping reliability ticket, or ask someone with the Reliability permission. See [Incidents, tickets and repairs](start/problems-explained.md).
 
+**I work on events without the Workshop permission (for example as a contractor). Where do I log an incident?**
+On the **Tracker** (the **Technical** card of your hub): tap **Log incident**. Any staff member with access to the hub can log one. It goes on the ICU board for the workshop. See [Report a problem](mechanic/report-a-problem.md#log-an-incident-from-the-tracker-events-staff-and-contractors).
+
+**Where did Log findings go?**
+Inspection findings were replaced. After inspecting a kart, use **Raise reliability ticket** or **Record damage** on the incident (kart page or ICU board), or **Resolved: no fault found**. See [Report a problem](mechanic/report-a-problem.md#follow-up-an-incident-after-inspecting-the-kart).
+
 **I cannot choose Reliability or Damage in Report a kart problem.**
 Both need the **Reliability** permission. Workshop includes it, so ask your hub manager to check your permissions; they can give it. Until then, ask a colleague who has it.
 

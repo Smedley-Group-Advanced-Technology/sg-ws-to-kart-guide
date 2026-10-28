@@ -123,7 +123,7 @@ captions:
       - [2, "text=Item / component", "What part of the kart"]
     :::
 
-8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet.
+8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet. **Add part** lists only FKL master parts that fit this kart's type and generation, the same list as **Record New Damage**.
 
     :::shot mech-report-part
     caption: Is a replacement part required? answered No

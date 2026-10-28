@@ -41,16 +41,22 @@ Every finding, every damaged component and every stopping ticket becomes a **rep
 
     ![Start repair under Current work on the 106 kart page](../assets/img/mechanic/mech-repair-start.png){ loading=lazy }
 
-3. Tap **Pause repair** for a break, then **Resume repair**. Tap **Stop repair work** when you finish.
+3. Tap **Pause repair** for a break, then **Resume repair**. Tap **Stop repair work** when you finish. On an incident or damage repair, **Log remedy / complete repair** then opens straight away (see the next section). Pausing never opens it.
 
     ![Pause repair and Stop repair work while repair work is running](../assets/img/mechanic/mech-repair-stop.png){ loading=lazy }
+
+!!! tip "Stopping for now, not finished?"
+    Tap **Cancel** or close the remedy dialog. The repair work stays stopped and the repair stays open. Tap **Start repair** (or **Resume repair**) later, or complete it from **Log remedy / complete repair**.
+
+!!! note "Repairs on a reliability ticket"
+    A repair on a stopping reliability ticket has no remedy dialog, so nothing opens when you stop its work. It is completed in the **Service Queue** (drag the card to **Completed**) or when the ticket is closed.
 
 !!! note "Remember"
     If the kart is also in service, starting repair work pauses the service. The service then shows the extra repair minutes. See [Pause and resume](pause-and-resume.md).
 
 ## Log the remedy and complete the repair
 
-1. Back in the **Service Queue**, tap **Log remedy / complete repair** on the card.
+1. The dialog opens on its own when you tap **Stop repair work**. To open it later, tap **Log remedy / complete repair** on the card in the **Service Queue** or next to the repair on the kart page.
 
     ![Log remedy / complete repair on the 106 card](../assets/img/mechanic/mech-remedy-open.png){ loading=lazy }
 

@@ -31,7 +31,7 @@ export default {
     await s.tap(dlg.getByRole('button', { name: 'Pause', exact: true }));
     await s.skip(() => s.settle(800));
     s.cue();                                                    // Your paused karts wait in the bar.
-    const k304 = s.page.locator('button').filter({ hasText: /Junior 304/ });
+    const k304 = s.page.locator('button').filter({ hasText: /Kart 304/ });
     await s.hover(k304);
     await s.wait(1200);
     await s.shot('mech-pause-done', { scroll: false, at: { 1: bar } });
@@ -40,7 +40,7 @@ export default {
     await s.tap(k304);
     await s.skip(() => s.settle(1000));
     await s.wait(2500);
-    await s.shot('mech-resume-open', { scroll: false, at: { 1: s.page.getByText('Junior 304', { exact: true }) } });
+    await s.shot('mech-resume-open', { scroll: false, at: { 1: s.page.getByText('Kart 304', { exact: true }) } });
     const r = await s.close();
     clip('mech-pause-clip', r, { poster: 3 });
 
@@ -52,7 +52,7 @@ export default {
     const c = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await c.goto('/workshop/in-service');
     await c.mustReload(c.page.getByText(/^Paused services$/i), 60000);
-    const k205 = c.page.locator('button').filter({ hasText: /Cadet 205/ });
+    const k205 = c.page.locator('button').filter({ hasText: /Kart 205/ });
     await c.hover(k205);
     await c.wait(1500);
     await c.shot('mech-resume-repair', { scroll: false, at: { 1: k205 }, tooltip: k205 });

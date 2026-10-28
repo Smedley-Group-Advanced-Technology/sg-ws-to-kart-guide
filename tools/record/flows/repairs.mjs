@@ -2,7 +2,6 @@
 // screenshots), then Remedy per part on Junior 307 once its front bumpers have arrived. Alex Mechanic, tablet.
 import { HUB } from '../lib/config.mjs';
 import { asPersona } from '../lib/db.mjs';
-import { tab } from './service-turn.mjs';
 
 const repairCard = (s, label) => s.page.getByText(label, { exact: true }).locator('xpath=ancestor::div[.//button[normalize-space()="Log remedy / complete repair"]][1]');
 
@@ -15,7 +14,7 @@ export default {
     // read-only views first (as seeded)
     const v = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await v.goto('/workshop/repairs');
-    await v.mustReload(v.page.getByText('Bambino 6', { exact: true }), 60000);
+    await v.mustReload(v.page.getByText('Kart 106', { exact: true }), 60000);
     const lanes = v.page.getByText(/^Exceptions/);
     await v.scrollTo(lanes, { block: 'start' });
     const h3 = (t) => v.page.locator('h3').filter({ hasText: new RegExp(`^${t}`) });
@@ -24,15 +23,15 @@ export default {
 
     const s = await open({ persona: 'Alex Mechanic', device: 'tablet', record: true });
     await s.goto('/workshop/repairs');
-    await s.mustReload(s.page.getByText('Bambino 6', { exact: true }), 60000);
+    await s.mustReload(s.page.getByText('Kart 106', { exact: true }), 60000);
     await s.settle(800);
     const lane = (t) => s.page.locator('h3').filter({ hasText: new RegExp(`^${t}`) });
     await s.scrollTo(s.page.getByText(/^Exceptions/), { block: 'start' });
     await s.shot('mech-repair-lanes', { scroll: false, at: { 1: lane('Requires reliability actions'), 2: lane('Requires part'), 3: lane('Requires Support') } });
     await s.shot('mech-repair-priority', { scroll: false, at: { 1: s.page.getByText(/^Repair priority, top first/) } });
-    const c307 = repairCard(s, 'Junior 7');
-    await s.shot('mech-repair-card', { at: { 1: c307.getByText('Junior 7', { exact: true }), 2: c307.getByText(/^Waiting on:/), 3: c307.getByText(/^On order/) } });
-    const c106 = repairCard(s, 'Bambino 6');
+    const c307 = repairCard(s, 'Kart 307');
+    await s.shot('mech-repair-card', { at: { 1: c307.getByText('Kart 307', { exact: true }), 2: c307.getByText(/^Waiting on:/), 3: c307.getByText(/^On order/) } });
+    const c106 = repairCard(s, 'Kart 106');
     await s.shot('mech-repair-kartpage', { at: { 1: c106.getByText('Open kart page') } });
     await s.shot('mech-remedy-open', { at: { 1: c106.getByRole('button', { name: 'Log remedy / complete repair' }) } });
     await s.shot('so-day-6-repairs', { at: { 1: c106.getByRole('button', { name: 'Log remedy / complete repair' }) } });
@@ -48,15 +47,11 @@ export default {
     await s.shot('mech-repair-stop', { at: { 1: s.page.getByRole('button', { name: /Pause repair/ }), 2: s.page.getByRole('button', { name: /Stop repair work/ }) } });
     s.cue();                                                    // Tap Stop repair work when you finish.
     await s.tap(s.page.getByRole('button', { name: /Stop repair work/ }));
-    await s.skip(() => s.settle(600));
-    await s.wait(1200);
-    s.cue();                                                    // Tap Log remedy / complete repair.
-    await s.tap(tab(s, 'Service Queue'));
-    await s.skip(async () => { await s.must(s.page.getByText('Bambino 6', { exact: true }), { timeout: 45000 }); await s.settle(600); });
-    await s.tap(repairCard(s, 'Bambino 6').getByRole('button', { name: 'Log remedy / complete repair' }));
     const dlg = s.dialog;
-    await dlg.locator('[data-testid="remedy-type"]').waitFor();
-    await s.wait(800);
+    // KART MF-37: stopping the work on an incident repair opens Log remedy / complete repair on its own
+    await s.skip(() => dlg.locator('[data-testid="remedy-type"]').waitFor({ timeout: 45000 }));
+    s.cue();                                                    // Log remedy / complete repair opens straight away.
+    await s.wait(1800);
     s.cue();                                                    // Choose the remedy and say what you did.
     await s.tap(dlg.locator('[data-testid="remedy-type"]'), { pause: 900 });
     await s.shot('mech-remedy-type', { scroll: false, at: { 1: dlg.getByText(/^Remedy \*/).or(dlg.getByText('Remedy', { exact: true })) } });
@@ -77,12 +72,14 @@ export default {
     clip('mech-repair-clip', r, { poster: 4 });
 
     // front bumpers received for the 307 repair, then Remedy per part
-    asPersona('Morgan Manager', `select public.ws_receive_stock_order(id, 2, 38.50, 0, 0, 'GBP', 'INV-DEMO-2002', NULL, 'Both bumpers received')
+    // ws_receive_goods replaced ws_receive_stock_order for clients (KART F64)
+    asPersona('Morgan Manager', `select public.ws_receive_goods('${HUB}', part_id, 2, id, 38.50, 0, 0, 'GBP', NULL, 'INV-DEMO-2002', NULL,
+        'Both bumpers received', gen_random_uuid())
       from public.workshop_stock_orders where hub_id = '${HUB}' and status = 'ordered';`);
     const p = await open({ persona: 'Alex Mechanic', device: 'tablet' });
     await p.goto('/workshop/repairs');
-    await p.mustReload(p.page.getByText('Junior 7', { exact: true }), 60000);
-    await p.tap(repairCard(p, 'Junior 7').getByRole('button', { name: 'Log remedy / complete repair' }));
+    await p.mustReload(p.page.getByText('Kart 307', { exact: true }), 60000);
+    await p.tap(repairCard(p, 'Kart 307').getByRole('button', { name: 'Log remedy / complete repair' }));
     const d = p.dialog;
     await d.getByText(/^Remedy per part/).first().waitFor();
     await p.tap(d.locator('[data-testid="remedy-part-replaced"]').first());

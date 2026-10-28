@@ -79,7 +79,8 @@ export default {
 
 `/home/arch/Work/guide-stack/seed/reset_demo.sh [variant ...]` rebuilds it (dates relative to today). Variants:
 `no_106_incident`, `no_207_ticket`, `no_jamie`, `jamie_temp`, `campaign_measure`. The normal world also has a past
-session event (Demo Club Night, a week ago) and the join link code `DE0DE0000001`. The runner restores the normal
+session event (Demo Club Night, a week ago) and the join link code `DE0DE0000001`. Jordan Contractor is a Demo Hub
+staff member without any permission (events contractor: Log incident on the Tracker). The runner restores the normal
 world after any flow that changed data.
 
 ## Next sections

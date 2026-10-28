@@ -39,7 +39,7 @@ export default {
     await s.tap('role=button[name="Pause and switch"]');
     await s.page.waitForURL(/in-service/);
     await s.settle(800);
-    await s.must(s.page.getByText('Cadet 204', { exact: true }), { timeout: 60000 }).catch(() => s.log('  204 not shown in service'));
+    await s.must(s.page.getByText('Kart 204', { exact: true }), { timeout: 60000 }).catch(() => s.log('  204 not shown in service'));
     await s.shot('mech-svc-switched', { scroll: false, at: { 1: s.page.getByText(/^Paused services$/i).first() } });
     const r = await s.close();
     gif('mech-svc-cycle-gif', r, { start: g0 - 300, end: g1 + 1200 });

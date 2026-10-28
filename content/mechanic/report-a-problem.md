@@ -27,6 +27,23 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
 ## Report an incident
 
+:::clip mech-incident-clip
+caption: reporting an incident on Bambino 106 and finding it on the ICU board
+duration: 45
+steps:
+  - Tap Report a kart problem on Overview
+  - Choose 106 in Kart
+  - Choose Incident, Incident type Impact / Contact, describe it, Impact location Front
+  - Tap Report problem
+  - Open the ICU board and show the incident on Kart 106
+captions:
+  - "Tap Report a kart problem."
+  - "Choose the kart."
+  - "Pick Incident and say what happened."
+  - "Tap Report problem."
+  - "The incident is on the ICU board for the workshop."
+:::
+
 1. On **Overview**, tap **Report a kart problem**.
 
     :::shot mech-report-open
@@ -51,13 +68,12 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 3. Under **What are you reporting?** choose **Incident**.
 
     :::shot mech-report-type
-    caption: The four report types with Reliability and Damage greyed out for Alex
+    caption: The four report types, with Incident chosen
     steps:
       - Look at What are you reporting?
       - Choose Incident
     callouts:
       - [1, "text=Incident", "Something that happened"]
-      - [2, "text=Needs the Reliability permission.", "Only with Reliability"]
     :::
 
 4. Choose the **Incident type**, for example **Impact / Contact**.
@@ -92,6 +108,14 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
 7. Tap **Report problem**. KART says **Workshop incident logged. It is on the ICU board for the workshop.** The kart's status does not change.
 
+    :::shot mech-report-logged
+    caption: The message after reporting the incident on Bambino 106
+    steps:
+      - Tap Report problem
+    callouts:
+      - [1, "text=Workshop incident logged.", "Saved for the workshop"]
+    :::
+
 !!! note "Remember"
     **The incident stays open on the ICU board until the workshop inspects the kart.** The ICU board is the list of an event's open incidents in priority order (in **Event Operations**, pick the event, then **ICU board**). It was **ICU Workflow** in the Workshop App. When you inspect the kart, follow the incident up as described below.
 
@@ -101,7 +125,35 @@ On an event you may not have the Workshop permission, for example as a contracto
 
 1. On **Select your Hub**, tap the **Technical** card of your hub. It opens the Karting Reliability Tracker (the **Tracker**).
 2. Tap **Log incident**, next to **New Reliability Issue** and **Record New Damage**.
+
+    :::shot mech-tracker-log-incident
+    persona: Jordan Contractor
+    url: /tracker
+    state: Normal demo world; Jordan Contractor has access to Demo Hub and no permissions
+    caption: Log incident on the Tracker, with the Reliability buttons greyed out for a contractor
+    steps:
+      - Open the Tracker for Demo Hub
+    callouts:
+      - [1, "text=Log incident", "Any staff member"]
+      - [2, "text=New Reliability Issue", "Needs the Reliability permission"]
+    :::
+
 3. Choose the **Kart**, the **Incident type** (and the **Impact location** for an impact) and type what happened in **Notes / details**.
+
+    :::shot mech-tracker-log-dialog
+    persona: Jordan Contractor
+    url: /tracker
+    state: Normal demo world; Jordan Contractor has access to Demo Hub and no permissions
+    caption: The Log incident dialog on the Tracker
+    steps:
+      - Tap Log incident
+      - Choose Kart 102, Incident type Spin / Off Track - No Contact, type what happened
+    callouts:
+      - [1, "text=Kart *", "Pick the kart"]
+      - [2, "text=Incident type *", "What happened"]
+      - [3, "text=Report problem", "Save it"]
+    :::
+
 4. Tap **Report problem**. You stay on the Tracker. The incident goes on the ICU board for the workshop.
 
 !!! warning "Watch out"
@@ -111,6 +163,32 @@ On an event you may not have the Workshop permission, for example as a contracto
 
 Open the kart page (or the **ICU board**). Every open incident shows three actions:
 
+:::shot mech-incident-follow-up
+url: /workshop/kart/{kart:106}
+state: Seed variant without the Bambino 106 incident, then the incident reported on 106 as above (no repairs)
+caption: An open incident on the kart page with its three follow-up actions
+steps:
+  - Open the kart page of Bambino 106
+  - Scroll to Incident history
+callouts:
+  - [1, "text=Raise reliability ticket", "You found a fault"]
+  - [2, "text=Record damage", "You found damage"]
+  - [3, "text=Resolved: no fault found", "Nothing to repair"]
+:::
+
+On the **ICU board** the same incident has **Raise reliability ticket** and **Record damage** on its card.
+
+:::shot mech-icu-follow-up
+url: /icu
+state: As above, the open incident on Bambino 106
+caption: The incident on the ICU board with the two follow-up buttons
+steps:
+  - Open the ICU board for Demo Hub
+callouts:
+  - [1, "text=Kart 106", "The incident's kart"]
+  - [2, "text=Raise reliability ticket", "Follow it up from here"]
+:::
+
 | Action | When | What happens |
 |---|---|---|
 | **Raise reliability ticket** | You found a fault, for example a loose bolt (root cause operational or poor quality control) | The ticket form opens on the Tracker with the kart filled in. When you tap **Submit Issue**, the incident is resolved and linked to the ticket (**Open linked ticket**); no new incident is created. KART says **Incident resolved with this ticket.** |
@@ -118,6 +196,19 @@ Open the kart page (or the **ICU board**). Every open incident shows three actio
 | **Resolved: no fault found** | Nothing needs repairing | The incident is closed. The kart's status does not change |
 
 **Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. The ticket may be **Ongoing** or already **Resolved** (fixed trackside). An incident that still has open repairs from before shows **Complete the open repairs first, then raise a reliability ticket or record damage.** instead of the two buttons. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
+
+:::shot mech-incident-resolved
+url: /workshop/kart/{kart:106}
+state: As above, then a reliability ticket raised for Bambino 106 from the incident (Casey Mechanic)
+caption: The incident resolved by a reliability ticket, with Open linked ticket
+steps:
+  - Open the kart page of Bambino 106
+  - Scroll to Incident history
+callouts:
+  - [1, "text=Resolved", "Closed by the ticket"]
+  - [2, "text=Reliability ticket raised:", "Names the ticket"]
+  - [3, "text=Open linked ticket", "Opens it on the Tracker"]
+:::
 
 !!! tip "Tip"
     Repairs that were logged as findings before this change stay on the kart page under their incident. Complete them as usual with **Log remedy / complete repair**.

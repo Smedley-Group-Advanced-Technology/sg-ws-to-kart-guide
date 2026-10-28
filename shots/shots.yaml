@@ -934,6 +934,27 @@
     target: text=Save settings
     note: Save
   caption: 'Steps 1 to 6 on one page: Schedule settings with mode, deadline, required times, participants and Save settings'
+- id: hm-sched-default
+  kind: screenshot
+  page: hub-manager/schedules-and-targets.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/schedule/settings
+  state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
+  steps:
+  - Tap Edit on AM's Default week line
+  - Switch Monday to Friday on, Start 08:00, Finish 16:30
+  callouts:
+  - n: 1
+    target: 'text=Default week: AM'
+    note: One person's usual week
+  - n: 2
+    target: text=Working
+    note: Switch the day on
+  - n: 3
+    target: text=Save default week
+    note: Saved straight away
+  caption: The default week editor for Alex Mechanic (AM), Monday to Friday 08:00 to 16:30
 - id: hm-target
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -2563,6 +2584,28 @@
     target: text=Confirm repair complete
     note: Done
   caption: Confirm repair complete at the bottom of the remedy dialog
+- id: mech-incident-clip
+  kind: clip
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report a kart problem on Overview
+  - Choose 106 in Kart
+  - Choose Incident, Incident type Impact / Contact, describe it, Impact location Front
+  - Tap Report problem
+  - Open the ICU board and show the incident on Kart 106
+  caption: reporting an incident on Bambino 106 and finding it on the ICU board
+  captions:
+  - Tap Report a kart problem.
+  - Choose the kart.
+  - Pick Incident and say what happened.
+  - Tap Report problem.
+  - The incident is on the ICU board for the workshop.
+  duration: 45
 - id: mech-report-open
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2609,10 +2652,7 @@
   - n: 1
     target: text=Incident
     note: Something that happened
-  - n: 2
-    target: text=Needs the Reliability permission.
-    note: Only with Reliability
-  caption: The four report types with Reliability and Damage greyed out for Alex
+  caption: The four report types, with Incident chosen
 - id: mech-report-incident-type
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2658,6 +2698,118 @@
     target: text=Impact location
     note: Where it was hit
   caption: Impact location Front selected
+- id: mech-report-logged
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
+    / Performance inspection checklist published
+  steps:
+  - Tap Report problem
+  callouts:
+  - n: 1
+    target: text=Workshop incident logged.
+    note: Saved for the workshop
+  caption: The message after reporting the incident on Bambino 106
+- id: mech-tracker-log-incident
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Jordan Contractor
+  device: tablet
+  url: /tracker
+  state: Normal demo world; Jordan Contractor has access to Demo Hub and no permissions
+  steps:
+  - Open the Tracker for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Log incident
+    note: Any staff member
+  - n: 2
+    target: text=New Reliability Issue
+    note: Needs the Reliability permission
+  caption: Log incident on the Tracker, with the Reliability buttons greyed out for a contractor
+- id: mech-tracker-log-dialog
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Jordan Contractor
+  device: tablet
+  url: /tracker
+  state: Normal demo world; Jordan Contractor has access to Demo Hub and no permissions
+  steps:
+  - Tap Log incident
+  - Choose Kart 102, Incident type Spin / Off Track - No Contact, type what happened
+  callouts:
+  - n: 1
+    target: text=Kart *
+    note: Pick the kart
+  - n: 2
+    target: text=Incident type *
+    note: What happened
+  - n: 3
+    target: text=Report problem
+    note: Save it
+  caption: The Log incident dialog on the Tracker
+- id: mech-incident-follow-up
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:106}
+  state: Seed variant without the Bambino 106 incident, then the incident reported on 106 as above (no repairs)
+  steps:
+  - Open the kart page of Bambino 106
+  - Scroll to Incident history
+  callouts:
+  - n: 1
+    target: text=Raise reliability ticket
+    note: You found a fault
+  - n: 2
+    target: text=Record damage
+    note: You found damage
+  - n: 3
+    target: 'text=Resolved: no fault found'
+    note: Nothing to repair
+  caption: An open incident on the kart page with its three follow-up actions
+- id: mech-icu-follow-up
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /icu
+  state: As above, the open incident on Bambino 106
+  steps:
+  - Open the ICU board for Demo Hub
+  callouts:
+  - n: 1
+    target: text=Kart 106
+    note: The incident's kart
+  - n: 2
+    target: text=Raise reliability ticket
+    note: Follow it up from here
+  caption: The incident on the ICU board with the two follow-up buttons
+- id: mech-incident-resolved
+  kind: screenshot
+  page: mechanic/report-a-problem.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/kart/{kart:106}
+  state: As above, then a reliability ticket raised for Bambino 106 from the incident (Casey Mechanic)
+  steps:
+  - Open the kart page of Bambino 106
+  - Scroll to Incident history
+  callouts:
+  - n: 1
+    target: text=Resolved
+    note: Closed by the ticket
+  - n: 2
+    target: 'text=Reliability ticket raised:'
+    note: Names the ticket
+  - n: 3
+    target: text=Open linked ticket
+    note: Opens it on the Tracker
+  caption: The incident resolved by a reliability ticket, with Open linked ticket
 - id: mech-feedback-type
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2795,6 +2947,20 @@
     target: text=Plan my week
     note: Start planning
   caption: The Plan my week button
+- id: mech-sched-default
+  kind: screenshot
+  page: mechanic/schedule.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop/schedule
+  state: Alex Mechanic has a default week (Monday to Friday, 08:00 to 16:30) and nothing planned for the upcoming week
+  steps:
+  - Tap Upcoming week, then Plan my week
+  callouts:
+  - n: 1
+    target: text=Filled from your default week
+    note: Check it, then save or submit
+  caption: Plan my week for an empty Upcoming week, filled from Alex's default week
 - id: mech-sched-day
   kind: screenshot
   page: mechanic/schedule.md

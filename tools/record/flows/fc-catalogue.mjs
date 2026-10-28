@@ -60,7 +60,7 @@ export default {
     await c.settle(600);
     const opt = (t) => d.getByText(t, { exact: true }).first();
     await c.shot('fc-req-review', { scroll: false, at: { 3: opt('Link an existing part'), 4: opt('Add a new part'),
-      5: opt('Keep as a hub-local part'), 6: opt('Reject') } });
+      5: opt('Reject') } });
     await c.page.keyboard.press('Escape');
     await c.close();
 
@@ -78,8 +78,8 @@ export default {
     const dl = s.dialog;
     await dl.getByText('Review part request').first().waitFor();
     await s.wait(800);
-    s.cue();                                                    // Link a part, add a new one, keep it local or reject.
-    for (const t of ['Link an existing part', 'Keep as a hub-local part', 'Reject']) {
+    s.cue();                                                    // Link a part, add a new one or reject.
+    for (const t of ['Link an existing part', 'Reject']) {
       await s.hover(dl.getByText(t, { exact: true }).first());
       await s.wait(700);
     }

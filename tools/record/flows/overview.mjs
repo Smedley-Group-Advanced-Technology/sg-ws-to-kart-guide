@@ -42,7 +42,7 @@ export default {
     await s.shot('so-day-3-board', { scroll: false, at: { 1: rb.getByText('Readiness board', { exact: true }) } });
     await s.shot('start-status-board', { scroll: false, at: { 1: rb.getByText('Readiness board', { exact: true }),
       2: tiles.nth(0), 3: tiles.nth(1), 4: tiles.nth(3) } });
-    const t301 = s.tile('#301', 'Available'), t308 = s.tile('#308', 'Available');
+    const t301 = s.tile('Kart 301', 'Available'), t308 = s.tile('Kart 308', 'Available');
     await s.scrollTo(s.page.getByText('Junior Karts (8)'), { block: 'start' });
     await s.shot('mech-board-tiles', { scroll: false, at: { 1: t301, 2: t308, 3: t308.getByText('View log book') } });
     await s.shot('start-status-tags', { scroll: false, at: { 1: t308, 2: t308.getByText('Missing Components'), 3: t301.getByText('Campaign') } });
@@ -52,9 +52,9 @@ export default {
     await s.page.waitForURL(/readiness\/turn_all/);
     await s.settle(800);
     await s.shot('mech-board-drill', { at: { 1: s.page.getByRole('heading').filter({ hasText: /Requires service/ }).first() }, optional: [1] });
-    await s.shot('mech-board-drill-open', { at: { 1: s.page.getByText('#203', { exact: true }).first() } });
+    await s.shot('mech-board-drill-open', { at: { 1: s.page.getByText('Kart 203', { exact: true }).first() } });
     await s.goto('/workshop/readiness/repair_all');
-    await s.shot('start-status-drilldown', { at: { 1: s.page.getByText('#207', { exact: true }).first(), 2: s.page.getByText('#307', { exact: true }).first() } });
+    await s.shot('start-status-drilldown', { at: { 1: s.page.getByText('Kart 207', { exact: true }).first(), 2: s.page.getByText('Kart 307', { exact: true }).first() } });
     await s.close();
   },
 };

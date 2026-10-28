@@ -32,6 +32,8 @@ Each included person has a **Default week** line under their switches. It shows 
 
 2. For each day they usually work, switch the day on. Set the **Start** time and, if you want, the **Finish** time. If remote work is allowed for them, you can also choose the **Work location**.
 
+    ![The default week editor for Alex Mechanic (AM), Monday to Friday 08:00 to 16:30](../assets/img/hub-manager/hm-sched-default.png){ loading=lazy }
+
 3. Tap **Save default week**. To remove it, tap **Clear default week**.
 
 !!! info "Good to know"

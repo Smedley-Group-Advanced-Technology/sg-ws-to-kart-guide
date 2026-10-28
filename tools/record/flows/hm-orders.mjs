@@ -121,7 +121,7 @@ export default {
     g.cue();                                                    // The waiting repair is ready to do.
     await g.goto('/workshop/repairs', { settle: false });
     // the repair card says Junior 7 (kart 307); after Goods In it is listed with the repairs ready to do
-    const card307 = g.page.getByText(/^Junior 3?07$/);
+    const card307 = g.page.getByText(/^Kart 307$/);
     await g.skip(async () => { await g.mustReload(card307, 60000); await g.settle(800); });
     await g.scrollTo(card307);
     await g.hover(card307);

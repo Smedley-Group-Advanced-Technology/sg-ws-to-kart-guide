@@ -32,7 +32,7 @@ export default {
     await s.skip(async () => { await s.mustReload(s.page.getByText('Junior Karts (8)'), 60000); await s.settle(800); });
     s.cue();                                                    // Each kart tile shows its tags.
     await s.scrollTo(s.page.getByText('Junior Karts (8)'), { block: 'start' });
-    await s.hover(s.tile('#308', 'Available').getByText('Missing Components'));
+    await s.hover(s.tile('Kart 308', 'Available').getByText('Missing Components'));
     await s.wait(3000);
     const r = await s.close();
     clip('mech-fleet-board-clip', r, { poster: 3 });

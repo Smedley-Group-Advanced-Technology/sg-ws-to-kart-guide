@@ -26,7 +26,7 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
 
 3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button.
+4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button. The AI does not answer while remote support is on the chat; your message goes to remote support.
 
     ![Step 4: an escalated AI chat with Requires support and a reply typed](../assets/img/remote-support/rs-trackside-send.png){ loading=lazy }
 

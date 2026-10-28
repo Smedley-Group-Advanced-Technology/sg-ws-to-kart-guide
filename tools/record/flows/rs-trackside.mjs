@@ -53,7 +53,7 @@ export default {
     await a.tap(a.page.getByText('Junior 307 shows Repair Required').first());
     await a.page.getByText(/Riley here/).first().waitFor({ timeout: 60000 });
     await a.settle(800);
-    await a.type(a.page.locator('textarea').last(), 'Kart 307 shows Repair Required but the bumper is fitted');
+    await a.type(a.page.locator('textarea').last(), 'Yes, the remedy is logged on the bumper repair.');
     await a.shot('rs-trackside-send', { scroll: false, at: { 4: a.page.getByText('Requires support', { exact: true }).first() } });
     await a.close();
   },

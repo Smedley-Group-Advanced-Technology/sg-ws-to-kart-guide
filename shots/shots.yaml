@@ -3548,7 +3548,7 @@
   state: Alex Mechanic's AI chat about Junior 307 escalated, taken by Riley Support
   steps:
   - Tap AI Chats and open the escalated chat
-  - Type "Kart 307 shows Repair Required but the bumper is fitted"
+  - Type "Yes, the remedy is logged on the bumper repair."
   callouts:
   - n: 4
     target: text=Requires support

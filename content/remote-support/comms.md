@@ -48,7 +48,7 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
 
 3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button.
+4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button. The AI does not answer while remote support is on the chat; your message goes to remote support.
 
     :::shot rs-trackside-send
     caption: "Step 4: an escalated AI chat with Requires support and a reply typed"
@@ -57,7 +57,7 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
     state: "Alex Mechanic's AI chat about Junior 307 escalated, taken by Riley Support"
     steps:
       - Tap AI Chats and open the escalated chat
-      - Type "Kart 307 shows Repair Required but the bumper is fitted"
+      - Type "Yes, the remedy is logged on the bumper repair."
     callouts:
       - [4, "text=Requires support", "A person is on it"]
     :::

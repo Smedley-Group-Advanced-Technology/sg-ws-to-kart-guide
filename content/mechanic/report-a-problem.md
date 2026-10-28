@@ -117,7 +117,7 @@ Open the kart page (or the **ICU board**). Every open incident shows three actio
 | **Record damage** | You found damaged components | **Record New Damage** opens with the kart filled in. When you record the damage, the incident is resolved and names the damage ticket. Each component becomes a repair |
 | **Resolved: no fault found** | Nothing needs repairing | The incident is closed. The kart's status does not change |
 
-**Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. Leave the new ticket open (for example **Ongoing**): a ticket saved as **Resolved** does not close the incident. An incident that still has open repairs from before cannot be linked to a ticket; complete those repairs first. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
+**Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. The ticket may be **Ongoing** or already **Resolved** (fixed trackside). An incident that still has open repairs from before shows **Complete the open repairs first, then raise a reliability ticket or record damage.** instead of the two buttons. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
 
 !!! tip "Tip"
     Repairs that were logged as findings before this change stay on the kart page under their incident. Complete them as usual with **Log remedy / complete repair**.

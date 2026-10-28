@@ -103,4 +103,4 @@ callouts:
     - Repairs moved from the Workshop App listed under their incidents on the kart page, with their photos.
 
 !!! tip "Tip"
-    Cannot find something? Ask in KART Comms support, or check [Troubleshooting](troubleshooting.md).
+    Cannot find something? Ask your hub manager (hub lead), or check [Troubleshooting](troubleshooting.md).

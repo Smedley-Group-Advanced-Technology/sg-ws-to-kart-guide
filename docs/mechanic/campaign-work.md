@@ -22,7 +22,7 @@ A fleet campaign is the same job done on many karts, for example a part upgrade 
 
     ![The Campaign work tab with Assigned to me and All open karts](../assets/img/mechanic/mech-camp-tab.png){ loading=lazy }
 
-2. Find the kart under **Assigned to me**, for example **Junior 301**, and tap **Open** on its row.
+2. Find the kart under **Assigned to me**, for example **Kart 301**, and tap **Open** on its row.
 
     ![Junior 301, 302 and 305 under Assigned to me for Junior caliper seal upgrade](../assets/img/mechanic/mech-camp-pick.png){ loading=lazy }
 

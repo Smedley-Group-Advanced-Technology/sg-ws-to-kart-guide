@@ -49,7 +49,7 @@ captions:
       - [2, "text=All open karts", "Everything still open"]
     :::
 
-2. Find the kart under **Assigned to me**, for example **Junior 301**, and tap **Open** on its row.
+2. Find the kart under **Assigned to me**, for example **Kart 301**, and tap **Open** on its row.
 
     :::shot mech-camp-pick
     caption: Junior 301, 302 and 305 under Assigned to me for Junior caliper seal upgrade

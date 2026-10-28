@@ -7,12 +7,12 @@ url: /workshop
 state: "Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)"
 :::
 
-A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation (KART does not offer it when karts are handed out for an event). This is the only normal way to take a kart out of use.
+A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation (KART does not offer it when karts are handed out for an event). It is the way to take a kart out of use when you find a fault. An open **damage ticket** and missing batteries (**Missing Components**) also make a kart unavailable.
 
 You need the **Reliability** permission to raise tickets. In this guide Casey Mechanic has it and Alex Mechanic does not.
 
 !!! info "What changed from the Workshop App"
-    - In the Workshop App an incident could stop a kart. In KART only a **stopping reliability ticket** (or a blocking repair) does.
+    - In the Workshop App an incident could stop a kart. In KART a **stopping reliability ticket**, an open damage ticket, missing batteries or a blocking repair do.
     - Tickets live in KART's **Technical** area (the Karting Reliability Tracker). Saving a ticket also creates a linked workshop incident, so the workshop sees it.
     - The root cause stays on the ticket. The remedy (what you did) goes on the repair.
 
@@ -172,7 +172,7 @@ captions:
       - Tap Update
       - Open Overview and find 207
     callouts:
-      - [1, "text=#207", "Available again"]
+      - [1, "text=Kart 207", "Available again"]
     :::
 
 !!! note "Remember"

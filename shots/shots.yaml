@@ -809,12 +809,12 @@
   state: 'Order List: Draft brake pads FKL-900003, Submitted rear tyres FKL-900009, Approved sprockets FKL-900015, Ordered
     front bumpers FKL-900001 (for Junior 307), Completed tie rods FKL-900005'
   steps:
-  - Open Service Queue and find the Junior 7 card
+  - Open Service Queue and find the Kart 307 card
   callouts:
   - n: 2
     target: text=On order
     note: Mechanics see it is coming
-  caption: 'Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers'
+  caption: 'Step 2: the repair card for Kart 307 with On order for front bumpers'
 - id: hm-ord-bulk
   kind: screenshot
   page: hub-manager/orders.md
@@ -903,14 +903,14 @@
   state: Demo Hub with some completed demo services
   steps:
   - Tap Reports
-  - Choose Turn summary
+  - Choose Service summary
   - Set From and To to the last two weeks
   callouts:
   - n: 1
     target: text=Reports
     note: The tab
   - n: 2
-    target: text=Turn summary
+    target: text=Service summary
     note: Pick a report
   - n: 3
     target: text=Period
@@ -918,7 +918,7 @@
   - n: 4
     target: text=Excel
     note: Excel, PDF or CSV
-  caption: 'Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons'
+  caption: 'Steps 1 to 4 on one screen: the Reports tab, Service summary, the period and the export buttons'
 - id: hm-sched
   kind: screenshot
   page: hub-manager/schedules-and-targets.md
@@ -957,7 +957,7 @@
   state: Planning event Demo Regional Race at Demo Hub with readiness targets; Alex and Casey are schedule participants
   steps:
   - Tap Work targets, then Add target
-  - Choose AM (Alex Mechanic) and Turns, type 10 and choose Cadet
+  - Choose AM (Alex Mechanic) and Services, type 10 and choose Cadet
   callouts:
   - n: 1
     target: text=Add work target
@@ -1420,10 +1420,10 @@
   - Scroll to the Junior Karts tiles
   callouts:
   - n: 1
-    target: text=#301
+    target: text=Kart 301
     note: 'Campaign tag: caliper seal upgrade'
   - n: 2
-    target: text=#308
+    target: text=Kart 308
     note: Missing Components
   - n: 3
     target: text=View log book
@@ -1641,7 +1641,7 @@
   - Show Kart marked as requiring service and tap Undo
   - Show Mark used undone
   - Switch to Race to Chassis for Demo Practice Day, tap Bambino and drag race number 8 onto chassis 04 (Bambino 104)
-  - Show Chassis 04 marked used and the event day note
+  - Show Kart 104 marked used and the event day note
   caption: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used
   captions:
   - Hub managers can mark a kart used on its tile.
@@ -1661,7 +1661,7 @@
   - Scroll to Bambino Karts
   callouts:
   - n: 1
-    target: text=#101
+    target: text=Kart 101
     note: Bambino 101
   - n: 2
     target: role=button[name='Requires service']
@@ -1936,8 +1936,8 @@
   - Open Race to Chassis for Demo Practice Day on the tablet
   - Tap Junior at the top
   - Drag race number 5 onto chassis 01 (Junior 301)
-  - Show the Chassis 01 marked used message with Undo
-  - Drag race number 6 onto chassis 07 (Junior 307) and show Chassis 07 is not available
+  - Show the Kart 301 marked used message with Undo
+  - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
   - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
   caption: putting race numbers on chassis with drag and drop
@@ -1996,7 +1996,7 @@
   - n: 2
     target: text=Undo
     note: Only for a mistake
-  caption: Chassis 01 marked used message with Undo
+  caption: Kart 301 marked used message with Undo
 - id: mech-r2c-takeoff
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2102,7 +2102,7 @@
   - n: 3
     target: text=Assign anyway
     note: Gives a track use override
-  caption: Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway
+  caption: Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway
 - id: mech-r2c-cancel
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2347,7 +2347,7 @@
   - Open Overview and find 207
   callouts:
   - n: 1
-    target: text=#207
+    target: text=Kart 207
     note: Available again
   caption: Cadet 207 back to normal on the board after its ticket is resolved, with Available ticked and no Reliability tag
 - id: mech-repair-lanes
@@ -2399,7 +2399,7 @@
   - Find the 307 card in Requires part
   callouts:
   - n: 1
-    target: text=Junior 7
+    target: text=Kart 307
     note: Junior 307
   - n: 2
     target: 'text=Waiting on:'
@@ -3238,7 +3238,7 @@
   - Open Overview and find 203
   callouts:
   - n: 1
-    target: text=#203
+    target: text=Kart 203
     note: Ready again
   caption: Kart 203 back as Ready on the Overview board
 - id: mech-svc-switch
@@ -3484,8 +3484,8 @@
     note: Your hub
   - n: 2
     target: text=Remote Support
-    note: Ask for help here
-  caption: 'Steps 1 and 2 on one screen: the Trackside view with the hub and the Remote Support chat'
+    note: Your chat with remote support
+  caption: 'Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat'
 - id: rs-trackside-send
   kind: screenshot
   page: remote-support/comms.md
@@ -3498,10 +3498,10 @@
   - Tap Remote Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
-  - n: 3
+  - n: 4
     target: text=On cover
     note: Who covers your hub today
-  caption: 'Step 3: a support message typed under the On cover header'
+  caption: 'Step 4: a reply in an escalated support chat, under the On cover header'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md
@@ -3971,7 +3971,7 @@
   - Scroll to the Bambino Karts tiles
   callouts:
   - n: 1
-    target: text=#106
+    target: text=Kart 106
     note: Bambino 106
   - n: 2
     target: css=[data-kart='106'] input[type=checkbox]
@@ -3988,7 +3988,7 @@
   - Scroll to the Cadet Karts tiles
   callouts:
   - n: 1
-    target: text=#207
+    target: text=Kart 207
     note: Cadet 207
   - n: 2
     target: text=Reliability
@@ -4406,7 +4406,7 @@
   - Scroll to the Junior Karts tiles
   callouts:
   - n: 1
-    target: text=#308
+    target: text=Kart 308
     note: Junior 308
   - n: 2
     target: text=Missing Components
@@ -4606,12 +4606,13 @@
   state: Demo Hub as seeded
   steps:
   - Open /comms as Alex Mechanic
+  - Tap AI Support
   - Type "Kart 307 shows Repair Required but the bumper is fitted"
   callouts:
   - n: 1
-    target: text=Remote Support
-    note: Ask for help
-  caption: A support message in KART Comms describing the problem
+    target: text=AI Support
+    note: Start here
+  caption: A question to AI Support in KART Comms describing the problem
 - id: gen-where-tabs
   kind: screenshot
   page: where-did-it-go.md

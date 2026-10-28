@@ -4,7 +4,7 @@
 Remote support helps hubs from a distance. In KART you answer hub staff in **KART Comms**, set who covers each event in **Remote Support**, and chat directly with colleagues.
 
 !!! info "What changed from the Workshop App"
-    - Workshop staff now ask for help through **KART Comms** support. Their message goes to whoever covers their hub today.
+    - Workshop staff now ask **AI Support** in **KART Comms** first. The AI escalates to Remote Support (whoever covers their hub today) or FKL Central when a person is needed.
     - Support cover can only be given to people with the **Remote support** permission.
     - New direct chats between two colleagues are private to those two people. Remote support and admins do not see them.
 

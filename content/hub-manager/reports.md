@@ -15,8 +15,8 @@ state: Demo Hub with some completed demo services
 
 | Workshop App report | In KART |
 |---|---|
-| Weekly Turn Summary | **Turn summary** |
-| Kart Turn Detail | **Kart turn detail** |
+| Weekly Turn Summary | **Service summary** |
+| Kart Turn Detail | **Kart service detail** |
 | Workshop Activity | **Workshop activity** |
 | Parts Usage | **Parts usage** |
 | Inventory Status | **Inventory status** |
@@ -27,21 +27,21 @@ state: Demo Hub with some completed demo services
 ## Run a report
 
 :::shot hm-rep
-caption: "Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons"
+caption: "Steps 1 to 4 on one screen: the Reports tab, Service summary, the period and the export buttons"
 steps:
   - Tap Reports
-  - Choose Turn summary
+  - Choose Service summary
   - Set From and To to the last two weeks
 callouts:
   - [1, "text=Reports", "The tab"]
-  - [2, "text=Turn summary", "Pick a report"]
+  - [2, "text=Service summary", "Pick a report"]
   - [3, "text=Period", "Dates"]
   - [4, "text=Excel", "Excel, PDF or CSV"]
 :::
 
 1. Open **Workshop Manager > Reports**.
 
-2. Pick a report, for example **Turn summary**.
+2. Pick a report, for example **Service summary**.
 
 3. Set the **Period** (**From** and **To**) or choose an **Event**.
 

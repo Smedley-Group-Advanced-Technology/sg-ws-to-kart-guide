@@ -9,8 +9,8 @@
 
 | Workshop App report | In KART |
 |---|---|
-| Weekly Turn Summary | **Turn summary** |
-| Kart Turn Detail | **Kart turn detail** |
+| Weekly Turn Summary | **Service summary** |
+| Kart Turn Detail | **Kart service detail** |
 | Workshop Activity | **Workshop activity** |
 | Parts Usage | **Parts usage** |
 | Inventory Status | **Inventory status** |
@@ -20,11 +20,11 @@
 
 ## Run a report
 
-![Steps 1 to 4 on one screen: the Reports tab, Turn summary, the period and the export buttons](../assets/img/hub-manager/hm-rep.png){ loading=lazy }
+![Steps 1 to 4 on one screen: the Reports tab, Service summary, the period and the export buttons](../assets/img/hub-manager/hm-rep.png){ loading=lazy }
 
 1. Open **Workshop Manager > Reports**.
 
-2. Pick a report, for example **Turn summary**.
+2. Pick a report, for example **Service summary**.
 
 3. Set the **Period** (**From** and **To**) or choose an **Event**.
 

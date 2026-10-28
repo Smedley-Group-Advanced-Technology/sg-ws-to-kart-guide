@@ -53,7 +53,7 @@ Use **Report a kart problem** for anything that happened to a kart or anything y
 
     ![Finding 1 with Issue type Loose and Item / component Bumper mount](../assets/img/mechanic/mech-report-finding.png){ loading=lazy }
 
-8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet.
+8. Answer **Is a replacement part required?** Choose **Yes, a part is required** and pick the part so it can be ordered, **No, repair without a replacement part**, or **Unknown, to be determined** if you are not sure yet. **Add part** lists only FKL master parts that fit this kart's type and generation, the same list as **Record New Damage**.
 
     ![Is a replacement part required? answered No](../assets/img/mechanic/mech-report-part.png){ loading=lazy }
 

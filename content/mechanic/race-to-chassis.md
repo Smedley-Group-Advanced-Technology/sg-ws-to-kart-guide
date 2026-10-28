@@ -7,12 +7,13 @@ url: /r2c
 state: "Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session 1; Cadet 207 and Junior 307 Repair Required"
 :::
 
-Race to Chassis (R2C) links each race number (the driver's number for the day) to the chassis (kart) it drives in each session (each time out on track). On the event day it also marks karts used, so they need a service after the event. You can drag numbers onto chassis (tablet and laptop) or use the tap grid (phone).
+Race to Chassis (R2C) links each race number (the driver's number for the day) to the chassis (kart) it drives in each session (each time out on track). On the event day it also marks karts used, so they need a service after the event. You can drag numbers onto chassis (tablet and laptop) or use the chassis list (phone). Both work the same way round: each chassis gets a race number.
 
 !!! info "What changed from the Workshop App"
     - **On Event > Race to Chassis** is now in **Event Operations**: pick the event, then **Race to Chassis**.
-    - New since 19 October: **drag and drop**. Drag a race number onto a chassis. On phones the tap grid stays the default. Each device remembers the view you last chose.
-    - Everything the tap grid did still happens on each drop: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
+    - New since 19 October: **drag and drop**. Drag a race number onto a chassis. On phones the chassis list opens by default. Each device remembers the view you last chose.
+    - New: on phones the old tap grid (race numbers down the side, sessions across) is now a **chassis list**: tap a chassis, then its race number. It works the same way round as drag and drop.
+    - Everything the Workshop App grid did still happens on each change: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
 
 ## Open Race to Chassis
 
@@ -115,56 +116,74 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
 !!! tip "Tip"
     **Copy Last Session** copies the previous session's numbers to this one. **Clear Session** empties only this session. **Clear All** empties every session of the event and cannot be undone.
 
-## Tap grid (phone)
+## Chassis list (phone)
 
-:::clip mech-r2c-tap-clip
-caption: putting a race number on a chassis with the tap grid on a phone
+:::clip mech-r2c-list-clip
+caption: putting a race number on a chassis with the chassis list on a phone
 duration: 45
 device: phone
 steps:
   - Open Race to Chassis for Demo Practice Day on the phone
-  - Tap the cell for race number 7 in the current session
-  - Tap Junior, then chassis 02 (Junior 302)
+  - Tap Junior, check the current session
+  - Tap Kart 302 in the list, then race number 7
   - Show the marked used message
-  - Tap Drag and drop view and back to Tap grid
+  - Tap Kart 303, then race number 7 again and show the Move question
+  - Tap Drag and drop view and back to Chassis list
 captions:
-  - "On a phone, the tap grid opens."
-  - "Tap the race number cell."
-  - "Then tap the chassis it drives."
+  - "On a phone, the chassis list opens."
+  - "Tap the chassis, then its race number."
+  - "A number another kart has asks before it moves."
   - "Switch views with the button at the bottom."
 :::
 
-1. Tap the cell for the race number and session, for example race number **7** in the **Current session**.
+The list shows one session of one class: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its status (**Available**, **Unpreferred**, **Unavailable** or **Not in fleet**, plus tags such as **Requires service**) and, on the right, the race number it has in this session (a dot when it has none).
 
-    :::shot mech-r2c-tap-cell
-    caption: The tap grid on a phone, with the cell for race number 7 in session 1
+1. Tap the chassis, for example **Kart 302**.
+
+    :::shot mech-r2c-list
+    caption: The chassis list on a phone, Junior session 1, with Kart 302
     device: phone
     steps:
       - Open Race to Chassis on the phone
-      - Find the cell for race number 7 in the current session
+      - Tap Junior
     callouts:
-      - [1, "text=Race #", "Race numbers"]
-      - [2, "css=[data-testid='r2c-cell-7-1']", "Race number 7, session 1"]
+      - [1, "text=Session 1 · Junior", "One session, one class"]
+      - [2, "css=[data-testid='r2c-row-2']", "Tap the chassis"]
     :::
 
-2. Tap the chassis this race number drives, for example chassis **02** in the **Junior** class (Junior 302).
+2. Tap the race number this kart runs with, for example **07**. Grey numbers are already on another kart in this session; the kart is shown under the number. KART says **Kart 302 marked used**, with **Undo**, as in drag and drop.
 
-    :::shot mech-r2c-tap-chassis
-    caption: Tap the chassis this race number drives, with the Junior chassis list
+    :::shot mech-r2c-list-picker
+    caption: The race number picker for Kart 303, with 07 in grey because Kart 302 has it
     device: phone
     steps:
-      - Tap chassis 02 (Junior 302)
+      - Put race number 07 on Kart 302
+      - Tap Kart 303
     callouts:
-      - [1, "text=Tap the chassis this race number drives.", "Pick the chassis"]
+      - [1, "text=Tap the race number this kart runs with.", "Pick the race number"]
+      - [2, "css=[data-testid='r2c-race-picker']", "Grey: taken, with its kart"]
     :::
 
-3. To switch views, tap **Drag and drop view** at the bottom left. In drag and drop, tap **Tap grid** to come back.
+3. If you pick a grey number, KART asks, for example, **Move race number 07 to Kart 303?** Tap **Move** to move it (the other kart is left without a race number), or **Cancel**. After the move KART asks why it changed chassis (see below).
+
+    :::shot mech-r2c-list-move
+    caption: Move race number 07 to Kart 303?
+    device: phone
+    steps:
+      - Tap Kart 303, then race number 07
+    callouts:
+      - [1, "text=Move race number", "Asks before it moves"]
+    :::
+
+4. To take a number off, tap the chassis and tap **Clear**.
+
+5. To switch views, tap **Drag and drop view** at the bottom left. In drag and drop, tap **Chassis list** to come back.
 
     :::shot mech-r2c-switch
-    caption: The Drag and drop view button at the bottom left of the tap grid
+    caption: The Drag and drop view button at the bottom left of the chassis list
     device: phone
     steps:
-      - Look at the bottom left of the tap grid
+      - Look at the bottom left of the chassis list
     callouts:
       - [1, "text=Drag and drop view", "Switch view"]
     :::
@@ -198,7 +217,7 @@ captions:
 
 ## Moving a race number to another chassis
 
-1. Drag a race number that is already on a chassis onto a different chassis. KART asks **Logged. Why did the race number change chassis?**
+1. Drag a race number that is already on a chassis onto a different chassis (on a phone: pick a grey number and tap **Move**). KART asks **Logged. Why did the race number change chassis?**
 
     :::shot mech-r2c-reassign
     caption: The Chassis reassignment question asking why the race number changed chassis

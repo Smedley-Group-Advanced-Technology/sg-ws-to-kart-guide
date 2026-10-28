@@ -2016,7 +2016,7 @@
     target: text=Take off chassis
     note: Remove the number
   caption: Take off chassis for a chassis with a race number
-- id: mech-r2c-tap-clip
+- id: mech-r2c-list-clip
   kind: clip
   page: mechanic/race-to-chassis.md
   persona: Alex Mechanic
@@ -2026,18 +2026,19 @@
     1; Cadet 207 and Junior 307 Repair Required
   steps:
   - Open Race to Chassis for Demo Practice Day on the phone
-  - Tap the cell for race number 7 in the current session
-  - Tap Junior, then chassis 02 (Junior 302)
+  - Tap Junior, check the current session
+  - Tap Kart 302 in the list, then race number 7
   - Show the marked used message
-  - Tap Drag and drop view and back to Tap grid
-  caption: putting a race number on a chassis with the tap grid on a phone
+  - Tap Kart 303, then race number 7 again and show the Move question
+  - Tap Drag and drop view and back to Chassis list
+  caption: putting a race number on a chassis with the chassis list on a phone
   captions:
-  - On a phone, the tap grid opens.
-  - Tap the race number cell.
-  - Then tap the chassis it drives.
+  - On a phone, the chassis list opens.
+  - Tap the chassis, then its race number.
+  - A number another kart has asks before it moves.
   - Switch views with the button at the bottom.
-  duration: 25
-- id: mech-r2c-tap-cell
+  duration: 35
+- id: mech-r2c-list
   kind: screenshot
   page: mechanic/race-to-chassis.md
   persona: Alex Mechanic
@@ -2047,16 +2048,16 @@
     1; Cadet 207 and Junior 307 Repair Required
   steps:
   - Open Race to Chassis on the phone
-  - Find the cell for race number 7 in the current session
+  - Tap Junior
   callouts:
   - n: 1
-    target: 'text=Race #'
-    note: Race numbers
+    target: text=Session 1 · Junior
+    note: One session, one class
   - n: 2
-    target: css=[data-testid='r2c-cell-7-1']
-    note: Race number 7, session 1
-  caption: The tap grid on a phone, with the cell for race number 7 in session 1
-- id: mech-r2c-tap-chassis
+    target: css=[data-testid='r2c-row-2']
+    note: Tap the chassis
+  caption: The chassis list on a phone, Junior session 1, with Kart 302
+- id: mech-r2c-list-picker
   kind: screenshot
   page: mechanic/race-to-chassis.md
   persona: Alex Mechanic
@@ -2065,12 +2066,31 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Tap chassis 02 (Junior 302)
+  - Put race number 07 on Kart 302
+  - Tap Kart 303
   callouts:
   - n: 1
-    target: text=Tap the chassis this race number drives.
-    note: Pick the chassis
-  caption: Tap the chassis this race number drives, with the Junior chassis list
+    target: text=Tap the race number this kart runs with.
+    note: Pick the race number
+  - n: 2
+    target: css=[data-testid='r2c-race-picker']
+    note: 'Grey: taken, with its kart'
+  caption: The race number picker for Kart 303, with 07 in grey because Kart 302 has it
+- id: mech-r2c-list-move
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: phone
+  url: /r2c
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Tap Kart 303, then race number 07
+  callouts:
+  - n: 1
+    target: text=Move race number
+    note: Asks before it moves
+  caption: Move race number 07 to Kart 303?
 - id: mech-r2c-switch
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2080,12 +2100,12 @@
   state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
     1; Cadet 207 and Junior 307 Repair Required
   steps:
-  - Look at the bottom left of the tap grid
+  - Look at the bottom left of the chassis list
   callouts:
   - n: 1
     target: text=Drag and drop view
     note: Switch view
-  caption: The Drag and drop view button at the bottom left of the tap grid
+  caption: The Drag and drop view button at the bottom left of the chassis list
 - id: mech-r2c-unavailable
   kind: screenshot
   page: mechanic/race-to-chassis.md

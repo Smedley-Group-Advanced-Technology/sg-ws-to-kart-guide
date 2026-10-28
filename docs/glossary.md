@@ -19,6 +19,7 @@
 | **Campaign Required** | Board status for karts with an open task of an active integrated campaign. The kart stays usable | (new) |
 | **Campaign work** | The Workshop tab where mechanics do campaign tasks | Campaign Work |
 | **Chassis** | The kart, by its number, in Race to Chassis | Chassis |
+| **Chassis list** | The Race to Chassis view for phones: tap a chassis, then its race number | Race to Chassis grid |
 | **Chassis reassignment** | A race number moved to a different chassis, logged with a reason | Chassis reassignment |
 | **Completed** | Order stage: received. Also a finished service, repair or task | Received |
 | **Components replaced** | Every part fitted during a service, recorded on Servicing | Components, Parts used |
@@ -99,7 +100,6 @@
 | **Stores** | The Workshop tab for parts and consumables | Inventory |
 | **Submitted** | Order stage: waiting for approval | Needed |
 | **Switch-over day** | The day your hub moves its workshop work from the Workshop App to KART | Cutover |
-| **Tap grid** | The Race to Chassis view for phones | Race to Chassis grid |
 | **Target (stock)** | How many of a part the hub wants to hold | Target |
 | **Technical** | The KART area for reliability tickets and damage (Karting Reliability Tracker) | (new) |
 | **Track use override** | Permission for a not-available kart to run until the end of the event | Track use override |

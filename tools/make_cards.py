@@ -55,7 +55,7 @@ CARDS = {
         "Fitted a part? Under [[Components replaced]] tap [[Select]], then [[Add to components replaced]]. Every part, every time.",
         "Stopping work? [[Pause]] and pick a [[Pause reason]]. Resume from [[Paused services]].",
         "Tap [[Complete service]], tick the declaration, [[Confirm]].",
-        "Problem on a kart: [[Report a kart problem]]. An incident is information only; each finding becomes a repair.",
+        "Problem on a kart: [[Report a kart problem]]. An incident is information only; after inspecting, use [[Raise reliability ticket]] or [[Record damage]].",
         "Must not be used? Raise a stopping reliability ticket (needs Reliability). It takes the kart out of use.",
         "Repair done: [[Log remedy / complete repair]] with the parts used.",
         "Campaign tasks: [[Campaign work]], [[Start work]], fit parts, [[Complete work]].",

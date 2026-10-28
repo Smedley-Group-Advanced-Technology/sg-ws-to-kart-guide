@@ -32,7 +32,7 @@
 | **Event Operations** | The KART area for events, Race to Chassis and the ICU board | On Event |
 | **Event usable** | Ready or Repair Needed (usable), and available | Usable |
 | **Exception lanes** | The three lanes under the red Exceptions bar in the Service Queue: Requires reliability actions, Requires part and Requires Support. All open repairs are here | Repair Workflow |
-| **Finding** | Something found on a kart during a report. Each finding becomes a repair | Finding |
+| **Finding** | Something found on a kart. Only in the Power / Performance inspection now; anything else found is a reliability ticket or a damage record | Finding |
 | **FKL Central** | The central team and its KART area: master parts, checklists, thresholds | Parts catalog manager |
 | **FKL part number** | The league's number for a part, such as FKL-900001 | Part number |
 | **FKL Support** | The button that gives automatic answers about KART. Not a person | (new) |
@@ -44,7 +44,7 @@
 | **Hub-local part** | A part only one hub uses, not in the master catalogue | Local part |
 | **ICU board** | Open incidents of an event in priority order | ICU Workflow |
 | **In Progress** | A service has been started | In Progress |
-| **Incident** | Information about something that happened to a kart. Never stops it | Incident |
+| **Incident** | Information about something that happened to a kart: asks the workshop to look at it. Never stops it. Logged with **Report a kart problem** or the Tracker's **Log incident** | Incident |
 | **Integrated campaign** | A campaign added to the service checklist. Complete service waits until its task is done | Integrated |
 | **Join link** | A sign-up link for one hub, made by a hub manager or admin | (new) |
 | **KART** | FKL Kart Allocation & Reliability Tracking, the league's main app | (new) |
@@ -79,7 +79,7 @@
 | **Remedy** | What you did to fix a repair, such as Tightened / Secured | Remedy |
 | **Remote support** | The people who answer help messages in KART Comms | (new) |
 | **Reorder point** | When stock falls to this number, it is time to order more | Reorder level |
-| **Repair** | Work to fix something. Comes from findings, damage or tickets | Repair |
+| **Repair** | Work to fix something. Comes from damage, tickets or failed inspection checks | Repair |
 | **Repair Needed (usable)** | An open repair that does not stop the kart | Repair Needed (Usable) |
 | **Repair Required** | The kart must not be used; a stopping ticket or blocking repair is open | Repair Required |
 | **Requires part** | Service Queue lane for repairs waiting for a part | Waiting on Parts |

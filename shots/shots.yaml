@@ -2576,32 +2576,6 @@
     target: text=Confirm repair complete
     note: Done
   caption: Confirm repair complete at the bottom of the remedy dialog
-- id: mech-incident-clip
-  kind: clip
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Tap Report a kart problem on Overview
-  - Choose 106 in Kart
-  - Choose Incident, Incident type Impact / Contact, describe it, Impact location Front
-  - Add a finding, Issue type Loose, Item / component Bumper mount
-  - Answer No, it is still usable
-  - Tap Report problem
-  - Show 106 as Repair Needed (usable) and its repair card in the Service Queue
-  caption: reporting an incident on Bambino 106 with a loose bumper mount finding
-  captions:
-  - Tap Report a kart problem.
-  - Choose the kart.
-  - Pick Incident and say what happened.
-  - Add what you found.
-  - Say whether it stops the kart.
-  - Tap Report problem.
-  - The finding is now a repair.
-  duration: 70
 - id: mech-report-open
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2697,95 +2671,6 @@
     target: text=Impact location
     note: Where it was hit
   caption: Impact location Front selected
-- id: mech-report-finding
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - In Finding 1 choose Issue type Loose
-  - Type "Bumper mount" in Item / component
-  - Type "Front bumper mount bolt loose" in Notes
-  callouts:
-  - n: 1
-    target: text=Finding 1
-    note: Each finding becomes a repair
-  - n: 2
-    target: text=Item / component
-    note: What part of the kart
-  caption: Finding 1 with Issue type Loose and Item / component Bumper mount
-- id: mech-report-part
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Answer No to Is a replacement part required?
-  callouts:
-  - n: 1
-    target: text=Is a replacement part required?
-    note: Yes adds the part to the repair
-  caption: Is a replacement part required? answered No
-- id: mech-report-stop
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Choose No, it is still usable
-  - Show the note under the question
-  callouts:
-  - n: 1
-    target: text=Would this stop the kart from being used?
-    note: Answer honestly
-  - n: 2
-    target: text=Recorded for the workshop
-    note: An incident never stops the kart
-  caption: Would this stop the kart from being used? with the note that an incident never stops the kart
-- id: mech-report-submit
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Scroll to the bottom of the dialog
-  callouts:
-  - n: 1
-    target: text=Add finding
-    note: Another finding
-  - n: 2
-    target: text=Report problem
-    note: Save the report
-  caption: Add finding and Report problem buttons at the bottom of the dialog
-- id: mech-report-result
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop/repairs
-  state: After the 106 incident is reported
-  steps:
-  - Open Service Queue
-  callouts:
-  - n: 1
-    target: text=Incident
-    note: Repair from the incident
-  - n: 2
-    target: text=106
-    note: Bambino 106
-  caption: The new repair card for 106 in the Service Queue
 - id: mech-feedback-type
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2848,8 +2733,8 @@
     target: text=Power / Performance inspection
     note: Answer every check
   - n: 2
-    target: text=Inspection findings (optional)
-    note: A failed check needs a finding
+    target: text=Other findings (optional)
+    note: Anything else you found
   caption: The Power / Performance inspection checklist with Pass and Fail answers
 - id: mech-feedback-finding
   kind: screenshot
@@ -2863,8 +2748,8 @@
   - Add a finding with Issue type Worn and Item / component "Throttle cable"
   callouts:
   - n: 1
-    target: text=Inspection findings (optional)
-    note: One finding per failed check
+    target: text=Other findings (optional)
+    note: Anything else you found
   caption: A finding added for a failed inspection check
 - id: mech-feedback-submit
   kind: screenshot

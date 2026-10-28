@@ -9,10 +9,10 @@ export default {
     // the repair card and resolving the ticket
     const c = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await c.goto('/workshop/repairs');
-    await c.mustReload(c.page.getByText('Cadet 207', { exact: true }), 60000);
-    const card = c.page.locator('a,button,[role=button]').filter({ hasText: /^\s*Cadet 207/ }).filter({ hasText: 'Open ticket' });
+    await c.mustReload(c.page.getByText('Kart 207', { exact: true }), 60000);
+    const card = c.page.locator('a,button,[role=button]').filter({ hasText: /^\s*Kart 207/ }).filter({ hasText: 'Open ticket' });
     await c.scrollTo(card);
-    await c.shot('mech-ticket-result', { at: { 1: card.getByText('Cadet 207', { exact: true }), 2: card.getByText('Open ticket', { exact: true }) } });
+    await c.shot('mech-ticket-result', { at: { 1: card.getByText('Kart 207', { exact: true }), 2: card.getByText('Open ticket', { exact: true }) } });
     // cropped to the exceptions lanes: the In service lane above shows Junior 304 as Unknown technician to Casey
     // (Alex's name is not visible to another mechanic), unlike every other picture
     const exc = await (await c.must(c.page.getByText(/^Exceptions/).first())).boundingBox();
@@ -38,7 +38,7 @@ export default {
     if (!/Resolved/.test(st || '')) throw new Error('the 207 ticket was not resolved');
     await c.goto('/workshop');
     await c.mustReload('text=Readiness board', 60000);
-    const t207 = c.tile('#207', 'Available');
+    const t207 = c.tile('Kart 207', 'Available');
     // wait until the board shows 207 available again (the resolved ticket frees it)
     await c.mustReload(t207.getByRole('checkbox').first().and(c.page.locator(':is([data-state=checked],[aria-checked=true],:checked)')), 60000);
     await c.shot('mech-ticket-closed', { at: { 1: t207 } });

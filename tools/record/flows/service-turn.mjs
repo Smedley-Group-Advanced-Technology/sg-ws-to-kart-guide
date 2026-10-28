@@ -24,7 +24,7 @@ export default {
     s.cue();                                                    // Tap Start service.
     await s.tap(s.dialog.getByRole('button', { name: 'Start service' }));
     await s.skip(async () => { await s.page.waitForURL(/in-service/); await s.settle(800); await s.mustReload(s.page.getByRole('button', { name: 'Unchecked' })); });
-    await s.shot('mech-svc-servicing', { scroll: false, at: { 1: tab(s, 'Servicing'), 2: s.page.getByText('Cadet 203', { exact: true }).first() } });
+    await s.shot('mech-svc-servicing', { scroll: false, at: { 1: tab(s, 'Servicing'), 2: s.page.getByText('Kart 203', { exact: true }).first() } });
     await s.wait(800);
     s.cue();                                                    // Tap each check to mark it Good.
     await answerVisible(s, 4, 700);
@@ -91,7 +91,7 @@ export default {
     s.cue();                                                    // The kart is Ready again.
     await s.tap(tab(s, 'Overview'));
     await s.skip(async () => { await s.must('text=Readiness board', { timeout: 30000 }); await s.settle(800); });
-    const t203 = s.tile('#203', 'Available');
+    const t203 = s.tile('Kart 203', 'Available');
     await s.scrollTo(t203);
     await s.hover(t203);
     await s.wait(2500);
@@ -103,7 +103,7 @@ export default {
 
 export const tab = (s, name) => s.page.locator('a,button,[role=tab]').filter({ hasText: new RegExp(`^\\s*${name}\\s*$`) });
 export const lane = (s, name) => s.page.locator('h3').filter({ hasText: new RegExp(`^${name}`) });
-export const kartButton = (s, n) => s.page.getByRole('button', { name: n, exact: true });
+export const kartButton = (s, n) => s.page.getByRole('button', { name: `Kart ${n}`, exact: true }); // KART MF-40 names
 
 async function openSection(s, name) {
   const head = s.page.getByText(name, { exact: true }).first();

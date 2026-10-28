@@ -14,7 +14,7 @@ export default {
     await s.mustReload(s.page.getByText('Bambino Karts (6)'), 60000);
     await s.settle(800);
     await s.scrollTo(s.page.getByText('Bambino Karts (6)'), { block: 'start' });
-    const t101 = s.tile('#101', 'Available');
+    const t101 = s.tile('Kart 101', 'Available');
     const btn = t101.getByRole('button', { name: 'Requires service' });
     await s.shot('mech-used-tile', { scroll: false, at: { 1: t101, 2: btn } });
     await s.wait(600);

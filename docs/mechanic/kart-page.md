@@ -13,7 +13,7 @@ Every kart has its own page. It shows the kart's status, what is open on it, and
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-openkart-clip.jpg" width="1180">
 <source src="../assets/video/mech-openkart-clip.mp4" type="video/mp4"><source src="../assets/video/mech-openkart-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-openkart-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: opening Cadet 207 with Open kart and looking at its history (about 35 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: opening Cadet 207 with Open kart and looking at its history (about 30 seconds, with captions)</figcaption></figure>
 
 1. On **Overview**, tap **Open kart**.
 

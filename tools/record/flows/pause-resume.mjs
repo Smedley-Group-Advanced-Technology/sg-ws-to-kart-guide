@@ -31,7 +31,7 @@ export default {
     await s.tap(dlg.getByRole('button', { name: 'Pause', exact: true }));
     await s.skip(() => s.settle(800));
     s.cue();                                                    // Your paused karts wait in the bar.
-    const k304 = s.page.locator('button').filter({ hasText: /Junior 304/ });
+    const k304 = s.page.locator('button').filter({ hasText: /Kart 304/ });
     await s.hover(k304);
     await s.wait(1200);
     await s.shot('mech-pause-done', { scroll: false, at: { 1: bar } });
@@ -40,19 +40,21 @@ export default {
     await s.tap(k304);
     await s.skip(() => s.settle(1000));
     await s.wait(2500);
-    await s.shot('mech-resume-open', { scroll: false, at: { 1: s.page.getByText('Junior 304', { exact: true }) } });
+    await s.shot('mech-resume-open', { scroll: false, at: { 1: s.page.getByText('Kart 304', { exact: true }) } });
     const r = await s.close();
     clip('mech-pause-clip', r, { poster: 3 });
 
-    // Casey: repair work on 205 while its service is open (an incident with a finding gives 205 a repair)
-    asPersona('Casey Mechanic', `select public.ws_log_incident('${kartId(205)}', 'Impact', ARRAY['Rear'], 'Rear bumper touched the barrier',
+    // Casey: repair work on 205 while its service is open (an incident with a finding gives 205 a repair; since KART
+    // MF-5 only the inspection may send findings, so its transaction flag is set to stand for such a repair)
+    asPersona('Casey Mechanic', `select set_config('fkl.ws_dfi_findings', 'on', true);
+      select public.ws_log_incident('${kartId(205)}', 'Impact', ARRAY['Rear'], 'Rear bumper touched the barrier',
       '[{"issue_type": "Loose", "component_name": "Rear bumper", "notes": "Rear bumper bracket loose", "blocking": false, "parts_required": false}]'::jsonb,
       NULL, NULL, 'Incident', NULL, NULL, NULL);
       select public.ws_start_repair_work(id) from public.workshop_repairs where kart_id = '${kartId(205)}' and status <> 'completed';`);
     const c = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await c.goto('/workshop/in-service');
     await c.mustReload(c.page.getByText(/^Paused services$/i), 60000);
-    const k205 = c.page.locator('button').filter({ hasText: /Cadet 205/ });
+    const k205 = c.page.locator('button').filter({ hasText: /Kart 205/ });
     await c.hover(k205);
     await c.wait(1500);
     await c.shot('mech-resume-repair', { scroll: false, at: { 1: k205 }, tooltip: k205 });

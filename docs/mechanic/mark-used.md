@@ -18,7 +18,7 @@ A kart needs a service after it has been used. KART needs to know which karts we
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-mark-used-clip.jpg" width="1180">
 <source src="../assets/video/mech-mark-used-clip.mp4" type="video/mp4"><source src="../assets/video/mech-mark-used-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-mark-used-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used (about 45 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: marking Bambino 101 used by hand, undoing it, and Race to Chassis marking a chassis used (about 35 seconds, with captions)</figcaption></figure>
 
 1. On **Overview**, find the kart's tile, for example **Kart 101**.
 

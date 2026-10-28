@@ -36,7 +36,7 @@ export default {
     await s.mustReload(s.page.getByRole('button', { name: 'Needs service only' }), 60000);
     await s.tap(s.page.getByRole('button', { name: 'Needs service only' }));
     await s.settle(600);
-    const row = s.page.locator('div.rounded-md.border').filter({ hasText: /Junior 303/ }).first();
+    const row = s.page.locator('div.rounded-md.border').filter({ hasText: /Kart 303/ }).first();
     await s.scrollTo(row);
     await s.tap(row.getByRole('combobox'));
     // a hub manager who is not an admin only sees their own Workshop permission, so the list holds Morgan only
@@ -46,14 +46,14 @@ export default {
       2: s.page.locator('button').filter({ hasText: /^Needs service only$/ }).first(), 3: row.locator('button[role=combobox]').first(), 4: s.page.getByRole('option', { name: 'Morgan Manager' }) } });
     await s.page.keyboard.press('Escape');
 
-    // Reports: Turn summary
+    // Reports: Service summary
     await s.goto('/workshop/manager?tab=reports');
-    await s.mustReload(s.page.getByText('Turn summary').first(), 60000);
-    await s.tap(s.page.getByText('Turn summary').first());
+    await s.mustReload(s.page.getByText('Service summary').first(), 60000);
+    await s.tap(s.page.getByText('Service summary').first());
     await s.mustReload(s.page.getByRole('button', { name: 'Excel' }), 60000);
     await s.settle(800);
     await s.page.evaluate(() => window.scrollTo(0, 0));
-    await s.shot('hm-rep', { scroll: false, at: { 1: tab(s, 'Reports'), 2: s.page.getByText('Turn summary').first(),
+    await s.shot('hm-rep', { scroll: false, at: { 1: tab(s, 'Reports'), 2: s.page.getByText('Service summary').first(),
       3: s.page.locator('label[for="report-period"], label:has-text("Period")').first(), 4: s.page.getByRole('button', { name: 'Excel' }) } });
 
     // Parts needed: Order qty on brake pads
@@ -96,7 +96,7 @@ export default {
     await wd.waitFor();
     // people are listed by their initials
     await s.choose(wd.locator('#work-target-person'), 'AM');
-    await s.choose(wd.locator('#work-target-type'), 'Turns');
+    await s.choose(wd.locator('#work-target-type'), 'Services');
     await s.type(wd.locator('#work-target-quantity'), '10');
     await s.choose(wd.locator('#work-target-class'), 'Cadet');
     await s.wait(500);

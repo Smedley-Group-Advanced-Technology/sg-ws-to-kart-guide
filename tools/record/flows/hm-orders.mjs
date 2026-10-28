@@ -21,9 +21,10 @@ export default {
   reset: true,
   async run({ open, clip }) {
     // a one-time need from Stores (Alex Mechanic), shown as Submitted, marked one-time
-    asPersona('Alex Mechanic', `select public.ws_create_stock_order('${HUB}',
-      (select id from public.workshop_parts_catalog where manufacturer_part_number = 'DEMO-CSK-01'), 2, 'one_time', 'needed',
-      'Junior caliper seal upgrade', NULL);`);
+    // (ws_create_one_time_order, as the One-time need dialog; ws_create_stock_order refuses one-time lines now)
+    asPersona('Alex Mechanic', `select public.ws_create_one_time_order('${HUB}',
+      (select id from public.workshop_parts_catalog where manufacturer_part_number = 'DEMO-CSK-01'), 2,
+      'Junior caliper seal upgrade', gen_random_uuid());`);
 
     // ---------- approve and mark ordered, recorded ----------
     const s = await open({ persona: 'Morgan Manager', device: 'desktop', record: true });
@@ -121,7 +122,7 @@ export default {
     g.cue();                                                    // The waiting repair is ready to do.
     await g.goto('/workshop/repairs', { settle: false });
     // the repair card says Junior 7 (kart 307); after Goods In it is listed with the repairs ready to do
-    const card307 = g.page.getByText(/^Junior 3?07$/);
+    const card307 = g.page.getByText(/^Kart 307$/);
     await g.skip(async () => { await g.mustReload(card307, 60000); await g.settle(800); });
     await g.scrollTo(card307);
     await g.hover(card307);

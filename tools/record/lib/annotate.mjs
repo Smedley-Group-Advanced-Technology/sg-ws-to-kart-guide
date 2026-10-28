@@ -85,7 +85,7 @@ export async function annotate(browser, rawPath, outPath, boxes, frame, tooltip)
       }
     }, { boxes, top, W, H });
     fs.mkdirSync(path.dirname(outPath), { recursive: true });
-    await page.locator('#wrap').screenshot({ path: outPath });
+    await page.locator('#wrap').screenshot({ path: outPath, timeout: 90000 }); // generous: the machine is shared
   } finally {
     await page.close();
   }

@@ -17,7 +17,7 @@ You need the **Reliability** permission to raise tickets. In this guide Casey Me
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-ticket-clip.jpg" width="1180">
 <source src="../assets/video/mech-ticket-clip.mp4" type="video/mp4"><source src="../assets/video/mech-ticket-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-ticket-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: raising a stopping reliability ticket on Cadet 207 that cut out and would not restart (about 40 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: raising a stopping reliability ticket on Cadet 207 that cut out and would not restart (about 35 seconds, with captions)</figcaption></figure>
 
 1. On **Overview**, tap **Report a kart problem**.
 

@@ -35,6 +35,7 @@ export const PERSONAS = {
   'Taylor Central': { email: 'taylor.central@demo-fkl.example', initials: 'TC', id: 'de000000-0000-4000-8000-0000000000a4' },
   'Riley Support': { email: 'riley.support@demo-fkl.example', initials: 'RS', id: 'de000000-0000-4000-8000-0000000000a5' },
   'Jamie Newstarter': { email: 'jamie.newstarter@demo-fkl.example', initials: 'JN', id: 'de000000-0000-4000-8000-0000000000a6' },
+  'Jordan Contractor': { email: 'jordan.contractor@demo-fkl.example', initials: 'JC', id: 'de000000-0000-4000-8000-0000000000a7' },
 };
 export const DEMO_EMAIL_DOMAIN = '@demo-fkl.example';
 

@@ -49,6 +49,16 @@ Each included person has a **Default week** line under their switches. It shows 
 
 2. For each day they usually work, switch the day on. Set the **Start** time and, if you want, the **Finish** time. If remote work is allowed for them, you can also choose the **Work location**.
 
+    :::shot hm-sched-default
+    caption: The default week editor for Alex Mechanic (AM), Monday to Friday 08:00 to 16:30
+    steps:
+      - Tap Edit on AM's Default week line
+      - Switch Monday to Friday on, Start 08:00, Finish 16:30
+    callouts:
+      - [1, "text=Default week: AM", "One person's usual week"]
+      - [2, "text=Working", "Switch the day on"]
+    :::
+
 3. Tap **Save default week**. To remove it, tap **Clear default week**.
 
 !!! info "Good to know"

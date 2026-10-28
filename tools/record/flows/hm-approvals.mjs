@@ -77,7 +77,7 @@ export default {
     const createBtn = c.dialog.getByRole('button', { name: 'Create user', exact: true });
     await c.scrollTo(createBtn);
     await c.shot('hm-create-form', { scroll: false, at: { 1: c.dialog.getByText('Full Name', { exact: true }),
-      2: c.dialog.getByText('Hub managers can give Workshop and Purchasing only.'), 3: createBtn } });
+      2: c.dialog.getByText('Hub managers can give Workshop and Reliability only. Workshop includes Reliability.'), 3: createBtn } });
     await c.tap(createBtn);
     await c.dialog.getByText('Temporary password').first().waitFor({ timeout: 60000 });
     await c.settle(600);

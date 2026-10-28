@@ -517,7 +517,7 @@ async function signInState(browser, persona, device, log) {
   const page = await ctx.newPage();
   try {
     await signInOnPage(page, p.email);
-    await page.waitForURL(/hub-selection|pending|change-password/, { timeout: 45000 });
+    await page.waitForURL(/hub-selection|pending|change-password/, { timeout: 120000 }); // generous: shared machine
     await page.waitForTimeout(1000);
     await ctx.storageState({ path: file });
   } finally {
@@ -530,10 +530,10 @@ async function signInState(browser, persona, device, log) {
 }
 
 export async function signInOnPage(page, email, password = demoPassword()) {
-  await page.goto(`${BASE}/auth`, { waitUntil: 'commit', timeout: 45000 });
-  await page.getByLabel('Email').first().waitFor({ timeout: 45000 }).catch(async () => {
+  await page.goto(`${BASE}/auth`, { waitUntil: 'commit', timeout: 120000 });
+  await page.getByLabel('Email').first().waitFor({ timeout: 120000 }).catch(async () => {
     await page.reload({ waitUntil: 'commit' });
-    await page.getByLabel('Email').first().waitFor({ timeout: 45000 });
+    await page.getByLabel('Email').first().waitFor({ timeout: 120000 });
   });
   await page.getByLabel('Email').first().fill(email);
   await page.getByLabel('Password').first().fill(password);

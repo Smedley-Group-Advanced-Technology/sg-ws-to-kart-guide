@@ -41,8 +41,8 @@ export default {
     await s.wait(1200);
     s.cue();                                                    // The kart is now Repair Required.
     await s.goto('/workshop/readiness/repair_all', { settle: false });
-    await s.skip(async () => { await s.must(s.page.getByText('#207', { exact: true }), { timeout: 45000 }); await s.settle(600); });
-    await s.hover(s.page.getByText('#207', { exact: true }));
+    await s.skip(async () => { await s.must(s.page.getByText('Kart 207', { exact: true }), { timeout: 45000 }); await s.settle(600); });
+    await s.hover(s.page.getByText('Kart 207', { exact: true }));
     await s.wait(3500);
     const r = await s.close();
     clip('mech-ticket-clip', r, { poster: 2 });

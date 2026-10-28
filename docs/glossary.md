@@ -41,7 +41,7 @@
 | **Hub catalogue** | Your hub's view of the master parts catalogue | Parts Catalog (hub) |
 | **Hub lead** | The person who runs your hub. In KART they usually have the Hub Manager permission. Ask them first | Hub manager |
 | **Hub Manager** | The permission and dashboard for running a hub | hub_manager |
-| **Hub-local part** | A part only one hub uses, not in the master catalogue | Local part |
+| **Hub-local part** | A part one hub added before every part had to be on the master list. No new ones can be added; FKL Central adopts them in **Master review** | Local part |
 | **ICU board** | Open incidents of an event in priority order | ICU Workflow |
 | **In Progress** | A service has been started | In Progress |
 | **Incident** | Information about something that happened to a kart. Never stops it | Incident |

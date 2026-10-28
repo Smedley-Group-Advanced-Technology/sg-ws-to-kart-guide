@@ -7,12 +7,12 @@ url: /workshop/manager?tab=hub-catalogue
 state: "Demo Hub uses the FKL Master catalogue; pending part request Steering column bush from Demo Hub"
 :::
 
-The parts list for every hub comes from FKL Central's master catalogue. In **Hub catalogue** you tailor it for your hub: hide parts you never use, choose your preferred supplier, ask FKL Central for a missing part, or add a part that only your hub uses.
+The parts list for every hub comes from FKL Central's master catalogue. In **Hub catalogue** you tailor it for your hub: hide parts you never use, choose your preferred supplier and a backup supplier, and ask FKL Central for a missing part. Every part is on the FKL master list: **Request a part** is the only way to get a new one.
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Parts Catalog** is now the FKL Central master catalogue. Your hub's view of it is **Workshop Manager > Hub catalogue**.
     - **Catalog Requests** are now **Request a part**. FKL Central reviews them.
-    - **Add local part** is now **Add hub-local part**. A manufacturer part number (MPN) is required.
+    - **Add local part** is gone. Hubs no longer add parts without approval: use **Request a part** and FKL Central adds it to the master list. Hub-local parts added earlier stay until FKL Central adopts them.
 
 ## Hide or show a part
 
@@ -42,6 +42,11 @@ callouts:
 
 1. Tap **Hub details** on the part. Choose the supplier your hub buys from in **Preferred supplier** and tap **Save preferred supplier**.
 
+2. To choose a **Backup supplier** as well (the one you order from when the preferred supplier cannot supply), open the part in **Stores** and tap the lorry (**Suppliers**). Under **Backup supplier at** your hub, pick another supplier from the part's list and tap **Save backup supplier**. The preferred supplier is not offered: if you later make the backup your preferred supplier, the backup is cleared.
+
+!!! tip "Tip"
+    Purchasing users with access to your hub can set the preferred and backup suppliers too, from **Stores**. When a line is marked ordered, the **Order List** shows both so you can pick one with **Use**.
+
 ## Request a part from FKL Central
 
 :::shot hm-req-open
@@ -54,22 +59,25 @@ callouts:
 
 1. In the **Part requests** card, tap **Request a part**.
 
-2. Type the **Part name**.
+2. Type the **Part name**, the **Manufacturer** and the **Manufacturer part number (MPN)**. All three are required.
 
     :::shot hm-req-form
-    caption: "Steps 2 to 4 on one screen: the Request a part form filled in"
+    caption: "Steps 2 to 5 on one screen: the Request a part form filled in"
     steps:
       - Tap Request a part
-      - Type a part name, an MPN, quantity 2 and notes
+      - Type a part name, manufacturer, MPN, supplier, supplier part number and link, tick Cadet and Cadet Gen3.1
     callouts:
-      - [2, "text=Part name", "What it is called"]
-      - [3, "text=Manufacturer part number (MPN), if known", "Helps FKL Central match it"]
-      - [4, "text=Send request", "Send it"]
+      - [2, "text=Manufacturer part number (MPN)", "Required, with name and manufacturer"]
+      - [3, "text=Link to the part (optional)", "Supplier details and a web link"]
+      - [4, "text=Compatible kart types", "Which karts it fits"]
+      - [5, "text=Send request", "Send it"]
     :::
 
-3. Add the **Manufacturer part number (MPN), if known** and the **Quantity needed**.
+3. If you know where to buy it, add the **Supplier (optional)**, the **Supplier part number (optional)** and a **Link to the part (optional)**. The link must start with http:// or https://.
 
-4. Add notes (supplier, kart class, what it is for) and tap **Send request**.
+4. Under **Compatible kart types**, tick **Bambino**, **Cadet** or **Junior**. Tick generations too if you know them; leave them empty if you are not sure. If the part is the same as, or an alternative to, a part already in the catalogue, choose **Same as** or **Alternative to** under **Related to an existing part (optional)** and pick that part.
+
+5. Add notes (what it is for) and tap **Send request**. There is no quantity: order the part through the Order List once it is in your hub's list.
 
 :::clip hm-request-part-clip
 caption: requesting a part from FKL Central in the Hub catalogue
@@ -77,32 +85,14 @@ duration: 40
 steps:
   - Open Workshop Manager, Hub catalogue
   - Tap Request a part
-  - Fill in Part name, MPN, Quantity needed and Notes
+  - Fill in Part name, Manufacturer, MPN, Supplier and Compatible kart types
   - Tap Send request and show it as Waiting for FKL Central
 captions:
   - "Open Hub catalogue."
   - "Tap Request a part."
-  - "Say what the part is and how many."
+  - "Say what the part is, who makes it and which karts it fits."
   - "Send the request to FKL Central."
 :::
 
 !!! note "Remember"
-    The request shows as **Waiting for FKL Central** until it is reviewed. Then it says **Linked to an existing part**, **Added as a new part**, **Added as a hub-local part** or **Rejected** with the reason. Tap **Withdraw** if you no longer need it.
-
-## Add a hub-local part
-
-:::shot hm-cat-local
-caption: The Add hub-local part form with MPN
-steps:
-  - Tap Add hub-local part
-callouts:
-  - [1, "text=Add hub-local part", "Only for your hub"]
-:::
-
-1. Tap **Add hub-local part**, fill in the part with its MPN and save. It appears only in your hub's Stores.
-
-!!! warning "Watch out"
-    Check Stores and ask FKL Central first: a hub-local part that duplicates a master part makes ordering and reports harder.
-
-!!! abstract "Coming soon"
-    The supplier fields are changing. **Add hub-local part** will save the supplier into the shared supplier list, the Stores badge **Hub price** becomes **Hub description**, and the separate hub override columns go away. This guide will be updated when it goes live.
+    FKL Central and purchasing users get a push notification when you send a request (if they have notifications switched on). It shows as **Waiting for FKL Central** until it is reviewed. Then it says **Linked to an existing part**, **Added as a new part** or **Rejected** with the reason. Tap **Withdraw** if you no longer need it.

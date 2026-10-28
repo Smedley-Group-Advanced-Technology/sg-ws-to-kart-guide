@@ -56,7 +56,7 @@ Every Workshop App screen and where to find it in KART, grouped by the Workshop 
 | Consumables | Workshop > **Stores**, **Consumables** tab | Workshop | [Stores](mechanic/stores.md) |
 | Parts Catalog | FKL Central > **Parts catalogue** > **Master parts**; hub view in Workshop Manager > **Hub catalogue** | FKL Central; hub manager | [Parts catalogue](fkl-central/parts-catalogue.md) |
 | Catalog Requests | Hub side: Workshop Manager > **Hub catalogue** > **Request a part**. Review: FKL Central > **Parts catalogue** > **Part requests** | Hub manager; FKL Central | [Hub catalogue](hub-manager/hub-catalogue.md), [Part requests](fkl-central/part-requests.md) |
-| Add local part | Workshop Manager > **Hub catalogue** > **Add hub-local part** (MPN required). Supplier field change: Coming soon | Hub manager, FKL Central, admin | [Hub catalogue](hub-manager/hub-catalogue.md) |
+| Add local part | Not in KART: every part is on the FKL master list. Use Workshop Manager > **Hub catalogue** > **Request a part** | Hub manager, FKL Central, admin | [Hub catalogue](hub-manager/hub-catalogue.md) |
 
 ## Management menu
 
@@ -85,7 +85,7 @@ Every Workshop App screen and where to find it in KART, grouped by the Workshop 
 
 !!! abstract "Coming soon"
     - FKL calendar sync page for admins.
-    - Supplier field changes in **Add hub-local part** and the **Hub price** badge.
+    - The **Hub price** badge in Stores renamed **Hub description**.
     - Removing the old 4-box front alignment entry from the checklists.
     - Repairs moved from the Workshop App listed under their incidents on the kart page, with their photos.
 

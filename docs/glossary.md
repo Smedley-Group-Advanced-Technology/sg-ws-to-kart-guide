@@ -68,7 +68,7 @@
 | **Planning event** | An event your hub prepares karts for, with readiness targets, such as Demo Regional Race | (new) |
 | **Power / Performance inspection** | The checklist for low power feedback, inside a Driver feedback report | Power / Performance Inspection |
 | **Preferred** | A kart flagged to be used first | Preferred |
-| **Purchasing** | Permission for order actions, but not approval | purchaser |
+| **Purchasing** | Permission for order actions, but not approval. Given by admins only | purchaser |
 | **Race to Chassis (R2C)** | Linking race numbers to chassis per session | Race to Chassis |
 | **Readiness board** | Counts of every status on Overview | Readiness |
 | **Readiness targets** | Event-usable karts each class needs for a planning event | Workshop Planning |
@@ -106,5 +106,5 @@
 | **Unavailable** | Not offered for allocation. Shown on the kart page; on tiles Available is not ticked | Not available |
 | **Waiting on parts** | A repair waiting for parts | Waiting on Parts |
 | **Work targets** | Targets per person: readiness, services, repairs or campaign tasks | Workshop Planning |
-| **Workshop** | The permission and the KART area for servicing, parts and repairs | mechanic |
+| **Workshop** | The permission and the KART area for servicing, parts and repairs. The permission includes Reliability | mechanic |
 | **Workshop Manager** | The hub manager's Workshop tab | Management |

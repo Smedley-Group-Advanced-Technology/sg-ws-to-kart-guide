@@ -116,7 +116,7 @@ CARDS = {
 }
 
 EXTRA = {
-    "fkl-central-card": ("Remember", "Your hub lead and FKL Central agree new parts. Hub managers can give only Workshop and Purchasing."),
+    "fkl-central-card": ("Remember", "Your hub lead and FKL Central agree new parts. Hub managers can give only Workshop and Reliability; only admins give Purchasing."),
     "remote-support-card": ("Who covers today", "Comms routes each hub's support chats to whoever covers that hub today and shows them as On cover."),
     "switch-over-day-card": ("Remember", "Your hub lead confirms the date and time at least 24 hours before. Record every part in KART from day one. Check the shelf before ordering until the stock moves. Typed Workshop App notes are not copied."),
 }

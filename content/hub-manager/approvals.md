@@ -11,7 +11,7 @@ New people get into your hub in one of two ways: they sign up with your join lin
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Manage Users** is split: hub managers handle their own hubs in **Pending approvals**; admins handle everything on the Admin page. See [Users and permissions](../fkl-central/users.md).
-    - Hub managers can give the **Workshop** and **Purchasing** permissions only.
+    - Hub managers can give the **Workshop** and **Reliability** permissions only. **Workshop includes Reliability**: ticking Workshop ticks Reliability too. Only admins give **Purchasing**.
     - You approve only for hubs you hold access to.
 
 ## Open Pending approvals
@@ -51,13 +51,13 @@ steps:
 captions:
   - "Open Pending approvals."
   - "Check who is asking and for which hub."
-  - "Tick Workshop for a new mechanic."
+  - "Tick Workshop for a new mechanic. Reliability ticks too."
   - "Tap Approve."
   - "They can sign in now."
 :::
 
 :::shot hm-appr-row
-caption: "Steps 1 to 3 on one screen: Jamie Newstarter's Sign-up row via join link, Workshop ticked and the Approve button"
+caption: "Steps 1 to 3 on one screen: Jamie Newstarter's Sign-up row via join link, Workshop and Reliability ticked and the Approve button"
 steps:
   - Tap Pending approvals
   - Tick Workshop
@@ -69,7 +69,7 @@ callouts:
 
 1. On **Requests**, find the person. The row says **Sign-up** or **Extra hub**, the hub, and **via join link** if they used one.
 
-2. For a sign-up, tick the permissions they need: **Workshop**, and **Purchasing** if they place orders. A new mechanic needs **Workshop**.
+2. For a sign-up, tick the permissions they need. A new mechanic needs **Workshop**; ticking it also ticks **Reliability**. If they also need **Purchasing**, ask an admin.
 
 3. Tap **Approve**. KART shows **Request approved** and they can sign in.
 
@@ -101,19 +101,19 @@ callouts:
 ## Create a user with a temporary password
 
 :::shot hm-create-form
-caption: "Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop ticked"
+caption: "Steps 1 to 3 on one screen: the Create user form filled in for Demo Hub with Workshop and Reliability ticked"
 steps:
   - Tap the Create user tab
   - Fill in a demo name and e-mail, choose Demo Hub and tick Workshop
 callouts:
   - [1, "text=Full Name", "Their details"]
-  - [2, "text=Hub managers can give Workshop and Purchasing only.", "Hub and permissions"]
+  - [2, "text=Hub managers can give Workshop and Reliability only. Workshop includes Reliability.", "Hub and permissions"]
   - [3, "text=Create user", "Create it"]
 :::
 
 1. Open the **Create user** tab. Fill in **Full Name**, **Initials (optional)**, **Email** and **Repeat e-mail**.
 
-2. Choose the **Hub** and tick **Permissions**: Workshop, and Purchasing if they place orders.
+2. Choose the **Hub** and tick **Permissions**: **Workshop** (it ticks **Reliability** too). Only admins give **Purchasing**.
 
 3. Tap **Create user**. KART shows a **Temporary password**. Tap **Copy password** and give it to the person in private.
 

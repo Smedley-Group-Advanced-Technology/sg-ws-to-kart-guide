@@ -24,7 +24,7 @@ There is no side menu. Use **Back**, the hub selection cards and the Workshop ta
 Incidents are information only. If the kart must not be used, raise a stopping reliability ticket, or ask someone with the Reliability permission. See [Incidents, tickets and repairs](start/problems-explained.md).
 
 **I cannot choose Reliability or Damage in Report a kart problem.**
-Both need the **Reliability** permission. Ask a colleague who has it, or your hub manager.
+Both need the **Reliability** permission. Workshop includes it, so ask your hub manager to check your permissions; they can give it. Until then, ask a colleague who has it.
 
 **Can I have two karts in service at once?**
 No. One active service per mechanic. Starting another offers **Pause and switch**.

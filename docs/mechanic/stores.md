@@ -1,12 +1,13 @@
 # Stores: finding a part and correcting stock
 
 
-**Stores** shows the parts and consumables your hub holds, how many are on the shelf and where they are. You can search for a part, correct the count after a stock check and ask for a part to be ordered.
+**Stores** shows the parts and consumables your hub holds, how many are on the shelf and where they are. You can search for a part and ask for a part to be ordered. Hub managers and admins also correct the count after a stock check.
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Inventory** is now the **Parts** tab in **Stores**. **Consumables** is the second tab.
     - The parts list comes from the master catalogue kept by FKL Central (the league's central team). Every part has an FKL part number (for example FKL-900001). The note **Parts catalogue and BoM are managed in FKL Central** on the Stores page means the same: FKL Central keeps the parts list and the BoM (bill of materials: which parts make up each kart).
     - Every stock correction asks for a **Reason**.
+    - Only hub managers and admins can adjust stock, as in the Workshop App. Mechanics do not see **Adjust**.
 
 ## Find a part
 
@@ -29,7 +30,9 @@
 !!! warning "Watch out"
     If a part is not in Stores, it may be hidden at your hub or not in the catalogue yet. Ask your hub manager. They can show it again or request it from FKL Central.
 
-## Correct the stock after a count
+## Correct the stock after a count (hub managers and admins)
+
+Only hub managers of your hub and admins see **Adjust**. If you are a mechanic and the count on the shelf is different, tell your hub manager the part and the real count.
 
 1. On the part's row, tap **Adjust**.
 

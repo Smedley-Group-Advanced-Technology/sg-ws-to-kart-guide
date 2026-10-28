@@ -68,11 +68,11 @@ Open the kart page (or the **ICU board**). Every open incident shows three actio
 
 | Action | When | What happens |
 |---|---|---|
-| **Raise reliability ticket** | You found a fault, for example a loose bolt (root cause operational or poor quality control) | The ticket form opens on the Tracker with the kart filled in. When you tap **Submit Issue**, the incident is resolved and linked to the ticket (**Open linked ticket**). KART says **Incident resolved with this ticket.** |
+| **Raise reliability ticket** | You found a fault, for example a loose bolt (root cause operational or poor quality control) | The ticket form opens on the Tracker with the kart filled in. When you tap **Submit Issue**, the incident is resolved and linked to the ticket (**Open linked ticket**); no new incident is created. KART says **Incident resolved with this ticket.** |
 | **Record damage** | You found damaged components | **Record New Damage** opens with the kart filled in. When you record the damage, the incident is resolved and names the damage ticket. Each component becomes a repair |
 | **Resolved: no fault found** | Nothing needs repairing | The incident is closed. The kart's status does not change |
 
-**Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
+**Raise reliability ticket** and **Record damage** need the Reliability permission, like the Tracker buttons. Leave the new ticket open (for example **Ongoing**): a ticket saved as **Resolved** does not close the incident. An incident that still has open repairs from before cannot be linked to a ticket; complete those repairs first. After saving, KART takes you back to the kart page, where the incident shows **Resolved** with **Reliability ticket raised: <ticket>** or **Damage recorded: <ticket>**.
 
 !!! tip "Tip"
     Repairs that were logged as findings before this change stay on the kart page under their incident. Complete them as usual with **Log remedy / complete repair**.

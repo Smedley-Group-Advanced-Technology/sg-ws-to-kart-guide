@@ -57,7 +57,9 @@ If another mechanic started the service (for example they paused it and went hom
 
 1. Open the kart page. KART says **Another mechanic is servicing this kart. Any Workshop user of this hub can take it over with a reason.** Tap **Take over**.
 
-    Or, in the **Service Queue**, tap the kart in the **In progress** lane.
+    Or, in the **Service Queue**, tap the kart in the **In progress** lane. Hub managers and admins first get the read-only view of the checklist there; **Take over** is the button at its top.
+
+    A service paused for repair work cannot be taken over: KART says **Paused for repair work: the repair mechanic finishes the repair first**.
 
 2. In **Take over service**, type the **Reason**, for example "Alex went home, I finish the service". The reason needs 4 to 500 characters; **Take over** stays grey until then.
 

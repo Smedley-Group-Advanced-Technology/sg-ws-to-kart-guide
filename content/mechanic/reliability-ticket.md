@@ -172,7 +172,7 @@ captions:
       - Tap Update
       - Open Overview and find 207
     callouts:
-      - [1, "text=#207", "Available again"]
+      - [1, "text=Kart 207", "Available again"]
     :::
 
 !!! note "Remember"

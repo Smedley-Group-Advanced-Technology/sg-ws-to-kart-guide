@@ -66,7 +66,7 @@ Every kart in KART has one workshop status. The status decides whether the kart 
     steps:
       - Scroll to the Junior Karts tiles
     callouts:
-      - [1, "text=#308", "Junior 308"]
+      - [1, "text=Kart 308", "Junior 308"]
       - [2, "text=Missing Components", "A battery is missing"]
       - [3, "text=Campaign", "Open campaign task"]
     :::

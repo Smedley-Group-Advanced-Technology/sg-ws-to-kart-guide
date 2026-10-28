@@ -120,8 +120,8 @@ captions:
     steps:
       - Scroll to the Junior Karts tiles
     callouts:
-      - [1, "text=#301", "Campaign tag: caliper seal upgrade"]
-      - [2, "text=#308", "Missing Components"]
+      - [1, "text=Kart 301", "Campaign tag: caliper seal upgrade"]
+      - [2, "text=Kart 308", "Missing Components"]
       - [3, "text=View log book", "The kart's log book"]
     :::
 

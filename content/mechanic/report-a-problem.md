@@ -156,7 +156,7 @@ captions:
       - [2, "text=Report problem", "Save the report"]
     :::
 
-11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by class and its number in the class: **Bambino 6** is kart 106.
+11. The kart now counts as **Repair Needed (usable)** and the repair appears as a card in the **Service Queue**. The card names the kart by its number, for example **Kart 106**.
 
     :::shot mech-report-result
     caption: The new repair card for 106 in the Service Queue

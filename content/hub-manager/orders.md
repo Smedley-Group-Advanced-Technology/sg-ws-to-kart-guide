@@ -106,10 +106,10 @@ callouts:
 2. Repairs waiting for that part now show **On order**, with the supplier and date.
 
     :::shot hm-ord-onorder
-    caption: "Step 2: the repair card for kart 307 (shown as Junior 7) with On order for front bumpers"
+    caption: "Step 2: the repair card for Kart 307 with On order for front bumpers"
     url: /workshop/repairs
     steps:
-      - Open Service Queue and find the Junior 7 card
+      - Open Service Queue and find the Kart 307 card
     callouts:
       - [2, "text=On order", "Mechanics see it is coming"]
     :::

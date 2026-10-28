@@ -39,9 +39,9 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
 
     ![Dragging race number 5 onto chassis 01, Junior 301](../assets/gif/mech-r2c-drag-gif.gif){ loading=lazy }
 
-3. KART says **Chassis 01 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
+3. KART says **Kart 301 marked used** and **It stays Ready during the event and requires service after the event day.** Tap **Undo** only if it was a mistake. A kart that already requires service is not marked again: KART says **Not marked used: the kart already requires service.**
 
-    ![Chassis 01 marked used message with Undo](../assets/img/mechanic/mech-r2c-marked.png){ loading=lazy }
+    ![Kart 301 marked used message with Undo](../assets/img/mechanic/mech-r2c-marked.png){ loading=lazy }
 
 4. To take a number off, drag it back to the race number list, or tap the chassis and tap **Take off chassis**.
 
@@ -71,9 +71,9 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example Junior chassis **07** (Junior 307). KART says **Chassis 07 is not available** and why.
+1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number and says **Kart 307 is not available** and why.
 
-    ![Chassis 07 (Junior 307) is not available, with the reason box and Assign anyway](../assets/img/mechanic/mech-r2c-unavailable.png){ loading=lazy }
+    ![Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway](../assets/img/mechanic/mech-r2c-unavailable.png){ loading=lazy }
 
 2. Normally tap **Cancel** and use another chassis. Only if your hub manager agrees, type a reason and tap **Assign anyway**. This gives a track use override until the end of the event.
 

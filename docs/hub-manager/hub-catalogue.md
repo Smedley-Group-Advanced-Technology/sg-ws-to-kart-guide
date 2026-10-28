@@ -18,11 +18,11 @@ The parts list for every hub comes from FKL Central's master catalogue. In **Hub
 
 ## Choose the preferred supplier
 
-![The supplier picker in Hub details](../assets/img/hub-manager/hm-cat-supplier.png){ loading=lazy }
+![The preferred and backup supplier pickers in Hub details](../assets/img/hub-manager/hm-cat-supplier.png){ loading=lazy }
 
 1. Tap **Hub details** on the part. Choose the supplier your hub buys from in **Preferred supplier** and tap **Save preferred supplier**.
 
-2. To choose a **Backup supplier** as well (the one you order from when the preferred supplier cannot supply), open the part in **Stores** and tap the lorry (**Suppliers**). Under **Backup supplier at** your hub, pick another supplier from the part's list and tap **Save backup supplier**. The preferred supplier is not offered: if you later make the backup your preferred supplier, the backup is cleared.
+2. Below it, under **Backup supplier at** your hub, pick the supplier you order from when the preferred one cannot supply and tap **Save backup supplier**. The preferred supplier is not offered: if you later make the backup your preferred supplier, or the supplier is deactivated, the backup is cleared. The same two pickers are in **Stores**: tap the lorry (**Suppliers**) on the part.
 
 !!! tip "Tip"
     Purchasing users with access to your hub can set the preferred and backup suppliers too, from **Stores**. When a line is marked ordered, the **Order List** shows both so you can pick one with **Use**.

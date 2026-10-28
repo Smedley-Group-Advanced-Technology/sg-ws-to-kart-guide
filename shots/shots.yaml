@@ -610,8 +610,8 @@
   callouts:
   - n: 1
     target: text=Hub details
-    note: Hub-specific settings
-  caption: The supplier picker in Hub details
+    note: Preferred and backup supplier
+  caption: The preferred and backup supplier pickers in Hub details
 - id: hm-req-open
   kind: screenshot
   page: hub-manager/hub-catalogue.md

@@ -50,7 +50,9 @@ export default {
       2: s.page.getByTestId('board-tag-Junior-campaign') } });
     const t301 = s.tile('Kart 301', 'Available'), t308 = s.tile('Kart 308', 'Available');
     await s.scrollTo(s.page.getByText('Junior Karts (8)'), { block: 'start' });
-    await s.shot('mech-board-tiles', { scroll: false, at: { 1: t301, 2: t308, 3: t308.getByText('View log book') } });
+    // numbers 2 and 3 outside the 308 tile so they do not cover its label
+    await s.shot('mech-board-tiles', { scroll: false, at: { 1: t301, 2: t308, 3: t308.getByText('View log book') },
+      place: { 2: 'below', 3: 'right' } });
     await s.shot('start-status-tags', { scroll: false, at: { 1: t308, 2: t308.getByText('Missing batteries').first(),
       3: t301.getByText('Campaign', { exact: true }) } });
     // drill-down lists

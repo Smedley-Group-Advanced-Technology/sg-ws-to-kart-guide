@@ -12,7 +12,7 @@ Every kart in KART has one colour: **green**, **amber** or **red** (grey for kar
 !!! info "What changed from the Workshop App"
     - **Three colours instead of nine.** Green is Ready, amber needs attention, red is blocked. The reason (for example **Paused** or **Waiting on parts**) is written next to the colour.
     - **"Turn Required" is now "Requires service".** Same meaning: the kart has been used since its last service and needs one. KART never shows the words "Turn Required".
-    - **One colour for status and availability.** A red kart is not offered for allocation. An amber kart in a service or paused carries a small **Not on track** marker.
+    - **One colour for status and availability.** A red kart is blocked: **Race to Chassis** refuses it unless someone assigns it with a reason. A kart someone ticked **Available** by hand shows as Available, with a lock and the **Manual override** tag. An amber kart in a service or paused carries a small **Not on track** marker.
     - Logging an incident no longer makes a kart Repair required on its own. See [Incidents, tickets and repairs](problems-explained.md).
 
 ## The colours at a glance
@@ -21,7 +21,7 @@ Every kart in KART has one colour: **green**, **amber** or **red** (grey for kar
 |---|---|---|---|
 | <span class="swatch sw-ready"></span> green | **Ready** | Serviced and nothing open. The kart can race. | Ready |
 | <span class="swatch sw-requires"></span> amber | **Needs attention** | The kart needs work, but nothing stops it for good. | **Campaign required**, **In progress**, **Paused**, **Requires service**, **Repair needed (usable)** |
-| <span class="swatch sw-repair-required"></span> red | **Blocked** | The kart must not be used. It is not offered for allocation (KART does not offer it when karts are handed out for an event). | **Repair required** (**Ready to repair**, **Waiting on parts** or **Stopping ticket**), **Missing batteries**, **Not available** |
+| <span class="swatch sw-repair-required"></span> red | **Blocked** | The kart must not be used. **Race to Chassis** refuses it unless someone assigns it with a reason. If someone ticked **Available** by hand, it shows as Available (with a lock). | **Repair required** (**Ready to repair**, **Waiting on parts** or **Stopping ticket**), **Missing batteries**, **Not available** |
 | <span class="swatch sw-paused"></span> grey | **Written off / off site** | The kart is written off or not at a hub. It is not counted in the hub's active karts. Shown only when there is one. | **Written off**, **Off site** |
 
 A kart is counted once, under the first reason that applies, in the order of the list below. The numbers on the board always add up to the number of active karts.
@@ -41,12 +41,12 @@ A kart is counted once, under the first reason that applies, in the order of the
 | **In progress** | amber, **Not on track** | A mechanic has started the service. | **Start service**. It ends with **Complete service**. | In Progress |
 | **Paused** | amber, **Not on track** | The service was paused with a reason (shown under the label). | **Pause**. It ends when someone resumes the service. | Paused |
 | **Requires service** | amber | The kart has been used and needs a service; the service has not started. | It goes on track (Race to Chassis on the event day), or a hub manager marks it used. Completing the service ends it. | Turn Required (Ready to Turn) |
-| **Repair needed (usable)** | amber | An open repair that does not stop the kart. The kart stays available. | Completing the repair. | Repair Needed (Usable) |
+| **Repair needed (usable)** | amber | An open repair that does not stop the kart, or an open **Performance** ticket. The kart stays available. | Completing the repair. | Repair Needed (Usable) |
 | **Campaign required** | amber | An open task in an active campaign, and nothing else is open. The kart stays usable. | Completing the task, or the kart is excluded. | (new) |
 | **Ready** | green | Nothing open. | Any of the above. | Ready |
 
 !!! note "Remember"
-    **Event usable** has not changed: Ready or Repair needed (usable), and available. Only those karts count towards your readiness targets, on the separate **Event readiness** card.
+    **Event usable** has not changed: Ready or Repair needed (usable), and available. Only those karts count towards your readiness targets, on the separate **Event readiness** card. So **Event usable** also counts amber karts that are **Repair needed (usable)** or **Campaign required**: it can be higher than the board's green **Ready**. That is by design.
 
 ## Markers and tags
 
@@ -58,7 +58,7 @@ The colour comes only from the kart's condition. Markers and tags add detail; th
 - **Track use override**: the kart may run until the time shown, even if it is not available. The colour stays as it is.
 - **Manual override**: someone set Available or Preferred by hand.
 - **Campaign**: an open campaign task. Shown on any colour, so a red kart with campaign work shows red with the Campaign tag.
-- **Performance**: an open performance ticket. The kart keeps its colour (it does not stop the kart) but is not preferred.
+- **Performance**: an open performance ticket. It does not stop the kart: the kart is amber **Repair needed (usable)** (unless another reason comes first) and not preferred.
 - **Reliability** or **Damage**: the kind of open ticket on a red kart.
 - **Missing batteries**: shown as a tag when the kart is red for another reason too.
 

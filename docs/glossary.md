@@ -28,7 +28,7 @@
 | **Damage** | Damaged components, recorded with Record New Damage. Each becomes a repair | Damage report |
 | **Direct chat** | A chat between two colleagues in KART Comms. New ones are private to the two. Only remote support can start a new one with a remote support person | (new) |
 | **Draft** | Order stage: created from Parts needed, not submitted yet | (new) |
-| **Driver feedback** | A report of what the driver said. Can include the Power / Performance inspection | Driver feedback |
+| **Driver feedback** | Feedback from customers (drivers). Staff no longer report it in KART; older Workshop App reports of this type still show in the incident history | Driver feedback |
 | **Effect of Issue** | On a reliability ticket: what the kart did, such as Cut out not restarted. Any effect except Performance stops the kart | (new) |
 | **Event Operations** | The KART area for events, Race to Chassis and the ICU board | On Event |
 | **Event usable** | Ready or Repair needed (usable), and available | Usable |
@@ -70,7 +70,7 @@
 | **Paused** | A service stopped for now, with a reason (amber, Not on track) | Paused |
 | **Permission** | What an account may do: Workshop, Reliability, Hub Manager, Purchasing, FKL Central, Remote support | Role |
 | **Planning event** | An event your hub prepares karts for, with readiness targets, such as Demo Regional Race | (new) |
-| **Power / Performance inspection** | The checklist for low power feedback, inside a Driver feedback report | Power / Performance Inspection |
+| **Power / Performance inspection** | The checklist for low power or performance, its own type in Report a kart problem | Power / Performance Inspection |
 | **Preferred** | A kart flagged to be used first | Preferred |
 | **Purchasing** | Permission for order actions, but not approval. Given by admins only | purchaser |
 | **Race to Chassis (R2C)** | Linking race numbers to chassis per session | Race to Chassis |

@@ -1,13 +1,13 @@
 // After an incident (KART MF-4/5): an open incident on Bambino 106 (logged as Alex Mechanic, no repairs) with its
 // follow-up actions on the kart page, then resolved by a reliability ticket (raised in the database as Casey Mechanic);
-// Log incident on the Tracker as Jordan Contractor (not saved); driver feedback with the Power / Performance inspection
+// Log incident on the Tracker as Jordan Contractor (not saved); the Power / Performance inspection report type
 // on Junior 302 (not submitted).
 import { kartId, HUB } from '../lib/config.mjs';
 import { sqlValue, asPersona } from '../lib/db.mjs';
 
 export default {
   shots: ['mech-incident-follow-up', 'mech-incident-resolved', 'mech-tracker-log-incident', 'mech-tracker-log-dialog',
-    'mech-feedback-type', 'mech-feedback-power', 'mech-feedback-describe', 'mech-feedback-inspection',
+    'mech-feedback-type', 'mech-feedback-describe', 'mech-feedback-inspection',
     'mech-feedback-finding', 'mech-feedback-submit'],
   reset: ['no_106_incident'],
   async run({ open }) {
@@ -61,7 +61,7 @@ export default {
       3: ld.locator('[data-testid="report-submit"]') } });
     await t.close();
 
-    // driver feedback on Junior 302, not submitted
+    // MF-6: the Power / Performance inspection (its own report type) on Kart 302, not submitted
     const f = await open({ persona: 'Alex Mechanic', device: 'tablet' });
     await f.goto('/workshop');
     await f.mustReload('text=Readiness board', 60000);
@@ -69,11 +69,9 @@ export default {
     await f.tap('role=button[name="Report a kart problem"]');
     await f.tap(d.getByRole('combobox').first());
     await f.tap(f.page.getByRole('option', { name: /302/ }));
-    await f.tap(d.locator('[data-testid="report-type-Driver Feedback"]'));
-    await f.shot('mech-feedback-type', { scroll: false, at: { 1: d.locator('label').filter({ has: f.page.locator('[data-testid="report-type-Driver Feedback"]') }) } });
-    await f.tap(d.getByRole('combobox').nth(1));
-    await f.tap(f.page.getByRole('option', { name: 'Power / Performance' }));
-    await f.shot('mech-feedback-power', { at: { 1: d.getByText(/^Driver feedback type/) } });
+    const pp = d.locator('label').filter({ has: f.page.locator('[data-testid="report-type-Performance Inspection"]') });
+    await f.tap(d.locator('[data-testid="report-type-Performance Inspection"]'));
+    await f.shot('mech-feedback-type', { scroll: false, at: { 1: pp.getByText('Power / Performance inspection', { exact: true }) } });
     await f.type(d.locator('#report-notes'), 'Driver says it feels slow out of the hairpin');
     await f.shot('mech-feedback-describe', { at: { 1: d.getByText('Notes / details', { exact: true }) } });
     await f.settle(600);
@@ -82,8 +80,10 @@ export default {
     const n = await passes.count();
     for (let i = 0; i < n; i++) if (await passes.nth(i).isEnabled()) await passes.nth(i).click().catch(() => {});
     await d.locator('[data-testid="dfi-fail"]').last().click().catch(() => {});
-    await f.scrollTo(d.getByText(/^Power \/ Performance inspection/));
-    await f.shot('mech-feedback-inspection', { at: { 1: d.getByText(/^Power \/ Performance inspection/), 2: d.getByText(/^(Inspection findings|Other findings) \(optional\)/) }, optional: [2] });
+    // the checklist heading inside the inspection section (the radio label has the same text)
+    const dfi = d.locator('[data-testid="dfi-section"]');
+    await f.scrollTo(dfi.getByText(/^Power \/ Performance inspection/));
+    await f.shot('mech-feedback-inspection', { at: { 1: dfi.getByText(/^Power \/ Performance inspection/), 2: d.getByText(/^(Inspection findings|Other findings) \(optional\)/) }, optional: [2] });
     // the finding of the failed check (in the check itself); Other findings stays empty below it
     const iss = d.getByRole('combobox').filter({ hasText: 'Choose' }).first();
     await f.tap(iss);

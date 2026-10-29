@@ -13,6 +13,7 @@ Remote support helps hubs from a distance. In KART you answer hub staff in **KAR
     - Workshop staff now ask **AI Support** in **KART Comms** first. The AI escalates to Remote Support (whoever covers their hub today) or FKL Central when a person is needed.
     - Support cover can only be given to people with the **Remote support** permission.
     - New direct chats between two colleagues are private to those two people. Remote support and admins do not see them.
+    - Only remote support can start a new direct chat with a remote support person. Hub staff reach you through AI Support, which escalates to you. You can still start a chat with anyone.
 
 :::shot rs-path-overview
 caption: KART Comms in the Support view for Riley

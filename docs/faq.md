@@ -54,7 +54,7 @@ Drag it back, or onto the right chassis. If KART marked the wrong chassis used, 
 **Open kart** on Overview: type the number (for example 207) or scan its QR code.
 
 **How do I ask for help?**
-Tell your hub manager (hub lead) first, with the kart number. For help with KART itself, open **KART Comms** and start with **AI Support**; the AI escalates to Remote Support or FKL Central when a person is needed (KART Comms is KART's messenger; ask your hub lead to bookmark it on the tablet). The **FKL Support** button gives automatic answers and is not a person. See [Getting help](start/finding-your-way.md#getting-help).
+Tell your hub manager (hub lead) first, with the kart number. For help with KART itself, open **KART Comms** and start with **AI Support**; the AI escalates to Remote Support or FKL Central when a person is needed (KART Comms is KART's messenger; ask your hub lead to bookmark it on the tablet). The **FKL Support** button gives automatic answers and is not a person. You cannot start a Remote Support chat or a direct chat with a remote support person yourself: the AI escalates to them. See [Getting help](start/finding-your-way.md#getting-help).
 
 **Who is my hub lead?**
 The person who runs your hub. In KART they usually have the Hub Manager permission, so this guide also says "hub manager".

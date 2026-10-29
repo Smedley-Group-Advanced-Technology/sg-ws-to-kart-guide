@@ -29,17 +29,18 @@ state: "Riley Support on cover for Demo Hub today; Alex Mechanic's support chat 
 ## Trackside view: asking for help (hub staff)
 
 :::shot rs-trackside-cover
-caption: "Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat"
-persona: Alex Mechanic
+caption: "Steps 1 and 2 on one screen: the Trackside view with the hub and AI Support"
+persona: Casey Mechanic
 device: tablet
+state: "Demo Hub as seeded; Casey Mechanic has no Remote Support chat"
 steps:
-  - Sign in as Alex Mechanic and open /comms
+  - Sign in as Casey Mechanic and open /comms
 callouts:
   - [1, "text=Demo Hub", "Your hub"]
-  - [2, "text=Remote Support", "Your chat with remote support"]
+  - [2, "text=AI Support", "Ask here first"]
 :::
 
-AI Support is always the first point of contact. Only the AI passes a chat on to Remote Support or FKL Central.
+AI Support is always the first point of contact. Only the AI passes a chat on to Remote Support or FKL Central. You cannot start a new Remote Support chat yourself, and you cannot start a direct chat with a remote support person (see [Direct chats](direct-chats.md)).
 
 1. As hub staff you see the **Trackside** view. At the top, check your hub. If KART asks, **Choose the hub you are working at**.
 
@@ -47,18 +48,21 @@ AI Support is always the first point of contact. Only the AI passes a chat on to
 
 3. If the answer does not solve it, tap **Ask remote support** in the AI chat. The AI escalates the chat to Remote Support or FKL Central, and a person replies in the same chat.
 
-4. Once the AI has passed your chat on, **Remote Support** also appears in the list, so you can reply in that chat later. Its header shows the hub and who is **On cover** today. Type your reply and tap the send button (**Send**).
+4. The escalated chat stays under **AI Chats** with the status **Requires support**, and **With** and a name once someone has taken it. Open it to read the reply, type yours and tap the send button. The AI does not answer while remote support is on the chat; your message goes to remote support.
 
     :::shot rs-trackside-send
-    caption: "Step 4: a reply in an escalated support chat, under the On cover header"
+    caption: "Step 4: an escalated AI chat with Requires support and a reply typed"
     persona: Alex Mechanic
     device: tablet
+    state: "Alex Mechanic's AI chat about Junior 307 escalated, taken by Riley Support"
     steps:
-      - Tap Remote Support
-      - Type "Kart 307 shows Repair Required but the bumper is fitted"
+      - Tap AI Chats and open the escalated chat
+      - Type "Yes, the remedy is logged on the bumper repair."
     callouts:
-      - [4, "text=On cover", "Who covers your hub today"]
+      - [4, "text=Requires support", "A person is on it"]
     :::
+
+If you already had a **Remote Support** chat from before, it stays in your list under **Direct Chats**. Its header shows the hub and who is **On cover** today, and you can still read and reply there.
 
 !!! note "Remember"
     If nobody is on cover the header says **Unassigned** and every remote support person is alerted.

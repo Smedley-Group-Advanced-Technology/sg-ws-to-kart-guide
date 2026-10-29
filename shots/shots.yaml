@@ -3558,37 +3558,35 @@
 - id: rs-trackside-cover
   kind: screenshot
   page: remote-support/comms.md
-  persona: Alex Mechanic
+  persona: Casey Mechanic
   device: tablet
   url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
+  state: Demo Hub as seeded; Casey Mechanic has no Remote Support chat
   steps:
-  - Sign in as Alex Mechanic and open /comms
+  - Sign in as Casey Mechanic and open /comms
   callouts:
   - n: 1
     target: text=Demo Hub
     note: Your hub
   - n: 2
-    target: text=Remote Support
-    note: Your chat with remote support
-  caption: 'Steps 1 and 4 on one screen: the Trackside view with the hub and the Remote Support chat'
+    target: text=AI Support
+    note: Ask here first
+  caption: 'Steps 1 and 2 on one screen: the Trackside view with the hub and AI Support'
 - id: rs-trackside-send
   kind: screenshot
   page: remote-support/comms.md
   persona: Alex Mechanic
   device: tablet
   url: /comms
-  state: Riley Support on cover for Demo Hub today; Alex Mechanic's support chat about Junior 307 claimed by Riley; one unassigned
-    chat from Casey Mechanic
+  state: Alex Mechanic's AI chat about Junior 307 escalated, taken by Riley Support
   steps:
-  - Tap Remote Support
-  - Type "Kart 307 shows Repair Required but the bumper is fitted"
+  - Tap AI Chats and open the escalated chat
+  - Type "Yes, the remedy is logged on the bumper repair."
   callouts:
   - n: 4
-    target: text=On cover
-    note: Who covers your hub today
-  caption: 'Step 4: a reply in an escalated support chat, under the On cover header'
+    target: text=Requires support
+    note: A person is on it
+  caption: 'Step 4: an escalated AI chat with Requires support and a reply typed'
 - id: rs-comms-clip
   kind: clip
   page: remote-support/comms.md

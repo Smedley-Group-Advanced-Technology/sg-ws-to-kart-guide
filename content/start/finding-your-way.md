@@ -217,7 +217,7 @@ KART can be added to the home screen of a tablet or phone. The icon is called **
 
 - **Ask your hub lead first.** The hub lead is the person who runs your hub. In KART they usually have the Hub Manager permission. They help with accounts, access and how your hub works.
 - **KART problems** (a wrong status, a missing record, an error): tell your hub manager (hub lead), with the kart number. For help with KART itself, open **KART Comms** and start with **AI Support**; the AI escalates to Remote Support or FKL Central when a person is needed. KART Comms is KART's messenger. It has no button in KART. Ask your hub lead to save it as a bookmark on the workshop tablet. See [KART Comms](../remote-support/comms.md).
-- **FKL Support** (blue button at the top, round button at the bottom right) gives automatic answers to questions about KART. It is not a person.
+- **FKL Support** (blue button at the top, round button at the bottom right) gives automatic answers to questions about KART. It is not a person. It has no **Remote Support** chat for new users: a person is reached only when the AI escalates. If you had a Remote Support chat there before, it stays.
 
 !!! note "Remember"
     Always give the kart number when you ask about a kart.

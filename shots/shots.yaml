@@ -1275,19 +1275,19 @@
     today
   steps:
   - Open the Workshop for Demo Hub on Overview
-  - Point at Next Event, Work targets and Event readiness
-  - Scroll to Fleet Status
-  - Scroll to the Readiness board and tap the Requires service count
-  - Show the list with 103, 203, 204, 303, 205 and 304
-  - Tap Back, scroll to the Junior Karts tiles and show the Campaign and Missing Components tags
-  caption: a tour of the Overview tab and the Readiness board
+  - Point at Next Event, Work targets, Event readiness and Campaigns
+  - Scroll to the Fleet board and its green, amber and red counts
+  - Show the amber and red reasons and tap Requires service
+  - Show the list with 103, 203, 204 and 303
+  - Tap Back, scroll to the Junior karts tiles and show the colours, the Campaign tag and Missing batteries on 308
+  caption: a tour of the Overview tab and the Fleet board
   captions:
   - Overview is the first Workshop tab.
   - The cards at the top show the next event and your targets.
-  - Fleet Status counts open problems.
-  - The Readiness board counts every status.
+  - The Fleet board counts green, amber and red karts.
+  - Under amber and red you see why.
   - Tap a number to list those karts.
-  - Each kart tile shows its tags.
+  - Each kart tile has its colour, its reason and its tags.
   duration: 35
 - id: mech-board-open
   kind: screenshot
@@ -1346,7 +1346,7 @@
     target: text=Remaining
     note: Karts still needed
   caption: Event readiness for Demo Regional Race with Remaining counts per class
-- id: mech-board-fleet-status
+- id: mech-board-colours
   kind: screenshot
   page: mechanic/fleet-board.md
   persona: Alex Mechanic
@@ -1355,54 +1355,69 @@
   state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
     today
   steps:
-  - Scroll to Fleet Status
+  - Scroll to the Fleet board
   callouts:
   - n: 1
-    target: text=Fleet Status
-    note: Open problems at a glance
+    target: text=Fleet board
+    note: Every active kart of this hub
   - n: 2
-    target: text=Missing
-    note: 308 is missing a battery
-  caption: The Fleet Status card with counts per problem type
-- id: mech-board-reload
-  kind: screenshot
-  page: mechanic/fleet-board.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
-    today
-  steps:
-  - Scroll to the Readiness board
-  callouts:
-  - n: 1
-    target: text=Readiness board
-    note: Every kart of this hub
-  - n: 2
+    target: text=Ready
+    note: 'Green: can race'
+  - n: 3
+    target: text=Needs attention
+    note: 'Amber: needs work'
+  - n: 4
+    target: text=Blocked
+    note: 'Red: must not be used'
+  - n: 5
     target: text=Reload board
     note: Fetch the latest
-  caption: The Readiness board with the Reload board button
+  caption: The Fleet board colour row with the class buttons and Reload board
+- id: mech-board-cascade
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Look at the Needs attention and Blocked lists under the colour row
+  callouts:
+  - n: 1
+    target: text=Paused
+    note: '205 in progress and 304 paused: Not on track'
+  - n: 2
+    target: text=Requires service
+    note: Used, service not started
+  - n: 3
+    target: text=Repair required
+    note: 207 and 307
+  - n: 4
+    target: text=Missing batteries
+    note: Junior 308
+  caption: The amber and red reasons with their counts
 - id: mech-board-drill
   kind: screenshot
   page: mechanic/fleet-board.md
   persona: Alex Mechanic
   device: tablet
-  url: /workshop/readiness/turn_all
+  url: /workshop/readiness/turn_required
   state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
     today
   steps:
-  - Tap the Requires service count
+  - Tap the Requires service count under Needs attention
   callouts:
   - n: 1
     target: text=Requires service
-    note: 103, 203, 204 and 303, plus 205 in progress and 304 paused
+    note: 103, 203, 204 and 303
   caption: The list of karts that require service
 - id: mech-board-drill-open
   kind: screenshot
   page: mechanic/fleet-board.md
   persona: Alex Mechanic
   device: tablet
-  url: /workshop/readiness/turn_all
+  url: /workshop/readiness/turn_required
   state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
     today
   steps:
@@ -1412,6 +1427,24 @@
     target: text=203
     note: Opens the kart page
   caption: Tapping kart 203 in the list opens its kart page
+- id: mech-board-classes
+  kind: screenshot
+  page: mechanic/fleet-board.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /workshop
+  state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
+    today
+  steps:
+  - Scroll to the class blocks on the Fleet board
+  callouts:
+  - n: 1
+    target: text=Junior
+    note: One block per class
+  - n: 2
+    target: text=Campaign work
+    note: Karts with campaign tasks
+  caption: The Bambino, Cadet and Junior blocks with their bars and tags
 - id: mech-board-tiles
   kind: screenshot
   page: mechanic/fleet-board.md
@@ -1421,18 +1454,18 @@
   state: Demo Hub fleet as seeded; planning event Demo Regional Race with readiness targets; session event Demo Practice Day
     today
   steps:
-  - Scroll to the Junior Karts tiles
+  - Scroll to the Junior karts tiles
   callouts:
   - n: 1
     target: text=Kart 301
-    note: 'Campaign tag: caliper seal upgrade'
+    note: 'Amber: Campaign required'
   - n: 2
     target: text=Kart 308
-    note: Missing Components
+    note: 'Red: Missing batteries'
   - n: 3
     target: text=View log book
     note: The kart's log book
-  caption: Junior Karts tiles with Campaign tags and Missing Components on 308
+  caption: Junior kart tiles in their colours, with Campaign tags and Missing batteries on 308
 - id: mech-path-overview
   kind: screenshot
   page: mechanic/index.md
@@ -4411,25 +4444,24 @@
   device: tablet
   url: /workshop
   state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
-    and 307 Repair Required; Juniors with campaign tasks)
+    and 307 Repair Required; 308 missing a battery; Juniors with campaign tasks)
   steps:
   - Open the Workshop for Demo Hub
-  - Scroll to the Readiness board
+  - Scroll to the Fleet board
   callouts:
   - n: 1
-    target: text=Readiness board
-    note: Counts per status
-  - n: 2
     target: text=Ready
     note: 'Green: can race'
+  - n: 2
+    target: text=Needs attention
+    note: 'Amber: needs work'
   - n: 3
-    target: text=Requires service
-    note: 'Amber: needs a service'
-  - n: 4
-    target: text=Repair Required
+    target: text=Blocked
     note: 'Red: must not be used'
-  caption: The Readiness board with counts for Ready, Requires service, Repair Needed (usable), Repair Required and Campaign
-    Required
+  - n: 4
+    target: text=Paused
+    note: A reason under amber
+  caption: The Fleet board with the green, amber and red counts and the amber and red reasons
 - id: start-status-drilldown
   kind: screenshot
   page: start/statuses.md
@@ -4437,9 +4469,9 @@
   device: tablet
   url: /workshop/readiness/repair_all
   state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
-    and 307 Repair Required; Juniors with campaign tasks)
+    and 307 Repair Required; 308 missing a battery; Juniors with campaign tasks)
   steps:
-  - Tap the Repair Required count on the Readiness board
+  - Tap the Repair required count under Blocked on the Fleet board
   callouts:
   - n: 1
     target: text=207
@@ -4447,7 +4479,7 @@
   - n: 2
     target: text=307
     note: Waiting on a front bumper
-  caption: The list of Repair Required karts, 207 and 307
+  caption: The list of Repair required karts, 207 and 307
 - id: start-status-tags
   kind: screenshot
   page: start/statuses.md
@@ -4455,20 +4487,20 @@
   device: tablet
   url: /workshop
   state: Demo Hub fleet as seeded (103, 203, 204, 303 Requires service; 205 in progress; 304 paused; 106 Repair Needed; 207
-    and 307 Repair Required; Juniors with campaign tasks)
+    and 307 Repair Required; 308 missing a battery; Juniors with campaign tasks)
   steps:
-  - Scroll to the Junior Karts tiles
+  - Scroll to the Junior karts tiles
   callouts:
   - n: 1
     target: text=Kart 308
     note: Junior 308
   - n: 2
-    target: text=Missing Components
-    note: A battery is missing
+    target: text=Missing batteries
+    note: 'A battery is missing: red'
   - n: 3
     target: text=Campaign
     note: Open campaign task
-  caption: Kart tiles with reason tags such as Missing Components on 308 and Campaign on the Juniors
+  caption: Kart tiles in their colours with reasons and tags such as Missing batteries on 308 and Campaign on the Juniors
 - id: so-before-signin
   kind: screenshot
   page: switch-over/index.md
@@ -4547,12 +4579,12 @@
   url: /workshop
   state: Demo Hub as seeded (shows what day one looks like; the demo hub has no Workshop App data)
   steps:
-  - Scroll to the Readiness board
+  - Scroll to the Fleet board
   callouts:
   - n: 1
-    target: text=Readiness board
+    target: text=Fleet board
     note: Compare with the real karts
-  caption: The Readiness board to compare with the karts in the workshop
+  caption: The Fleet board to compare with the karts in the workshop
 - id: so-day-4-services
   kind: screenshot
   page: switch-over/index.md

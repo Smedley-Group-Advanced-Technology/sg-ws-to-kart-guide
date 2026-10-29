@@ -1,4 +1,4 @@
-// Clip: a tour of Overview and the Readiness board as Alex Mechanic (read only).
+// Clip: a tour of Overview and the Fleet board (D-18) as Alex Mechanic (read only).
 export default {
   shots: ['mech-fleet-board-clip'],
   reset: false,
@@ -16,23 +16,26 @@ export default {
     await s.wait(1000);
     await s.hover(s.card('Event readiness').getByText('Event readiness', { exact: true }));
     await s.wait(1500);
-    s.cue();                                                    // Fleet Status counts open problems.
-    await s.scrollTo(s.card('Fleet Status').getByText('Fleet Status', { exact: true }), { block: 'start' });
-    await s.hover(s.card('Fleet Status').getByText(/Missing/).first());
-    await s.wait(2000);
-    s.cue();                                                    // The Readiness board counts every status.
-    const rb = s.card('Readiness board');
-    await s.scrollTo(rb.getByText('Readiness board', { exact: true }), { block: 'start' });
-    await s.wait(2500);
+    await s.hover(s.card('Campaigns').getByText('Campaigns', { exact: true }));
+    await s.wait(800);
+    s.cue();                                                    // The Fleet board counts green, amber and red karts.
+    await s.scrollTo(s.page.getByTestId('fleet-board').getByText('Fleet board', { exact: true }), { block: 'start' });
+    await s.hover(s.page.getByTestId('board-colour-amber'));
+    await s.wait(2200);
+    s.cue();                                                    // Under amber and red you see why.
+    await s.hover(s.page.getByTestId('board-line-hub-paused'));
+    await s.wait(1200);
+    await s.hover(s.page.getByTestId('board-line-hub-repair_all'));
+    await s.wait(1200);
     s.cue();                                                    // Tap a number to list those karts.
-    await s.tap(s.page.locator('[data-testid^="readiness-tile-"]').nth(1));
+    await s.tap(s.page.getByTestId('board-line-hub-turn_required'));
     await s.skip(async () => { await s.page.waitForURL(/readiness/); await s.settle(800); });
     await s.wait(2500);
     await s.tap(s.page.getByRole('button', { name: 'Back' }));
     await s.skip(async () => { await s.mustReload(s.page.getByText('Junior Karts (8)'), 60000); await s.settle(800); });
-    s.cue();                                                    // Each kart tile shows its tags.
+    s.cue();                                                    // Each kart tile has its colour, its reason and its tags.
     await s.scrollTo(s.page.getByText('Junior Karts (8)'), { block: 'start' });
-    await s.hover(s.tile('Kart 308', 'Available').getByText('Missing Components'));
+    await s.hover(s.tile('Kart 308', 'Available').getByText('Missing batteries').first());
     await s.wait(3000);
     const r = await s.close();
     clip('mech-fleet-board-clip', r, { poster: 3 });

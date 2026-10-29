@@ -70,7 +70,7 @@ captions:
   - "Drag the number back to take it off."
 :::
 
-The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. The chassis border colour shows **Available** (green), **Unpreferred** (yellow), **Unavailable** (red) or **Not in fleet** (grey).
+The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. The chassis colour is the kart's status colour, the same as on the Fleet board: **Ready** (green), **Needs attention** (amber, for example in a service or Requires service) or **Blocked** (red, must not be used); **Not in fleet** is a plain outline. A filled star means the kart is preferred, an empty star **Unpreferred**. See [Kart statuses](../start/statuses.md).
 
 1. At the top, tap the kart class, for example **Junior**. Check the right session is selected. The **Race Number** list on the right holds the numbers to place.
 
@@ -136,7 +136,7 @@ captions:
   - "Switch views with the button at the bottom."
 :::
 
-The list shows one session of one class: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its status (**Available**, **Unpreferred**, **Unavailable** or **Not in fleet**, plus tags such as **Requires service**) and, on the right, the race number it has in this session (a dot when it has none).
+The list shows one session of one class: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its colour (**Ready**, **Needs attention**, **Blocked** or **Not in fleet**), a filled or empty star (preferred or **Unpreferred**), plus tags such as **Requires service**, and, on the right, the race number it has in this session (a dot when it has none).
 
 1. Tap the chassis, for example **Kart 302**.
 

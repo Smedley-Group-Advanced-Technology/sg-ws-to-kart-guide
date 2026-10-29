@@ -44,7 +44,7 @@ flowchart TD
 
 ## See the difference on screen
 
-1. Open **Overview** and look at the tile of Bambino **106**. **Available** is still ticked: an older incident left a repair for a loose bumper mount, and the kart can still be used. On the Readiness board and on its kart page it counts as **Repair Needed (usable)**.
+1. Open **Overview** and look at the tile of Bambino **106**. **Available** is still ticked: an older incident left a repair for a loose bumper mount, and the kart can still be used. On the Fleet board and on its kart page it is amber, **Repair needed (usable)**.
 
     ![Bambino 106 after an incident, still Available on its tile](../assets/img/start/start-problem-106.png){ loading=lazy }
 

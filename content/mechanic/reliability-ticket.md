@@ -7,7 +7,7 @@ url: /workshop
 state: "Seed variant without the Cadet 207 ticket (or record on 207 and delete the extra ticket afterwards)"
 :::
 
-A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows **Repair Required** and is not offered for allocation (KART does not offer it when karts are handed out for an event). It is the way to take a kart out of use when you find a fault. An open **damage ticket** and missing batteries (**Missing Components**) also make a kart unavailable.
+A reliability ticket records a fault for engineering. When the ticket's effect is anything other than **Performance**, it **stops** the kart: the kart shows red, **Repair required**, and is not offered for allocation (KART does not offer it when karts are handed out for an event). It is the way to take a kart out of use when you find a fault. An open **damage ticket** and **Missing batteries** also make a kart red (not available).
 
 You need the **Reliability** permission to raise tickets. In this guide Casey Mechanic has it and Alex Mechanic does not.
 

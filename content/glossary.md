@@ -13,7 +13,7 @@
 | **Approved** | Order stage: OK to order | (new) |
 | **Assign anyway** | Put a race number on a chassis that is not available, with a reason. Gives a track use override | Track use override |
 | **Available** | The kart is offered for allocation | Available |
-| **Blocked** | A checklist answer: this check cannot pass. Needs a reason | Further action required |
+| **Blocked** | A checklist answer: this check cannot pass. Needs a reason. On the Fleet board: red, the kart must not be used and is not offered for allocation | Further action required; Repair Required |
 | **BoM** | Bill of materials: the list of parts that make up each kart. Kept by FKL Central | (new) |
 | **Campaign** | One job done on many karts, such as a part upgrade | Campaign |
 | **Campaign Required** | Board status for karts with an open task of an active integrated campaign. The kart stays usable | (new) |
@@ -31,20 +31,20 @@
 | **Driver feedback** | A report of what the driver said. Can include the Power / Performance inspection | Driver feedback |
 | **Effect of Issue** | On a reliability ticket: what the kart did, such as Cut out not restarted. Any effect except Performance stops the kart | (new) |
 | **Event Operations** | The KART area for events, Race to Chassis and the ICU board | On Event |
-| **Event usable** | Ready or Repair Needed (usable), and available | Usable |
+| **Event usable** | Ready or Repair needed (usable), and available | Usable |
 | **Exception lanes** | The three lanes under the red Exceptions bar in the Service Queue: Requires reliability actions, Requires part and Requires Support. All open repairs are here | Repair Workflow |
 | **Finding** | Something found on a kart. Only in the Power / Performance inspection now; anything else found is a reliability ticket or a damage record | Finding |
 | **FKL Central** | The central team and its KART area: master parts, checklists, thresholds | Parts catalog manager |
 | **FKL part number** | The league's number for a part, such as FKL-900001 | Part number |
 | **FKL Support** | The button that gives automatic answers about KART. Not a person | (new) |
-| **Fleet Status** | The Overview card that counts open problems per class | Dashboard |
+| **Fleet board** | The board on Overview: green, amber and red counts, their reasons, a block per class and every kart as a tile in its colour | Readiness / Dashboard |
 | **Goods In** | Booking received parts into stock, with cost | Parts Received |
 | **Hub catalogue** | Your hub's view of the master parts catalogue | Parts Catalog (hub) |
 | **Hub lead** | The person who runs your hub. In KART they usually have the Hub Manager permission. Ask them first | Hub manager |
 | **Hub Manager** | The permission and dashboard for running a hub | hub_manager |
 | **Hub-local part** | A part one hub added before every part had to be on the master list. No new ones can be added; FKL Central adopts them in **Master review** | Local part |
 | **ICU board** | Open incidents of an event in priority order | ICU Workflow |
-| **In Progress** | A service has been started | In Progress |
+| **In progress** | A service has been started (amber, Not on track) | In Progress |
 | **Incident** | Information about something that happened to a kart: asks the workshop to look at it. Never stops it. Logged with **Report a kart problem** or the Tracker's **Log incident** | Incident |
 | **Integrated campaign** | A campaign added to the service checklist. Complete service waits until its task is done | Integrated |
 | **Join link** | A sign-up link for one hub, made by a hub manager or admin | (new) |
@@ -58,20 +58,22 @@
 | **Mark ordered** | Order stage change from Approved to Ordered, after placing the order | Mark as ordered |
 | **Mark used** | Recording that a kart was used, so it needs a service | Mark used |
 | **Master parts** | The single FKL list of all parts | Parts Catalog |
+| **Missing batteries** | Fewer batteries fitted than the class needs (Bambino 1, Cadet 2, Junior 3); the kart is red | (none) |
 | **MPN** | Manufacturer part number | MPN |
+| **Needs attention** | Amber on the Fleet board: the kart needs work but nothing stops it for good | (new) |
+| **Not on track** | Marker on an amber kart in a service or paused: not available for track use until the service is finished | Unavailable |
 | **On order** | Shown on a repair card when its part has been ordered | Ordered |
 | **Order List** | All order lines by stage | Order list |
 | **Overview** | The first Workshop tab with the fleet board | Readiness / Dashboard |
 | **Parts needed** | What the hub must order: repairs, campaigns and restock, minus what is on order | Parts Needed |
 | **Pause reason** | Why a service was paused, such as End of Shift | Pause reason |
-| **Paused** | A service stopped for now, with a reason | Paused |
+| **Paused** | A service stopped for now, with a reason (amber, Not on track) | Paused |
 | **Permission** | What an account may do: Workshop, Reliability, Hub Manager, Purchasing, FKL Central, Remote support | Role |
 | **Planning event** | An event your hub prepares karts for, with readiness targets, such as Demo Regional Race | (new) |
 | **Power / Performance inspection** | The checklist for low power feedback, inside a Driver feedback report | Power / Performance Inspection |
 | **Preferred** | A kart flagged to be used first | Preferred |
 | **Purchasing** | Permission for order actions, but not approval. Given by admins only | purchaser |
 | **Race to Chassis (R2C)** | Linking race numbers to chassis per session | Race to Chassis |
-| **Readiness board** | Counts of every status on Overview | Readiness |
 | **Readiness targets** | Event-usable karts each class needs for a planning event | Workshop Planning |
 | **Ready** | Serviced and nothing open; can race | Ready |
 | **Ready to repair** | A repair that can be done now | Ready to Repair |
@@ -81,8 +83,8 @@
 | **Remote support** | The people who answer the help chats AI Support escalates in KART Comms | (new) |
 | **Reorder point** | When stock falls to this number, it is time to order more | Reorder level |
 | **Repair** | Work to fix something. Comes from damage, tickets or failed inspection checks | Repair |
-| **Repair Needed (usable)** | An open repair that does not stop the kart | Repair Needed (Usable) |
-| **Repair Required** | The kart must not be used; a stopping ticket or blocking repair is open | Repair Required |
+| **Repair needed (usable)** | An open repair that does not stop the kart (amber) | Repair Needed (Usable) |
+| **Repair required** | The kart must not be used; a stopping ticket or blocking repair is open (red) | Repair Required |
 | **Requires part** | Service Queue lane for repairs waiting for a part | Waiting on Parts |
 | **Requires reliability actions** | Service Queue lane for repairs you can do now, from any source | Ready to Repair |
 | **Requires service** | Used since its last service; needs a service | Turn Required |

@@ -1,11 +1,13 @@
 # The fleet board (Overview)
 
 
-**Overview** is the first Workshop tab. It shows the whole fleet of your hub on one screen: what is ready, what needs a service, what needs a repair, and how close you are to the next event's targets.
+**Overview** is the first Workshop tab. It shows the whole fleet of your hub on one board: how many karts are green (ready), amber (need attention) and red (blocked), why, and every kart as a tile in its colour. The cards above it show the next event and your targets.
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Readiness** (fleet) screen and the management **Dashboard** are together on **Overview**.
-    - Click a count to list those karts. This replaces the Workshop App's status drill-down.
+    - **One fleet board.** The Fleet Status card, the Readiness board and the kart grid are now one **Fleet board**, with one set of numbers.
+    - **Three colours.** Green **Ready**, amber **Needs attention**, red **Blocked**, with the reasons listed under amber and red. See [Kart statuses](../start/statuses.md).
+    - Click a count to list exactly those karts. This replaces the Workshop App's status drill-down.
     - The board says **Requires service** where the Workshop App said Turn Required.
 
 ## Fleet board tour
@@ -13,7 +15,7 @@
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-fleet-board-clip.jpg" width="1180">
 <source src="../assets/video/mech-fleet-board-clip.mp4" type="video/mp4"><source src="../assets/video/mech-fleet-board-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-fleet-board-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: a tour of the Overview tab and the Readiness board (about 35 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: a tour of the Overview tab and the Fleet board (about 35 seconds, with captions)</figcaption></figure>
 
 1. Tap **Overview** in the tab strip.
 
@@ -23,19 +25,19 @@
 
     ![Next Event, Work targets, Event readiness and Campaigns cards](../assets/img/mechanic/mech-board-cards.png){ loading=lazy }
 
-3. Check **Event readiness**. It shows how many event-usable karts (Ready or Repair Needed (usable), and available) each class still needs for **Demo Regional Race**. This is a planning event: an event your hub prepares karts for, with readiness targets.
+3. Check **Event readiness**. It shows how many event-usable karts (Ready or Repair needed (usable), and available) each class still needs for **Demo Regional Race**. This is a planning event: an event your hub prepares karts for, with readiness targets. It stays a separate card because it carries the targets.
 
     ![Event readiness for Demo Regional Race with Remaining counts per class](../assets/img/mechanic/mech-board-readiness.png){ loading=lazy }
 
-4. Look at **Fleet Status**. It counts karts with **Reliability**, **Damages**, **Performance**, **Missing**, **Service** and **Campaign work** items.
+4. Scroll to the **Fleet board**. The colour row shows **Ready** (green), **Needs attention** (amber) and **Blocked** (red), each as a count of the hub's active karts. Use **All**, **Bambino**, **Cadet** or **Junior** at the top to see one class. If a colleague has just changed something, tap the round arrows icon (**Reload board**); **Updated** shows when the numbers were read.
 
-    ![The Fleet Status card with counts per problem type](../assets/img/mechanic/mech-board-fleet-status.png){ loading=lazy }
+    ![The Fleet board colour row with the class buttons and Reload board](../assets/img/mechanic/mech-board-colours.png){ loading=lazy }
 
-5. Scroll to the **Readiness board**. If a colleague has just changed something, tap the round arrows icon at its top right (**Reload board**).
+5. Read the reasons under amber and red. Amber lists **Campaign required**, **In progress**, **Paused**, **Requires service** and **Repair needed (usable)**; In progress and Paused carry the **Not on track** marker. Red lists **Repair required** (with **Ready to repair**, **Waiting on parts** and **Stopping ticket** under it), **Missing batteries** and **Not available**.
 
-    ![The Readiness board with the Reload board button](../assets/img/mechanic/mech-board-reload.png){ loading=lazy }
+    ![The amber and red reasons with their counts](../assets/img/mechanic/mech-board-cascade.png){ loading=lazy }
 
-6. Tap the **Requires service** count to list the karts that need a service.
+6. Tap **Requires service** under amber to list the karts that need a service.
 
     ![The list of karts that require service](../assets/img/mechanic/mech-board-drill.png){ loading=lazy }
 
@@ -43,12 +45,16 @@
 
     ![Tapping kart 203 in the list opens its kart page](../assets/img/mechanic/mech-board-drill-open.png){ loading=lazy }
 
-8. Scroll down to the kart tiles per class, such as **Junior Karts (8)**. Each tile shows the kart number and its tags.
+8. Below the reasons, each class has a block with a green, amber and red bar, the same reasons (tap to open) and tags with counts, such as **Campaign work** or **Performance**. Tap a tag to list those karts.
 
-    ![Junior Karts tiles with Campaign tags and Missing Components on 308](../assets/img/mechanic/mech-board-tiles.png){ loading=lazy }
+    ![The Bambino, Cadet and Junior blocks with their bars and tags](../assets/img/mechanic/mech-board-classes.png){ loading=lazy }
+
+9. Scroll down to the kart tiles. Each tile has the kart's colour, its reason, a star when it is preferred, and its tags. Use **All**, **Green**, **Amber**, **Red** or **Grey** above the tiles to show only one colour.
+
+    ![Junior kart tiles in their colours, with Campaign tags and Missing batteries on 308](../assets/img/mechanic/mech-board-tiles.png){ loading=lazy }
 
 !!! note "Remember"
-    Tile colours show availability, not the status: red background means not available, green means preferred, yellow means available. A kart that is in service or paused is not available, so its tile is red. **View log book** on a tile opens the kart's record of past work. With only the Workshop permission the **Available** and **Preferred** ticks are greyed out. Colleagues with **Reliability** can change them.
+    The tile colour is the kart's status colour, the same as everywhere else. A kart in a service or paused is amber with **Not on track**: it is not available until the service is finished. **View log book** on a tile opens the kart's record of past work. With only the Workshop permission the **Available** and **Preferred** ticks are greyed out. Colleagues with **Reliability** can change them.
 
 !!! tip "Tip"
     Start every shift on Overview. Compare the board with the karts in front of you. If something does not match, tell your hub manager (hub lead), with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).

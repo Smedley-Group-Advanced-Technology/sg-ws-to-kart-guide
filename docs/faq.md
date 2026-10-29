@@ -1,7 +1,7 @@
 # Frequently asked questions
 
 !!! info "What changed from the Workshop App"
-    Most answers come down to three changes: workshop work is now in **KART**, "Turn Required" is now **Requires service**, and karts are taken out of use by a **stopping reliability ticket**, an open **damage ticket** or missing batteries (**Missing Components**).
+    Most answers come down to three changes: workshop work is now in **KART**, "Turn Required" is now **Requires service**, and karts are taken out of use by a **stopping reliability ticket**, an open **damage ticket** or **Missing batteries**. On the **Fleet board** every kart is green (ready), amber (needs attention) or red (blocked).
 
 ## For mechanics
 

@@ -33,7 +33,7 @@ callouts:
 
 | In the Workshop App | In KART (how to get there) | Who can use it | Guide page |
 |---|---|---|---|
-| Readiness / Fleet | Workshop > **Overview**, **Readiness board** | Workshop | [The fleet board](mechanic/fleet-board.md) |
+| Readiness / Fleet | Workshop > **Overview**, **Fleet board** | Workshop | [The fleet board](mechanic/fleet-board.md) |
 | Kart page, kart QR | Overview > **Open kart** (type the number or **Scan QR code**); print a label on the kart page **QR code** tab | Workshop | [The kart page](mechanic/kart-page.md) |
 | Start Turn, turn checklist | **Start service** (Service Queue, Overview or kart page), then the checklist on **Servicing** | Workshop | [Doing a service](mechanic/service-turn.md) |
 | Turn Details | Service report (Workshop Manager > **Service Metrics**, or kart page history). Hub managers can cancel or correct times with a reason | Workshop; corrections hub manager | [Workshop Manager tour](hub-manager/workshop-manager.md) |
@@ -76,7 +76,7 @@ callouts:
 | In the Workshop App | In KART (how to get there) | Who can use it | Guide page |
 |---|---|---|---|
 | Dashboard | Workshop > **Overview**; **Hub Manager** dashboard workshop tiles | Workshop; hub manager | [The fleet board](mechanic/fleet-board.md) |
-| Status drill-down | Tap a count on the **Readiness board** | Workshop | [The fleet board](mechanic/fleet-board.md) |
+| Status drill-down | Tap a count on the **Fleet board** | Workshop | [The fleet board](mechanic/fleet-board.md) |
 | Reports | Workshop Manager > **Reports** (Excel, PDF, CSV) | Hub manager and admin | [Reports](hub-manager/reports.md) |
 | Workshop Planning | Workshop Manager > **Work targets** and **Readiness targets** | Hub manager | [Schedules and targets](hub-manager/schedules-and-targets.md) |
 | Schedule Settings | Schedule > **Schedule settings** | Hub manager | [Schedules and targets](hub-manager/schedules-and-targets.md) |

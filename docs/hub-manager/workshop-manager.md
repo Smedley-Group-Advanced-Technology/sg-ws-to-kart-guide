@@ -34,7 +34,7 @@
 11. Tap **Reports**. See [Reports](reports.md).
 
 !!! tip "Tip"
-    The **Hub Manager** dashboard (button on **Select your Hub**) has workshop tiles too: **Fleet readiness**, **Services this week**, **Parts waiting**, **Stock**, **Fleet campaigns**, **Track use overrides**, **Weekly schedule** and **Work targets**. Tap a tile to jump to the screen.
+    The **Hub Manager** dashboard (button on **Select your Hub**) has workshop tiles too: **Fleet readiness**, **Services this week**, **Parts waiting**, **Stock**, **Fleet campaigns**, **Track use overrides**, **Weekly schedule** and **Work targets**. Tap a tile to jump to the screen. **Fleet readiness** uses the Fleet board's colours: karts ready (green) of the active karts, **Needs attention** (amber), **Blocked** (red) and **Event usable**.
 
 !!! note "Remember"
     In the service report (from Service Metrics or the kart page history) hub managers can cancel a service or correct its times, always with a reason.

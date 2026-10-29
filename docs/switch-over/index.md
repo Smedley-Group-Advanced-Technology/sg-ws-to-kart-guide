@@ -89,7 +89,7 @@ Print this list, or the [switch-over day card](../cards/index.md).
 
 3. Open KART > Workshop and check the fleet board against the karts in front of you. If anything is wrong, tell your hub manager (hub lead), with the kart number (see [Getting help](../start/finding-your-way.md#getting-help)).
 
-    ![The Readiness board to compare with the karts in the workshop](../assets/img/switch-over/so-day-3-board.png){ loading=lazy }
+    ![The Fleet board to compare with the karts in the workshop](../assets/img/switch-over/so-day-3-board.png){ loading=lazy }
 
 4. Open **Servicing** and pick up the carried-over services: complete or cancel each one.
 

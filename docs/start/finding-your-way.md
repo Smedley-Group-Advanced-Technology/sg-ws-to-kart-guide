@@ -51,7 +51,7 @@ KART has no side menu. You move around with the hub selection cards, the **Back*
     - The two clocks show your hub's local time and UTC (world time).
     - **SOP Viewer** opens your hub's SOPs (standard operating procedures: the written way your hub does each job).
     - **FKL Support** opens automatic help answers. It is not a person. For a person, see [Getting help](#getting-help).
-    - The bell shows your notifications: kart chat messages, FKL Support replies and, for FKL Central and purchasing users, new part requests. The flag changes the language. The sun switches between light and dark screens.
+    - The bell shows your notifications: kart chat messages, FKL Support replies and, for FKL Central users, new part requests. The flag changes the language. The sun switches between light and dark screens.
     - The arrow at the far right signs you out.
 
     ![Header buttons SOP Viewer, FKL Support, notifications, language, theme and sign out](../assets/img/start/start-header.png){ loading=lazy }

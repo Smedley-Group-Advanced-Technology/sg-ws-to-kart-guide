@@ -8,6 +8,8 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
     - New since 19 October: **drag and drop**. Drag a race number onto a chassis. On phones the chassis list opens by default. Each device remembers the view you last chose.
     - New: on phones the old tap grid (race numbers down the side, sessions across) is now a **chassis list**: tap a chassis, then its race number. It works the same way round as drag and drop.
     - Everything the Workshop App grid did still happens on each change: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
+    - New since 30 October: only your hub's own karts of that class are listed, in chassis order (for example 18 Bambino chassis), instead of fixed chassis 1 to 30.
+    - New since 30 October: KART always warns before a kart that is not available goes on track, and asks for a reason. This now also happens when the chassis already has a race number, for **Copy Last Session**, and for administrators changing another day. A chassis with a warning triangle has a race number although its kart is not available.
 
 ## Open Race to Chassis
 
@@ -30,7 +32,7 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
 <track kind="captions" src="../assets/video/mech-r2c-drag-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: putting race numbers on chassis with drag and drop (about 50 seconds, with captions)</figcaption></figure>
 
-The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. The chassis colour is the kart's status colour, the same as on the Fleet board: **Ready** (green), **Needs attention** (amber, for example in a service, Requires service or Campaign required), **Blocked** (red, must not be used) or **Written off** (grey); **Not in fleet** is a plain outline. A filled star means the kart is preferred, an empty star **Unpreferred**. See [Kart statuses](../start/statuses.md).
+The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. Only the karts of your hub's fleet for that class are shown, in chassis order, ten to a column. A hub with no karts of that class shows chassis 1 to 30. The chassis colour is the kart's status colour, the same as on the Fleet board: **Ready** (green), **Needs attention** (amber, for example in a service, Requires service or Campaign required), **Blocked** (red, must not be used) or **Written off** (grey); **Not in fleet** is a plain outline. A filled star means the kart is preferred, an empty star **Unpreferred**. See [Kart statuses](../start/statuses.md).
 
 1. At the top, tap the kart class, for example **Junior**. Check the right session is selected. The **Race Number** list on the right holds the numbers to place.
 
@@ -49,7 +51,7 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
     ![Take off chassis for a chassis with a race number](../assets/img/mechanic/mech-r2c-takeoff.png){ loading=lazy }
 
 !!! tip "Tip"
-    **Copy Last Session** copies the previous session's numbers to this one. **Clear Session** empties only this session. **Clear All** empties every session of the event and cannot be undone.
+    **Copy Last Session** copies the previous session's numbers to this one. If that puts karts on track that are not available, KART lists them and asks for one reason before it copies (see below). **Clear Session** empties only this session. **Clear All** empties every session of the event and cannot be undone.
 
 ## Chassis list (phone)
 
@@ -58,7 +60,7 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
 <track kind="captions" src="../assets/video/mech-r2c-list-clip.vtt" srclang="en" label="English" default></video>
 <figcaption>Watch: putting a race number on a chassis with the chassis list on a phone (about 35 seconds, with captions)</figcaption></figure>
 
-The list shows one session of one class: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its colour (**Ready**, **Needs attention**, **Blocked**, **Written off** or **Not in fleet**), a filled or empty star (preferred or **Unpreferred**), plus tags such as **Requires service**, and, on the right, the race number it has in this session (a dot when it has none).
+The list shows one session of one class, with only your hub's karts of that class in chassis order: tap the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**) at the top. KART opens on the current session. Each row is a chassis, for example **Kart 302**, with its colour (**Ready**, **Needs attention**, **Blocked**, **Written off** or **Not in fleet**), a filled or empty star (preferred or **Unpreferred**), plus tags such as **Requires service**, and, on the right, the race number it has in this session (a dot when it has none).
 
 1. Tap the chassis, for example **Kart 302**.
 
@@ -80,7 +82,7 @@ The list shows one session of one class: tap the kart class (**Junior**, **Cadet
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number and says **Kart 307 is not available** and why.
+1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number and says **Kart 307 is not available** and why. This also happens when the chassis already has another race number: the new number would replace it, so KART asks first.
 
     ![Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway](../assets/img/mechanic/mech-r2c-unavailable.png){ loading=lazy }
 
@@ -90,6 +92,15 @@ The list shows one session of one class: tap the kart class (**Junior**, **Cadet
 
 !!! warning "Watch out"
     Never assign a kart with a stopping reliability ticket (Repair Required) just to fill the grid. **Assign anyway** is recorded with your reason.
+
+### Copy Last Session with karts that are not available
+
+1. Tap **Copy Last Session**. If the copy puts karts on track that are not available, the question lists them, for example **1 kart being copied is not available:** Kart 307.
+2. Normally tap **Cancel** and change those chassis first. Only if your hub manager agrees, type one reason for all of them and tap **Copy Last Session**. The reason is recorded for each kart.
+
+### Warning triangles
+
+A chassis with a warning triangle has a race number although its kart is not available: it was assigned or copied with a recorded reason, or the kart changed after it got the number, or a copy filled the session when it started. Check with your hub manager before that kart goes out.
 
 ## Moving a race number to another chassis
 
@@ -103,7 +114,7 @@ The list shows one session of one class: tap the kart class (**Junior**, **Cadet
 
 ## Past events are read-only
 
-1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it.
+1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too, and every change of chassis appears under **Reassignments** marked **Admin correction**.
 
     ![Past Event - Editing Restricted on an earlier event](../assets/img/mechanic/mech-r2c-past.png){ loading=lazy }
 

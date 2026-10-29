@@ -13,6 +13,7 @@ Pause a service whenever you stop working on the kart: end of shift, waiting for
     - Pausing works like the Workshop App, but KART always asks for a **Pause reason**.
     - Your paused services sit in a **Paused services** bar under the Workshop tabs. Tap one to carry on.
     - Doing repair work on the kart pauses its service by itself. The service then shows the extra repair minutes.
+    - New in KART: any mechanic of the hub can **Take over** a service somebody else started. KART always asks for a reason, and the mechanic who started it and your hub manager see who took it over, when and why.
 
 ## Watch it first
 
@@ -119,8 +120,25 @@ captions:
       - [2, "text=Pause reason", "Why it was paused"]
     :::
 
+## Take over another mechanic's service
+
+If another mechanic started the service (for example they paused it and went home), you carry on with the same service. Do not start a new one: the checks, parts and times stay on the service.
+
+1. Open the kart page. KART says **Another mechanic is servicing this kart. Any Workshop user of this hub can take it over with a reason.** Tap **Take over**.
+
+    Or, in the **Service Queue**, tap the kart in the **In progress** lane. Hub managers and admins first get the read-only view of the checklist there (unless the kart is assigned to them); **Take over** is the button at its top.
+
+    A service paused for repair work cannot be taken over: KART says **Paused for repair work: the repair mechanic finishes the repair first**.
+
+2. In **Take over service**, type the **Reason**, for example "Alex went home, I finish the service". The reason needs 4 to 500 characters; **Take over** stays grey until then.
+
+3. Tap **Take over**. KART moves the service to you, starts its clock again and opens **Servicing**.
+
+!!! note "Who sees it"
+    The reason is logged. The mechanic who started the service sees **Taken over from you** on their **Servicing** page for 24 hours, with who took it over, when and why. The kart page and the kart's card in the **In progress** lane show **Taken over by** with the initials, the time and the reason. The service report has a **Taken over** section listing every take-over: the previous and the new owner's initials, the time and the reason. So your hub manager sees it too.
+
 !!! warning "Watch out"
-    If another mechanic paused the kart, KART says **Another mechanic is servicing this kart. A hub manager can re-allocate it in the Service Queue.** Ask your hub manager rather than starting a new service.
+    Take over only when the other mechanic cannot carry on. If they are still working on the kart, talk to them first.
 
 ## Repair work pauses the service
 

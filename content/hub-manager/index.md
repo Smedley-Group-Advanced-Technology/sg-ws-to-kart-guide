@@ -28,7 +28,7 @@ Read the [mechanic path](../mechanic/index.md) first. As a hub manager you also:
 
 - mark a kart used by hand with **Requires service** on its Overview tile ([Marking karts used](../mechanic/mark-used.md));
 - drag repairs into priority order in the Service Queue;
-- re-allocate a service that another mechanic paused.
+- re-allocate a service that another mechanic paused, and see who took over a service and why (any mechanic of the hub can **Take over** with a reason).
 
 ## Then, in order
 

@@ -1,25 +1,25 @@
 WEBVTT
 
 1
-00:00:00.050 --> 00:00:03.175
+00:00:00.050 --> 00:00:03.229
 Overview is the first Workshop tab.
 
 2
-00:00:03.275 --> 00:00:08.775
+00:00:03.329 --> 00:00:08.829
 The cards at the top show the next event and your targets.
 
 3
-00:00:12.442 --> 00:00:16.998
-Fleet Status counts open problems.
+00:00:15.851 --> 00:00:21.330
+The Fleet board counts green, amber and red karts.
 
 4
-00:00:17.098 --> 00:00:20.569
-The Readiness board counts every status.
+00:00:21.430 --> 00:00:26.930
+Under amber and red you see why.
 
 5
-00:00:20.669 --> 00:00:26.169
+00:00:27.375 --> 00:00:32.875
 Tap a number to list those karts.
 
 6
-00:00:28.012 --> 00:00:33.512
-Each kart tile shows its tags.
+00:00:34.753 --> 00:00:40.253
+Each kart tile has its colour, its reason and its tags.

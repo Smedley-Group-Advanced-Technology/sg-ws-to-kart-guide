@@ -1288,7 +1288,7 @@
   - Under amber and red you see why.
   - Tap a number to list those karts.
   - Each kart tile has its colour, its reason and its tags.
-  duration: 35
+  duration: 40
 - id: mech-board-open
   kind: screenshot
   page: mechanic/fleet-board.md

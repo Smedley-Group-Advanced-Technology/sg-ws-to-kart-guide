@@ -13,7 +13,7 @@
 | **Approved** | Order stage: OK to order | (new) |
 | **Assign anyway** | Put a race number on a chassis that is not available, with a reason. Gives a track use override | Track use override |
 | **Available** | The kart is offered for allocation | Available |
-| **Blocked** | A checklist answer: this check cannot pass. Needs a reason. On the Fleet board: red, the kart must not be used; Race to Chassis usually refuses it unless someone assigns it with a reason (a kart ticked Available by hand is assigned without asking) | Further action required; Repair Required |
+| **Blocked** | A checklist answer: this check cannot pass. Needs a reason. On the Fleet board: red, the kart must not be used; Race to Chassis usually refuses it unless someone assigns it with a reason; ticking Available gives a track use override with a reason, and the kart stays red | Further action required; Repair Required |
 | **BoM** | Bill of materials: the list of parts that make up each kart. Kept by FKL Central | (new) |
 | **Campaign** | One job done on many karts, such as a part upgrade | Campaign |
 | **Campaign Required** | Board status for karts with an open task of an active integrated campaign. The kart stays usable | (new) |

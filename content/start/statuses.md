@@ -12,7 +12,7 @@ Every kart in KART has one colour: **green**, **amber** or **red** (grey for kar
 !!! info "What changed from the Workshop App"
     - **Three colours instead of nine.** Green is Ready, amber needs attention, red is blocked. The reason (for example **Paused** or **Waiting on parts**) is written next to the colour.
     - **"Turn Required" is now "Requires service".** Same meaning: the kart has been used since its last service and needs one. KART never shows the words "Turn Required".
-    - **One colour for status and availability.** A red kart is blocked: **Race to Chassis** usually refuses it unless someone assigns it with a reason. Ticking **Available** on a kart that is not available asks for a reason and gives it a **track use override**: the tile shows the override with its expiry and the kart stays red until it is fixed (a kart with an open stopping ticket cannot be ticked). An amber kart in a service or paused carries a small **Not on track** marker.
+    - **One colour for status and availability.** A red kart is blocked: **Race to Chassis** usually refuses it unless someone assigns it with a reason. Ticking **Available** on a kart that is not available asks for a reason and gives it a **track use override**: the tile shows the override with its expiry and the kart keeps its colour (a red kart stays red until it is fixed) (a kart with an open stopping ticket cannot be ticked). An amber kart in a service or paused carries a small **Not on track** marker.
     - Logging an incident no longer makes a kart Repair required on its own. See [Incidents, tickets and repairs](problems-explained.md).
 
 ## The colours at a glance

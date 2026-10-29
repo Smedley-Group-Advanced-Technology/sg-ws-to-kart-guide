@@ -7,7 +7,7 @@ url: /fkl-central?tab=bom
 state: "Pending part request Steering column bush from Demo Hub"
 :::
 
-When a hub needs a part that is not in the catalogue, the hub manager sends a request. You get a push notification (FKL Central and purchasing users, if notifications are switched on). You review it: link an existing part, add a new master part, or reject it with a reason the hub sees. Every part is on the FKL master list: hubs cannot add parts of their own.
+When a hub needs a part that is not in the catalogue, the hub manager sends a request. You get a push notification (FKL Central and purchasing users, if notifications are switched on), and, for FKL Central users, the request also appears under **Part requests** in the bell at the top of the page. Tap it there to open the request. You review it: link an existing part, add a new master part, or reject it with a reason the hub sees. Every part is on the FKL master list: hubs cannot add parts of their own.
 
 !!! info "What changed from the Workshop App"
     - **Catalog Requests** are now **Part requests** in **FKL Central > Parts catalogue**, with a badge showing how many wait.
@@ -40,7 +40,7 @@ callouts:
   - [2, "text=Review", "Open the request"]
 :::
 
-1. Open **Parts catalogue** and tap **Part requests**. Requests waiting are under **Waiting**. Each row shows what the hub sent: manufacturer, supplier, which karts it fits, a related part and a **Product link**.
+1. Open **Parts catalogue** and tap **Part requests**, or tap the request in the bell: it opens here with the request highlighted and its review open if it is still waiting and you can review it. Requests waiting are under **Waiting**. Each row shows what the hub sent: manufacturer, supplier, which karts it fits, a related part and a **Product link**.
 
 2. Tap **Review** on the request.
 

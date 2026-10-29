@@ -95,4 +95,4 @@ captions:
 :::
 
 !!! note "Remember"
-    FKL Central and purchasing users get a push notification when you send a request (if they have notifications switched on). It shows as **Waiting for FKL Central** until it is reviewed. Then it says **Linked to an existing part**, **Added as a new part** or **Rejected** with the reason. Tap **Withdraw** if you no longer need it.
+    FKL Central and purchasing users get a push notification when you send a request (if they have notifications switched on), and FKL Central users also see it in their notification bell. It shows as **Waiting for FKL Central** until it is reviewed. Then it says **Linked to an existing part**, **Added as a new part** or **Rejected** with the reason. Tap **Withdraw** if you no longer need it.

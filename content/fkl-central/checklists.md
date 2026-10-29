@@ -11,7 +11,7 @@ Every kart class has one master service checklist: Bambino, Cadet and Junior. Yo
 
 !!! info "What changed from the Workshop App"
     - The Workshop App's **Checklists** are now **FKL Central > Service checklists**.
-    - One versioned master per kart class (v1: 15 sections, 102 checks each), plus the driver feedback **Power / Performance inspection** checklist.
+    - One versioned master per kart class (v1: 15 sections, 102 checks each), plus the **Power / Performance inspection** checklist.
     - An open service keeps the version it started with.
 
 ## Make and publish a change

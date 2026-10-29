@@ -61,6 +61,6 @@ flowchart TD
 
 ## Where next
 
-- [Report a problem](../mechanic/report-a-problem.md) for incidents, driver feedback and following an incident up.
+- [Report a problem](../mechanic/report-a-problem.md) for incidents, the Power / Performance inspection and following an incident up.
 - [Reliability tickets](../mechanic/reliability-ticket.md) to stop a kart.
 - [Repairs and parts used](../mechanic/repairs-and-parts.md) to fix it.

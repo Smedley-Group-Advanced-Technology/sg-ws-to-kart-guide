@@ -20,7 +20,7 @@ This section is for mechanics. Work through the pages in this order the first ti
 3. [The fleet board](fleet-board.md): what the Overview tells you at the start of a shift.
 4. [Doing a service](service-turn.md): start, check, complete.
 5. [Pause and resume](pause-and-resume.md): stop for a reason and pick up again.
-6. [Report a problem](report-a-problem.md): incidents, driver feedback and following an incident up.
+6. [Report a problem](report-a-problem.md): incidents, the Power / Performance inspection and following an incident up.
 7. [Reliability tickets](reliability-ticket.md): take an unsafe kart out of use.
 8. [Repairs and parts used](repairs-and-parts.md): fix it and record every part.
 9. [Campaign work](campaign-work.md): fleet campaigns, task by task.

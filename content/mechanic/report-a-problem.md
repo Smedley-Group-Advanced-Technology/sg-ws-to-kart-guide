@@ -7,21 +7,22 @@ url: /workshop
 state: "Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power / Performance inspection checklist published"
 :::
 
-Use **Report a kart problem** for anything that happened to a kart or anything you found on it. The type you pick decides which records KART creates. This page covers incidents, driver feedback and what to do after you inspect a kart. To stop a kart, see [Reliability tickets](reliability-ticket.md).
+Use **Report a kart problem** for anything that happened to a kart or anything you found on it. The type you pick decides which records KART creates. This page covers incidents, the Power / Performance inspection and what to do after you inspect a kart. To stop a kart, see [Reliability tickets](reliability-ticket.md).
 
 !!! info "What changed from the Workshop App"
     - **Create New Kart Report** is now the **Report a kart problem** button on Overview and on the kart page.
     - **Incidents are information only.** They never make a kart Repair Required or unavailable. To take a kart out of use, raise a stopping reliability ticket.
     - An incident tells the workshop to **look at a kart**. What you find is recorded the standard way: a **reliability ticket** (for example a loose bolt, root cause operational or poor quality control) or a **damage record**. There are no "inspection findings" any more.
     - Events staff and contractors log incidents on the **Tracker** with **Log incident**. They do not need the Workshop permission.
-    - The **Power / Performance Inspection** is now part of the **Driver feedback** report.
+    - The **Power / Performance Inspection** is its own type in **Report a kart problem**.
+    - Staff no longer report **Driver feedback**: driver feedback comes from customers. Driver feedback reports moved from the Workshop App still show in the kart's incident history.
 
 ## The four types
 
 | Type | Use it for | What KART creates |
 |---|---|---|
 | **Incident** | Impact, spin or anything that happened on track | A workshop incident on the ICU board |
-| **Driver feedback** | What the driver reported, for example low power or noise | A workshop incident, plus repairs for failed inspection checks |
+| **Power / Performance inspection** | The driver reports low power or poor performance | A workshop incident with the inspection, plus a repair for each failed check |
 | **Reliability** | A fault for engineering to investigate | Opens the reliability ticket form. Needs the Reliability permission |
 | **Damage** | Damaged components | Opens Record New Damage. Each component becomes a repair. Needs the Reliability permission |
 
@@ -213,30 +214,22 @@ callouts:
 !!! tip "Tip"
     Repairs that were logged as findings before this change stay on the kart page under their incident. Complete them as usual with **Log remedy / complete repair**.
 
-## Report driver feedback and do the Power / Performance inspection
+## Do the Power / Performance inspection
 
-1. Open **Report a kart problem** for the kart, as in steps 1 and 2 above (for example kart **302**). Then choose **Driver feedback**.
+Use it when a driver reports low power or poor performance.
+
+1. Open **Report a kart problem** for the kart, as in steps 1 and 2 above (for example kart **302**). Then choose **Power / Performance inspection**.
 
     :::shot mech-feedback-type
-    caption: Driver feedback chosen for Junior 302
+    caption: Power / Performance inspection chosen for Kart 302
     steps:
       - Tap Report a kart problem
-      - Choose 302 and Driver feedback
+      - Choose 302 and Power / Performance inspection
     callouts:
-      - [1, "text=Driver feedback", "What the driver said"]
+      - [1, "text=Power / Performance inspection", "Low power or performance"]
     :::
 
-2. Choose the **Driver feedback type**. For low power choose **Power / Performance**.
-
-    :::shot mech-feedback-power
-    caption: Driver feedback type Power / Performance
-    steps:
-      - Open Driver feedback type and choose Power / Performance
-    callouts:
-      - [1, "text=Driver feedback type", "Type of feedback"]
-    :::
-
-3. Type what the driver said in **Notes / details**. (**Describe the driver feedback** only appears for the type **Other**.)
+2. Type what the driver said in **Notes / details**.
 
     :::shot mech-feedback-describe
     caption: Notes / details filled in with what the driver said
@@ -246,7 +239,7 @@ callouts:
       - [1, "text=Notes / details", "In the driver's words"]
     :::
 
-4. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. A failed check needs a finding, which becomes a repair.
+3. Work through the **Power / Performance inspection**. Answer every check Pass or Fail. A failed check needs a finding, which becomes a repair.
 
     :::shot mech-feedback-inspection
     caption: The Power / Performance inspection checklist with Pass and Fail answers
@@ -258,7 +251,7 @@ callouts:
       - [2, "text=Other findings (optional)", "Anything else you found"]
     :::
 
-5. For a failed check, add its finding in the check. Use **Other findings (optional)** for anything else you found on the kart.
+4. For a failed check, add its finding in the check. Use **Other findings (optional)** for anything else you found on the kart.
 
     :::shot mech-feedback-finding
     caption: A finding added for a failed inspection check
@@ -268,10 +261,10 @@ callouts:
       - [1, "text=Other findings (optional)", "Anything else you found"]
     :::
 
-6. Tap **Report problem**.
+5. Tap **Report problem**.
 
     :::shot mech-feedback-submit
-    caption: Report problem at the bottom of the driver feedback report
+    caption: Report problem at the bottom of the Power / Performance inspection
     steps:
       - Tap Report problem
     callouts:
@@ -279,4 +272,4 @@ callouts:
     :::
 
 !!! tip "Tip"
-    If KART says **No Power / Performance inspection checklist is published. The report is saved without an inspection.**, tell your hub manager so FKL Central (the league's central team) can publish it.
+    If KART says **No Power / Performance inspection checklist is published for this kart. Ask FKL Central to publish one, or log an incident.**, the inspection cannot be saved. Report an **Incident** instead and tell your hub manager, so FKL Central (the league's central team) can publish the checklist.

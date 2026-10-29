@@ -2870,27 +2870,12 @@
     / Performance inspection checklist published
   steps:
   - Tap Report a kart problem
-  - Choose 302 and Driver feedback
+  - Choose 302 and Power / Performance inspection
   callouts:
   - n: 1
-    target: text=Driver feedback
-    note: What the driver said
-  caption: Driver feedback chosen for Junior 302
-- id: mech-feedback-power
-  kind: screenshot
-  page: mechanic/report-a-problem.md
-  persona: Alex Mechanic
-  device: tablet
-  url: /workshop
-  state: Seed variant without the Bambino 106 incident (or record on 106 and delete the extra incident afterwards); Power
-    / Performance inspection checklist published
-  steps:
-  - Open Driver feedback type and choose Power / Performance
-  callouts:
-  - n: 1
-    target: text=Driver feedback type
-    note: Type of feedback
-  caption: Driver feedback type Power / Performance
+    target: text=Power / Performance inspection
+    note: Low power or performance
+  caption: Power / Performance inspection chosen for Kart 302
 - id: mech-feedback-describe
   kind: screenshot
   page: mechanic/report-a-problem.md
@@ -2954,7 +2939,7 @@
   - n: 1
     target: text=Report problem
     note: Save it
-  caption: Report problem at the bottom of the driver feedback report
+  caption: Report problem at the bottom of the Power / Performance inspection
 - id: mech-sched-tab
   kind: screenshot
   page: mechanic/schedule.md

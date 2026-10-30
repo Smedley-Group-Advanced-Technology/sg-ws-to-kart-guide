@@ -16,6 +16,7 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
     - Everything the Workshop App grid did still happens on each change: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
     - New since 30 October: only your hub's own karts of that class are listed, in chassis order (for example 18 Bambino chassis), instead of fixed chassis 1 to 30.
     - New since 30 October: KART always warns before a kart that is not available goes on track, and asks for a reason. This now also happens when the chassis already has a race number, for **Copy Last Session**, and for administrators changing another day. A chassis with a warning triangle has a race number although its kart is not available.
+    - New: an administrator can switch a hub to **Signed off karts only**. Race to Chassis at that hub then lists and accepts only karts that are signed off. See [Signed off karts only](#signed-off-karts-only).
 
 ## Open Race to Chassis
 
@@ -225,6 +226,48 @@ The list shows one session of one class, with only your hub's karts of that clas
 ### Warning triangles
 
 A chassis with a warning triangle has a race number although its kart is not available: it was assigned or copied with a recorded reason, or the kart changed after it got the number, or a copy filled the session when it started. Check with your hub manager before that kart goes out.
+
+## Signed off karts only
+
+An administrator can switch this on per hub (see below). When it is on, **Signed off karts only** shows above the chassis, and Race to Chassis at your hub:
+
+- lists only the karts that are signed off (their kart sign-off is done), in chassis order. There is no fall-back to chassis 1 to 30;
+- refuses a kart that is not signed off: KART says **This kart is not signed off. This hub lists signed off karts only.** No reason helps. Use a signed off kart;
+- keeps a kart that is not signed off but already has a race number in the session on the list, marked **Not signed off** with a warning triangle. Its race number stays. You can move the number to a signed off kart, take it off, or leave it; you cannot give that kart another race number;
+- still copies such a kart with **Copy Last Session**, after asking for a reason (as for a kart that is not available).
+
+If your hub's list looks short, ask an administrator to check the kart sign-offs, or to switch it off for your hub. When it is off, Race to Chassis works as before.
+
+:::shot mech-r2c-signoff-only
+caption: Signed off karts only, with a kart that is not signed off still holding its race number
+state: "Signed off karts only switched on for Demo Hub; Junior 303 not signed off and holding race number 07 in session 1"
+steps:
+  - Open Race to Chassis for Demo Practice Day on the tablet
+  - Tap Junior
+callouts:
+  - [1, "text=Signed off karts only", "Switched on for this hub"]
+  - [2, "text=Not signed off", "Still on track, marked"]
+:::
+
+### Switch it on or off (administrators)
+
+1. On **Select your Hub**, tap **FKL Central**, then the **Hubs** tab, and pick the hub.
+2. Under the hub's settings, find **Race to Chassis: signed off karts only**. It shows how many of the hub's Race to Chassis karts are signed off, for example **69 of 69 Race to Chassis karts are signed off.**
+3. Tap the switch. If some karts are not signed off, KART asks **List signed off karts only?** and says how many karts Race to Chassis will no longer list. Tap **Turn on**, or **Cancel**. Switching it off does not ask.
+4. Every change is logged with who made it and when (**Last changed**).
+
+    :::shot fc-r2c-signoff-switch
+    caption: The Race to Chassis sign-off switch in FKL Central, Hubs
+    device: desktop
+    persona: Taylor Central
+    url: /fkl-central?tab=hubs
+    steps:
+      - Pick Demo Hub on the Hubs tab
+      - Scroll to Race to Chassis: signed off karts only
+    callouts:
+      - [1, "text=Race to Chassis: signed off karts only", "Per hub, administrators only"]
+      - [2, "css=[data-testid='r2c-signoff-switch']", "On or off"]
+    :::
 
 ## Moving a race number to another chassis
 

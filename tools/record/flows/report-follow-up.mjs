@@ -64,7 +64,7 @@ export default {
     // MF-6: the Power / Performance inspection (its own report type) on Kart 302, not submitted
     const f = await open({ persona: 'Alex Mechanic', device: 'tablet' });
     await f.goto('/workshop');
-    await f.mustReload('text=Readiness board', 60000);
+    await f.mustReload('text=Event readiness', 60000);
     const d = f.dialog;
     await f.tap('role=button[name="Report a kart problem"]');
     await f.tap(d.getByRole('combobox').first());

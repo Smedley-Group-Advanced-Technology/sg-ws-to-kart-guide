@@ -9,7 +9,7 @@ export default {
   async run({ open, clip }) {
     const s = await open({ persona: 'Casey Mechanic', device: 'tablet', record: true });
     await s.goto('/workshop');
-    await s.mustReload('text=Readiness board', 60000);
+    await s.mustReload('text=Event readiness', 60000);
     await s.settle(800);
     const dlg = s.dialog;
     s.cue();                                                    // Tap Report a kart problem.

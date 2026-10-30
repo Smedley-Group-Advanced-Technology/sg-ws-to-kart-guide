@@ -12,7 +12,7 @@ Every kart in KART has one colour: **green**, **amber** or **red** (grey for kar
 !!! info "What changed from the Workshop App"
     - **Three colours instead of nine.** Green is Ready, amber needs attention, red is blocked. The reason (for example **Paused** or **Waiting on parts**) is written next to the colour.
     - **"Turn Required" is now "Requires service".** Same meaning: the kart has been used since its last service and needs one. KART never shows the words "Turn Required".
-    - **One colour for status and availability.** A red kart is blocked: **Race to Chassis** usually refuses it unless someone assigns it with a reason. Ticking **Available** on a kart that is not available asks for a reason and gives it a **track use override**: the tile shows the override with its expiry and the kart keeps its colour (a red kart stays red until it is fixed) (a kart with an open stopping ticket cannot be ticked). An amber kart in a service or paused carries a small **Not on track** marker.
+    - **One colour for status and availability.** A red kart is blocked: **Race to Chassis** refuses it. Ticking **Available** on a kart that is not available asks for a reason and gives it a **track use override**: the tile shows the override with its expiry and the kart keeps its colour (a red kart stays red until it is fixed) (a kart with an open stopping ticket cannot be ticked). An amber kart in a service or paused carries a small **Not on track** marker.
     - Logging an incident no longer makes a kart Repair required on its own. See [Incidents, tickets and repairs](problems-explained.md).
 
 ## The colours at a glance
@@ -21,7 +21,7 @@ Every kart in KART has one colour: **green**, **amber** or **red** (grey for kar
 |---|---|---|---|
 | <span class="swatch sw-ready"></span> green | **Ready** | Serviced and nothing open. The kart can race. | Ready |
 | <span class="swatch sw-requires"></span> amber | **Needs attention** | The kart needs work, but nothing stops it for good. | **Campaign required**, **In progress**, **Paused**, **Requires service**, **Repair needed (usable)** |
-| <span class="swatch sw-repair-required"></span> red | **Blocked** | The kart must not be used. **Race to Chassis** usually refuses it unless someone assigns it with a reason. Ticking **Available** asks for a reason and gives a track use override until the time shown; the kart stays red. | **Repair required** (**Ready to repair**, **Waiting on parts** or **Stopping ticket**), **Missing batteries**, **Not available** |
+| <span class="swatch sw-repair-required"></span> red | **Blocked** | The kart must not be used. **Race to Chassis** refuses it. Ticking **Available** asks for a reason and gives a track use override until the time shown; the kart stays red. | **Repair required** (**Ready to repair**, **Waiting on parts** or **Stopping ticket**), **Missing batteries**, **Not available** |
 | <span class="swatch sw-paused"></span> grey | **Written off / off site** | The kart is written off or not at a hub. It is not counted in the hub's active karts. Shown only when there is one. | **Written off**, **Off site** |
 
 A kart is counted once, under the first reason that applies, in the order of the list below. The numbers on the board always add up to the number of active karts.

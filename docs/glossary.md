@@ -11,9 +11,9 @@
 | **Allocation** | Handing out karts for an event. A kart that is "not offered for allocation" is not handed out. (The **Kart Allocation** tab in Workshop Manager is different: it gives karts to mechanics to service) | (new) |
 | **Approval queue** | Order lines waiting for the hub's manager or an admin to approve | (new) |
 | **Approved** | Order stage: OK to order | (new) |
-| **Assign anyway** | Put a race number on a chassis that is not available, with a reason. Gives a track use override | Track use override |
+| **Assign anyway** | Removed on 2 November. Race to Chassis now refuses a kart that is not available; see **Set available manually** | Track use override |
 | **Available** | The kart is offered for allocation | Available |
-| **Blocked** | A checklist answer: this check cannot pass. Needs a reason. On the Fleet board: red, the kart must not be used; Race to Chassis usually refuses it unless someone assigns it with a reason; ticking Available gives a track use override with a reason, and the kart stays red | Further action required; Repair Required |
+| **Blocked** | A checklist answer: this check cannot pass. Needs a reason. On the Fleet board: red, the kart must not be used; Race to Chassis refuses it; ticking Available gives a track use override with a reason, and the kart stays red | Further action required; Repair Required |
 | **BoM** | Bill of materials: the list of parts that make up each kart. Kept by FKL Central | (new) |
 | **Campaign** | One job done on many karts, such as a part upgrade | Campaign |
 | **Campaign Required** | Board status for karts with an open task of an active integrated campaign. The kart stays usable | (new) |
@@ -94,6 +94,7 @@
 | **Services (Work targets)** | On the Work targets card, your target number of services | Turns |
 | **Service Queue** | The Workshop tab with karts to service and repair cards | Repair Workflow |
 | **Servicing** | The Workshop tab with the checklist of your current service | In Service / turn checklist |
+| **Set available manually** | In Race to Chassis, for a kart that is not available: opens **Kart Availability** with that kart selected, where the manual override is made with a reason. Not offered for a kart with an open stopping ticket | (none) |
 | **Session** | One time out on track at an event. Race to Chassis has a column or button per session | Session |
 | **Session event** | An event day with race numbers and sessions, used in Race to Chassis, such as Demo Practice Day | Event |
 | **SOP** | Standard operating procedure: the written way your hub does a job. Open them with **SOP Viewer** | SOP |

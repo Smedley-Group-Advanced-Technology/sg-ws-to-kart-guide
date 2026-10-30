@@ -13,9 +13,9 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
     - **On Event > Race to Chassis** is now in **Event Operations**: pick the event, then **Race to Chassis**.
     - New since 19 October: **drag and drop**. Drag a race number onto a chassis. On phones the chassis list opens by default. Each device remembers the view you last chose.
     - New: on phones the old tap grid (race numbers down the side, sessions across) is now a **chassis list**: tap a chassis, then its race number. It works the same way round as drag and drop.
-    - Everything the Workshop App grid did still happens on each change: reasons, track use overrides (letting a not-available kart run until the end of the event), marking karts used with **Undo**, and the reassignment log.
+    - Marking karts used with **Undo** and the reassignment log still happen on each change, as in the Workshop App grid.
     - New since 30 October: only your hub's own karts of that class are listed, in chassis order (for example 18 Bambino chassis), instead of fixed chassis 1 to 30.
-    - New since 30 October: KART always warns before a kart that is not available goes on track, and asks for a reason. This now also happens when the chassis already has a race number, for **Copy Last Session**, and for administrators changing another day. A chassis with a warning triangle has a race number although its kart is not available.
+    - New from 2 November: Race to Chassis **refuses** a kart that is not available. No reason lets it through and Race to Chassis never makes a kart available (there is no **Assign anyway** any more). KART says why and offers the ways out: **Open in Tracker** for each ticket, and, where a manual override is allowed, **Set available manually** on Kart Availability. This also applies when the chassis already has a race number and for administrators changing another day. **Copy Last Session** and the automatic copies leave such karts out and list them. See [A chassis that is not available](#a-chassis-that-is-not-available).
     - New: an administrator can switch a hub to **Signed off karts only**. Race to Chassis at that hub then lists and accepts only karts that are signed off. See [Signed off karts only](#signed-off-karts-only).
 
 ## Open Race to Chassis
@@ -64,12 +64,12 @@ steps:
   - Drag race number 5 onto chassis 01 (Junior 301)
   - Show the Kart 301 marked used message with Undo
   - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
-  - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
+  - Tap Close, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
 captions:
   - "Drag a race number onto a chassis."
   - "KART marks the chassis used for today."
-  - "An unavailable chassis asks for a reason."
+  - "A chassis that is not available is refused, with the reason."
   - "Drag the number back to take it off."
 :::
 
@@ -117,7 +117,7 @@ The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) 
     :::
 
 !!! tip "Tip"
-    **Copy Last Session** copies the previous session's numbers to this one. If that puts karts on track that are not available, KART lists them and asks for one reason before it copies (see below). **Clear Session** empties only this session. **Clear All** empties every session of the event and cannot be undone.
+    **Copy Last Session** copies the previous session's numbers to this one. Karts that are not available are left out and listed; their race numbers stay without a chassis (see below). **Clear Session** empties only this session. **Clear All** empties every session of the event and cannot be undone.
 
 ## Chassis list (phone)
 
@@ -193,53 +193,60 @@ The list shows one session of one class, with only your hub's karts of that clas
 
 ## A chassis that is not available
 
-1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number and says **Kart 307 is not available** and why. This also happens when the chassis already has another race number: the new number would replace it, so KART asks first.
+Race to Chassis does not put a kart that is not available on track. This applies to dragging or tapping a number onto a chassis, to a chassis that already has another race number, and to administrators changing another day. Open incidents alone do not make a kart unavailable: they are listed as **Open incident (does not block)**.
+
+1. Put a number on a chassis that is not available, for example Junior chassis **07**. KART names the kart by its number, says **Kart 307 is not available** and lists why, the same reasons as on the Fleet board: for example **An open ticket stops this kart**, **Set unavailable by hand**, **In a service** or **Batteries missing: 1 of 3 fitted**. Nothing is assigned.
 
     :::shot mech-r2c-unavailable
-    caption: Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway
+    caption: Kart 307 (Junior chassis 07) is not available, with its reasons, the ticket and Open in Tracker
     steps:
       - Drag race number 6 onto chassis 07
     callouts:
-      - [1, "text=is not available", "Repair Required: stopping ticket"]
-      - [2, "text=4 to 500 characters.", "Give a reason"]
-      - [3, "text=Assign anyway", "Gives a track use override"]
+      - [1, "text=is not available", "Refused, nothing assigned"]
+      - [2, "css=[data-testid='r2c-refusal-reasons']", "Why, as on the Fleet board"]
+      - [3, "css=[data-testid='r2c-refusal-open-ticket']", "Open the ticket"]
     :::
 
-2. Normally tap **Cancel** and use another chassis. Only if your hub manager agrees, type a reason and tap **Assign anyway**. This gives a track use override until the end of the event.
+2. Normally tap **Close** and use another chassis.
+3. To get the kart back, speak to the technical team. There are two ways, both outside Race to Chassis:
+    - **Resolve the ticket.** Tap **Open in Tracker** next to the ticket. The technical team resolves it there; then the kart is available again.
+    - **Manual override.** Only where it is allowed (staff and administrators, and never for a kart with an open stopping ticket), KART shows **Set available manually**. It opens **Kart Availability** with this kart selected. Tick **Available** on the kart and give a reason there, as always. Then come back to Race to Chassis and place the number again.
 
     :::shot mech-r2c-cancel
-    caption: Cancel in the not available dialog
+    caption: Set available manually for a kart that is locked by hand, which opens Kart Availability
+    state: "Junior 304 set not Available by hand (no ticket)"
     steps:
-      - Tap Cancel
+      - Drag race number 6 onto chassis 04
     callouts:
-      - [1, "text=Cancel", "Use another chassis"]
+      - [1, "css=[data-testid='r2c-refusal-override']", "Opens Kart Availability"]
+      - [2, "css=[data-testid='r2c-refusal-close']", "Use another chassis"]
     :::
 
 !!! warning "Watch out"
-    Never assign a kart with a stopping reliability ticket (Repair Required) just to fill the grid. **Assign anyway** is recorded with your reason.
+    An open stopping ticket (Repair Required) cannot be overridden: KART says **An open stopping ticket cannot be overridden.** Resolve the ticket in the Tracker first.
 
 ### Copy Last Session with karts that are not available
 
-1. Tap **Copy Last Session**. If the copy puts karts on track that are not available, the question lists them, for example **1 kart being copied is not available:** Kart 307.
-2. Normally tap **Cancel** and change those chassis first. Only if your hub manager agrees, type one reason for all of them and tap **Copy Last Session**. The reason is recorded for each kart.
+1. Tap **Copy Last Session**. If the previous session has karts that are not available now, the question lists them, for example **Race number 05: Kart 207 (An open ticket stops this kart)**, and says they are not copied.
+2. Tap **Copy Last Session**. Everything else is copied. KART then lists the karts that were not copied; their race numbers stay without a chassis in this session. Put each of those race numbers on another kart.
 
     :::shot mech-r2c-copy-unavailable
-    caption: Copy Last Session listing Kart 207, which is not available, with the reason box
+    caption: Copy Last Session listing Kart 207, which is not available and is not copied
     state: "Cadet 207 got race number 05 in session 1, then a stopping reliability ticket (Repair Required); session 2 cleared"
     steps:
       - Tap Cadet, then session 2
       - Tap Clear Session 2 and confirm
       - Tap Copy Last Session
-      - Type a reason
     callouts:
-      - [1, "css=[data-testid='r2c-copy-unavailable-list']", "Karts not available"]
-      - [2, "css=[data-testid='r2c-copy-reason']", "One reason for all"]
-      - [3, "css=[data-testid='r2c-confirm']", "Copies with the reason"]
+      - [1, "css=[data-testid='r2c-copy-skip']", "Not copied"]
+      - [2, "css=[data-testid='r2c-confirm']", "Copies the rest"]
     :::
+
+The same happens when KART copies on its own: when a later session starts and KART fills it from the session before, or when a change copies forward to a later session. Karts that are not available at that moment are left out and recorded. When your change made the copy, KART shows a message such as **1 kart was not copied** with the race number and kart.
 
 ### Warning triangles
 
-A chassis with a warning triangle has a race number although its kart is not available: it was assigned or copied with a recorded reason, or the kart changed after it got the number, or a copy filled the session when it started. Check with your hub manager before that kart goes out.
+A chassis with a warning triangle has a race number although its kart is not available: the kart became unavailable after it got the number (or before 2 November). It stays as it is, but Race to Chassis will not give that kart a new race number or copy it to a new session. Check with your hub manager before that kart goes out.
 
 :::shot mech-r2c-triangle
 caption: Chassis 07 (Cadet 207) with race number 05 and a warning triangle
@@ -257,7 +264,7 @@ An administrator can switch this on per hub (see below). When it is on, **Signed
 - lists only the karts that are signed off (their kart sign-off is done), in chassis order. There is no fall-back to chassis 1 to 30;
 - refuses a kart that is not signed off: KART says **This kart is not signed off. This hub lists signed off karts only.** No reason helps. Use a signed off kart;
 - keeps a kart that is not signed off but already has a race number in the session on the list, marked **Not signed off** with a warning triangle. Its race number stays. You can move the number to a signed off kart, take it off, or leave it; you cannot give that kart another race number;
-- still copies such a kart with **Copy Last Session**, after asking for a reason (as for a kart that is not available).
+- leaves such a kart out of **Copy Last Session** (as a kart that is not available).
 
 If your hub's list looks short, ask an administrator to check the kart sign-offs, or to switch it off for your hub. When it is off, Race to Chassis works as before.
 
@@ -318,7 +325,7 @@ callouts:
 
 ## Past events are read-only
 
-1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too.
+1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. A kart that is not available is refused there too.
 
     :::shot mech-r2c-past
     caption: Past Event - Editing Restricted on an earlier event

@@ -7,6 +7,7 @@ New people get into your hub in one of two ways: they sign up with your join lin
     - The Workshop App's **Manage Users** is split: hub managers handle their own hubs in **Pending approvals**; admins handle everything on the Admin page. See [Users and permissions](../fkl-central/users.md).
     - Hub managers can give the **Workshop** and **Reliability** permissions only. **Workshop includes Reliability**: ticking Workshop ticks Reliability too. Only admins give **Purchasing**.
     - You approve only for hubs you hold access to.
+    - The same requests are on the **Team** tab of **Workshop Manager**, where you can also change **Workshop** and **Reliability** for people already on your team. See [Team](team.md).
 
 ## Open Pending approvals
 

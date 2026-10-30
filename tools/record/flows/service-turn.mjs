@@ -8,7 +8,7 @@ export default {
     // ---------- part B: the full service, recorded ----------
     const s = await open({ persona: 'Alex Mechanic', device: 'tablet', record: true });
     await s.goto('/workshop');
-    await s.mustReload('text=Readiness board', 60000);
+    await s.mustReload('text=Event readiness', 60000);
     await s.settle(600);
     s.cue();                                                    // Open the Service Queue.
     await s.tap(tab(s, 'Service Queue'));
@@ -90,7 +90,7 @@ export default {
     await s.wait(1500);
     s.cue();                                                    // The kart is Ready again.
     await s.tap(tab(s, 'Overview'));
-    await s.skip(async () => { await s.must('text=Readiness board', { timeout: 30000 }); await s.settle(800); });
+    await s.skip(async () => { await s.must('text=Event readiness', { timeout: 30000 }); await s.settle(800); });
     const t203 = s.tile('Kart 203', 'Available');
     await s.scrollTo(t203);
     await s.hover(t203);

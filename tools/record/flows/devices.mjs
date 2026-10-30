@@ -10,7 +10,7 @@ export default {
     await p.tap(p.page.getByRole('option', { name: 'Demo Hub', exact: true }));
     await p.shot('start-phone-cards', { at: { 1: 'h3:text-is("Workshop")' } });
     await p.goto('/workshop');
-    await p.mustReload('text=Readiness board', 60000);
+    await p.mustReload('text=Event readiness', 60000);
     const sched = p.page.locator('a,button,[role=tab]').filter({ hasText: /^\s*Schedule\s*$/ });
     await (await p.must(sched)).evaluate((e) => e.scrollIntoView({ inline: 'end', block: 'nearest' }));
     await p.page.evaluate(() => window.scrollTo(0, 0));
@@ -24,7 +24,7 @@ export default {
     await d.tap(d.page.getByRole('option', { name: 'Demo Hub', exact: true }));
     await d.shot('start-hub-buttons', { at: { 1: 'role=button[name="Hub Manager"]' } });
     await d.goto('/workshop');
-    await d.mustReload('text=Readiness board', 60000);
+    await d.mustReload('text=Event readiness', 60000);
     await d.shot('start-tab-strip-manager', { scroll: false, at: { 1: d.page.locator('a,button,[role=tab]').filter({ hasText: /^\s*Workshop Manager\s*$/ }) } });
     await d.close();
   },

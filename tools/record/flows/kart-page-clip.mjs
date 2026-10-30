@@ -5,7 +5,7 @@ export default {
   async run({ open, clip }) {
     const s = await open({ persona: 'Alex Mechanic', device: 'tablet', record: true });
     await s.goto('/workshop');
-    await s.skip(async () => { await s.mustReload(s.page.getByText('Readiness board'), 60000); await s.settle(800); });
+    await s.skip(async () => { await s.mustReload(s.page.getByText('Event readiness'), 60000); await s.settle(800); });
     s.cue();                                                    // Tap Open kart.
     await s.tap('role=button[name="Open kart"]');
     const dlg = s.dialog;

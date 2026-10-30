@@ -37,7 +37,7 @@ export default {
     c.log(`  207 ticket status after Update: ${st}`);
     if (!/Resolved/.test(st || '')) throw new Error('the 207 ticket was not resolved');
     await c.goto('/workshop');
-    await c.mustReload('text=Readiness board', 60000);
+    await c.mustReload('text=Event readiness', 60000);
     const t207 = c.tile('Kart 207', 'Available');
     // wait until the board shows 207 available again (the resolved ticket frees it)
     await c.mustReload(t207.getByRole('checkbox').first().and(c.page.locator(':is([data-state=checked],[aria-checked=true],:checked)')), 60000);

@@ -8,7 +8,7 @@ export default {
   async run({ open }) {
     const s = await open({ persona: 'Alex Mechanic', device: 'tablet' });
     await s.goto('/workshop');
-    await s.mustReload('text=Readiness board', 60000);
+    await s.mustReload('text=Event readiness', 60000);
     await s.tap('role=button[name="Open kart"]');
     const dlg = s.dialog;
     await s.shot('mech-kart-scan', { at: { 1: dlg.getByRole('button', { name: 'Scan QR code' }), 2: dlg.getByText('Scan a photo') } });

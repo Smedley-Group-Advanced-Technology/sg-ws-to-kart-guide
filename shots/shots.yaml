@@ -1983,7 +1983,7 @@
   - KART marks the chassis used for today.
   - An unavailable chassis asks for a reason.
   - Drag the number back to take it off.
-  duration: 50
+  duration: 80
 - id: mech-r2c-dd-view
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2175,6 +2175,43 @@
     target: text=Cancel
     note: Use another chassis
   caption: Cancel in the not available dialog
+- id: mech-r2c-copy-unavailable
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Cadet 207 got race number 05 in session 1, then a stopping reliability ticket (Repair Required); session 2 cleared
+  steps:
+  - Tap Cadet, then session 2
+  - Tap Clear Session 2 and confirm
+  - Tap Copy Last Session
+  - Type a reason
+  callouts:
+  - n: 1
+    target: css=[data-testid='r2c-copy-unavailable-list']
+    note: Karts not available
+  - n: 2
+    target: css=[data-testid='r2c-copy-reason']
+    note: One reason for all
+  - n: 3
+    target: css=[data-testid='r2c-confirm']
+    note: Copies with the reason
+  caption: Copy Last Session listing Kart 207, which is not available, with the reason box
+- id: mech-r2c-triangle
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Cadet 207 got race number 05 in session 1, then a stopping reliability ticket (Repair Required)
+  steps:
+  - Tap Cadet, then session 1
+  callouts:
+  - n: 1
+    target: css=[data-testid='r2c-dd-slot-7']
+    note: On track, not available
+  caption: Chassis 07 (Cadet 207) with race number 05 and a warning triangle
 - id: mech-r2c-signoff-only
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2199,8 +2236,7 @@
   persona: Taylor Central
   device: desktop
   url: /fkl-central?tab=hubs
-  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
-    1; Cadet 207 and Junior 307 Repair Required
+  state: Every Demo Hub kart signed off except Junior 303; Signed off karts only just switched on
   steps:
   - Pick Demo Hub on the Hubs tab
   - Scroll to Race to Chassis: signed off karts only
@@ -2259,6 +2295,21 @@
     target: text=Past Event - Editing Restricted
     note: View only
   caption: Past Event - Editing Restricted on an earlier event
+- id: mech-r2c-admin-correction
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Taylor Central
+  device: tablet
+  url: /r2c
+  state: A past session event exists at Demo Hub; an administrator moved race number 01 from chassis 02 to 08 today
+  steps:
+  - Open Race to Chassis for the past event as an administrator
+  - Tap Cadet, then Reassignments
+  callouts:
+  - n: 1
+    target: css=[data-testid='r2c-log-admin-correction']
+    note: Changed on another day
+  caption: Reassignments on a past event with a change marked Admin correction
 - id: mech-ticket-clip
   kind: clip
   page: mechanic/reliability-ticket.md

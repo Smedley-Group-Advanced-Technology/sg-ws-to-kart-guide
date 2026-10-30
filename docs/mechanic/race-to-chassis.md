@@ -31,7 +31,7 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-r2c-drag-clip.jpg" width="1180">
 <source src="../assets/video/mech-r2c-drag-clip.mp4" type="video/mp4"><source src="../assets/video/mech-r2c-drag-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-r2c-drag-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: putting race numbers on chassis with drag and drop (about 50 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: putting race numbers on chassis with drag and drop (about 80 seconds, with captions)</figcaption></figure>
 
 The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. Only the karts of your hub's fleet for that class are shown, in chassis order, ten to a column. A hub with no karts of that class shows chassis 1 to 30. The chassis colour is the kart's status colour, the same as on the Fleet board: **Ready** (green), **Needs attention** (amber, for example in a service, Requires service or Campaign required), **Blocked** (red, must not be used) or **Written off** (grey); **Not in fleet** is a plain outline. A filled star means the kart is preferred, an empty star **Unpreferred**. See [Kart statuses](../start/statuses.md).
 
@@ -99,9 +99,13 @@ The list shows one session of one class, with only your hub's karts of that clas
 1. Tap **Copy Last Session**. If the copy puts karts on track that are not available, the question lists them, for example **1 kart being copied is not available:** Kart 307.
 2. Normally tap **Cancel** and change those chassis first. Only if your hub manager agrees, type one reason for all of them and tap **Copy Last Session**. The reason is recorded for each kart.
 
+    ![Copy Last Session listing Kart 207, which is not available, with the reason box](../assets/img/mechanic/mech-r2c-copy-unavailable.png){ loading=lazy }
+
 ### Warning triangles
 
 A chassis with a warning triangle has a race number although its kart is not available: it was assigned or copied with a recorded reason, or the kart changed after it got the number, or a copy filled the session when it started. Check with your hub manager before that kart goes out.
+
+![Chassis 07 (Cadet 207) with race number 05 and a warning triangle](../assets/img/mechanic/mech-r2c-triangle.png){ loading=lazy }
 
 ## Signed off karts only
 
@@ -137,9 +141,13 @@ If your hub's list looks short, ask an administrator to check the kart sign-offs
 
 ## Past events are read-only
 
-1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too, and every change of chassis appears under **Reassignments** marked **Admin correction**.
+1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too.
 
     ![Past Event - Editing Restricted on an earlier event](../assets/img/mechanic/mech-r2c-past.png){ loading=lazy }
+
+2. For administrators: tap **Reassignments** to see every change of chassis at that event. A change made on another day is marked **Admin correction**.
+
+    ![Reassignments on a past event with a change marked Admin correction](../assets/img/mechanic/mech-r2c-admin-correction.png){ loading=lazy }
 
 !!! note "Remember"
     Race numbers go from 1 to 30. Marking karts used only happens for today's event, in the hub's own time zone.

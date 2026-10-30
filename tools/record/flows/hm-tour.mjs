@@ -13,7 +13,7 @@ export default {
 
     // the Workshop with the Workshop Manager tab, and Event readiness on Overview
     await s.goto('/workshop');
-    await s.mustReload('text=Readiness board', 60000);
+    await s.mustReload('text=Event readiness', 60000);
     await s.settle(800);
     await s.shot('hm-path-overview', { scroll: false, at: { 1: strip(s, 'Workshop Manager') } });
     const er = s.page.getByText('Event readiness', { exact: true }).first();

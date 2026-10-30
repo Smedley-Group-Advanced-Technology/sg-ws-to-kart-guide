@@ -5,7 +5,7 @@ export default {
   async run({ open }) {
     const s = await open({ persona: 'Casey Mechanic', device: 'tablet' });
     await s.goto('/workshop');
-    await s.mustReload('text=Readiness board', 60000);
+    await s.mustReload('text=Event readiness', 60000);
     await s.settle(800);
     await s.scrollTo(s.page.getByText('Bambino Karts (6)'), { block: 'start' });
     const t106 = s.tile('Kart 106', 'Available');

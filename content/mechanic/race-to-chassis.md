@@ -223,9 +223,32 @@ The list shows one session of one class, with only your hub's karts of that clas
 1. Tap **Copy Last Session**. If the copy puts karts on track that are not available, the question lists them, for example **1 kart being copied is not available:** Kart 307.
 2. Normally tap **Cancel** and change those chassis first. Only if your hub manager agrees, type one reason for all of them and tap **Copy Last Session**. The reason is recorded for each kart.
 
+    :::shot mech-r2c-copy-unavailable
+    caption: Copy Last Session listing Kart 207, which is not available, with the reason box
+    state: "Cadet 207 got race number 05 in session 1, then a stopping reliability ticket (Repair Required); session 2 cleared"
+    steps:
+      - Tap Cadet, then session 2
+      - Tap Clear Session 2 and confirm
+      - Tap Copy Last Session
+      - Type a reason
+    callouts:
+      - [1, "css=[data-testid='r2c-copy-unavailable-list']", "Karts not available"]
+      - [2, "css=[data-testid='r2c-copy-reason']", "One reason for all"]
+      - [3, "css=[data-testid='r2c-confirm']", "Copies with the reason"]
+    :::
+
 ### Warning triangles
 
 A chassis with a warning triangle has a race number although its kart is not available: it was assigned or copied with a recorded reason, or the kart changed after it got the number, or a copy filled the session when it started. Check with your hub manager before that kart goes out.
+
+:::shot mech-r2c-triangle
+caption: Chassis 07 (Cadet 207) with race number 05 and a warning triangle
+state: "Cadet 207 got race number 05 in session 1, then a stopping reliability ticket (Repair Required)"
+steps:
+  - Tap Cadet, then session 1
+callouts:
+  - [1, "css=[data-testid='r2c-dd-slot-7']", "On track, not available"]
+:::
 
 ## Signed off karts only
 
@@ -261,6 +284,7 @@ callouts:
     device: desktop
     persona: Taylor Central
     url: /fkl-central?tab=hubs
+    state: "Every Demo Hub kart signed off except Junior 303; Signed off karts only just switched on"
     steps:
       - Pick Demo Hub on the Hubs tab
       - Scroll to Race to Chassis: signed off karts only
@@ -294,7 +318,7 @@ callouts:
 
 ## Past events are read-only
 
-1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too, and every change of chassis appears under **Reassignments** marked **Admin correction**.
+1. Open Race to Chassis for an event on another day. KART shows **Past Event - Editing Restricted**. Only administrators can change it. For administrators the not-available warning applies there too.
 
     :::shot mech-r2c-past
     caption: Past Event - Editing Restricted on an earlier event
@@ -303,6 +327,19 @@ callouts:
       - Open Race to Chassis for a past event
     callouts:
       - [1, "text=Past Event - Editing Restricted", "View only"]
+    :::
+
+2. For administrators: tap **Reassignments** to see every change of chassis at that event. A change made on another day is marked **Admin correction**.
+
+    :::shot mech-r2c-admin-correction
+    caption: Reassignments on a past event with a change marked Admin correction
+    persona: Taylor Central
+    state: "A past session event exists at Demo Hub; an administrator moved race number 01 from chassis 02 to 08 today"
+    steps:
+      - Open Race to Chassis for the past event as an administrator
+      - Tap Cadet, then Reassignments
+    callouts:
+      - [1, "css=[data-testid='r2c-log-admin-correction']", "Changed on another day"]
     :::
 
 !!! note "Remember"

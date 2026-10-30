@@ -30,7 +30,7 @@ export default {
     await s.hover('h3:text-is("Workshop")');
     await s.skip(async () => {
       await s.followNewTab(() => s.tap('h3:text-is("Workshop")', { pause: 0 }), /\/workshop/);
-      await s.page.getByText('Readiness board').first().waitFor({ timeout: 60000 });
+      await s.page.getByText('Event readiness').first().waitFor({ timeout: 60000 });
       await s.settle(500);
     });
     await s.moveCursor(110, 180);

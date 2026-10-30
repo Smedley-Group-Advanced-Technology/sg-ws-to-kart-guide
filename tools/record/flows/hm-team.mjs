@@ -11,6 +11,7 @@ export default {
     await s.settle(800);
     await s.shot('hm-team-tab', {
       scroll: false,
+      place: { 1: 'below' },
       at: { 1: s.page.getByRole('tab', { name: 'Team', exact: true }), 2: s.page.getByText('Pending requests').first() },
     });
     const row = s.page.locator('[data-testid=team-row]', { hasText: 'Jordan Contractor' }).first();

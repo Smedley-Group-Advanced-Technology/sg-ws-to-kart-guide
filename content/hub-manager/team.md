@@ -13,6 +13,7 @@ The **Team** tab on **Workshop Manager** lists the people of your hub. You can t
     - Before, hub managers could tick permissions only when approving someone. Now you can change **Workshop** and **Reliability** for anyone already on your team.
     - **Workshop includes Reliability**: turning Workshop on turns Reliability on too. Turning Workshop off leaves Reliability on.
     - Only admins change **Purchasing**, **Hub Manager**, **FKL Central** and admin accounts. You cannot change your own permissions or another hub manager's.
+    - Permissions belong to the person, not the hub: a change applies on every hub they work at.
 
 ## Open the Team tab
 
@@ -28,7 +29,7 @@ callouts:
 
 1. Tap **Workshop Manager** in the Workshop tab strip, then tap **Team**.
 
-2. **Pending requests** lists people who asked to join your hub or for access to it. Below it, **Team** lists everyone with access to your hub.
+2. **Pending requests** lists people who asked to join your hub or for access to it. Below it, **Team** lists the approved staff with access to your hub.
 
 ## Give someone Workshop or Reliability
 
@@ -46,7 +47,7 @@ callouts:
 
 2. Turn **Workshop** on. **Reliability** turns on too. KART shows **Workshop turned on**.
 
-3. To take a permission away, turn its switch off. KART shows **turned off**.
+3. To take a permission away, turn its switch off. KART shows **Workshop turned off** or **Reliability turned off**.
 
 !!! note "Remember"
     A switch you cannot move shows why under the name, for example **Admins are managed by admins** or **You cannot change your own permissions**. Ask an admin for those.

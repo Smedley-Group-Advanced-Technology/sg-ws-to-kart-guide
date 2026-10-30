@@ -2013,13 +2013,13 @@
   - Drag race number 5 onto chassis 01 (Junior 301)
   - Show the Kart 301 marked used message with Undo
   - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
-  - Tap Cancel, then drag race number 6 onto chassis 02 (Junior 302)
+  - Tap Close, then drag race number 6 onto chassis 02 (Junior 302)
   - Drag race number 6 back to the race number list to take it off
   caption: putting race numbers on chassis with drag and drop
   captions:
   - Drag a race number onto a chassis.
   - KART marks the chassis used for today.
-  - An unavailable chassis asks for a reason.
+  - A chassis that is not available is refused, with the reason.
   - Drag the number back to take it off.
   duration: 80
 - id: mech-r2c-dd-view
@@ -2190,29 +2190,31 @@
   callouts:
   - n: 1
     target: text=is not available
-    note: 'Repair Required: stopping ticket'
+    note: Refused, nothing assigned
   - n: 2
-    target: text=4 to 500 characters.
-    note: Give a reason
+    target: css=[data-testid='r2c-refusal-reasons']
+    note: Why, as on the Fleet board
   - n: 3
-    target: text=Assign anyway
-    note: Gives a track use override
-  caption: Kart 307 (Junior chassis 07) is not available, with the reason box and Assign anyway
+    target: css=[data-testid='r2c-refusal-open-ticket']
+    note: Open the ticket
+  caption: Kart 307 (Junior chassis 07) is not available, with its reasons, the ticket and Open in Tracker
 - id: mech-r2c-cancel
   kind: screenshot
   page: mechanic/race-to-chassis.md
   persona: Alex Mechanic
   device: tablet
   url: /r2c
-  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
-    1; Cadet 207 and Junior 307 Repair Required
+  state: Junior 304 set not Available by hand (no ticket)
   steps:
-  - Tap Cancel
+  - Drag race number 6 onto chassis 04
   callouts:
   - n: 1
-    target: text=Cancel
+    target: css=[data-testid='r2c-refusal-override']
+    note: Opens Kart Availability
+  - n: 2
+    target: css=[data-testid='r2c-refusal-close']
     note: Use another chassis
-  caption: Cancel in the not available dialog
+  caption: Set available manually for a kart that is locked by hand, which opens Kart Availability
 - id: mech-r2c-copy-unavailable
   kind: screenshot
   page: mechanic/race-to-chassis.md
@@ -2224,18 +2226,14 @@
   - Tap Cadet, then session 2
   - Tap Clear Session 2 and confirm
   - Tap Copy Last Session
-  - Type a reason
   callouts:
   - n: 1
-    target: css=[data-testid='r2c-copy-unavailable-list']
-    note: Karts not available
+    target: css=[data-testid='r2c-copy-skip']
+    note: Not copied
   - n: 2
-    target: css=[data-testid='r2c-copy-reason']
-    note: One reason for all
-  - n: 3
     target: css=[data-testid='r2c-confirm']
-    note: Copies with the reason
-  caption: Copy Last Session listing Kart 207, which is not available, with the reason box
+    note: Copies the rest
+  caption: Copy Last Session listing Kart 207, which is not available and is not copied
 - id: mech-r2c-triangle
   kind: screenshot
   page: mechanic/race-to-chassis.md

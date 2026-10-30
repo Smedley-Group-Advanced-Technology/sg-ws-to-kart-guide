@@ -36,5 +36,8 @@ callouts:
 !!! note "Remember"
     Hub managers without the FKL Central permission see only a view-only **Service checklists** page.
 
+!!! info "New: Race to Chassis signed off karts only"
+    On the **Hubs** tab, administrators can switch a hub to **Race to Chassis: signed off karts only**. See [Race to Chassis](../mechanic/race-to-chassis.md#signed-off-karts-only).
+
 !!! tip "Tip"
     Print the [FKL Central quick reference card](../cards/index.md).

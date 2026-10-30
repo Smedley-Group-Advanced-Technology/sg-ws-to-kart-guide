@@ -2175,6 +2175,43 @@
     target: text=Cancel
     note: Use another chassis
   caption: Cancel in the not available dialog
+- id: mech-r2c-signoff-only
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Alex Mechanic
+  device: tablet
+  url: /r2c
+  state: Signed off karts only switched on for Demo Hub; Junior 303 not signed off and holding race number 07 in session 1
+  steps:
+  - Open Race to Chassis for Demo Practice Day on the tablet
+  - Tap Junior
+  callouts:
+  - n: 1
+    target: text=Signed off karts only
+    note: Switched on for this hub
+  - n: 2
+    target: text=Not signed off
+    note: Still on track, marked
+  caption: Signed off karts only, with a kart that is not signed off still holding its race number
+- id: fc-r2c-signoff-switch
+  kind: screenshot
+  page: mechanic/race-to-chassis.md
+  persona: Taylor Central
+  device: desktop
+  url: /fkl-central?tab=hubs
+  state: Session event Demo Practice Day today at Demo Hub; race numbers 1 to 10, numbers 1 to 4 already on chassis in session
+    1; Cadet 207 and Junior 307 Repair Required
+  steps:
+  - Pick Demo Hub on the Hubs tab
+  - Scroll to Race to Chassis: signed off karts only
+  callouts:
+  - n: 1
+    target: 'text=Race to Chassis: signed off karts only'
+    note: Per hub, administrators only
+  - n: 2
+    target: css=[data-testid='r2c-signoff-switch']
+    note: On or off
+  caption: The Race to Chassis sign-off switch in FKL Central, Hubs
 - id: mech-r2c-reassign
   kind: screenshot
   page: mechanic/race-to-chassis.md

@@ -43,7 +43,7 @@ Every damaged component, every stopping ticket and every failed Power / Performa
       - [1, "text=Repair priority, top first. Work top to bottom.", "Start at the top"]
     :::
 
-3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by its number, for example **Kart 307**. Small tags say where the work happens (**In shop** or **Remote**) and **Files** opens photos.
+3. Read the card. It shows the kart, where the repair came from (**Damage**, **Incident** or **Reliability**), and **Waiting on:** with the parts if any. Repair cards name the kart by its number, for example **Kart 307**. Small tags say where the work happens (**In shop** or **Remote**) and **Files** opens photos. In **Files**, **Open file** shows a photo or video in a new tab. Other files, for example a PDF, download to your device instead.
 
     :::shot mech-repair-card
     caption: The repair card for Junior 307 showing Waiting on front bumper and On order

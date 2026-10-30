@@ -33,5 +33,8 @@
 !!! tip "Tip"
     The screen shows the first rows only. The exports contain all of them.
 
+!!! note "Remember"
+    In Excel and CSV exports, a text cell that starts with =, +, - or @ gets an apostrophe in front, for example '- replaced seat. This stops Excel from running it as a formula. Numbers, dates and negative numbers are not changed.
+
 !!! abstract "Coming with your hub's switch-over"
     Checklist answers of old Workshop App services are moved later. Until then, old services show "0 of N checks" in reports.

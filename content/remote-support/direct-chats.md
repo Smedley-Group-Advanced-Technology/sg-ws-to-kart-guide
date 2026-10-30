@@ -63,6 +63,8 @@ callouts:
 
 4. Type your message and tap the send button (**Send**). Use the paper clip (**Attach file**) for a photo.
 
+    Photos and videos show in the chat. Other files, for example a PDF, download to your device when you tap them. They do not open in a new tab.
+
     :::shot rs-direct-send
     caption: "Steps 3 and 4 on one screen: the existing chat with Casey Mechanic and a message typed"
     steps:

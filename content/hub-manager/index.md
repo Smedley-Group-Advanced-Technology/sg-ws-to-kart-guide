@@ -40,7 +40,8 @@ Read the [mechanic path](../mechanic/index.md) first. As a hub manager you also:
 6. [Orders](orders.md): Draft to Goods In.
 7. [Hub catalogue](hub-catalogue.md): your hub's parts and part requests.
 8. [Approvals](approvals.md): join links, sign-ups, new users.
-9. [Reports](reports.md): the Workshop App reports in KART.
+9. [Team](team.md): who on your hub has Workshop and Reliability.
+10. [Reports](reports.md): the Workshop App reports in KART.
 
 !!! tip "Tip"
     Print the [hub manager quick reference card](../cards/index.md).

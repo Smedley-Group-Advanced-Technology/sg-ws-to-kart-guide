@@ -1052,6 +1052,44 @@
     target: label=Reorder point
     note: Order when stock reaches this, then Target and Save
   caption: Adjust stock with Reorder point and Target
+- id: hm-team-tab
+  kind: screenshot
+  page: hub-manager/team.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=team
+  state: 'Demo Hub as seeded: Jordan Contractor without permissions, Jamie Newstarter pending (signed up with a Demo Hub join
+    link)'
+  steps:
+  - Tap Workshop Manager in the Workshop tab strip
+  - Tap Team
+  callouts:
+  - n: 1
+    target: text=Team
+    note: The Team tab
+  - n: 2
+    target: text=Pending requests
+    note: Asked to join your hub
+  caption: 'Steps 1 and 2 on one screen: the Team tab with Pending requests and the hub''s people'
+- id: hm-team-switch
+  kind: screenshot
+  page: hub-manager/team.md
+  persona: Morgan Manager
+  device: desktop
+  url: /workshop/manager?tab=team
+  state: 'Demo Hub as seeded: Jordan Contractor without permissions, Jamie Newstarter pending (signed up with a Demo Hub join
+    link)'
+  steps:
+  - Tap Team
+  - Turn Workshop on for Jordan Contractor
+  callouts:
+  - n: 1
+    target: text=Jordan Contractor
+    note: The person
+  - n: 2
+    target: css=[data-testid=team-switch-workshop]
+    note: Workshop on
+  caption: 'Steps 1 and 2 on one screen: Jordan Contractor with Workshop and Reliability turned on'
 - id: hm-wm-tabs
   kind: screenshot
   page: hub-manager/workshop-manager.md

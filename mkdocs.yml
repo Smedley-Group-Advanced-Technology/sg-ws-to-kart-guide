@@ -79,6 +79,7 @@ nav:
       - Orders: hub-manager/orders.md
       - Hub catalogue: hub-manager/hub-catalogue.md
       - Approvals: hub-manager/approvals.md
+      - Team: hub-manager/team.md
       - Reports: hub-manager/reports.md
   - FKL Central:
       - Your path: fkl-central/index.md

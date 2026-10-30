@@ -55,6 +55,8 @@ callouts:
 
 11. Tap **Reports**. See [Reports](reports.md).
 
+12. Tap **Team**: your hub's people, their **Workshop** and **Reliability**, and pending requests. See [Team](team.md).
+
 !!! tip "Tip"
     The **Hub Manager** dashboard (button on **Select your Hub**) has workshop tiles too: **Fleet readiness**, **Services this week**, **Parts waiting**, **Stock**, **Fleet campaigns**, **Track use overrides**, **Weekly schedule** and **Work targets**. Tap a tile to jump to the screen. **Fleet readiness** uses the Fleet board's colours: karts ready (green) of the active karts, **Needs attention** (amber), **Blocked** (red) and **Event usable**.
 

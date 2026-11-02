@@ -1,5 +1,8 @@
 // Race to Chassis on today's Demo Practice Day as Alex Mechanic: opening it from Event Operations, the drag and
-// drop clip and GIF on a tablet (Cadet class), a reassignment, Take off chassis, and a past event.
+// drop clip and GIF on a tablet (Junior class) with a refused chassis (Junior 307, open damage ticket), and the refusal
+// for a kart set not Available by hand (Junior 304).
+import { HUB } from '../lib/config.mjs';
+import { asPersona } from '../lib/db.mjs';
 
 export async function openR2C(s, event = 'Demo Practice Day', shots = {}) {
   await s.goto('/events');
@@ -37,22 +40,43 @@ export default {
     s.cue();                                                    // KART marks the chassis used for today.
     await s.toastShot('mech-r2c-marked', /marked used/, 'Undo');
     await s.wait(2500);
-    s.cue();                                                    // An unavailable chassis asks for a reason.
+    s.cue();                                                    // A chassis that is not available is refused, with the reason.
     await s.drag(race(s, 6), slot(s, 7));
-    await s.page.getByText(/is not available/).first().waitFor({ timeout: 30000 });
+    const refusal = s.page.locator('[data-testid="r2c-refusal"]');
+    await refusal.getByText(/is not available/).first().waitFor({ timeout: 30000 });
+    await refusal.locator('[data-testid="r2c-refusal-reasons"]').waitFor({ timeout: 30000 });
     await s.wait(800);
-    await s.shot('mech-r2c-unavailable', { scroll: false, at: { 1: s.dialog.getByText(/is not available/).first(),
-      2: s.page.getByText(/4 to 500 characters/).first(), 3: s.page.locator('[data-testid="r2c-gate-confirm"]') }, optional: [2] });
-    await s.shot('mech-r2c-cancel', { scroll: false, at: { 1: s.page.getByRole('button', { name: 'Cancel' }) } });
-    await s.tap(s.page.getByRole('button', { name: 'Cancel' }));
+    await s.shot('mech-r2c-unavailable', { scroll: false, at: { 1: refusal.getByText(/is not available/).first() } });
+    await s.wait(1200);
+    await s.tap(s.page.locator('[data-testid="r2c-refusal-close"]'));
+    await refusal.waitFor({ state: 'detached', timeout: 30000 }).catch(() => {});
     await s.drag(race(s, 6), slot(s, 2));
     await s.wait(1500);
     s.cue();                                                    // Drag the number back to take it off.
     await s.drag(slot(s, 2), s.page.locator('[data-testid="r2c-dd-pool"]'));
-    await s.wait(3000);
+    // dropped back on the race numbers: the same confirmation as tapping the chassis
+    await s.tap(s.dialog.getByRole('button', { name: 'Take off chassis' }));
+    await s.page.locator('[data-testid="r2c-dd-slot-2"][data-race=""]').waitFor({ timeout: 30000 });
+    await s.wait(2500);
     const r = await s.close();
     clip('mech-r2c-drag-clip', r, { poster: 1 });
     gif('mech-r2c-drag-gif', r, { start: g0 - 400, end: g1 + 900 });
+
+    // MF-12(ii): Junior 304 set not Available by hand on Kart Availability (no ticket): the refusal offers
+    // Set available manually, which opens Kart Availability (the reset drops the lock again)
+    asPersona('Morgan Manager', `SELECT public.set_kart_availability_override('${HUB}', 'Junior', 4, 'manual_available_override', false);`);
+    const m = await open({ persona: 'Alex Mechanic', device: 'tablet' });
+    await openR2C(m);
+    await m.tap(m.page.locator('[data-testid="r2c-class-Junior"]'));
+    await m.settle(800);
+    await m.page.locator('[data-testid="r2c-dd-chassis-label-4"]').waitFor({ timeout: 30000 });
+    await m.wait(1000);
+    await m.drag(race(m, 6), slot(m, 4));
+    await m.page.locator('[data-testid="r2c-refusal-override"]').waitFor({ timeout: 30000 });
+    await m.wait(800);
+    await m.shot('mech-r2c-cancel', { scroll: false });
+    await m.tap(m.page.locator('[data-testid="r2c-refusal-close"]'));
+    await m.close();
 
   },
 };

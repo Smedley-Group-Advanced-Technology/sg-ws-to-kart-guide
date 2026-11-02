@@ -9,7 +9,7 @@
 
 ## The tabs, one by one
 
-![Steps 1 to 11 on one screen: the Workshop Manager tab and its own tabs](../assets/img/hub-manager/hm-wm-tabs.png){ loading=lazy }
+![Steps 1 to 12 on one screen: the Workshop Manager tab and its own tabs](../assets/img/hub-manager/hm-wm-tabs.png){ loading=lazy }
 
 1. Tap **Workshop Manager** in the Workshop tab strip. It opens on **Service Metrics**: services done, time per service and the service report.
 

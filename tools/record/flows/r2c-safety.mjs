@@ -1,6 +1,6 @@
 // Race to Chassis safety (KART MF-12 / MF-41), screenshots only:
 // - a chassis with a warning triangle (Cadet 207 got its race number, then a stopping ticket) and the Copy Last Session
-//   question that lists it (Alex Mechanic, tablet);
+//   confirmation that lists it as not copied (MF-12(ii), Alex Mechanic, tablet);
 // - Admin correction in Reassignments on the past Demo Club Night (Taylor Central, after a move made as Taylor);
 // - Signed off karts only: every Demo Hub kart signed off except Junior 303, which holds race number 07 in session 1;
 //   Taylor switches it on in FKL Central > Hubs, then Alex sees the marked chassis.
@@ -51,19 +51,10 @@ export default {
       await a.page.locator('[role=alertdialog]').waitFor({ state: 'detached', timeout: 30000 }).catch(() => {});
       await a.settle(800);
       await a.tap(a.page.locator('[data-testid="r2c-copy-previous"]'));
-      const warn = a.page.locator('[data-testid="r2c-copy-unavailable"]');
-      // the app lists them at once when it knows; otherwise the server refuses the copy and the same dialog asks
-      const shown = await warn.waitFor({ timeout: 8000 }).then(() => true).catch(() => false);
-      if (!shown) {
-        await a.page.locator('[data-testid="r2c-confirm"]').waitFor({ timeout: 30000 });
-        await a.page.screenshot({ path: '/tmp/r2c-copy-before.png' }).catch(() => {});
-        await a.tap(a.page.locator('[data-testid="r2c-confirm"]'));
-        await warn.waitFor({ timeout: 30000 }).catch(async (e) => {
-          await a.page.screenshot({ path: '/tmp/r2c-copy-after.png' }).catch(() => {});
-          throw e;
-        });
-      }
-      await a.type(a.page.locator('[data-testid="r2c-copy-reason"]'), 'Hub manager agreed for session 2');
+      // MF-12(ii): the confirmation lists the karts that are not available; they are not copied (no reason asked)
+      await a.page.locator('[data-testid="r2c-copy-skip"]').waitFor({ timeout: 30000 });
+      await a.page.locator('[data-testid="r2c-copy-skip"]').getByText(/Kart 207|207/).first().waitFor({ timeout: 30000 });
+      await a.wait(600);
       await a.shot('mech-r2c-copy-unavailable', { scroll: false });
       await a.tap(a.page.locator('[role=alertdialog]').getByRole('button', { name: 'Cancel' }));
       await a.wait(600);

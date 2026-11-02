@@ -68,7 +68,7 @@ callouts:
 | Inventory | Workshop > **Stores**, **Parts** tab (**Adjust**, **Add inventory**) | Workshop; **Adjust**: hub manager or admin | [Stores](mechanic/stores.md) |
 | Consumables | Workshop > **Stores**, **Consumables** tab | Workshop | [Stores](mechanic/stores.md) |
 | Parts Catalog | FKL Central > **Parts catalogue** > **Master parts**; hub view in Workshop Manager > **Hub catalogue** | FKL Central; hub manager | [Parts catalogue](fkl-central/parts-catalogue.md) |
-| Catalog Requests | Hub side: Workshop Manager > **Hub catalogue** > **Request a part**. Review: FKL Central > **Parts catalogue** > **Part requests** | Hub manager; FKL Central | [Hub catalogue](hub-manager/hub-catalogue.md), [Part requests](fkl-central/part-requests.md) |
+| Catalog Requests | Hub side: Workshop Manager > **Hub catalogue** > **Request a part**. Review: FKL Central > **Parts catalogue** > **Part requests** | Hub manager; FKL Central; Purchasing: read only, **Part requests** on Hub Selection | [Hub catalogue](hub-manager/hub-catalogue.md), [Part requests](fkl-central/part-requests.md) |
 | Add local part | Not in KART: every part is on the FKL master list. Use Workshop Manager > **Hub catalogue** > **Request a part** | Hub manager, FKL Central, admin | [Hub catalogue](hub-manager/hub-catalogue.md) |
 
 ## Management menu

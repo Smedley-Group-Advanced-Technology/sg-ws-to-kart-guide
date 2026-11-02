@@ -65,7 +65,7 @@ steps:
   - Show the Kart 301 marked used message with Undo
   - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
   - Tap Close, then drag race number 6 onto chassis 02 (Junior 302)
-  - Drag race number 6 back to the race number list to take it off
+  - Drag race number 6 back to the race number list and tap Take off chassis
 captions:
   - "Drag a race number onto a chassis."
   - "KART marks the chassis used for today."

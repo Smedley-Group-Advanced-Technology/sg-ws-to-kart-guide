@@ -16,7 +16,7 @@ state: Demo Hub as seeded
 ## The tabs, one by one
 
 :::shot hm-wm-tabs
-caption: "Steps 1 to 11 on one screen: the Workshop Manager tab and its own tabs"
+caption: "Steps 1 to 12 on one screen: the Workshop Manager tab and its own tabs"
 steps:
   - Tap Workshop Manager in the Workshop tab strip
 callouts:
@@ -31,6 +31,7 @@ callouts:
   - [9, "text=Parts needed", "Parts and orders"]
   - [10, "text=Hub catalogue", "Your hub's parts"]
   - [11, "text=Reports", "Excel, PDF or CSV"]
+  - [12, "text=Team", "Your hub's people"]
 :::
 
 1. Tap **Workshop Manager** in the Workshop tab strip. It opens on **Service Metrics**: services done, time per service and the service report.

@@ -31,7 +31,7 @@ Race to Chassis (R2C) links each race number (the driver's number for the day) t
 <figure class="clip"><video controls preload="none" playsinline poster="../assets/video/mech-r2c-drag-clip.jpg" width="1180">
 <source src="../assets/video/mech-r2c-drag-clip.mp4" type="video/mp4"><source src="../assets/video/mech-r2c-drag-clip.webm" type="video/webm">
 <track kind="captions" src="../assets/video/mech-r2c-drag-clip.vtt" srclang="en" label="English" default></video>
-<figcaption>Watch: putting race numbers on chassis with drag and drop (about 80 seconds, with captions)</figcaption></figure>
+<figcaption>Watch: putting race numbers on chassis with drag and drop (about 60 seconds, with captions)</figcaption></figure>
 
 The buttons at the top pick the kart class (**Junior**, **Cadet**, **Bambino**) and the session (**1**, **2**, **3**, **4**). The chassis show each kart's number in its class, so Junior 301 is chassis **01**. Only the karts of your hub's fleet for that class are shown, in chassis order, ten to a column. A hub with no karts of that class shows chassis 1 to 30. The chassis colour is the kart's status colour, the same as on the Fleet board: **Ready** (green), **Needs attention** (amber, for example in a service, Requires service or Campaign required), **Blocked** (red, must not be used) or **Written off** (grey); **Not in fleet** is a plain outline. A filled star means the kart is preferred, an empty star **Unpreferred**. See [Kart statuses](../start/statuses.md).
 

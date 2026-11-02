@@ -1133,7 +1133,10 @@
   - n: 11
     target: text=Reports
     note: Excel, PDF or CSV
-  caption: 'Steps 1 to 11 on one screen: the Workshop Manager tab and its own tabs'
+  - n: 12
+    target: text=Team
+    note: Your hub's people
+  caption: 'Steps 1 to 12 on one screen: the Workshop Manager tab and its own tabs'
 - id: home-hub-selection
   kind: screenshot
   page: index.md
@@ -2014,14 +2017,14 @@
   - Show the Kart 301 marked used message with Undo
   - Drag race number 6 onto chassis 07 (Junior 307) and show Kart 307 is not available
   - Tap Close, then drag race number 6 onto chassis 02 (Junior 302)
-  - Drag race number 6 back to the race number list to take it off
+  - Drag race number 6 back to the race number list and tap Take off chassis
   caption: putting race numbers on chassis with drag and drop
   captions:
   - Drag a race number onto a chassis.
   - KART marks the chassis used for today.
   - A chassis that is not available is refused, with the reason.
   - Drag the number back to take it off.
-  duration: 80
+  duration: 60
 - id: mech-r2c-dd-view
   kind: screenshot
   page: mechanic/race-to-chassis.md

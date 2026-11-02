@@ -26,7 +26,7 @@ export default {
     await s.settle(800);
     await s.page.evaluate(() => window.scrollTo(0, 0));
     const names = ['Blockers', 'Time Tracking', 'Alignment health', 'Campaigns', 'Work targets', 'Kart Allocation', 'Damage Reports',
-      'Parts needed', 'Hub catalogue', 'Reports'];
+      'Parts needed', 'Hub catalogue', 'Reports', 'Team'];
     const at = { 1: strip(s, 'Workshop Manager') };
     names.forEach((n, i) => { at[i + 2] = tab(s, n); });
     await s.shot('hm-wm-tabs', { scroll: false, at, place: Object.fromEntries(names.map((_, i) => [i + 2, 'below'])) });

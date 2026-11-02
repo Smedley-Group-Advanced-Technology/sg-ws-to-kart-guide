@@ -54,7 +54,7 @@ callouts:
 |---|---|---|---|
 | Race to Chassis | **Event Operations** > pick the event > **Race to Chassis**. Drag and drop on tablets and laptops, chassis list on phones | Signed in; other days admins only | [Race to Chassis](mechanic/race-to-chassis.md) |
 | Chassis reassignment | Reason question after a move, **Reassignments** on Race to Chassis, kart page **Chassis reassignments** | Event and workshop staff | [Race to Chassis](mechanic/race-to-chassis.md) |
-| Track use override | **Assign anyway** in Race to Chassis, or ticking Available with a reason; overrides end with the event | Per screen | [Race to Chassis](mechanic/race-to-chassis.md) |
+| Track use override | Ticking **Available** with a reason on Kart Availability (from Race to Chassis: **Set available manually**); overrides end with the event. Race to Chassis no longer gives one (**Assign anyway** removed on 2 November) | Per screen | [Race to Chassis](mechanic/race-to-chassis.md#a-chassis-that-is-not-available) |
 | ICU Workflow | **Event Operations** > pick the event > **ICU board** | Workshop to edit; others read only | [Report a problem](mechanic/report-a-problem.md) |
 
 ## Parts & Consumables menu

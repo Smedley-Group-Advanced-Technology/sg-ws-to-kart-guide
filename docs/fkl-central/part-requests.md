@@ -1,7 +1,7 @@
 # Part requests
 
 
-When a hub needs a part that is not in the catalogue, the hub manager sends a request. You get a push notification (FKL Central and purchasing users, if notifications are switched on), and, for FKL Central users, the request also appears under **Part requests** in the bell at the top of the page. Tap it there to open the request. You review it: link an existing part, add a new master part, or reject it with a reason the hub sees. Every part is on the FKL master list: hubs cannot add parts of their own.
+When a hub needs a part that is not in the catalogue, the hub manager sends a request. You get a push notification (FKL Central and purchasing users, if notifications are switched on), and the request also appears under **Part requests** in the bell at the top of the page. Tap it there to open the request. Purchasing users without FKL Central see a read-only list instead (see [Purchasing: view part requests](#purchasing-view-part-requests)). You review it: link an existing part, add a new master part, or reject it with a reason the hub sees. Every part is on the FKL master list: hubs cannot add parts of their own.
 
 !!! info "What changed from the Workshop App"
     - **Catalog Requests** are now **Part requests** in **FKL Central > Parts catalogue**, with a badge showing how many wait.
@@ -37,3 +37,17 @@ When a hub needs a part that is not in the catalogue, the hub manager sends a re
 
 !!! note "Remember"
     **Reviewed (last 90 days)** lists what you have already decided. **Master review** is where you check hub-local parts and merge them into a matching master part.
+
+## Purchasing: view part requests
+
+If you have the **Purchasing** permission, you can see every hub's part requests in a read-only list. You cannot review, change or withdraw anything there: FKL Central does the review.
+
+1. Open it in one of three ways: tap **Part requests** on the **Hub Selection** page, tap a part request in the bell, or tap the push notification. The bell and the push open the request highlighted.
+
+2. **Waiting** lists the requests FKL Central has not reviewed yet. **Reviewed (last 90 days)** lists the decided ones with the result and the reason.
+
+3. Pick a hub in the hub list to see only that hub's requests, or **All hubs** to see every hub.
+
+!!! note "Remember"
+    If you also have **FKL Central** (or are an admin), the bell and the push open **FKL Central > Parts catalogue > Part requests** as before. The read-only list then shows **Review in FKL Central** and **Open in FKL Central** buttons that take you there.
+
